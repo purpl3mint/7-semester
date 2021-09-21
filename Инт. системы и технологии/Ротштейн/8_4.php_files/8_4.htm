@@ -1,0 +1,2123 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" margin height="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169671061"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/8_4.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="8_5.php">К следующему разделу</a> \ <a class="menu1"
+    href="8_3.php">К предыдущему разделу </a></p>
+
+ 
+
+
+<p><b>8.4. Идентификация коэффициента сцепления &quot;автомобиль-дорога&quot;</b></p>
+
+  <p>Задача оценки коэффициента сцепления колес автомобиля с дорожным покрытием возникает в связи с проведением автотехнической экспертизы при расследовании дорожно-транспортных происшествий (ДТП). От точности определения коэффициента сцепления зависит объективность принятия решения о виновности или невиновности водителя, который совершил ДТП (например, наезд на пешехода). Существующая методика позволяет определить только диапазон возможных значений коэффициента сцепления в зависимости от ряда влияющих факторов. Поэтому, окончательная его оценка определяется автотехническим экспертом субъективно, с учетом дополнительных факторов и условий, которые не входят в методику.</p>
+  <p>Принятие решения о причине аварии очень чувствительно к значению коэффициента сцепления: субъективный выбор нижнего или верхнего значения коэффициента может решить судьбу участников происшествия.</p>
+  <p>Целью исследования, результаты которого представлены в этом разделе, была разработка математической модели оценки коэффициента сцепления, которая бы учитывала всю доступную информацию о влияющих факторах и, за счет уточнения величины коэффициента сцепления, повышала объективность решений [49,70].</p>
+
+
+  <p><b><a name="1"></a>8.4.1.&nbsp;Методика идентификации</b></p>
+  <p>Модель оценки коэффициента сцепления разрабатывалась на основе идентификации нелинейных объектов нечеткими базами знаний. Построение модели производилось в два этапа: <i>первый</i> - структурная идентификация; <i>второй</i> - параметрическая идентификация. На первом этапе строилась структура зависимости коэффициента сцепления от влияющих факторов с применением экспертных правил <ЕСЛИ - ТО>. На втором этапе проводилась настройка модели путем подбора таких параметров формы функций принадлежности нечетких термов и весов правил <ЕСЛИ - ТО>, которые обеспечивают минимальное расхождение модельных и экспериментальных результатов.</p>
+
+
+  <p><b><a name="2"></a>8.4.2. Структурная идентификация</b></p>
+  <p><img width=590 height=417 src="8_4_files/image001.gif"></p>
+  <p>Структура предлагаемой модели представлена на рис.&nbsp;8.16 в виде дерева, висячими вершинами которого являются факторы, влияющие на коэффициент сцепления. Особенность модели заключается в том, что она учитывает как традиционные для известной методики факторы, которые обобщены интегральным показателем <img align="absmiddle" width=19 height=24 src="8_4_files/image002.gif">, так и дополнительно введенные факторы: <img align="absmiddle" width=16 height=20 src="8_4_files/image003.gif">, <img align="absmiddle" width=21 height=19 src="8_4_files/image004.gif">, <img align="absmiddle" width=17 height=19 src="8_4_files/image005.gif">, <img align="absmiddle" width=20 height=20 src="8_4_files/image006.gif">, <img align="absmiddle" width=17 height=20 src="8_4_files/image007.gif">. Все влияющие факторы, сведенные в табл. 8.15, рассматриваются как лингвистические переменные, заданные на соответствующих универсальных множествах и оцениваются нечеткими термами. Интегральный показатель <img align="absmiddle" width=19 height=24 src="8_4_files/image002.gif">, который входит в табл. 8.15, в свою очередь, зависит от факторов: <img align="absmiddle" width=27 height=29 src="8_4_files/image008.gif"> - тип дорожного покрытия; <img align="absmiddle" width=31 height=29 src="8_4_files/image009.gif"> - состояние дорожного покрытия; <img align="absmiddle" width=16 height=19 src="8_4_files/image010.gif"> - тип шин. Это показано на древовидной структуре модели коэффициента сцепления (рис.&nbsp;8.16). Рекомендации для оценки интегрального показателя <img align="absmiddle" width=19 height=24 src="8_4_files/image002.gif"> даны в табл. 8.16, которая отвечает общепринятой методике.</p>
+  <p>Экспертная матрица знаний для оценки коэффициента сцепления в зависимости от влияющих факторов представлена в табл. 8.17 (эксперты В.Н.&nbsp;Ребедайло, А.А.&nbsp;Кашканов). Применение этой матрицы знаний и модели нечеткого логического вывода позволяет прогнозировать коэффициент сцепления в практическом диапазоне его изменения. Однако точная оценка этого коэффициента зависит от выбора параметров настройки модели.</p>
+
+
+  <p><b><a name="3"></a>8.4.3. Параметрическая идентификация</b></p>
+
+  <p>Таблица 8.15. Факторы, влияющие на коэффициент сцепления</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Фактор</p>
+   </td>
+   <td>   <p>Универсальное   множество</p>
+   </td>
+   <td>   <p>Термы для оценок</p>
+   </td>
+  </tr>
+  <tr>
+  	<td>  <p><img align="absmiddle" width=19 height=24   src="8_4_files/image002.gif"> - интегральный показатель "тип шин - дорога"</p>
+   </td>
+   <td><p>(0 - 9) у.е.</p>
+   </td>
+   <td>   <p>низкий (<img align="absmiddle" width=25   height=29 src="8_4_files/image011.gif">),<br>
+   ниже среднего (<img align="absmiddle" width=29   height=29 src="8_4_files/image012.gif">),<br>
+   средний (<img align="absmiddle" width=28   height=31 src="8_4_files/image013.gif">),<br>
+   выше среднего (<img align="absmiddle" width=29   height=29 src="8_4_files/image014.gif">),<br>
+   высокий (<img align="absmiddle" width=28   height=31 src="8_4_files/image015.gif">)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=16 height=20   src="8_4_files/image003.gif"> - степень проскальзывания шины</p>
+   </td>
+   <td>
+   <p>(0 - 100)%</p>
+   </td>
+   <td>   <p>качение с проскальзыванием (<img align="absmiddle"   width=24 height=29 src="8_4_files/image016.gif">),</p>
+   <p>юз (<img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif">)</p>
+   </td>
+  </tr>
+  <tr>   <td > <p><img align="absmiddle" width=21 height=19 src="8_4_files/image004.gif"> - износ   шины</p>
+   </td>
+   <td><p>(0 - 100)%</p>
+   </td>
+   <td>   <p>новая (<img align="absmiddle" width=29   height=29 src="8_4_files/image018.gif">),<br>
+   в приделах допустимого (<img align="absmiddle"   width=32 height=29 src="8_4_files/image019.gif">),<br>
+   лысая (<img align="absmiddle" width=31   height=31 src="8_4_files/image020.gif">)</p>
+   </td>
+  </tr>
+  <tr>   <td><p><img align="absmiddle" width=17 height=19   src="8_4_files/image005.gif"> - давление в шине</p>
+   </td>
+   <td><p>(0.1 - 0.325) МПа</p>
+   </td>
+   <td>   <p>пониженный (<img align="absmiddle" width=23   height=29 src="8_4_files/image021.gif">),<br>
+   нормальный (<img align="absmiddle" width=27   height=29 src="8_4_files/image022.gif">),<br>
+   повышенный (<img align="absmiddle" width=25   height=31 src="8_4_files/image023.gif">)</p>
+   </td>
+  </tr>
+  <tr>   <td><p><img align="absmiddle" width=20 height=20   src="8_4_files/image006.gif"> -нагрузка на колесо</p>
+   </td>
+   <td><p>(0 - 100)%</p>
+   </td>
+   <td>   <p>без нагрузки (<img align="absmiddle" width=28   height=29 src="8_4_files/image024.gif">),<br>
+   средняя (<img align="absmiddle" width=31   height=29 src="8_4_files/image025.gif">),<br>
+   полная (<img align="absmiddle" width=29   height=31 src="8_4_files/image026.gif">)</p>
+   </td>
+  </tr>
+  <tr>   <td><p><img align="absmiddle" width=17 height=20   src="8_4_files/image007.gif"> -скорость автомобиля</p>
+   </td>
+   <td><p>(0 - 130)км/ ч</p>
+   </td>
+   <td>   <p>низкая (<img align="absmiddle" width=23   height=29 src="8_4_files/image027.gif">),<br>
+   ниже средней (<img align="absmiddle" width=27   height=29 src="8_4_files/image028.gif">),<br>
+   средняя (<img align="absmiddle" width=25   height=31 src="8_4_files/image029.gif">),<br>
+   выше средней (<img align="absmiddle" width=27   height=29 src="8_4_files/image030.gif">),<br>
+   высокая (<img align="absmiddle" width=25   height=31 src="8_4_files/image031.gif">)</p>
+   </td>
+  </tr>
+ </table>
+ 
+  <p>Таблица 8.16. Рекомендации для оценки интегрального показателя <img align="absmiddle" width=19 height=24 src="8_4_files/image002.gif"></p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td colspan="2">   <p>Дорожное покрытие</p>
+   </td>
+   <td colspan="3">   <p>Показатель <img align="absmiddle" width=19   height=24 src="8_4_files/image002.gif"> для типа шин (<img align="absmiddle"   width=16 height=19 src="8_4_files/image010.gif">)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Тип (<img align="absmiddle" width=27 height=29   src="8_4_files/image008.gif">)</p>
+   </td>
+   <td>   <p>Состояние (<img align="absmiddle" width=31 height=29   src="8_4_files/image009.gif">)</p>
+   </td>
+   <td>   <p>Высокого давления</p>
+   </td>
+   <td>   <p>Низкого давления</p>
+   </td>
+   <td>   <p>Высокой <br>   проходимости</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Асфальтобетонное, цементобетонное</p>
+   </td>
+   <td>   <p>Сухое</p>
+   </td>
+   <td>   <p>5.63 - 7.88</p>
+   </td>
+   <td>   <p>7.88 - 9 </p>
+   </td>
+   <td>   <p>7.88 - 9 </p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Увлажненное <br>   дождем</p>
+   </td>
+   <td>   <p>3.1 - 4.33</p>
+   </td>
+   <td>   <p>4.33 - 4.95</p>
+   </td>
+   <td>   <p>4.33 - 4.95</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Мокрое</p>
+   </td>
+   <td>   <p>3.94 - 5.06 </p>
+   </td>
+   <td>   <p>5.06 - 6.19</p>
+   </td>
+   <td>   <p>5.63 - 6.75</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Покрытое грязью</p>
+   </td>
+   <td>   <p>2.81 - 5.06</p>
+   </td>
+   <td>   <p>2.81 - 4.5</p>
+   </td>
+   <td>   <p>2.81 - 5.06</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Мокрый снег (t&gt;0°C)</p>
+   </td>
+   <td>   <p>2.1 - 3.4</p>
+   </td>
+   <td>   <p>2.1 - 4.2</p>
+   </td>
+   <td>   <p>2.1 - 4.2</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Гололед (t&lt;0°C)</p>
+   </td>
+   <td>   <p>0.9 - 1.69</p>
+   </td>
+   <td>   <p>1.13 - 2.25</p>
+   </td>
+   <td>   <p>0.56 - 1.13</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   <p>Булыжное</p>
+   </td>
+   <td>   <p>Сухо</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+   <td>   <p>5.63 - 6.19</p>
+   </td>
+   <td>   <p>6.75 - 7.88</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Мокрое</p>
+   </td>
+   <td>   <p>2.7 - 3.75</p>
+   </td>
+   <td>   <p>3.75 - 4.43</p>
+   </td>
+   <td>   <p>4.5 - 6.19</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   <p>Щебеночное</p>
+   </td>
+   <td>   <p>Сухое</p>
+   </td>
+   <td>   <p>5.63 - 6.75</p>
+   </td>
+   <td>   <p>6.75 - 7.88</p>
+   </td>
+   <td>   <p>6.75 - 7.88</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Мокрое</p>
+   </td>
+   <td>   <p>3.38 - 4.5</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+   <td>   <p>4.5 - 6.19</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Грунтовая дорога</p>
+   </td>
+   <td>   <p>Суха</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+   <td>   <p>5.63 - 6.75</p>
+   </td>
+   <td>   <p>5.63 - 6.75</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Увлажненная дождем</p>
+   </td>
+   <td>   <p>2.25 - 4.5</p>
+   </td>
+   <td>   <p>3.38 - 5.06</p>
+   </td>
+   <td>   <p>3.94 - 5.63</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>В период распутицы</p>
+   </td>
+   <td>   <p>1.68 - 2.81</p>
+   </td>
+   <td>   <p>1.68 - 2.81</p>
+   </td>
+   <td>   <p>2.25 - 3.38</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Целина летом:</p>
+   <p>Песок</p>
+   </td>
+   <td>   <p>Сухой</p>
+   </td>
+   <td>   <p>2.25 - 3.38</p>
+   </td>
+   <td>   <p>2.48 - 4.5</p>
+   </td>
+   <td>   <p>2.25 - 3.38</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Влажный</p>
+   </td>
+   <td>   <p>3.94 - 4.5</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Суглинок</p>
+   </td>
+   <td>   <p>Сухой</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+   <td>   <p>5.06 - 6.19</p>
+   </td>
+   <td>   <p>4.5 - 5.63</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Увлажненный до пластического состояния</p>
+   </td>
+   <td>   <p>2.25 - 4.5</p>
+   </td>
+   <td>   <p>2.81 - 4.5</p>
+   </td>
+   <td>   <p>3.38 - 5.06</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Увлажненный до текучего состояния</p>
+   </td>
+   <td>   <p>1.69 - 2.25</p>
+   </td>
+   <td>   <p>1.69 - 2.81</p>
+   </td>
+   <td>   <p>1.69 - 2.81</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Целина зимой:</p>
+   <p>снег</p>
+   </td>
+   <td>   <p>Рыхлый</p>
+   </td>
+   <td>   <p>2.25 - 3.38</p>
+   </td>
+   <td>   <p>2.25 - 4.5</p>
+   </td>
+   <td>   <p>2.25 - 4.5</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Укатанный</p>
+   </td>
+   <td>   <p>1.69 - 2.25</p>
+   </td>
+   <td>   <p>2.25 - 2.81</p>
+   </td>
+   <td>   <p>3.38 - 5.63</p>
+   </td>
+  </tr>
+ </table>
+ <p>Таблица 8.17. Нечеткая база знаний</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p><img align="absmiddle" width=19 height=24   src="8_4_files/image002.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=16 height=20   src="8_4_files/image003.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=21 height=19   src="8_4_files/image004.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=17 height=19   src="8_4_files/image005.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=20 height=20   src="8_4_files/image006.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=17 height=20   src="8_4_files/image007.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=16 height=19   src="8_4_files/image032.gif"></p>
+   </td>
+   <td>   <p>Вес</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=25 height=29   src="8_4_files/image011.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image033.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=25 height=29   src="8_4_files/image011.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image021.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image033.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=29   src="8_4_files/image035.gif"></p>
+   </td>
+   <td>   <p>0.700</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=25 height=29   src="8_4_files/image011.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"> </p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=31   src="8_4_files/image036.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image023.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.999</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.700</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=25 height=29   src="8_4_files/image011.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image021.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image038.gif"></p>
+   </td>
+   <td>   <p>0.700</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image023.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.998</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image031.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.700</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image023.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=31   src="8_4_files/image039.gif"></p>
+   </td>
+   <td>   <p>0.400</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image023.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.300</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.400</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image013.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image040.gif"></p>
+   </td>
+   <td>   <p>0.997</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image013.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image021.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image031.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.400</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.999</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image013.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image023.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image033.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image041.gif"></p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=31   src="8_4_files/image036.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.400</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image033.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.999</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image021.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image042.gif"></p>
+   </td>
+   <td>   <p>0.400</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.400</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.699</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image015.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image031.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image043.gif"></p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image015.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image021.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image030.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image015.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image015.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=31   src="8_4_files/image044.gif"></p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image015.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image018.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image024.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image030.gif"></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.600</p>
+   </td>
+  </tr>
+ </table>
+  <p>Настройка модели производилась с помощью обучающей выборки, которая представляет собой совокупность пар <влияющие факторы - коэффициент сцепления>. Для получения обучающей выборки проводился специально спланированный натурный эксперимент с автомобилем <Москвич - 412>. В этом эксперименте варьировались факторы, влияющие на коэффициент сцепления, и измерялась длина пути торможения автомобиля. Общий объем обучающей выборки составил 60 пар данных <влияющие факторы - коэффициент сцепления>. Настройка модели производилась с помощью системы FUZZY EXPERT. В результате получены функции принадлежности нечетких термов, показанные на рис.&nbsp;8.17. Параметры центров (<img align="absmiddle" width=13 height=20 src="8_4_files/image045.gif">) и крутизны (<img align="absmiddle" width=13 height=16 src="8_4_files/image046.gif">) настроенных функций принадлежности сведены в табл. 8.18. Веса нечетких правил, полученные после настройки, приведены в правой части табл. 8.17.</p>
+  <p>Таблица 8.18. Параметры функций принадлежности после настройки</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Терм</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=20   src="8_4_files/image045.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=16   src="8_4_files/image046.gif"></p>
+   </td>
+   <td>   <p>Терм</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=20   src="8_4_files/image045.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=16   src="8_4_files/image046.gif"></p>
+   </td>
+   <td>   <p>Терм</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=20   src="8_4_files/image045.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=16   src="8_4_files/image046.gif"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=25 height=29   src="8_4_files/image011.gif"></p>
+   </td>
+   <td>   <p>0.90</p>
+   </td>
+   <td>   <p>0.97</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image047.gif"></p>
+   </td>
+   <td>   <p>21.36</p>
+   </td>
+   <td>   <p>24.33</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image037.gif"></p>
+   </td>
+   <td>   <p>64.48</p>
+   </td>
+   <td>   <p>28.92</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image012.gif"></p>
+   </td>
+   <td>   <p>2.50</p>
+   </td>
+   <td>   <p>0.40</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=29   src="8_4_files/image019.gif"></p>
+   </td>
+   <td>   <p>57.15</p>
+   </td>
+   <td>   <p>38.68</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=31   src="8_4_files/image034.gif"></p>
+   </td>
+   <td>   <p>85.92</p>
+   </td>
+   <td>   <p>20.31</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image048.gif"></p>
+   </td>
+   <td>   <p>4.63</p>
+   </td>
+   <td>   <p>0.59</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=32 height=31   src="8_4_files/image036.gif"></p>
+   </td>
+   <td>   <p>90.21</p>
+   </td>
+   <td>   <p>26.55</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image027.gif"></p>
+   </td>
+   <td>   <p>10.40</p>
+   </td>
+   <td>   <p>14.74</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=29 height=29   src="8_4_files/image014.gif"></p>
+   </td>
+   <td>   <p>6.23</p>
+   </td>
+   <td>   <p>0.42</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=29   src="8_4_files/image049.gif"></p>
+   </td>
+   <td>   <p>0.14</p>
+   </td>
+   <td>   <p>0.04</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image028.gif"></p>
+   </td>
+   <td>   <p>10.40</p>
+   </td>
+   <td>   <p>30.06</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=28 height=31   src="8_4_files/image050.gif"></p>
+   </td>
+   <td>   <p>8.58</p>
+   </td>
+   <td>   <p>0.75</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image022.gif"></p>
+   </td>
+   <td>   <p>0.20</p>
+   </td>
+   <td>   <p>0.04</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image029.gif"></p>
+   </td>
+   <td>   <p>14.07</p>
+   </td>
+   <td>   <p>42.26</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=24 height=29   src="8_4_files/image016.gif"></p>
+   </td>
+   <td>   <p>24.88</p>
+   </td>
+   <td>   <p>41.76</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image023.gif"></p>
+   </td>
+   <td>   <p>0.32</p>
+   </td>
+   <td>   <p>0.07</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image030.gif"></p>
+   </td>
+   <td>   <p>64.65</p>
+   </td>
+   <td>   <p>5.82</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=27 height=29   src="8_4_files/image017.gif"></p>
+   </td>
+   <td>   <p>98.93</p>
+   </td>
+   <td>   <p>41.95</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=28 height=29   src="8_4_files/image051.gif"></p>
+   </td>
+   <td>   <p>0.10</p>
+   </td>
+   <td>   <p>38.98</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=25 height=31   src="8_4_files/image031.gif"></p>
+   </td>
+   <td>   <p>119.99</p>
+   </td>
+   <td>   <p>13.48</p>
+   </td>
+  </tr>
+ </table>
+  <p><img width=619 height=585 src="8_4_files/image052.gif"></p>
+  <p>Таблица 8.19. Сравнение решений</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td colspan="6">   <p>Факторы</p>
+   </td>
+   <td colspan="3">   <p>Коэффициент сцепления</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=14 height=18   src="8_4_files/image053.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=12 height=15   src="8_4_files/image054.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=16 height=14   src="8_4_files/image055.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=14   src="8_4_files/image056.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=15 height=15   src="8_4_files/image057.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=15   src="8_4_files/image058.gif"></p>
+   </td>
+   <td>   <p>Табличный</p>
+   </td>
+   <td>   <p>1)</p>
+   </td>
+   <td>   <p>2)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,15</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.45 - 0.55</p>
+   </td>
+   <td>   <p>0,55</p>
+   </td>
+   <td>   <p>0,54</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,45</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.25 - 0.4</p>
+   </td>
+   <td>   <p>0,33</p>
+   </td>
+   <td>   <p>0,35</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,7</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.30 - 0.45</p>
+   </td>
+   <td>   <p>0,39</p>
+   </td>
+   <td>   <p>0,39</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,4</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>45&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,17</p>
+   </td>
+   <td>   <p>95&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>120&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.22 - 0.40</p>
+   </td>
+   <td>   <p>0,26</p>
+   </td>
+   <td>   <p>0,26</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,7</p>
+   </td>
+   <td>   <p>64&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>95&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,25</p>
+   </td>
+   <td>   <p>45&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>72&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.20 - 0.40</p>
+   </td>
+   <td>   <p>0,28</p>
+   </td>
+   <td>   <p>0,29</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,9</p>
+   </td>
+   <td>   <p>84&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>81&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,27</p>
+   </td>
+   <td>   <p>67&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.25 - 0.45</p>
+   </td>
+   <td>   <p>0,32</p>
+   </td>
+   <td>   <p>0,31</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,1</p>
+   </td>
+   <td>   <p>67&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>72&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,25</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>58&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.60 - 0.70</p>
+   </td>
+   <td>   <p>0,68</p>
+   </td>
+   <td>   <p>0,68</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,4</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>80&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,14</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.25 - 0.40</p>
+   </td>
+   <td>   <p>0,27</p>
+   </td>
+   <td>   <p>0,28</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,6</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>75&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>45&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.30   - 0.45</p>
+   </td>
+   <td>   <p>0,34</p>
+   </td>
+   <td>   <p>0,31</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,9</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>35&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,29</p>
+   </td>
+   <td>   <p>45&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>110&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.20   - 0.40</p>
+   </td>
+   <td>   <p>0,29</p>
+   </td>
+   <td>   <p>0,29</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>7,4</p>
+   </td>
+   <td>   <p>35&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,19</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.60   - 0.70</p>
+   </td>
+   <td>   <p>0,62</p>
+   </td>
+   <td>   <p>0,62</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5,3</p>
+   </td>
+   <td>   <p>30&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>5&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,26</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>35&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.40   - 0.50</p>
+   </td>
+   <td>   <p>0,45</p>
+   </td>
+   <td>   <p>0,45</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,6</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.70   - 0.80</p>
+   </td>
+   <td>   <p>0,76</p>
+   </td>
+   <td>   <p>0,75</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,15</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.45   - 0.55</p>
+   </td>
+   <td>   <p>0,52</p>
+   </td>
+   <td>   <p>0,52</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,3</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.50   - 0.60</p>
+   </td>
+   <td>   <p>0,56</p>
+   </td>
+   <td>   <p>0,54</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,7</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.30   - 0.45</p>
+   </td>
+   <td>   <p>0,36</p>
+   </td>
+   <td>   <p>0,38</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,8</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>55&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,21</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>32&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.40   - 0.50</p>
+   </td>
+   <td>   <p>0,42</p>
+   </td>
+   <td>   <p>0,41</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5</p>
+   </td>
+   <td>   <p>37&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>17&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>25&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.40   - 0.50</p>
+   </td>
+   <td>   <p>0,44</p>
+   </td>
+   <td>   <p>0,42</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,8</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>28&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,16</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>52&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.50   - 0.70</p>
+   </td>
+   <td>   <p>0,55</p>
+   </td>
+   <td>   <p>0,54</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>7,3</p>
+   </td>
+   <td>   <p>41&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>37&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>50&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.60   - 0.70</p>
+   </td>
+   <td>   <p>0,62</p>
+   </td>
+   <td>   <p>0,62</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,7</p>
+   </td>
+   <td>   <p>80&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>55&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,12</p>
+   </td>
+   <td>   <p>56&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.50   - 0.60</p>
+   </td>
+   <td>   <p>0,52</p>
+   </td>
+   <td>   <p>0,54</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,8</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,23</p>
+   </td>
+   <td>   <p>10&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>80&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.35   - 0.50</p>
+   </td>
+   <td>   <p>0,39</p>
+   </td>
+   <td>   <p>0,38</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3,3</p>
+   </td>
+   <td>   <p>50&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,3</p>
+   </td>
+   <td>   <p>50&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>85&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.25   - 0.40</p>
+   </td>
+   <td>   <p>0,24</p>
+   </td>
+   <td>   <p>0,24</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2,1</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>55&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,23</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.15   - 0.20</p>
+   </td>
+   <td>   <p>0,16</p>
+   </td>
+   <td>   <p>0,15</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,6</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.70   - 0.80</p>
+   </td>
+   <td>   <p>0,74</p>
+   </td>
+   <td>   <p>0,74</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,15</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.45   - 0.55</p>
+   </td>
+   <td>   <p>0,48</p>
+   </td>
+   <td>   <p>0,51</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,3</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.50   - 0.60</p>
+   </td>
+   <td>   <p>0,53</p>
+   </td>
+   <td>   <p>0,52</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>7,2</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,19</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.60   - 0.70</p>
+   </td>
+   <td>   <p>0,63</p>
+   </td>
+   <td>   <p>0,62</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1,7</p>
+   </td>
+   <td>   <p>35&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>30&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,16</p>
+   </td>
+   <td>   <p>74&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>34&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.10   - 0.20</p>
+   </td>
+   <td>   <p>0,16</p>
+   </td>
+   <td>   <p>0,15</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1,3</p>
+   </td>
+   <td>   <p>72&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>35&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,15</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>33&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.08   - 0.15</p>
+   </td>
+   <td>   <p>0,12</p>
+   </td>
+   <td>   <p>0,13</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2,25</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>21&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,31</p>
+   </td>
+   <td>   <p>85&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>64&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.20   - 0.25</p>
+   </td>
+   <td>   <p>0,17</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,5</p>
+   </td>
+   <td>   <p>32&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>75&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,19</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>80&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.35   - 0.50</p>
+   </td>
+   <td>   <p>0,35</p>
+   </td>
+   <td>   <p>0,36</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>7,5</p>
+   </td>
+   <td>   <p>75&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>25&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>71&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>67&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.60 - 0.70</p>
+   </td>
+   <td>   <p>0,64</p>
+   </td>
+   <td>   <p>0,63</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2,6</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>50&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,16</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>55&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.20 - 0.30</p>
+   </td>
+   <td>   <p>0,22</p>
+   </td>
+   <td>   <p>0,20</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5</p>
+   </td>
+   <td>   <p>70&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,17</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>25&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.40 - 0.50</p>
+   </td>
+   <td>   <p>0,39</p>
+   </td>
+   <td>   <p>0,40</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0,7</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>75&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>10&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.05 - 0.10</p>
+   </td>
+   <td>   <p>0,06</p>
+   </td>
+   <td>   <p>0,06</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,6</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.70 - 0.80</p>
+   </td>
+   <td>   <p>0,70</p>
+   </td>
+   <td>   <p>0,70</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,45</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.25   - 0.40</p>
+   </td>
+   <td>   <p>0,40</p>
+   </td>
+   <td>   <p>0,38</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6,3</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>60&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.50   - 0.60</p>
+   </td>
+   <td>   <p>0,51</p>
+   </td>
+   <td>   <p>0,52</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5,6</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>75&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>25&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.45   - 0.55</p>
+   </td>
+   <td>   <p>0,46</p>
+   </td>
+   <td>   <p>0,44</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2,9</p>
+   </td>
+   <td>   <p>48&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>25&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,24</p>
+   </td>
+   <td>   <p>51&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>68&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.20   - 0.40</p>
+   </td>
+   <td>   <p>0,22</p>
+   </td>
+   <td>   <p>0,21</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2,85</p>
+   </td>
+   <td>   <p>56&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>75&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,29</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.20   - 0.30</p>
+   </td>
+   <td>   <p>0,20</p>
+   </td>
+   <td>   <p>0,22</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5,5</p>
+   </td>
+   <td>   <p>53&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>98&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,18</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>35&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.40   - 0.50</p>
+   </td>
+   <td>   <p>0,42</p>
+   </td>
+   <td>   <p>0,43</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5,2</p>
+   </td>
+   <td>   <p>78&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>20&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,17</p>
+   </td>
+   <td>   <p>38&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>129&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.40   - 0.55</p>
+   </td>
+   <td>   <p>0,41</p>
+   </td>
+   <td>   <p>0,41</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>10&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>115&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.70   - 0.80</p>
+   </td>
+   <td>   <p>0,67</p>
+   </td>
+   <td>   <p>0,66</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,3</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>30&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,17</p>
+   </td>
+   <td>   <p>80&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.70   - 0.80</p>
+   </td>
+   <td>   <p>0,71</p>
+   </td>
+   <td>   <p>0,71</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,3</p>
+   </td>
+   <td>   <p>90&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>10&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,13</p>
+   </td>
+   <td>   <p>10&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>120&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.35   - 0.40</p>
+   </td>
+   <td>   <p>0,33</p>
+   </td>
+   <td>   <p>0,33</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8,6</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>62&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>80&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.70   - 0.80</p>
+   </td>
+   <td>   <p>0,67</p>
+   </td>
+   <td>   <p>0,68</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4,45</p>
+   </td>
+   <td>   <p>100&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>65&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>15&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>40&nbsp;&nbsp;</p>
+   </td>
+   <td>   <p>0.25   - 0.40</p>
+   </td>
+   <td>   <p>0,36</p>
+   </td>
+   <td>   <p>0,38</p>
+   </td>
+  </tr>
+ </table>
+  <p><span style='font-size:10.0pt'>&nbsp;</p>
+  <p>1) Экспериментальный</p>
+  <p>2) По предложенной модели</p>
+  <p>Сравнение модельных и экспериментальных результатов оценки коэффициента сцепления (табл. 8.19), свидетельствует об удовлетворительной для практики адекватности полученной модели.</p>
+  <p><b><a name="4"></a>8.4.4. Пример и сравнение с действующей методикой</b></p>
+  <p>Рассматривается случай наезда на пешехода автомобилем ГАЗ-24. Информация из протокола ДТП:</p>
+  <p>·&nbsp;тип дорожного покрытия (<img align="absmiddle" width=27 height=29 src="8_4_files/image008.gif">) - асфальтобетон; </p>
+  <p>·&nbsp;состояние дорожного покрытия (<img align="absmiddle" width=31 height=29 src="8_4_files/image009.gif">) - покрытий грязью;</p>
+  <p>·&nbsp;тип шин (<img align="absmiddle" width=16 height=19 src="8_4_files/image010.gif">) - низкого давления;</p>
+  <p>·&nbsp;степень проскальзывания шины (<img align="absmiddle" width=16 height=20 src="8_4_files/image003.gif">) - качение с проскальзыванием;</p>
+  <p>·&nbsp;износ шин (<img align="absmiddle" width=21 height=19 src="8_4_files/image004.gif">) - в пределах допустимого (около 50%);</p>
+  <p>·&nbsp;давление в шинах (<img align="absmiddle" width=17 height=19 src="8_4_files/image005.gif">) - нормальное (0.2МПа);</p>
+  <p>·&nbsp;нагрузка на колесо (<img align="absmiddle" width=20 height=20 src="8_4_files/image006.gif">) - низкая (около10%);</p>
+  <p>·&nbsp;скорость автомобиля (<img align="absmiddle" width=17 height=20 src="8_4_files/image007.gif">) - 55 км/г. </p>
+  <p>Участок дороги горизонтального профиля. После наезда до полной остановки автомобиль ГАЗ - 24 в заторможенном состоянии преодолел 9.2 м. С момента возникновения преграды для движения и до момента наезда пешеход преодолел 5 м со скоростью 4.5 км/г. Пешеход был сбит передней частью автомобиля. Результаты расчетов величины коэффициента сцепления составили:</p>
+  <p>а)  по действующей методике: j = 0.25 - 0,4;<br>
+  б)  по предложенной методике: j = 0.35.</p>
+  <p>Результаты использования всей известной информации сведены в табл.&nbsp;8.20. Последний столбик этой таблицы показывает насколько важно точное знание коэффициента сцеплений для принятия решения. </p>
+
+  <p>Таблица 8.20. Результаты расчетов для принятия решения</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Методика</p>
+   </td>
+   <td>   <p>Коэффициент   сцепления</p>
+   </td>
+   <td>   <p>Остановочный   путь автомобиля</p>
+   </td>
+   <td>   <p>Расстояние до препятствия в момент возникновения опасной ситуации</p>
+   </td>
+   <td>   <p>Решение о возможности избежать наезда</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Действующая</p>
+   </td>
+   <td>   <p>0.25</p>
+   </td>
+   <td>   <p>68.8 м</p>
+   </td>
+   <td>   <p>46.2 м</p>
+   </td>
+   <td>   <p>невозможно</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>51.0 м</p>
+   </td>
+   <td>   <p>55.3 м</p>
+   </td>
+   <td>   <p>возможно</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Предложенная</p>
+   </td>
+   <td>   <p>0.35</p>
+   </td>
+   <td>   <p>55.3 м</p>
+   </td>
+   <td>   <p>53.3 м</p>
+   </td>
+   <td>   <p>невозможно</p>
+   </td>
+  </tr>
+ </table>
+ 
+ 
+   
+ 
+
+
+
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="8_5.php">К следующему разделу</a> \ <a class="menu1"
+    href="8_3.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

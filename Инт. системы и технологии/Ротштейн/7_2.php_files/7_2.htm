@@ -1,0 +1,692 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" margin height="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169671007"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/7_2.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="7_3.php">К следующему разделу</a> \ <a class="menu1"
+    href="7_1.php">К предыдущему разделу </a></p>
+
+ 
+  <p><b>7.2. Метод построения функции принадлежности</b></p>
+
+  <p>Успешное использование теории нечетких множеств предусматривает наличие функций принадлежности, с помощью которых лингвистическая информация превращается в форму, пригодную для обработки на ЭВМ. Среди многих методов определения функции принадлежности наибольшее распространение получил метод парных сравнений Саати [49]. Сложность использования этого метода обусловлена необходимостью нахождения собственного вектора матрицы парных сравнений, которая задается с помощью специально предложенной шкалы. Причем эти сложности увеличиваются с ростом размерности универсального множества, на которой задается лингвистический терм. </p>
+  <p>Предлагаемый здесь метод тоже использует матрицу парных сравнений элементов универсального множества. Но в отличие от метода Саати, он не требует нахождения собственного вектора матрицы, т.&nbsp;е. освобождает исследователя от трудоемких процедур решения характеристических уравнений. </p>
+
+
+  <p><b><a name="1"></a>7.2.1.Постановка задачи</b></p>
+
+  <p>Пусть S - некоторое свойство, которое рассматривается как лингвистический терм. Нечеткое множество, с помощью которого формализуется терм <img align="absmiddle" width=19 height=25 src="7_1_files/image051.gif">, представляет собой совокупность пар: </p>
+
+  <p><img align="absmiddle" width=351 height=79 src="7_1_files/image052.gif"></p>
+
+  <p>где <img align="absmiddle" width=175 height=39 src="7_1_files/image053.gif"> - универсальное множество, на котором задается нечеткое множество <img align="absmiddle" width=67 height=20 src="7_1_files/image054.gif">; <img align="absmiddle" width=80 height=39 src="7_1_files/image055.gif"> - степень принадлежности элемента  <img align="absmiddle" width=56 height=25 src="7_1_files/image056.gif"> нечеткому множеству <img align="absmiddle" width=17 height=27 src="7_1_files/image057.gif">.</p>
+  <p>Задача состоит в том, чтобы определить значения <img align="absmiddle" width=80 height=39 src="7_1_files/image055.gif"> для всех <img align="absmiddle" width=51 height=32 src="7_1_files/image058.gif">. Совокупность этих значений и будет составлять неизвестную функцию принадлежности. </p>
+
+
+  <p><b><a name="2"></a>7.2.2. Основные определения и соотношения</b></p>
+
+  <p>Метод, который предлагается для решения поставленной задачи, базируется на идее распределения степеней принадлежности элементов универсального множества согласно с их рангами. Эта идея раньше использовалась в теории структурного анализа систем, где рассмотрены разные способы определения рангов элементов. Методика распределения надежности по элементам системы согласно их рангов приведена в книге [27]. </p>
+  <p>В нашем случае под рангом элемента <img align="absmiddle" width=68 height=27 src="7_1_files/image059.gif"> будем понимать число <img align="absmiddle" width=75 height=39 src="7_1_files/image060.gif">, которое характеризует значимость этого элемента в формировании свойства, которое описывается нечетким термом <img align="absmiddle" width=17 height=27 src="7_1_files/image057.gif">. Допускаем, что выполняется правило: <i>чем больший ранг элемента, тем больше степень принадлежности</i>. </p>
+  <p>В дальнейшем введем такие обозначения: </p>
+
+  <p><img align="absmiddle" width=108 height=39 src="7_1_files/image061.gif">, <img align="absmiddle" width=119 height=39 src="7_1_files/image062.gif">, <img align="absmiddle" width=51 height=32 src="7_1_files/image058.gif">.</p>
+
+  <p>Тогда правило распределения степеней принадлежности можно задать в виде соотношения: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=171 height=65 src="7_1_files/image063.gif">,                                        </td>
+      <td align="right"> (7.7)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>до которого прибавляется условие нормирования: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=143 height=31 src="7_1_files/image064.gif">                                            </td>
+      <td align="right"> (7.8)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Используя соотношение (7.7), легко определить степени принадлежности всех элементов универсального множества через степень принадлежности опорного элемента. </p>
+  <p>Если опорным является элемент <img align="absmiddle" width=67 height=27 src="7_1_files/image065.gif"> с принадлежностью  <img align="absmiddle" width=24 height=29 src="7_1_files/image066.gif">  то</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=96 height=64 src="7_1_files/image067.gif">, <img align="absmiddle" width=97 height=65 src="7_1_files/image068.gif">, ... , <img align="absmiddle" width=101 height=65 src="7_1_files/image069.gif"> .                    </td>
+      <td align="right"> (7.9)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Для опорного элемента <img align="absmiddle" width=68 height=27 src="7_1_files/image070.gif"> принадлежностью <img align="absmiddle" width=28 height=29 src="7_1_files/image071.gif"> получаем: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=103 height=65 src="7_1_files/image072.gif">, <img align="absmiddle" width=104 height=65 src="7_1_files/image073.gif">, ..., <img align="absmiddle" width=107 height=65 src="7_1_files/image074.gif"> .                 </td>
+      <td align="right">(7.10)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>И наконец, для опорного элемента <img align="absmiddle" width=68 height=28 src="7_1_files/image075.gif"> с принадлежностью <img align="absmiddle" width=28 height=31 src="7_1_files/image076.gif"> имеем: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=101 height=65 src="7_1_files/image077.gif">, ..., <img align="absmiddle" width=144 height=65 src="7_1_files/image078.gif"> .                          </td>
+      <td align="right">(7.11)</td>
+    </tr>
+  </table>
+  </p>
+  <p>Учитывая условие нормировки (7.8), из соотношений (7.9) - (7.11) находим: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=285 height=276 src="7_1_files/image079.gif">     .                     </td>
+      <td align="right">(7.12)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Полученные формулы (7.12) дают возможность вычислять степени принадлежности <img align="absmiddle" width=80 height=39 src="7_1_files/image055.gif">   элементов <img align="absmiddle" width=68 height=27 src="7_1_files/image080.gif"> к нечеткому терму <img align="absmiddle" width=17 height=27 src="7_1_files/image057.gif"> двумя независимыми путями: </p>
+  <p>1) по абсолютным оценкам уровней <img align="absmiddle" width=19 height=31 src="7_1_files/image081.gif">, <img align="absmiddle" width=51 height=32 src="7_1_files/image058.gif">, которые определяются согласно методикам, предложенных в теории структурного анализа систем [17,27]. Для экспертных оценок рангов можно использовать 9-ти бальную шкалу (1 - наименьший ранг, 9 - наибольший ранг) или принцип термометра, который рассмотрен в главе 2.</p>
+  <p>2) по относительным оценкам рангов <img align="absmiddle" width=75 height=69 src="7_1_files/image082.gif">,  <img align="absmiddle" width=68 height=32 src="7_1_files/image083.gif">  , которые образуют матрицу: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=269 height=271 src="7_1_files/image084.gif"> .                           </td>
+      <td align="right">(7.13)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Эта матрица обладает следующими свойствами: </p>
+  <p>а) она диагональная, т.&nbsp;е. <img align="absmiddle" width=55 height=31 src="7_1_files/image085.gif">, <img align="absmiddle" width=51 height=32 src="7_1_files/image058.gif">.</p>
+  <p>б) элементы, которые симметричны относительно главной диагонали, связаны зависимостью: <img align="absmiddle" width=99 height=35 src="7_1_files/image086.gif">.</p>
+  <p>в) она транзитивна, т.&nbsp;е. <img align="absmiddle" width=116 height=35 src="7_1_files/image087.gif">  , поскольку <img align="absmiddle" width=116 height=69 src="7_1_files/image088.gif">.</p>
+  <p>Наличие этих свойств приводит к тому, что при известных элементах одной строки матрицы <img align="absmiddle" width=17 height=19 src="7_1_files/image089.gif"> легко определить элементы всех других строк. Если известная <img align="absmiddle" width=15 height=16 src="7_1_files/image090.gif">-я строка, т.&nbsp;е. элементы <img align="absmiddle" width=29 height=31 src="7_1_files/image091.gif">, <img align="absmiddle" width=73 height=32 src="7_1_files/image092.gif">, то произвольный элемент <img align="absmiddle" width=28 height=31 src="7_1_files/image093.gif"> находится так: </p>
+
+  <p><img align="absmiddle" width=125 height=35 src="7_1_files/image094.gif">,  <img align="absmiddle" width=87 height=32 src="7_1_files/image095.gif"> .</p>
+
+  <p>Поскольку матрица (7.13) может быть интерпретирована как матрица парных сравнений рангов, то для экспертных оценок элементов этой матрицы можно использовать 9-ти бальную шкалу Саати: <img align="absmiddle" width=79 height=69 src="7_1_files/image096.gif">  В нашем случае эта шкала формируется так: </p>
+  <p>1 - при <i>отсутствии преимущества</i> <img align="absmiddle" width=23 height=35 src="7_1_files/image097.gif"><i> </i>над <img align="absmiddle" width=17 height=31 src="7_1_files/image098.gif">; </p>
+  <p>3 -при <i>слабом преимуществе</i> <img align="absmiddle" width=23 height=35 src="7_1_files/image097.gif"> над <img align="absmiddle" width=17 height=31 src="7_1_files/image098.gif">; </p>
+  <p>5 -при <i>существенном преимуществе</i> <img align="absmiddle" width=23 height=35 src="7_1_files/image097.gif"> над <img align="absmiddle" width=17 height=31 src="7_1_files/image098.gif">; </p>
+  <p>7 -при <i>явном преимуществе </i><img align="absmiddle" width=23 height=35 src="7_1_files/image097.gif"> над <img align="absmiddle" width=17 height=31 src="7_1_files/image098.gif">; </p>
+  <p>9-при <i>абсолютном преимуществе</i> <img align="absmiddle" width=23 height=35 src="7_1_files/image097.gif"> над <img align="absmiddle" width=17 height=31 src="7_1_files/image098.gif">; </p>
+  <p>2,4,6,8 - <i>промежуточные</i> сравнительные оценки. </p>
+
+  <p>Таким образом, с помощью полученных формул (7.12), экспертные знания о рангах элементов или их парные сравнения преобразуются в функцию принадлежности нечеткого терма. </p>
+  <p><b><a name="3"></a>7.2.3. Алгоритм построения функции принадлежности</b></p>
+
+  <p>Для реализации предложенного метода необходимо: </p>
+  <p>1<img align="absmiddle" width=12 height=27 src="7_1_files/image099.gif">.&nbsp;Задать лингвистическую переменную <img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif">.</p>
+  <p>2<img align="absmiddle" width=12 height=27 src="7_1_files/image099.gif">.&nbsp;Определить универсальное множество, на котором задается переменная <img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif">.</p>
+  <p>3<img align="absmiddle" width=12 height=27 src="7_1_files/image099.gif">.&nbsp;Задать совокупность нечетких термов <img align="absmiddle" width=152 height=39 src="7_1_files/image100.gif">, которые используются для оценки переменной <img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif">.</p>
+  <p>4<img align="absmiddle" width=12 height=27 src="7_1_files/image099.gif">.&nbsp;Для каждого терма  <img align="absmiddle" width=93 height=41 src="7_1_files/image101.gif"> сформировать матрицу (7.13). </p>
+  <p>5<img align="absmiddle" width=12 height=27 src="7_1_files/image099.gif">.&nbsp;Используя формулы (7.12) вычислить элементы функций принадлежности для каждого терма. Нормирование найденных функций осуществляется путем деления на наибольшие степени принадлежности. </p>
+
+  <p><b>Пример&nbsp;7.1.</b> Рассмотрим лингвистическую переменную "КАЧЕСТВО СЫРЬЯ для процесса биоконверсии", которая определена на универсальном множестве {&nbsp;<img align="absmiddle" width=23 height=27 src="7_1_files/image102.gif">- коровы, <img align="absmiddle" width=24 height=27 src="7_1_files/image103.gif"> - бычки, <img align="absmiddle" width=25 height=27 src="7_1_files/image104.gif"> - свиньи,<img align="absmiddle" width=25 height=27 src="7_1_files/image105.gif"> - куры, <img align="absmiddle" width=25 height=27 src="7_1_files/image106.gif"> - индюки&nbsp;} [41]. Уровень качества будем оценивать такими нечеткими термами: Н - низкий; С - средний; В - высокий. </p>
+  <p>Матрицы (7.13)  для каждого терма сформировано таким образом: </p>
+
+  <table border=0 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>1</sub></p>
+   </td>
+   <td>   <p>u<sub>2</sub></p>
+   </td>
+   <td>   <p>u<sub>3</sub></p>
+   </td>
+   <td>   <p>u<sub>4</sub></p>
+   </td>
+   <td>   <p>u<sub>5</sub></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>1</sub></p>
+   </td>
+   <td>   <p>u<sub>2</sub></p>
+   </td>
+   <td>   <p>u<sub>3</sub></p>
+   </td>
+   <td>   <p>u<sub>4</sub></p>
+   </td>
+   <td>   <p>u<sub>5</sub></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>1</sub></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>7/9</p>
+   </td>
+   <td>   <p>5/9</p>
+   </td>
+   <td>   <p>3/9</p>
+   </td>
+   <td>   <p>1/9</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>1</sub></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>2</sub></p>
+   </td>
+   <td>   <p>9/7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>3/7</p>
+   </td>
+   <td>   <p>1/7</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>2</sub></p>
+   </td>
+   <td>   <p>1/3</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>5/3</p>
+   </td>
+   <td>   <p>7/3</p>
+   </td>
+   <td>   <p>9/3</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=26 height=22   src="7_1_files/image107.gif">=</p>
+   </td>
+   <td>   <p>u<sub>3</sub></p>
+   </td>
+   <td>   <p>9/5</p>
+   </td>
+   <td>   <p>7/5</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>3/5</p>
+   </td>
+   <td>   <p>1/5</p>
+   </td>
+   <td>   <p>,</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=23 height=20   src="7_1_files/image108.gif">=</p>
+   </td>
+   <td>   <p>u<sub>3</sub></p>
+   </td>
+   <td>   <p>1/5</p>
+   </td>
+   <td>   <p>3/5</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>7/5</p>
+   </td>
+   <td>   <p>9/5</p>
+   </td>
+   <td>   <p> ,</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>4</sub></p>
+   </td>
+   <td>   <p>9/3</p>
+   </td>
+   <td>   <p>7/3</p>
+   </td>
+   <td>   <p>5/3</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1/3</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>4</sub></p>
+   </td>
+   <td>   <p>1/7</p>
+   </td>
+   <td>   <p>3/7</p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>9/7</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>5</sub></p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>5</sub></p>
+   </td>
+   <td>   <p>1/9</p>
+   </td>
+   <td>   <p>3/9</p>
+   </td>
+   <td>   <p>5/9</p>
+   </td>
+   <td>   <p>7/9</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+ </table>
+
+  <table border=0 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>1</sub></p>
+   </td>
+   <td>   <p>u<sub>2</sub></p>
+   </td>
+   <td>   <p>u<sub>3</sub></p>
+   </td>
+   <td>   <p>u<sub>4</sub></p>
+   </td>
+   <td>   <p>u<sub>5</sub></p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>1</sub></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>7/5</p>
+   </td>
+   <td>   <p>9/5</p>
+   </td>
+   <td>   <p>7/5</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>2</sub></p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=20 height=22   src="7_1_files/image109.gif">=</p>
+   </td>
+   <td>   <p>u<sub>3</sub></p>
+   </td>
+   <td>   <p>5/9</p>
+   </td>
+   <td>   <p>7/9</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>7/9</p>
+   </td>
+   <td>   <p>5/9</p>
+   </td>
+   <td>   <p> .</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>4</sub></p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>9/7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>5/7</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>u<sub>5</sub></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>7/5</p>
+   </td>
+   <td>   <p>9/5</p>
+   </td>
+   <td>   <p>7/5</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td><p>&nbsp;</td>
+  </tr>
+  <tr>   <td width=189 style='border:none'></td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+ </table>
+
+  <p>После обработки этих матриц по формулам (7.12) получим функции принадлежности, которые в нормированном виде приведены на рис.7.2. </p>
+<img width=455 height=307 src="7_1_files/image114.gif">
+
+
+
+  <p>Рис.7.2. Функции принадлежности нечетких множеств.</p>
+
+  <p>Главным преимуществом предложенного метода является то, что в отличие от известного метода Саати, он не требует решения характеристического уравнения матрицы парных сравнений при нахождении элементов ее собственного вектора. Кроме того, полученные соотношения дают возможность вычислять функции принадлежности с использованием ранговых оценок, которые задаются экспертно, или при помощи методик, разработанных в теории структурного анализа систем.</p>
+
+
+ 
+ 
+
+
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="7_3.php">К следующему разделу</a> \ <a class="menu1"
+    href="7_1.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

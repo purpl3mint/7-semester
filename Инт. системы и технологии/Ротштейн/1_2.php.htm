@@ -1,0 +1,1301 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="1_2.php_files/default.css" type="text/css"></head><body leftmargin="0" topmargin="0" background="1_2.php_files/1_2.htm" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="1_2.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="1_2.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="1_2.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="1_2.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="1_2.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="1_2.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="1_2.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="1_2.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="1_2.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="1_2.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="1_2.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="1_2.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="1_2.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="1_2.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/1_2.php"><span class="text1">Вход</span></a></td>
+<td><img src="1_2.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+  <tbody><tr>
+   <td width="10"></td>
+    <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+    <p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php">К предыдущему разделу </a></p>
+  <p><b>1.2.&nbsp;Генетические алгоритмы</b></p>
+  <p>Как
+отмечалось в предисловии, оптимизация является важнейшим этапом решения
+задач идентификации. Основные трудности применения классических методов
+оптимизации нелинейных функций [10,58] связаны с проблемами локального
+экстремума (рис.&nbsp;1.3) и &lt;проклятия размерности&gt;
+(рис.&nbsp;1.4). </p>
+ 
+<p><img src="1_2.php_files/image133.gif" height="320" width="647">
+</p><p>Попытки преодоления указанных проблем привели к созданию теории
+генетических алгоритмов, которые выращивают оптимальное решение путем
+скрещивания исходных вариантов с последующей селекцией по некоторому
+критерию (рис. 1.5). Излагаемые в этом разделе общие сведения о
+генетических алгоритмах, базируются на работах [8,58,59,81]. Примеры,
+иллюстрирующие генетические алгоритмы, являются оригинальными.</p>
+<p><img src="1_2.php_files/image001.htm"><br>Рис. 1.5. Идея
+генетического алгоритма (Goldberg D. Genetic Algorithms in Search,
+Optimization and Machine Learning, Addison Wesley, 1989)</p>
+<p><a name="1"></a><b>1.2.1. Принципы построения генетических алгоритмов</b></p>
+  <p>Генетический
+алгоритм (ГА) можно рассматривать как одну из разновидностей случайного
+поиска [30], которая основана на механизмах, напоминающих естественный
+отбор и размножение.</p>
+  <p>В отличие от существующих методик, ГА начинает работу с некоторого случайного набора исходных решений, который называется <i>популяцией</i>. Каждый элемент из популяции называется <i>хромосомой</i>
+и представляет некоторое решение проблемы в первом приближении.
+Хромосома представляет собой строку символов некоторой природы, не
+обязательно бинарных. Хромосомы эволюционируют на протяжении множества
+итераций, носящих название <i>поколений </i> (или генераций). В ходе
+каждой итерации хромосома оценивается с использованием некоторой меры
+соответствия (англ. fitness function ), которую мы будем называть <i>функцией соответствия</i>. Для создания следующего поколения новые хромосомы, называемые <i>отпрысками</i>,
+формируются либо путем скрещивания (англ. crossover) двух хромосом -
+родителей из текущей популяции, либо путем случайного изменения (<i>мутации</i>)
+одной хромосомы. Новая популяция формируется путем (а) выбора согласно
+функции соответствия некоторых родителей и отпрысков и (б) удаления
+оставшихся для того, чтобы сохранять постоянным размер популяции.</p>
+  <p>Хромосомы
+с большей функцией соответствия имеют больше шансов быть выбранными
+(выжить). После нескольких итераций алгоритм сходится к лучшей
+хромосоме, которая является либо оптимальным, либо близким к
+оптимальному решением. Пусть <img src="1_2.php_files/image001_002.gif" align="absmiddle" height="32" width="52"> и <img src="1_2.php_files/image002_002.gif" align="absmiddle" height="32" width="52"> являются родителями и отпрысками из текущей генерации <img src="1_2.php_files/image003_002.gif" align="absmiddle" height="17" width="12">. Общая структура генетического алгоритма (рис. 1.6) имеет вид:</p>
+  <p><b>Процедура: Генетический алгоритм</b></p>
+  <p><b>begin</b></p>
+  <p>&nbsp; <img src="1_2.php_files/image003_002.gif" align="absmiddle" height="17" width="12">:=0 ; </p>
+  <p>&nbsp; Задать_начальное_значение <img src="1_2.php_files/image001_002.gif" align="absmiddle" height="32" width="52">;</p>
+  <p>&nbsp; Оценить <img src="1_2.php_files/image001_002.gif" align="absmiddle" height="32" width="52">с помощью функции соответствия;</p>
+  <p><b>&nbsp; while</b> (нет условия_завершения) <b>do</b></p>
+  <p>&nbsp; &nbsp; Cкрещивать <img src="1_2.php_files/image001_002.gif" align="absmiddle" height="32" width="52">чтобы получить <img src="1_2.php_files/image002_002.gif" align="absmiddle" height="32" width="52">;</p>
+  <p>&nbsp; &nbsp; Оценить <img src="1_2.php_files/image002_002.gif" align="absmiddle" height="32" width="52">с помощью функции соответствия; </p>
+  <p>&nbsp; &nbsp; Выбрать <img src="1_2.php_files/image004_002.gif" align="absmiddle" height="32" width="75"> из <img src="1_2.php_files/image001_002.gif" align="absmiddle" height="32" width="52"> и <img src="1_2.php_files/image002_002.gif" align="absmiddle" height="32" width="52"> ;</p>
+  <p>&nbsp; &nbsp; <img src="1_2.php_files/image003_002.gif" align="absmiddle" height="17" width="12"><i>:=</i><img src="1_2.php_files/image003_002.gif" align="absmiddle" height="17" width="12">+1 ;</p>
+  <p><b>&nbsp; end</b></p>
+  <p><b>end.</b></p>
+  <p><img src="1_2.php_files/image005_002.gif" height="795" width="592"></p>
+  <p>Таким образом, используются два вида операций:</p>
+  <p>  1. Генетические операции: скрещивание и мутация;</p>
+  <p>  2. Эволюционная операция: выбор.</p>
+  <p>Генетические
+операции напоминают процесс наследования генов при создании нового
+отпрыска в каждой генерации. Эволюционная операция, осуществляющая
+переход от одной популяции к следующей, напоминает процесс Дарвиновской
+эволюции.</p>
+ <p><b><a name="2"></a>1.2.2. Основные операции генетических алгоритмов</b></p>
+  <p><b>Операция скрещивания.</b> <i>Скрещивание </i>является
+главной генетической операцией. Эта операция выполняется над двумя
+хромосомами- родителями и создает отпрыск путем комбинирования
+особенностей обоих родителей. Приведем простейший пример скрещивания. В
+начале выберем некоторую случайную точку (точка скрещивания - англ.
+cut-point), после этого создадим хромосому-отпрыск путем комбинирования
+сегмента первого родителя, стоящего слева от выбранной точки
+скрещивания, с сегментом второго родителя, стоящего по правую сторону
+от точки скрещивания, как это показано на рис. 1.7.</p>
+  <p><img src="1_2.php_files/image006_002.gif" height="195" width="570"></p>
+ <p>Этот
+метод работает очень хорошо, если хромосомы представляют собой битовые
+строчки. Кроме того производительность всего генетического алгоритма в
+первую очередь зависит от производительности используемой <br> операции скрещивания.</p>
+  <p>Доля производимых на каждой итерации отпрысков называется <i>коэффициентом скрещивания</i> (<img src="1_2.php_files/image007_002.gif" align="absmiddle" height="31" width="28">). Произведение <img src="1_2.php_files/image007_002.gif" align="absmiddle" height="31" width="28"><img src="1_2.php_files/image008_002.gif" align="absmiddle" height="15" width="13">&nbsp;<i>размер_популяции</i>
+показывает количество отпрысков. Большое значение этого коэффициента
+позволяет исследовать больше областей пространства поиска (или
+пространства решений) и уменьшает шанс попадания в локальный минимум.
+Но если значение <img src="1_2.php_files/image007_002.gif" align="absmiddle" height="31" width="28"> слишком велико, то это приведет к большим затратам времени вычислений на исследование бесперспективных областей.</p>
+  <p><b>Операция мутации.</b> <i>Мутация</i>
+- это фоновая операция, производящая случайное изменение в различных
+хромосомах. Наипростейший вариант мутации состоит в случайном изменении
+одного или более генов. В&nbsp;&nbsp;ГА мутация играет важную роль для
+(а)&nbsp;восстановления генов, выпавших из популяции в ходе операции
+выбора, так что они могут быть опробованы в новых комбинациях,
+(б)&nbsp;формирования генов, которые не были представлены в исходной
+популяции. Интенсивность мутаций определяется <i>коэффициентом мутаций</i> (<img src="1_2.php_files/image009_002.gif" align="absmiddle" height="31" width="33">).
+Он представляет собой долю генов, подвергающихся мутации на данной
+итерации, в расчете на их общее число. Слишком малое значение этого
+коэффициента приводит к тому, что многие гены, которые могли бы быть
+полезными, никогда не будут рассмотрены. В то же время слишком большое
+значение коэффициента <img src="1_2.php_files/image009_002.gif" align="absmiddle" height="31" width="33">
+приведет к большим случайным возмущениям. Отпрыски перестанут быть
+похожими на родителей и алгоритм потеряет возможность обучаться,
+сохраняя наследственные признаки .</p>
+  <p><b><a name="3"></a>1.2.3. Стратегии поиска</b></p>
+  <p>Поиск
+является одним из наиболее универсальных методов нахождения решения для
+случаев, когда априори не известна последовательность шагов, ведущая к
+оптимуму.</p>
+  <p>Существуют две поисковые стратегии: эксплуатация
+наилучшего решения и исследование пространства решений. Градиентный
+метод является примером стратегии, которая выбирает наилучшее решение
+для возможного улучшения, игнорируя в то же время исследование всего
+пространства поиска. Случайный поиск является примером стратегии,
+которая, наоборот, исследует пространство решений, игнорируя
+исследование перспективных областей поискового пространства.
+Генетический алгоритм представляет собой класс поисковых методов общего
+назначения, которые комбинируют элементы обоих стратегий. Использование
+этих методов позволяет удерживать приемлемый баланс между исследованием
+и эксплуатацией наилучшего решения. В начале работы генетического
+алгоритма популяция случайна и имеет разнообразные элементы. Поэтому
+оператор скрещивания осуществляет обширное исследование пространства
+решений. С ростом значения функции соответствия получаемых решений
+оператор скрещивания обеспечивает исследование окрестностей каждого из
+них. Другими словами, тип поисковой стратегии (эксплуатация наилучшего
+решения или исследование области решений) для оператора скрещивания
+определяется разнообразием популяции, а не самим этим оператором.</p>
+  <p><b><a name="4"></a>1.2.4. Отличие от классического поиска</b></p>
+  <p>В
+общем, алгоритм решения оптимизационных проблем представляет собой
+последовательность вычислительных шагов, которые асимптотически
+сходятся к оптимальному решению. Большинство классических методов
+оптимизации генерируют детерминированную последовательность вычислений,
+основанную на градиенте или производной целевой функции более высокого
+порядка. Эти методы применяются к одной исходной точке поискового
+пространства. Затем решение постепенно улучшается в направлении
+наискорейшего роста или убывания целевой функции. При таком поточечном
+подходе существует опасность попадания в локальный оптимум. </p>
+  <p>Генетический
+алгоритм осуществляет одновременный поиск по многим направлениям путем
+использования популяции возможных решений. Переход от одной популяции к
+другой позволяет избежать попадания в локальный оптимум. Популяция
+претерпевает нечто наподобие эволюции: в каждом поколении относительно
+хорошие решения репродуцируются, в то время как относительно плохие
+отмирают. ГА используют вероятностные правила для определения
+репродуцируемой или уничтожаемой хромосомы, чтобы направить поиск к
+областям вероятного улучшения целевой функции.</p>
+  <p><b><a name="5"></a>1.2.5. Преимущества генетических алгоритмов</b></p>
+  <p>Существуют два главных преимущества генетических алгоритмов перед классическими оптимизационными методиками:</p>
+  <p>1.&nbsp;ГА
+не имеет значительных математических требований к видам целевых функций
+и ограничений. Исследователь не должен упрощать модель объекта, теряя
+ее адекватность, и искусственно добиваясь возможности применения
+доступных математических методов. При этом могут использоваться самые
+разнообразные целевые функции и виды ограничений (линейные и
+нелинейные), определенные на дискретных, непрерывных и смешанных
+универсальных множествах.</p>
+  <p>2.&nbsp;При использовании
+классических пошаговых методик глобальный оптимум может быть найден
+только в том случае когда проблема обладает свойством выпуклости. В
+тоже время эволюционные операции генетических алгоритмов позволяют
+эффективно отыскивать глобальный оптимум.</p>
+  <p><b><a name="6"></a>1.2.6. Терминология</b></p>
+  <p>Поскольку
+ГА происходят как из естественных наук (генетика), так и из
+компьютерных наук, то используемая терминология представляет собой
+сплав естественного и искусственного. Соответствие терминов,
+относящихся к ГА и тех, которые относятся к решению оптимизационных
+проблем, приведено в табл. 1.1.</p>
+  <p>Таблица 1.1&nbsp;&nbsp;</p>
+  <p>Основные термины теории ГА</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>ГА</p>
+   </td>
+   <td>   <p>Объяснение</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1. &nbsp;   Хромосомы</p>
+   <p>2. &nbsp;   Ген (несколько бит)</p>
+   <p>3. &nbsp;   Локус (местоположение)</p>
+   <p>4. &nbsp;   Аллель </p>
+   <p>5. &nbsp;   Фенотип</p>
+   <p>6. &nbsp;   Генотип</p>
+   </td>
+   <td>   <p>Решение   (код)</p>
+   <p>Часть   решения</p>
+   <p>Позиция   гена в хромосоме</p>
+   <p>Значение   гена</p>
+   <p>Раскодированное   решение</p>
+   <p>Закодированное   решение</p>
+   </td>
+  </tr>
+ </tbody></table>
+  <p><b><a name="7"></a>1.2.7.&nbsp;Примеры генетической оптимизации</b></p>
+
+  <p>В этом разделе мы подробно объясним как в действительности работает генетический алгоритм на двух простых примерах. </p>
+
+  <p><b>Пример 1.9. Задача оптимизации. </b>Рассмотрим нелинейную целевую функцию с ограничениями:</p>
+
+  <p><img src="1_2.php_files/image010.gif" align="absmiddle" height="57" width="483"></p>
+
+  <p>0.5<img src="1_2.php_files/image011_002.gif" align="absmiddle" height="17" width="15"><img src="1_2.php_files/image012_002.gif" align="absmiddle" height="29" width="21"><img src="1_2.php_files/image011_002.gif" align="absmiddle" height="17" width="15">1.1,        1.0<img src="1_2.php_files/image011_002.gif" align="absmiddle" height="17" width="15"><img src="1_2.php_files/image013.gif" align="absmiddle" height="29" width="27"><img src="1_2.php_files/image011_002.gif" align="absmiddle" height="17" width="15">4.6</p>
+
+  <p>Требуется найти:    <img src="1_2.php_files/image014_002.gif" align="absmiddle" height="52" width="156"></p>
+
+  <p>Поверхность целевой функции показана на рис. 1.8.</p>
+
+  <p><b>Кодирование. </b>Для
+реализации генетического алгоритма необходимо закодировать
+оптимизируемые параметры в двоичные строчки. Длина строчки зависит от
+требуемой точности. Например, пусть переменная <img src="1_2.php_files/image015_002.gif" align="absmiddle" height="35" width="27"> имеет интервал изменения <img src="1_2.php_files/image016_002.gif" align="absmiddle" height="49" width="84">, и требуемая точность - пять знаков после запятой. В этом случае интервал изменения переменной <img src="1_2.php_files/image015_002.gif" align="absmiddle" height="35" width="27"> должен быть разбит как минимум на <img src="1_2.php_files/image017_002.gif" align="absmiddle" height="49" width="141"> квантов. Требуемое число битов <img src="1_2.php_files/image018_002.gif" align="absmiddle" height="35" width="31"> находится по формуле:</p>
+
+  <p><img src="1_2.php_files/image019_002.gif" align="absmiddle" height="55" width="324"></p>
+
+  <p>Обратное преобразование строки битов в действительное значение переменной <img src="1_2.php_files/image015_002.gif" align="absmiddle" height="35" width="27"> выполняется по следующей формуле:</p>
+
+  <p><img src="1_2.php_files/image020_002.gif" align="absmiddle" height="35" width="93"> <i>десятичное_число</i>( <i>строка_битов<img src="1_2.php_files/image021_002.gif" align="absmiddle" height="35" width="15"> </i>) <img src="1_2.php_files/image022_002.gif" align="absmiddle" height="76" width="89">  ,</p>
+
+  <p>где    <i>десятичное_число </i>( <i>строка_битов<img src="1_2.php_files/image021_002.gif" align="absmiddle" height="35" width="15"></i>) представляет собой десятичное значение, закодированное в бинарной строке <i>строка_битов<img src="1_2.php_files/image021_002.gif" align="absmiddle" height="35" width="15"></i></p>
+
+ 
+ <p><img src="1_2.php_files/image001.gif" height="397" width="634"></p>
+ <br><p>Предположим,
+что требуемая точность составляет 5 знаков после запятой. Найдем число
+битов, необходимых для кодирования переменных <img src="1_2.php_files/image002.gif" align="absmiddle" height="29" width="23"> и <img src="1_2.php_files/image003.gif" align="absmiddle" height="29" width="27">:</p>
+  <p>(1.1 - 0.5) <img src="1_2.php_files/image004.gif" align="absmiddle" height="15" width="13">100,000 = 60,000</p>
+  <p>2<img src="1_2.php_files/image005.gif" align="absmiddle" height="28" width="21"><img src="1_2.php_files/image006.gif" align="absmiddle" height="15" width="15">60,000<img src="1_2.php_files/image007.gif" align="absmiddle" height="17" width="15">2<img src="1_2.php_files/image008.gif" align="absmiddle" height="28" width="21">- 1,                                    <img src="1_2.php_files/image009.gif" align="absmiddle" height="29" width="68"></p>
+  <p>(4.6 - 1.0) <img src="1_2.php_files/image004.gif" align="absmiddle" height="15" width="13">100,000 = 360,000</p>
+  <p>2<img src="1_2.php_files/image010_002.gif" align="absmiddle" height="28" width="21"><img src="1_2.php_files/image006.gif" align="absmiddle" height="15" width="15">360,000<img src="1_2.php_files/image007.gif" align="absmiddle" height="17" width="15">2<img src="1_2.php_files/image011.gif" align="absmiddle" height="28" width="21">- 1,                                 <img src="1_2.php_files/image012.gif" align="absmiddle" height="29" width="71"></p>
+  <p><img src="1_2.php_files/image013_002.gif" align="absmiddle" height="29" width="220"> .</p>
+  <p>Суммарная длина хромосомы составляет 35 битов, которые можно представить следующим образом:</p>
+  <p><img src="1_2.php_files/image014.gif" height="83" width="560"></p>
+
+
+
+  <br>  <p>Соответствующие значения переменных <img src="1_2.php_files/image015.gif" align="absmiddle" height="29" width="21"> и <img src="1_2.php_files/image016.gif" align="absmiddle" height="29" width="25"> даны ниже:</p>
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Двоичное число</p>
+   </td>
+   <td>   <p>Десятичное число</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image015.gif" align="absmiddle" height="29" width="21"></p>
+   </td>
+   <td>   <p>0100000101010010</p>
+   </td>
+   <td>   <p>16722</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image003.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td>   <p>1001101111011111110</p>
+   </td>
+   <td>   <p>319230</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p><img src="1_2.php_files/image002.gif" align="absmiddle" height="29" width="23">= 0.5 + 16722<img src="1_2.php_files/image004.gif" align="absmiddle" height="15" width="13"><img src="1_2.php_files/image017.gif" align="absmiddle" height="56" width="85">0.65310   ,</p>
+
+  <p><img src="1_2.php_files/image003.gif" align="absmiddle" height="29" width="27">= 1.0 + 319230 <img src="1_2.php_files/image004.gif" align="absmiddle" height="15" width="13"><img src="1_2.php_files/image018.gif" align="absmiddle" height="56" width="87"> 3.19198  .</p>
+
+  <p><b>Исходная популяция. </b>Исходная популяция генерируется случайно:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2"><tbody><tr><td>   <p><i>v</i><b><img src="1_2.php_files/image019.gif" align="absmiddle" height="22" width="8">  =</b></p>
+   </td>
+   <td>   <p>[01000001010100101001101111011111110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image020.gif" align="absmiddle" height="22" width="11">  =</b></p>
+   </td>
+   <td>   <p>[10001110101110011000000010101001000]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image021.gif" align="absmiddle" height="23" width="10">  =</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image022.gif" align="absmiddle" height="22" width="11">  =</b></p>
+   </td>
+   <td>   <p>[01100110110100101101000000010111001]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image023.gif" align="absmiddle" height="23" width="10">  =</b></p>
+   </td>
+   <td>   <p>[00000010111101100010001110001101000]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image024.gif" align="absmiddle" height="23" width="10">  =</b></p>
+   </td>
+   <td>   <p>[10111110101011011000000010110011001]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image025.gif" align="absmiddle" height="23" width="11">  =</b></p>
+   </td>
+   <td>   <p>[00110100010011111000100110011101101]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image026.gif" align="absmiddle" height="23" width="10">  =</b></p>
+   </td>
+   <td>   <p>[11001011010100001100010110011001100]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image027.gif" align="absmiddle" height="23" width="10">  =</b></p>
+   </td>
+   <td>   <p>[01111110001011101100011101000111101]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image028.gif" align="absmiddle" height="23" width="16">=</b></p>
+   </td>
+   <td>   <p>[01111101001110101010000010101101010]</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Соответствующие значения переменных <img src="1_2.php_files/image015.gif" align="absmiddle" height="29" width="21"> и <img src="1_2.php_files/image003.gif" align="absmiddle" height="29" width="27"> имеют вид:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2"><tbody><tr><td>   <p><i>v</i><b><img src="1_2.php_files/image019.gif" align="absmiddle" height="22" width="8">  =&nbsp;</b> [<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">] <b>=</b></p>
+   </td>
+   <td>   <p>[0.653097, 3.191983]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image020.gif" align="absmiddle" height="22" width="11">  =&nbsp;</b> [<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">] <b>=</b></p>
+   </td>
+   <td>   <p>[0.834511,2.809287]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image021.gif" align="absmiddle" height="23" width="10">  =&nbsp; </b>[<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">] <b>=</b></p>
+   </td>
+   <td>   <p>[1.083310,2.874312]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image022.gif" align="absmiddle" height="22" width="11">  =&nbsp; </b>[<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">] <b>=</b></p>
+   </td>
+   <td>   <p>[0.740989,3.926276]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image023.gif" align="absmiddle" height="23" width="10">  =&nbsp; </b>[<img src="1_2.php_files/image030.gif" align="absmiddle" height="29" width="57">]<b> =</b></p>
+   </td>
+   <td>   <p>[0.506940,1.499934]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image024.gif" align="absmiddle" height="23" width="10">  =&nbsp; </b>[<img src="1_2.php_files/image030.gif" align="absmiddle" height="29" width="57">]<b> =</b></p>
+   </td>
+   <td>   <p>[0.946903,2.809843]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image025.gif" align="absmiddle" height="23" width="11">  =&nbsp; </b>[<img src="1_2.php_files/image030.gif" align="absmiddle" height="29" width="57">]<b> =</b></p>
+   </td>
+   <td>   <p>[0.622600,2.935225]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image026.gif" align="absmiddle" height="23" width="10">  =&nbsp; </b>[<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">]<b> =</b></p>
+   </td>
+   <td>   <p>[0.976521,3.778750]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image027.gif" align="absmiddle" height="23" width="10">  =&nbsp; </b>[<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">]<b> =</b></p>
+   </td>
+   <td>   <p>[0.795738,3.802377]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>v</i><b><img src="1_2.php_files/image028.gif" align="absmiddle" height="23" width="16">=&nbsp;  </b>[<img src="1_2.php_files/image029.gif" align="absmiddle" height="29" width="55">] <b>=</b></p>
+   </td>
+   <td>   <p>[0.793504,3.259521]</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p><b>Функция соответствия. </b>Оценка функции соответствия хромосомы выполняется в три шага:</p>
+
+  <p>1°.
+Преобразовать генотип хромосомы в фенотип. В данной задаче это означает
+преобразование двоичной строчки в соответствующее действительное
+значение <img src="1_2.php_files/image031.gif" align="absmiddle" height="47" width="133">, <img src="1_2.php_files/image032.gif" align="absmiddle" height="24" width="160">, где <img src="1_2.php_files/image033.gif" align="absmiddle" height="23" width="80"> - число вариантов в исходной популяции.</p>
+  <p>2°. Вычислить целевую функцию <img src="1_2.php_files/image034.gif" align="absmiddle" height="47" width="71">.</p>
+  <p>3°.
+Преобразовать целевую функцию в значение функции соответствия. Для
+решаемой задачи оптимизации функция соответствия эквивалентна целевой
+функции. <img src="1_2.php_files/image035.gif" align="absmiddle" height="47" width="161">, <img src="1_2.php_files/image032.gif" align="absmiddle" height="24" width="160">.</p>
+  <p>Функция соответствия играет роль среды и оценивает хромосомы по степени их приспособленности к выполнению критерия оптимизации. </p>
+  <p>Значения функций соответствия вышеприведенных хромосом следующие:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2"><tbody><tr><td>   <p><b><i><img src="1_2.php_files/image036.gif" align="absmiddle" height="37" width="83"> =</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.653097,3.191983  ) = 20.432394</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image037.gif" align="absmiddle" height="37" width="87">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.834511,2.809287  ) = -4.133627</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image038.gif" align="absmiddle" height="39" width="85">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(1.083310,2.874312  ) = 28.978472</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image039.gif" align="absmiddle" height="37" width="87">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.740989,3.926276  ) = -2.415740</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image040.gif" align="absmiddle" height="39" width="85">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.506940,1.499934  ) = -2.496340</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image041.gif" align="absmiddle" height="39" width="85">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.946903,2.809843  ) = -23.503709</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image042.gif" align="absmiddle" height="39" width="87">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.622600,2.935225  ) = -13.878172</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image043.gif" align="absmiddle" height="39" width="85">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.976521,3.778750  ) = -8.996062</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image044.gif" align="absmiddle" height="39" width="85">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.795738,3.802377  ) = 6.982708</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><i><img src="1_2.php_files/image045.gif" align="absmiddle" height="39" width="93">=</i></b></p>
+   </td>
+   <td>   <p><i>f</i>(0.793504,3.259521  ) = 6.201905</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Очевидно, что хромосома <img src="1_2.php_files/image046.gif" align="absmiddle" height="31" width="24"> наиболее сильная, а хромосома <img src="1_2.php_files/image047.gif" align="absmiddle" height="31" width="24"> наиболее слабая.</p>
+  <p><b>Отбор. </b>Наибольшее распространение на практике получил подход, называемый <i>колесо рулетки</i>
+[58] (от англ. roulette wheel). Согласно этому подходу отбор
+осуществляется на основе некоторой функции распределения, которая
+строится пропорционально вычисленным функциям соответствия
+сгенерированных вариантов-хромосом. Колесо рулетки может быть
+сконструировано следующим образом:</p>
+  <p>1.&nbsp;Вычисляем значение функции соответствия <i><img src="1_2.php_files/image048.gif" align="absmiddle" height="39" width="87"></i> для каждой хромосомы <i><img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25"></i>:</p>
+
+  <p><img src="1_2.php_files/image050.gif" align="absmiddle" height="47" width="163">,               <img src="1_2.php_files/image032.gif" align="absmiddle" height="24" width="160"> .</p>
+
+  <p>2.&nbsp;Вычисляем общую функцию соответствия популяции:</p>
+
+  <p><img src="1_2.php_files/image051.gif" align="absmiddle" height="81" width="452"></p>
+
+  <p>3.&nbsp;Вычисляем вероятность отбора <img src="1_2.php_files/image052.gif" align="absmiddle" height="31" width="28"> для каждой хромосомы <img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25">:</p>
+
+  <p><img src="1_2.php_files/image053.gif" align="absmiddle" height="88" width="365"> ,   <img src="1_2.php_files/image032.gif" align="absmiddle" height="24" width="160"> .</p>
+
+  <p>4.&nbsp;Вычисляем совокупную вероятность <img src="1_2.php_files/image054.gif" align="absmiddle" height="31" width="27"> для каждой хромосомы <img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25">:</p>
+
+  <p><img src="1_2.php_files/image055.gif" align="absmiddle" height="72" width="109"> ,        <img src="1_2.php_files/image032.gif" align="absmiddle" height="24" width="160"> .</p>
+
+  <p>Процесс отбора начинается с вращения колеса <img src="1_2.php_files/image056.gif" align="absmiddle" height="23" width="79"> раз; при этом каждый раз выбирается одна хромосома по следующему алгоритму:</p>
+  <p>1°. Генерируем случайное число <img src="1_2.php_files/image057.gif" align="absmiddle" height="15" width="13"> из интервала <img src="1_2.php_files/image058.gif" align="absmiddle" height="32" width="53"> .</p>
+  <p>2°. Если <img src="1_2.php_files/image059.gif" align="absmiddle" height="29" width="51">, то выбираем первую хромосому <img src="1_2.php_files/image060.gif" align="absmiddle" height="29" width="20">; иначе выбираем <img src="1_2.php_files/image061.gif" align="absmiddle" height="20" width="15">-ую хромосому <img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25"> (<img src="1_2.php_files/image062.gif" align="absmiddle" height="24" width="136">) такую, что <img src="1_2.php_files/image063.gif" align="absmiddle" height="31" width="119"> .</p>
+  <p>Общая функция соответствия <img src="1_2.php_files/image064.gif" align="absmiddle" height="19" width="19"> всей популяции равна:</p>
+
+  <p><img src="1_2.php_files/image065.gif" align="absmiddle" height="81" width="367">242.208919 .</p>
+  <p>Вероятность отбора <img src="1_2.php_files/image066.gif" align="absmiddle" height="31" width="29"> для каждой хромосомы <img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25"> (<img src="1_2.php_files/image067.gif" align="absmiddle" height="21" width="103">) равна:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><img src="1_2.php_files/image068.gif" align="absmiddle" height="29" width="25">&nbsp;=&nbsp;0.181398,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image069.gif" align="absmiddle" height="29" width="29">&nbsp;=&nbsp;0.079973,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image070.gif" align="absmiddle" height="31" width="28">&nbsp;=&nbsp;0.216681,</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image071.gif" align="absmiddle" height="29" width="29">&nbsp;=&nbsp;0.087065,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image072.gif" align="absmiddle" height="31" width="28">&nbsp;=&nbsp;0.086732,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image073.gif" align="absmiddle" height="31" width="28">&nbsp;=&nbsp;0.000000,</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image074.gif" align="absmiddle" height="31" width="29">&nbsp;=&nbsp;0.039741,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image075.gif" align="absmiddle" height="31" width="28">&nbsp;=&nbsp;0.059897,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image076.gif" align="absmiddle" height="31" width="28">&nbsp;=&nbsp;0.125868,</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image077.gif" align="absmiddle" height="31" width="36">&nbsp;=&nbsp;0.122645 .</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Совокупные вероятности <img src="1_2.php_files/image054.gif" align="absmiddle" height="31" width="27"> для каждой хромосомы <img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25"> (<img src="1_2.php_files/image078.gif" align="absmiddle" height="21" width="101">) равны:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><img src="1_2.php_files/image079.gif" align="absmiddle" height="29" width="23">&nbsp;=&nbsp;0.181398,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image080.gif" align="absmiddle" height="29" width="27">&nbsp;=&nbsp;0.261370,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image081.gif" align="absmiddle" height="31" width="25">&nbsp;=&nbsp;0.478052,</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image082.gif" align="absmiddle" height="29" width="27">&nbsp;=&nbsp;0.565117,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image083.gif" align="absmiddle" height="31" width="25">&nbsp;=&nbsp;0.651849,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image084.gif" align="absmiddle" height="31" width="27">&nbsp;=&nbsp;0.651849,</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image085.gif" align="absmiddle" height="31" width="27">&nbsp;=&nbsp;0.691590,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image086.gif" align="absmiddle" height="31" width="25">&nbsp;=&nbsp;0.751487,</p>
+   </td>
+   <td>   <p><img src="1_2.php_files/image087.gif" align="absmiddle" height="31" width="25">&nbsp;=&nbsp;0.877355,</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="1_2.php_files/image088.gif" align="absmiddle" height="31" width="33">&nbsp;=&nbsp;1.000000   .</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Теперь
+мы готовы вращать колесо рулетки 10 раз и каждый раз отобрать одну
+хромосому для новой популяции. Допустим, что случайная
+последовательность 10 чисел из интервала <img src="1_2.php_files/image089.gif" align="absmiddle" height="32" width="53"> имеет вид:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>0.301431</p>
+   </td>
+   <td>   <p>0.322062</p>
+   </td>
+   <td>   <p>0.766503</p>
+   </td>
+   <td>   <p>0.881893</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.350871</p>
+   </td>
+   <td>   <p>0.583392</p>
+   </td>
+   <td>   <p>0.177618</p>
+   </td>
+   <td>   <p>0.343242</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.032685</p>
+   </td>
+   <td>   <p>0.197577 .</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Первое число <img src="1_2.php_files/image090.gif" align="absmiddle" height="29" width="36">0.301431 больше чем <img src="1_2.php_files/image080.gif" align="absmiddle" height="29" width="27"> и меньше чем <img src="1_2.php_files/image081.gif" align="absmiddle" height="31" width="25">. Это означает, что отбирается хромосома <img src="1_2.php_files/image046.gif" align="absmiddle" height="31" width="24">. Второе число <img src="1_2.php_files/image091.gif" align="absmiddle" height="29" width="41">0.322062 также больше чем <img src="1_2.php_files/image080.gif" align="absmiddle" height="29" width="27"> и меньше чем <img src="1_2.php_files/image081.gif" align="absmiddle" height="31" width="25">. Значит опять отбираем хромосому <img src="1_2.php_files/image046.gif" align="absmiddle" height="31" width="24"> для новой популяции; и т.д. Наконец, получим новую популяцию, состоящую из таких хромосом:</p>
+
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><b><img src="1_2.php_files/image092.gif" align="absmiddle" height="29" width="20">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image093.gif" align="absmiddle" height="39" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image094.gif" align="absmiddle" height="29" width="25">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image093.gif" align="absmiddle" height="39" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image095.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[11001011010100001100010110011001100]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image096.gif" align="absmiddle" height="39" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image097.gif" align="absmiddle" height="29" width="25">=</b></p>
+   </td>
+   <td>   <p>[01111110001011101100011101000111101]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image098.gif" align="absmiddle" height="39" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image099.gif" align="absmiddle" height="31" width="23">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image093.gif" align="absmiddle" height="39" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image100.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[01100110110100101101000000010111001]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image101.gif" align="absmiddle" height="37" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image102.gif" align="absmiddle" height="31" width="25">=</b></p>
+   </td>
+   <td>   <p>[01000001010100101001101111011111110]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image103.gif" align="absmiddle" height="37" width="49"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image104.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image093.gif" align="absmiddle" height="39" width="52"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image105.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[01000001010100101001101111011111110]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image106.gif" align="absmiddle" height="37" width="49"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image107.gif" align="absmiddle" height="31" width="32">=</b></p>
+   </td>
+   <td>   <p>[10001110101110011000000010101001000]</p>
+   </td>
+   <td>   <p><b><img src="1_2.php_files/image108.gif" align="absmiddle" height="37" width="52"></b></p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p><b>Скрещивание. </b>Для
+скрещивания хромосом будем использовать метод с одной точкой обмена. В
+соответствие с этим методом, случайно выбирается одна точка обмена,
+относительно которой меняются местами части хромосом-родителей. Для
+примера рассмотрим скрещивание двух хромосом, для которых была случайно
+выбрана точка обмена после 17-го гена:</p>
+  <p><img src="1_2.php_files/image109.gif" height="101" width="494">
+  </p><p>В результате обмена частей родительских хромосом получаются следующие хромосомы-отпрыски: </p>
+  <p><img src="1_2.php_files/image110.gif" height="71" width="494">&nbsp;</p>
+  <p>Пусть вероятность скрещивания  <img src="1_2.php_files/image111.gif" align="absmiddle" height="31" width="84"> , т.&nbsp;е. в среднем 25% хромосом подвергнуться скрещиванию. Таким образом, скрещивание осуществляется по такому алгоритму:</p>
+
+  <p>Процедура: Скрещивание.</p>
+  <p><b>begin</b></p>
+  <p>&nbsp; <img src="1_2.php_files/image061.gif" align="absmiddle" height="20" width="15">:=0&nbsp;;</p>
+  <p>&nbsp; <b>while</b> (<img src="1_2.php_files/image112.gif" align="absmiddle" height="20" width="51">) <b>do</b></p>
+  <p>&nbsp; &nbsp; <img src="1_2.php_files/image113.gif" align="absmiddle" height="31" width="24">:= случайное число из интервала [0,1] &nbsp;;</p>
+  <p>&nbsp; &nbsp; <b>if</b> (<img src="1_2.php_files/image114.gif" align="absmiddle" height="31" width="79">) <b>then</b></p>
+  <p>&nbsp; &nbsp; отобрать хромосому <img src="1_2.php_files/image049.gif" align="absmiddle" height="31" width="25"> как одного из родителей для  скрещивания&nbsp;;</p>
+  <p>&nbsp; &nbsp; <b>end</b>&nbsp;;</p>
+  <p>&nbsp; &nbsp; <img src="1_2.php_files/image115.gif" align="absmiddle" height="20" width="72">&nbsp;;</p>
+  <p><b>&nbsp; end</b>&nbsp;;</p>
+  <p><b>end</b>.</p>
+
+  <p>Предположим, что сгенерирована последовательность случайных чисел:</p>
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>0.625721</p>
+   </td>
+   <td>   <p>0.266823</p>
+   </td>
+   <td>   <p>0.288644</p>
+   </td>
+   <td>   <p>0.295114</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.163274</p>
+   </td>
+   <td>   <p>0.567461</p>
+   </td>
+   <td>   <p>0.085940</p>
+   </td>
+   <td>   <p>0.392865</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.770714</p>
+   </td>
+   <td>   <p>0.548656 .</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Это означает, что хромосомы <img src="1_2.php_files/image099.gif" align="absmiddle" height="31" width="23"> и <img src="1_2.php_files/image102.gif" align="absmiddle" height="31" width="25"> выбираются для скрещивания. После этого мы генерируем случайное целое число <img src="1_2.php_files/image116.gif" align="absmiddle" height="20" width="33">
+(позиция) из промежутка [1,34] (так как общая длина хромосомы равна 35)
+и считаем его точкой обмена хромосом или, другими словами, точкой
+скрещивания. Предположим, что было сгенерировано число <img src="1_2.php_files/image116.gif" align="absmiddle" height="20" width="33"> равное 1, т. е. хромосомы-родители обмениваются частями после первого бита и появятся следующие хромосомы-отпрыски:</p>
+<p><img src="1_2.php_files/image117.gif" height="221" width="504"></p>
+ <p><b>Мутация. </b>Мутация
+состоит в изменении одного или большего числа генов с вероятностью
+равной коэффициенту мутации. Допустим, что 18-й ген хромосомы <img src="1_2.php_files/image118.gif" align="absmiddle" height="29" width="21"> подвергается мутации. Так как мы имеем дело с бинарными строчками, то мутация заключается в инверсии соответствующего бита:</p>
+  <p><img src="1_2.php_files/image119.gif" height="152" width="532"></p>
+  <p>Зададим коэффициенту  мутации значение <img src="1_2.php_files/image120.gif" align="absmiddle" height="31" width="88">, так что в среднем 1% всех битов популяции подвергнуться операции мутации. Число битов во всей популяции составляет <img src="1_2.php_files/image121.gif" align="absmiddle" height="24" width="224">
+битов. Поэтому в среднем в каждом поколении мутирует 3.5 бита. Каждый
+бит имеет одинаковый шанс подвергнуться мутации. Таким образом, мы
+должны сгенерировать последовательность случайных чисел <img src="1_2.php_files/image113.gif" align="absmiddle" height="31" width="24"> <img src="1_2.php_files/image122.gif" align="absmiddle" height="25" width="113"> из интервала [0,1]. Предположим, что мутируют следующие гены:</p>
+
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>Позиция бита в популяции</p>
+   </td>
+   <td>   <p>Номер <br>   хромосомы</p>
+   </td>
+   <td>   <p>Позиция <br>   бита в хромосоме</p>
+   </td>
+   <td>   <p>Случайное число <img src="1_2.php_files/image113.gif" align="absmiddle" height="31" width="24"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>111</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+   <td>   <p>0.009857</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>172</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>32</p>
+   </td>
+   <td>   <p>0.003113</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>211</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0.000946</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>347</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+   <td>   <p>32</p>
+   </td>
+   <td>   <p>0.001282</p>
+   </td>
+  </tr>
+ </tbody></table>
+  <p>После мутации получается следующая популяция:</p>
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><b><img src="1_2.php_files/image092.gif" align="absmiddle" height="29" width="20">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image094.gif" align="absmiddle" height="29" width="25">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image095.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[11001011010100001100010110011001100]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image097.gif" align="absmiddle" height="29" width="25">=</b></p>
+   </td>
+   <td>   <p>[01111010001011101100011101000111101]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image099.gif" align="absmiddle" height="31" width="23">=</b></p>
+   </td>
+   <td>   <p>[11000001010100101001101111011110110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image100.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[01100110110100101101000000010111001]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image102.gif" align="absmiddle" height="31" width="25">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image104.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[11111000111000001000010101001000110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image105.gif" align="absmiddle" height="31" width="24">=</b></p>
+   </td>
+   <td>   <p>[01000001010100101001101111011111110]</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img src="1_2.php_files/image107.gif" align="absmiddle" height="31" width="32">=</b></p>
+   </td>
+   <td>   <p>[10001110101110011000000010101000000] .</p>
+   </td>
+  </tr>
+ </tbody></table>
+  <p>Соответствующие десятичные значения переменных <img src="1_2.php_files/image015.gif" align="absmiddle" height="29" width="21"> и <img src="1_2.php_files/image003.gif" align="absmiddle" height="29" width="27"> и значения функции соответствия имеют вид:</p>
+
+  <p><i>f</i>(1.083310,2.874312)=28.978472</p>
+  <p><i>f</i>(1.083310,2.874312)=28.978472</p>
+  <p><i>f</i>(0.976521,3.778750)=-8.996062</p>
+  <p><i>f</i>(0.786363,3.802377)=9.366723</p>
+  <p><i>f</i>(0.953101,3.191928)=-23.229745</p>
+  <p><i>f</i>(0.740989,3.926276)=-2.415740</p>
+  <p><i>f</i>(1.083310,2.874312)=28.978472</p>
+  <p><i>f</i>(1.083310,2.874312)=28.978472</p>
+  <p><i>f</i>(0.653097,3.191983)=20.432394</p>
+  <p><i>f</i>(0.834511,2.809232)=-4.138564</p>
+
+  <p>Таким
+образом, завершена одна итерация генетического алгоритма. Проделав 1000
+итераций, мы получим наилучшую хромосому в 419-м поколении:</p>
+
+  <p><img src="1_2.php_files/image123.gif" align="absmiddle" height="29" width="24"> = [01000011000100110110010011011101001]</p>
+
+  <p><img src="1_2.php_files/image124.gif" align="absmiddle" height="47" width="89"> = <i>f</i>(0.657208,2.418399) = 31.313555</p>
+
+  <p><img src="1_2.php_files/image125.gif" align="absmiddle" height="37" width="25"> = 0.657208       <img src="1_2.php_files/image126.gif" align="absmiddle" height="37" width="27"> = 2.418399</p>
+
+  <p><img src="1_2.php_files/image127.gif" align="absmiddle" height="47" width="100"> = 31.313555  .</p>
+  <p><b>Пример&nbsp;1.10. Синтез текста. </b>Этот
+пример прекрасно демонстрирует мощь генетических алгоритмов. Задача
+синтеза текста заключается в получении фрагмента известной украинской
+песни <i>несе Галя воду</i></p>
+
+  <p>из случайно сгенерированного
+списка букв при помощи генетического алгоритма. Так как для каждой
+позиции текста возможны 32 различные буквы алфавита, а таких позиций в
+заданном выражении 12, то вероятность получения необходимой строки
+случайным способом равна <img src="1_2.php_files/image128.gif" align="absmiddle" height="60" width="189">, т.&nbsp;е. практически нуль.</p>
+  <p>Для кодирования строки букв будем использовать кодовую таблицу символов ASCII (в операционной системе Windows). Тогда строка <i>несе Галя воду</i> преобразуется в следующую хромосому:</p>
+
+  <p>[237, 229, 241, 229, 227, 224, 235, 255, 226, 238, 228, 243]</p>
+
+  <p>Сгенерируем исходную популяцию из 10 случайных фраз:</p>
+
+  <p>[232, 239, 225, 242, 227, 238, 255, 227, 186, 238, 236, 239]</p>
+  <p>[228, 226, 244, 231, 231, 224, 226, 224, 237, 248, 243, 247] </p>
+  <p>[252, 241, 243, 228, 228, 225, 246, 225, 234, 186, 230, 246] </p>
+  <p>[249, 227, 252, 249, 244, 245, 236, 229, 248, 252, 224, 226] </p>
+  <p>[230, 232, 234, 245, 231, 254, 227, 245, 238, 247, 242, 232] </p>
+  <p>[232, 228, 227, 245, 230, 226, 232, 179, 247, 255, 238, 186] </p>
+  <p>[232, 248, 231, 235, 248, 179, 235, 186, 224, 255, 252, 242] </p>
+  <p>[239, 248, 236, 229, 179, 233, 232, 244, 249, 245, 252, 230] </p>
+  <p>[249, 232, 236, 229, 240, 244, 227, 243, 230, 244, 254, 242] </p>
+  <p>[248, 230, 231, 252, 245, 239, 242, 254, 252, 255, 240, 255] </p>
+
+  <p>Теперь преобразуем эти хромосомы в строки символов и увидим, что получится 10 бессмысленных фраз:</p>
+
+  <p>ипбтгоягєомп</p>
+  <p>двфззаваншуч</p>
+  <p>ьсуддбцбкєжц</p>
+  <p>щгьщфхмешьав</p>
+  <p>жикхзюгхочти</p>
+  <p>идгхжви_чяоє</p>
+  <p>ишзлш_лєаяьт</p>
+  <p>пшме_йифщхьж</p>
+  <p>щимерфгужфют</p>
+  <p>шжзьхптюьяря .</p>
+
+  <p>Функция соответствия вычисляется как число правильно отгаданных букв. Например, функция соответствия для строки &lt;ипбт<u>г</u>оягє<u>о</u>мп&gt;
+равна 2. В табл. 1.2 приведен список хромосом, которые были наилучшими
+на каждой из 32-х итераций генетического алгоритма.</p>
+
+  <p>Таблица 1.2</p>
+  <p>Лучшие хромосомы на каждой итерации</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>Поко-ление</p>
+   </td>
+   <td>   <p>Строка</p>
+   </td>
+   <td>   <p>Функция <br>   соответствия</p>
+   </td>
+   <td>   <p>Поколение</p>
+   </td>
+   <td>   <p>Строка</p>
+   </td>
+   <td>   <p>Функция <br>   соответствия</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1</p>
+   </td>
+   <td>   <p>ипбтгоягєомп</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>17</p>
+   </td>
+   <td>   <p>несечалядгду</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2</p>
+   </td>
+   <td>   <p>ипбтгоягєомп</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>18</p>
+   </td>
+   <td>   <p>несечалядгду</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3</p>
+   </td>
+   <td>   <p>ипбтгоягєомп</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>19</p>
+   </td>
+   <td>   <p>несегалядгду</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4</p>
+   </td>
+   <td>   <p>никхгаваншйт</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>20</p>
+   </td>
+   <td>   <p>несегалядгду</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5</p>
+   </td>
+   <td>   <p>ндмералядгжц</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>21</p>
+   </td>
+   <td>   <p>несегалядгду</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6</p>
+   </td>
+   <td>   <p>ндмералядгжц</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>22</p>
+   </td>
+   <td>   <p>несегалядгду</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>7</p>
+   </td>
+   <td>   <p>ндмералядгжц</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>23</p>
+   </td>
+   <td>   <p>несегалядгду</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8</p>
+   </td>
+   <td>   <p>ндшеьалявгжц</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+   <td>   <p>24</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>9</p>
+   </td>
+   <td>   <p>ндшеьалявгжц</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+   <td>   <p>25</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>10</p>
+   </td>
+   <td>   <p>ндшеьалявгжц</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+   <td>   <p>26</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>11</p>
+   </td>
+   <td>   <p>нисералядгжу</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>27</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>12</p>
+   </td>
+   <td>   <p>нисералядгжу</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>28</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>13</p>
+   </td>
+   <td>   <p>нисералядгжу</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>29</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>14</p>
+   </td>
+   <td>   <p>несеролядгду</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>30</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>15</p>
+   </td>
+   <td>   <p>несеролядгду</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>31</p>
+   </td>
+   <td>   <p>несегалядоду</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>16</p>
+   </td>
+   <td>   <p>несеролядгду</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>32</p>
+   </td>
+   <td>   <p>несегаляводу</p>
+   </td>
+   <td>   <p>12</p>
+   </td>
+  </tr>
+ </tbody></table>
+ 
+
+ 
+    <p></p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php">К предыдущему разделу </a></p>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="1_2.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="1_2.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="1_2.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="1_2.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="1_2.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

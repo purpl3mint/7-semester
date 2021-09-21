@@ -1,0 +1,20 @@
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\bin\Debug\Lab 1.exe.config
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\bin\Debug\Lab 1.exe
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\bin\Debug\Lab 1.pdb
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab 1.csprojAssemblyReference.cache
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab_1.Form1.resources
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab_1.Properties.Resources.resources
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab 1.csproj.GenerateResource.cache
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab 1.csproj.CoreCompileInputs.cache
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab 1.exe
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИСиТ\Lab 1\obj\Debug\Lab 1.pdb
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\bin\Debug\Lab 1.exe.config
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\bin\Debug\Lab 1.exe
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\bin\Debug\Lab 1.pdb
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab 1.csprojAssemblyReference.cache
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab_1.Form1.resources
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab_1.Properties.Resources.resources
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab 1.csproj.GenerateResource.cache
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab 1.csproj.CoreCompileInputs.cache
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab 1.exe
+C:\Users\Buzz\Desktop\Учеба\7 семак\ИСиТ\Lab 1\obj\Debug\Lab 1.pdb

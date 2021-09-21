@@ -1,0 +1,547 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="4_1.php_files/default.css" type="text/css"></head><body leftmargin="0" topmargin="0" background="4_1.php_files/4_1.htm" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="4_1.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="4_1.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="4_1.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="4_1.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="4_1.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="4_1.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="4_1.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="4_1.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="4_1.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="4_1.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="4_1.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="4_1.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="4_1.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="4_1.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="4_1.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="4_1.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="4_1.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="4_1.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="4_1.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="4_1.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/4_1.php"><span class="text1">Вход</span></a></td>
+<td><img src="4_1.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/4_2.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/3_5.php">К предыдущему разделу </a></p>
+ 
+<p>ГЛАВА 4</p>
+  <p><img src="4_1.php_files/image001.gif" height="2" width="597"><b>&nbsp;</b></p>
+  <p><b>АНАЛИТИКО - ЛИНГВИСТИЧЕСКАЯ АППРОКСИМАЦИЯ</b></p>
+  <p>Под <i>аналитико-лингвистической аппроксимацией</i>
+понимается получение настраиваемой модели объекта путем комбинации
+аналитической и лингвистической составляющих. Предполагается, что
+имеется аналитическая зависимость &lt;вход-выход&gt;, параметры которой
+могут иметь неопределенный характер и описываться нечеткими базами
+знаний.</p>
+  <p>Для получения аналитико-лингвистической модели необходимо:</p>
+  <p>а) обобщить аналитическую зависимость на случай нечетких параметров;</p>
+  <p>б) представить нечеткие параметры в виде баз знаний, учитывающих влияющие факторы.</p>
+  <p>Эта глава написана на основе работ [36,69].</p>
+  <p><b>4.1. Нечеткое представление неопределенных параметров</b></p>
+
+  <p>Рассмотрим некоторый неопределенный параметр <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">, который может соответствовать вероятности, стоимости, времени или другому показателю. Для описания параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15"> с помощью теории нечетких множеств этот параметр необходимо преобразовать к нечеткому числу <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, т.е. задать функцию принадлежности.</p>
+  <p>В
+настоящем разделе предлагается два способа формирования функций
+принадлежности: трапециевидный и треугольный. Они позволяют
+использовать следующую экспертную информацию параметре:</p>
+  <p>·&nbsp; название параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">;</p>
+  <p>·&nbsp; диапазон <img src="4_1.php_files/image004.gif" align="absmiddle" height="45" width="60"> изменения значений параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">;</p>
+  <p>·&nbsp; количество лингвистических термов, с помощью которых оценивается параметр <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">;</p>
+  <p>·&nbsp; название каждого лингвистического терма.</p>
+
+  <p><b>Определение&nbsp;4.1.</b> <i>Трапециевидной формой</i> нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> (неопределенного параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">) будем называть четверку:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image005.gif" align="absmiddle" height="41" width="161"> ,                                         </td>
+      <td align="right"> (4.1)</td>
+    </tr>
+  </tbody></table></p>
+
+  <p>где <img src="4_1.php_files/image006.gif" align="absmiddle" height="52" width="91"> - нижняя (верхняя) граница нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> на нулевом <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровне; </p>
+  <p><img src="4_1.php_files/image008.gif" align="absmiddle" height="44" width="81"> - нижняя (верхняя) граница нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> на единичном <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровне; </p>
+  <p>Интервал <img src="4_1.php_files/image009.gif" align="absmiddle" height="41" width="88"> будем называть <i>оптимистической</i> оценкой параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">, а интервал  <img src="4_1.php_files/image010.gif" align="absmiddle" height="41" width="93"> - <i>пессимистической </i>оценкой параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">.</p>
+  <p>Такое представление соответствует функции принадлежности, показанной на рис.4.1,  которая имеет следующий вид:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image011.gif" align="absmiddle" height="279" width="413">        </td>
+      <td align="right"> (4.2)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>В этом случае носителем нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> будет интервал <img src="4_1.php_files/image012.gif" align="absmiddle" height="41" width="89"> ,  а ядром - <img src="4_1.php_files/image013.gif" align="absmiddle" height="41" width="80">.</p>
+
+  <p><b>Предложение&nbsp;4.1.</b> Если нечеткое число <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> задано в <i>трапециевидной </i>форме <img src="4_1.php_files/image005.gif" align="absmiddle" height="41" width="161">, то переход к <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровневому описанию </p>
+
+  <p><img src="4_1.php_files/image014.gif" align="absmiddle" height="65" width="216"></p>
+  <p>осуществляется по формулам:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image015.gif" align="absmiddle" height="41" width="211">,                                 </td>
+      <td align="right"> (4.3)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image016.gif" align="absmiddle" height="36" width="205">.                                 </td>
+      <td align="right"> (4.4)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><img src="4_1.php_files/image017.gif" height="250" width="586"></p>
+  <p>Рис. 4.1. Нечеткое число <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> с трапециевидной функцией </p>
+  <p>принадлежности</p>
+
+
+  <p><i>Доказательство.</i> Для перехода к <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровневому   описанию необходимо определить значение нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> на любом <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровне, т.е. найти такие <img src="4_1.php_files/image018.gif" align="absmiddle" height="33" width="29">и <img src="4_1.php_files/image019.gif" align="absmiddle" height="35" width="29">, что </p>
+
+  <p><img src="4_1.php_files/image020.gif" align="absmiddle" height="57" width="327">,</p>
+
+  <p>где <img src="4_1.php_files/image021.gif" align="absmiddle" height="49" width="105">и <img src="4_1.php_files/image022.gif" align="absmiddle" height="49" width="93"> - степени принадлежности элементов <img src="4_1.php_files/image018.gif" align="absmiddle" height="33" width="29"> и <img src="4_1.php_files/image023.gif" align="absmiddle" height="28" width="31"> нечеткому множеству <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, соответственно.</p>
+  <p>Учитывая аналитический вид трапециевидной функции принадлежности (4.2) и подставляя <img src="4_1.php_files/image024.gif" align="absmiddle" height="35" width="91">, получаем:</p>
+
+  <p><img src="4_1.php_files/image025.gif" align="absmiddle" height="71" width="105">;     <img src="4_1.php_files/image026.gif" align="absmiddle" height="68" width="115">.</p>
+
+  <p>Отсюда следует, что</p>
+  <p><img src="4_1.php_files/image027.gif" align="absmiddle" height="39" width="197">,  <img src="4_1.php_files/image028.gif" align="absmiddle" height="36" width="199">,  <img src="4_1.php_files/image029.gif" align="absmiddle" height="32" width="85"></p>
+
+  <p><b>Пример 4.1.</b> Пусть вероятность (<img src="4_1.php_files/image030.gif" align="absmiddle" height="20" width="17">) безошибочного выполнения операции равна "около 0.9". Требуется задать эту информацию в виде нечеткого числа <img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17"> с трапециевидной функцией принадлежности.</p>
+  <p><i>Решение</i>. Согласно определению 4.1, число <img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17"> представим в следующем виде:</p>
+
+  <p><img src="4_1.php_files/image032.gif" align="absmiddle" height="36" width="209"></p>
+
+  <p>где    [0.8, 1] - пессимистическая оценка параметра <img src="4_1.php_files/image030.gif" align="absmiddle" height="20" width="17">;</p>
+  <p>[0.85, 0.95] - оптимистическая оценка параметра <img src="4_1.php_files/image030.gif" align="absmiddle" height="20" width="17">.</p>
+  <p>Разложение нечеткого числа <img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17"> по <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровневым множествам имеет вид:</p>
+
+  <p><img src="4_1.php_files/image033.gif" align="absmiddle" height="36" width="432"></p>
+
+  <p>Пример 4.1 иллюстрируется на рис. 4.2,</p>
+
+  <p><img src="4_1.php_files/image034.gif" height="210" width="606"></p>
+  <p>Рис. 4.2. К примеру 4.1</p>
+
+  <p><b>Определение 4.2.</b> <i>Треугольной формой</i> нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> будем называть тройку вида:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image035.gif" align="absmiddle" height="41" width="112">    ,                                            </td>
+      <td align="right"> (4.5)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где <img src="4_1.php_files/image036.gif" align="absmiddle" height="45" width="56"> - нижняя (верхняя) граница нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> на нулевом <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровне; </p>
+  <p><img src="4_1.php_files/image037.gif" align="absmiddle" height="27" width="15"> - значение нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> на единичном <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровне. </p>
+  <p>Такое описание соответствует функции принадлежности, показанной на рис.4.3, которая имеет следующий аналитический вид:</p>
+
+  <p><img src="4_1.php_files/image038.gif" align="absmiddle" height="292" width="507"></p>
+
+  <p>Носителем нечеткого числа  <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> в этом случае является интервал <img src="4_1.php_files/image039.gif" align="absmiddle" height="45" width="63">, а ядром, - число <img src="4_1.php_files/image037.gif" align="absmiddle" height="27" width="15"> . Интервал  <img src="4_1.php_files/image040.gif" align="absmiddle" height="45" width="61">будем называть <i>пессимистической </i>оценкой, а число <img src="4_1.php_files/image037.gif" align="absmiddle" height="27" width="15">, - <i>оптимистической</i> оценкой параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">.</p>
+
+  <p><img src="4_1.php_files/image041.gif" height="219" width="562"></p>
+  <p>Рис. 4.3. Нечеткое число <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> с треугольной функцией принадлежности</p>
+
+
+  <p><b>Предложение 4.2.</b> Если нечеткое число <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> задано в треугольной форме <img src="4_1.php_files/image042.gif" align="absmiddle" height="41" width="128"> то переход к <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровневому описанию </p>
+
+  <p><img src="4_1.php_files/image043.gif" align="absmiddle" height="64" width="216">  </p>
+  <p>осуществляется по формулам:</p>
+
+  <p><img src="4_1.php_files/image044.gif" align="absmiddle" height="44" width="180"> ;    <img src="4_1.php_files/image045.gif" align="absmiddle" height="39" width="183">.</p>
+
+  <p><i>Доказательство</i>. Треугольная форма неопределенного параметра является частным случаем трапециевидной формы при  <img src="4_1.php_files/image046.gif" align="absmiddle" height="33" width="89">. Подставляя <img src="4_1.php_files/image047.gif" align="absmiddle" height="35" width="287"> в формулы (4.3) и (4.4), получаем:</p>
+
+  <p><img src="4_1.php_files/image044.gif" align="absmiddle" height="44" width="180"> ;    <img src="4_1.php_files/image048.gif" align="absmiddle" height="40" width="191">.</p>
+
+  <p><b>Пример 4.2.</b><i> </i>Пусть время (<img src="4_1.php_files/image049.gif" align="absmiddle" height="19" width="16">) выполнения операции составляет "<i>около 2 сек</i>". Требуется представить эту информацию в виде нечеткого числа <img src="4_1.php_files/image050.gif" align="absmiddle" height="25" width="17"> с треугольной формой функции принадлежности. </p>
+  <p><i>Решение.</i> Согласно определению 4.2, нечеткое число <img src="4_1.php_files/image050.gif" align="absmiddle" height="25" width="17"> представим в следующем виде:</p>
+
+  <p><img src="4_1.php_files/image051.gif" align="absmiddle" height="33" width="169">  ,</p>
+
+  <p>где [1.6, 2.2] и 2<i> -</i> пессимистическая и оптимистическая оценки, соответственно, которые предполагаются известными.</p>
+  <p>Разложение числа <img src="4_1.php_files/image049.gif" align="absmiddle" height="19" width="16"> по <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровневым множествам имеет вид:</p>
+
+  <p><img src="4_1.php_files/image052.gif" align="absmiddle" height="37" width="368"> .</p>
+
+  <p>Пример 4.2 иллюстрируется на рис. 4.4.</p>
+
+  <p><img src="4_1.php_files/image053.gif" height="236" width="610"><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Рис. 4.4. К примеру 4.2 &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рис. 4.5. Пример функций </p>
+  <p>принадлежности для <img src="4_1.php_files/image054.gif" align="absmiddle" height="16" width="19"> термов</p>
+  <p><b>Определение 4.3.</b>  <i>l-формой</i> неопределенного параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15"> (нечет-кого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">) будем называть тройку вида:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image055.gif" align="absmiddle" height="41" width="120">   ,                                             </td>
+      <td align="right"> (4.7)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где <img src="4_1.php_files/image056.gif" align="absmiddle" height="37" width="45"> - нижняя (верхняя) граница изменения параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">;</p>
+  <p><i>l</i> - лингвистическая оценка параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15">  диапазоне <img src="4_1.php_files/image057.gif" align="absmiddle" height="45" width="68">, причем <img src="4_1.php_files/image058.gif" align="absmiddle" height="35" width="183">.</p>
+  <p><img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16">
+- линейно-упорядоченное по принципу от "меньшего" к "большему"
+множество лингвистических термов для качественной оценки параметра <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15"> (рис.4.5)<i>.</i></p>
+
+  <p><b>Допущение 4.1.</b> При переходе от <i>l</i>-формы (4.7) нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> к трапециевидной форме (4.1) будем предполагать, следующее:</p>
+  <p>(1) носителем нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> является интервал <img src="4_1.php_files/image057.gif" align="absmiddle" height="45" width="68">;</p>
+  <p>(2) размер ядра <img src="4_1.php_files/image060.gif" align="absmiddle" height="19" width="17"> нечетного числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> зависит oт мощности (<img src="4_1.php_files/image054.gif" align="absmiddle" height="16" width="19">) терм-множества <img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16">, носителя <img src="4_1.php_files/image057.gif" align="absmiddle" height="45" width="68"> и не зависит от лингвистической переменной; </p>
+  <p>(3) для любых соседних термов <img src="4_1.php_files/image061.gif" align="absmiddle" height="28" width="21"> и <img src="4_1.php_files/image062.gif" align="absmiddle" height="27" width="129"> :</p>
+
+  <p><img src="4_1.php_files/image063.gif" align="absmiddle" height="39" width="209"> ,</p>
+
+  <p>где <img src="4_1.php_files/image064.gif" align="absmiddle" height="33" width="65"> и <img src="4_1.php_files/image065.gif" align="absmiddle" height="33" width="63">- нижние границы ядра нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, выраженного лингвистическими оценками <img src="4_1.php_files/image061.gif" align="absmiddle" height="28" width="21"> и <img src="4_1.php_files/image066.gif" align="absmiddle" height="24" width="17">, соответственно;</p>
+  <p>(4)  для первого терма <img src="4_1.php_files/image067.gif" align="absmiddle" height="39" width="161"> ;</p>
+  <p>(5) для последнего терма <img src="4_1.php_files/image068.gif" align="absmiddle" height="39" width="180">;</p>
+
+  <p><b>Предложение 4.3.</b> Если неопределенный параметр <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15"> задан <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формой нечеткого числа <img src="4_1.php_files/image070.gif" align="absmiddle" height="41" width="127">, где <img src="4_1.php_files/image071.gif" align="absmiddle" height="39" width="200">, то переход от <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формы к трапециевидной форме (4.1) осуществляется по формулам:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image072.gif" align="absmiddle" height="39" width="111">&nbsp;;                                              </td>
+      <td align="right"> (4.8)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image073.gif" align="absmiddle" height="39" width="109">&nbsp;;                                              </td>
+      <td align="right"> (4.9)</td>
+    </tr>
+</tbody></table></p>
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image074.gif" align="absmiddle" height="64" width="247">&nbsp;;                             </td>
+      <td align="right">(4.10)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image075.gif" align="absmiddle" height="64" width="244">&nbsp;,                             </td>
+      <td align="right">(4.11)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где  <img src="4_1.php_files/image076.gif" align="absmiddle" height="39" width="155"> - нижняя (верхняя) граница носителя нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, оцениваемого лингвистическим термом <img src="4_1.php_files/image077.gif" align="absmiddle" height="31" width="17">;</p>
+  <p><img src="4_1.php_files/image078.gif" align="absmiddle" height="39" width="148"> - нижняя {верхняя) граница ядра нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, оцениваемого лингвистическим термом <img src="4_1.php_files/image077.gif" align="absmiddle" height="31" width="17">.</p>
+  <p><i>Доказательство.</i> Из допущения 4.1(1) следует, что для любого лингвистического терма  <img src="4_1.php_files/image079.gif" align="absmiddle" height="31" width="49"> :</p>
+
+  <p><img src="4_1.php_files/image080.gif" align="absmiddle" height="39" width="107"> и <img src="4_1.php_files/image081.gif" align="absmiddle" height="39" width="109">.</p>
+
+  <p>Учитывая, что размер ядра нечеткого числа определяется по формуле  <img src="4_1.php_files/image082.gif" align="absmiddle" height="37" width="161">, и, опираясь на допущения 4.1(2)-4.1(5), получаем, что в интервал <img src="4_1.php_files/image057.gif" align="absmiddle" height="45" width="68"> попадает ровно (2<img src="4_1.php_files/image054.gif" align="absmiddle" height="16" width="19">-1) отрезков длиной <img src="4_1.php_files/image060.gif" align="absmiddle" height="19" width="17">.</p>
+  <p>Отсюда, <img src="4_1.php_files/image083.gif" align="absmiddle" height="56" width="89"> . С учетом этого получаем:</p>
+  <p>для первого терма <img src="4_1.php_files/image084.gif" align="absmiddle" height="29" width="17">:</p>
+
+  <p><img src="4_1.php_files/image085.gif" align="absmiddle" height="64" width="268"> ;</p>
+
+  <p><img src="4_1.php_files/image086.gif" align="absmiddle" height="64" width="357"> ; </p>
+
+  <p>для второго терма  <img src="4_1.php_files/image087.gif" align="absmiddle" height="29" width="21">:</p>
+
+  <p><img src="4_1.php_files/image088.gif" align="absmiddle" height="64" width="365"> </p>
+
+  <p><img src="4_1.php_files/image089.gif" align="absmiddle" height="64" width="375"> ; </p>
+
+  <p>для последнего терма <img src="4_1.php_files/image090.gif" align="absmiddle" height="31" width="25">:</p>
+
+  <p><img src="4_1.php_files/image091.gif" align="absmiddle" height="64" width="255"> ; </p>
+
+  <p><img src="4_1.php_files/image092.gif" align="absmiddle" height="64" width="256"> . </p>
+
+  <p>Отсюда для любого терма  <img src="4_1.php_files/image079.gif" align="absmiddle" height="31" width="49">:</p>
+
+  <p><img src="4_1.php_files/image093.gif" align="absmiddle" height="64" width="237"> ; </p>
+
+  <p><img src="4_1.php_files/image094.gif" align="absmiddle" height="64" width="239"> . </p>
+
+  <p>Предложение 4.3 иллюстрируется   рис .4.6.</p>
+
+  <p><img src="4_1.php_files/image095.gif" height="225" width="617"></p>
+  <p>Рис. 4.6. Переход от <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формы нечеткого числа к трапециевидной форме </p>
+  <p>в случае 4-х термов</p>
+
+  <p><b>Пример 4.3.</b> Пусть вероятность   обнаружения   ошибок   при визуальном контроле задана в виде <img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17">=&lt;0.3, 0.8, <i>выше средней</i>&gt;. При этом используется множество лингвистических оценок:</p>
+
+  <p><img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16"> = {<i>низкая, ниже средней, средняя, выше средней, высокая</i>}.</p>
+  <p>Необходимо представить число <img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17"> в трапециевидной форме. </p>
+  <p><i>Решение.</i> Количество лингвистических термов (мощность множества <img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16">) равно <img src="4_1.php_files/image054.gif" align="absmiddle" height="16" width="19">=5. Лингвистическая оценка "<i>выше средней</i>" в множестве <img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16"> имеет порядковый номер <img src="4_1.php_files/image096.gif" align="absmiddle" height="19" width="12">=4. Применяя формулы (4.8)-(4.11) из предложения 4.3, получаем:</p>
+
+  <p><img src="4_1.php_files/image097.gif" align="absmiddle" height="33" width="72">&nbsp;; </p>
+
+  <p><img src="4_1.php_files/image098.gif" align="absmiddle" height="28" width="72">&nbsp;; </p>
+
+  <p><img src="4_1.php_files/image099.gif" align="absmiddle" height="49" width="300">&nbsp;; </p>
+
+  <p><img src="4_1.php_files/image100.gif" align="absmiddle" height="49" width="309">&nbsp;. </p>
+
+  <p>Поэтому в трапециевидной форме:</p>
+
+  <p><img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17">=&lt;0.3, 0.8, 0.63, 0.69&gt;, </p>
+
+  <p>или в виде разложения по <img src="4_1.php_files/image007.gif" align="absmiddle" height="16" width="17">-уровневым множествам:</p>
+
+  <p><img src="4_1.php_files/image101.gif" align="absmiddle" height="29" width="261">.</p>
+
+  <p>Графическое изображение нечеткого числа <img src="4_1.php_files/image031.gif" align="absmiddle" height="27" width="17"> представлено на рис.4.7.</p>
+
+  <p><img src="4_1.php_files/image102.gif" height="213" width="454"></p>
+  <p>Рис. 4.7. К примеру 4.3</p>
+
+  <p><b>Допущение 4.2.</b> При переходе от <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формы нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> (4.7) к треугольной форме (4.5) будем предполагать следующее: </p>
+  <p>·&nbsp; носителем нечеткого числа  <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> является интервал <img src="4_1.php_files/image039.gif" align="absmiddle" height="45" width="63">;</p>
+  <p>·&nbsp; для первого терма <img src="4_1.php_files/image084.gif" align="absmiddle" height="29" width="17"> :  <img src="4_1.php_files/image103.gif" align="absmiddle" height="39" width="108"> ;</p>
+  <p>·&nbsp; для последнего терма <img src="4_1.php_files/image090.gif" align="absmiddle" height="31" width="25">:  <img src="4_1.php_files/image104.gif" align="absmiddle" height="45" width="111"> ;</p>
+  <p>·&nbsp; для соседних термов <img src="4_1.php_files/image105.gif" align="absmiddle" height="35" width="21"> и <img src="4_1.php_files/image077.gif" align="absmiddle" height="31" width="17"> (<img src="4_1.php_files/image106.gif" align="absmiddle" height="24" width="63">) расстояние между ядрами <b><img src="4_1.php_files/image107.gif" align="absmiddle" height="49" width="172"> </b>является постоянной величиной,</p>
+  <p>где <img src="4_1.php_files/image108.gif" align="absmiddle" height="37" width="71">, <img src="4_1.php_files/image109.gif" align="absmiddle" height="39" width="71">, <img src="4_1.php_files/image110.gif" align="absmiddle" height="39" width="63">, <img src="4_1.php_files/image111.gif" align="absmiddle" height="49" width="73"> - ядра нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16"> соответствующие термам <img src="4_1.php_files/image084.gif" align="absmiddle" height="29" width="17">, <img src="4_1.php_files/image090.gif" align="absmiddle" height="31" width="25">, <img src="4_1.php_files/image077.gif" align="absmiddle" height="31" width="17">, <img src="4_1.php_files/image105.gif" align="absmiddle" height="35" width="21">.</p>
+
+  <p><b>Предложение 4.4.</b> Если неопределенный параметр <img src="4_1.php_files/image002.gif" align="absmiddle" height="20" width="15"> задан <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формой нечеткого числа, где <img src="4_1.php_files/image112.gif" align="absmiddle" height="41" width="119">, где <img src="4_1.php_files/image113.gif" align="absmiddle" height="39" width="199">, то переход от <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формы нечеткого числа к треугольной форме (4.5) осуществляется по формулам:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image114.gif" align="absmiddle" height="44" width="101"> ;                                               </td>
+      <td align="right">(4.12)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image115.gif" align="absmiddle" height="40" width="104"> ;                                               </td>
+      <td align="right">(4.13)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="4_1.php_files/image116.gif" align="absmiddle" height="68" width="217"> ,                                  </td>
+      <td align="right">(4.14)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где  <img src="4_1.php_files/image117.gif" align="absmiddle" height="45" width="129"> - нижняя (верхняя) граница носителя нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, выраженного лингвистической оценкой <img src="4_1.php_files/image077.gif" align="absmiddle" height="31" width="17">;</p>
+  <p><img src="4_1.php_files/image118.gif" align="absmiddle" height="39" width="60"> - ядро нечеткого числа <img src="4_1.php_files/image003.gif" align="absmiddle" height="27" width="16">, выраженного лингвистической оценкой <img src="4_1.php_files/image077.gif" align="absmiddle" height="31" width="17">.</p>
+  <p>Доказательство
+этого предложения аналогично тому, которое| использовалось в
+предложении 4.3. Предложение 4.4 иллюстрирует рис.4.8.</p>
+
+  <p><b>Пример 4.4.</b> Пусть информация о времени выполнения контрольной операции задана <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формой нечеткого числа:</p>
+
+  <p><img src="4_1.php_files/image119.gif" align="absmiddle" height="24" width="16"> = &lt; 10, 19, <i>высокое </i>&gt;. </p>
+
+  <p>Множество лингвистических оценок имеет вид:</p>
+
+  <p><img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16"> = { <i>низкое, среднее, высокое, очень высокое </i>}. </p>
+  <p>Требуется представить число <img src="4_1.php_files/image119.gif" align="absmiddle" height="24" width="16"> в треугольной форме. </p>
+  <p><i>Решение.</i>   Количество   лингвистических  термов (мощность множества <img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16">) равно четырем. Лингвистическая оценка &lt;<i>высокое</i>&gt; в множестве <img src="4_1.php_files/image059.gif" align="absmiddle" height="19" width="16"> имеет порядковый номер <img src="4_1.php_files/image096.gif" align="absmiddle" height="19" width="12">=3. Применяя формулы (4.12)-(4.14), получаем:</p>
+
+  <p><img src="4_1.php_files/image120.gif" align="absmiddle" height="27" width="45"> ;  <img src="4_1.php_files/image121.gif" align="absmiddle" height="24" width="47"> ; </p>
+
+  <p><img src="4_1.php_files/image122.gif" align="absmiddle" height="27" width="285"> . </p>
+
+  <p>Окончательно находим:</p>
+
+  <p><img src="4_1.php_files/image119.gif" align="absmiddle" height="24" width="16"> =&lt; 10, 19. 16 &gt;.</p>
+
+  <p>Функция принадлежности нечеткого числа <img src="4_1.php_files/image119.gif" align="absmiddle" height="24" width="16"> показана на рис.4.9.</p>
+
+  <p><img src="4_1.php_files/image123.gif" height="205" width="559"></p>
+  <table border="0" cellpadding="2" cellspacing="2">
+    <tbody><tr>
+      <td width="300">Рис. 4.8. Переход от <img src="4_1.php_files/image069.gif" align="absmiddle" height="20" width="12">-формы к треугольной в случае пяти термов
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рис. 4.9. К примеру 4.4.
+      </td>
+    </tr>
+  </tbody></table>
+
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/4_2.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/3_5.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="4_1.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="4_1.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="4_1.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="4_1.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="4_1.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

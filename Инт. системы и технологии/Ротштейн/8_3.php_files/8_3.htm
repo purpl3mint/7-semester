@@ -1,0 +1,610 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" margin height="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169671068"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/8_3.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="8_4.php">К следующему разделу</a> \ <a class="menu1"
+    href="8_2.php">К предыдущему разделу </a></p>
+
+ 
+
+
+   <p><b>8.3. Прогнозирование количества заболеваний</b></p>
+   <p>Прогнозирование или предсказание количества заболеваний того или иного типа на уровне города, региона, и т. д. является необходимым элементом организации лечебно-профилактических мероприятий. С формальной точки зрения эта задача относится к широкому классу задач прогнозирования дискретных последовательностей (совокупности значений в фиксированные моменты), которые возникают не только в медицине, но и в физике, технике, экономике, социологии, и других областях.</p>
+   <p>Нетривиальность прогнозирования дискретных последовательностей обусловлена тем, что, в отличие от хорошо алгоритмизованных процедур интерполяции [13], прогнозирование требует экстраполяции данных о прошлом на будущее. При этом необходимо учитывать неизвестную закономерность о явлении, лежащем в основе процесса, который генерирует дискретные последовательности. Разработке математических моделей прогнозирования посвящено большое количество исследований [16]. Наиболее распространенными являются методы, построенные на базе вероятностно-статистического аппарата. Но их использование требует значительного количества экспериментальных данных, которые не всегда удается собрать в условиях событий, состоявшихся относительно недавно, например, авария в Чернобыле.</p>
+  <p>В последнее время в задачах прогнозирования возродился интерес к использованию искусственных нейронных сетей [12,63]. Они рассматриваются как близкие к человеческому мозгу универсальные модели, которые обучаются распознаванию неизвестных закономерностей. Но, как и в случае вероятностно-статистических методов, для обучения нейронных сетей требуется большая выборка экспериментальных данных. Кроме того обученная нейронная сеть не допускает ясной интерпретации весов дуг.</p>
+  <p>В этом разделе предлагается подход к прогнозированию, который объединяет экспериментальные данные о количестве заболеваний с экспертно-лингвистической информацией о закономерностях, которые удается увидеть в существующих данных. Использование экспертно-лингвистических закономерностей, которые формализуются при помощи нечеткой логики, позволяет построить модель прогнозирования в условиях малых экспериментальных выборок. Предлагаемый здесь подход идеологически достаточно близок к так называемому <нейро - нечеткому> подходу [66], объединяющему способности нейронных сетей к обучению и легкую интерпретируемость нечетких правил <br> ЕСЛИ-ТО. Однако, в отличие от&nbsp;[66], мы не используем нейронную сеть для обучения модели прогноза, а непосредственно настраиваем нечеткие правила ЕСЛИ-ТО с помощью существующих экспериментальных данных [33].</p>
+  <p><b><a name="1"></a>8.3.1. Экспериментальные данные </b></p>
+  <p>Нами рассматривается количество заболеваний аппендикулярным перитонитом у детей по данным клиники детской хирургии г. Винницы в 1982-1997 годах, которые сведены в табл.&nbsp;8.11. </p>
+
+  <p>Таблица 8.11. Распределение количества заболеваний по годам.</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Год</p>
+   </td>
+   <td>   <p>1982</p>
+   </td>
+   <td>   <p>1983</p>
+   </td>
+   <td>   <p>1984</p>
+   </td>
+   <td>   <p>1985</p>
+   </td>
+   <td>   <p>1986</p>
+   </td>
+   <td>   <p>1987</p>
+   </td>
+   <td>   <p>1988</p>
+   </td>
+   <td>   <p>1989</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Количество заболеваний</p>
+   </td>
+   <td>   <p>109</p>
+   </td>
+   <td>   <p>143</p>
+   </td>
+   <td>   <p>161</p>
+   </td>
+   <td>   <p>136</p>
+   </td>
+   <td>   <p>161</p>
+   </td>
+   <td>   <p>163</p>
+   </td>
+   <td>   <p>213</p>
+   </td>
+   <td>   <p>220</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Год</p>
+   </td>
+   <td>   <p>1990</p>
+   </td>
+   <td>   <p>1991</p>
+   </td>
+   <td>   <p>1992</p>
+   </td>
+   <td>   <p>1993</p>
+   </td>
+   <td>   <p>1994</p>
+   </td>
+   <td>   <p>1995</p>
+   </td>
+   <td>   <p>1996</p>
+   </td>
+   <td>   <p>1997</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Количество заболеваний</p>
+   </td>
+   <td>   <p>162</p>
+   </td>
+   <td>   <p>194</p>
+   </td>
+   <td>   <p>164</p>
+   </td>
+   <td>   <p>196</p>
+   </td>
+   <td>   <p>245</p>
+   </td>
+   <td>   <p>252</p>
+   </td>
+   <td>   <p>240</p>
+   </td>
+   <td>   <p>225</p>
+   </td>
+  </tr>
+ </table>
+  <p>Наблюдая динамику изменения количества заболеваний по рис.&nbsp;8.9, легко заметить наличие <i>четырехлетних циклов,</i> в которых на третьем месте стоит високосный год. Эти циклы будем обозначать так:</p>
+  <p><img width=310 height=73 src="8_3_files/image001.gif"></p>
+  <p>где <img align="absmiddle" width=12 height=19 src="8_3_files/image002.gif">- номер четырехлетнего цикла,</p>
+  <p><img align="absmiddle" width=23 height=37 src="8_3_files/image003.gif"> - количество заболеваний за два года до високосного,</p>
+  <p><img align="absmiddle" width=25 height=37 src="8_3_files/image004.gif"> - количество заболеваний за один год до високосного,</p>
+  <p><img align="absmiddle" width=24 height=39 src="8_3_files/image005.gif"> - количество заболеваний в високосном году,</p>
+  <p><img align="absmiddle" width=25 height=37 src="8_3_files/image006.gif"> - количество заболеваний в следующем году после високосного.</p>
+
+  <p><img width=704 height=323 src="8_3_files/image007.gif"></p>
+  <p>Введенные обозначения будут использованы в дальнейшем при формировании закономерностей, необходимых для прогнозирования.</p>
+  <p><b><a name="2"></a>8.3.2. Экспертно-лингвистические закономерности</b></p>
+  <p>Закономерности, которые удается наблюдать на рис. 8.9, легко записать в виде четырех экспертных высказываний на естественном языке. Эти высказывания являются правилами ЕСЛИ-ТО, которые связывают количество заболеваний в <img align="absmiddle" width=12 height=19 src="8_3_files/image002.gif">- ом и (<img align="absmiddle" width=33 height=20 src="8_3_files/image008.gif">)- ом циклах (рис. 8.10):</p>
+  <p><img width=619 height=753 src="8_3_files/image009.gif"></p>
+  <p>Сеть зависимостей на рис. 8.11, которая объединяет сформированные выше правила, показывает, что по двум первым годам <img align="absmiddle" width=12 height=19 src="8_3_files/image002.gif">-го цикла можно прогнозировать на четыре года вперед: на два последних года <img align="absmiddle" width=12 height=19 src="8_3_files/image002.gif">-го цикла и на два первых года следующего <img align="absmiddle" width=49 height=24 src="8_3_files/image010.gif">-го цикла.</p>
+  <p><b><a name="3"></a>8.3.3. Модель прогнозирования</b></p>
+  <p><img width=590 height=272 src="8_3_files/image012.gif"></p>
+  <p><img width=580 height=503 src="8_3_files/image013.gif"></p>
+  <p>Для использования экспертно-лингвистических высказываний <img align="absmiddle" width=67 height=29 src="8_3_files/image011.gif"> используется аппарат теории нечетких множеств. Согласно этой теории, лингвистические оценки <низкий>, <ниже среднего> и другие формализуются при помощи функций принадлежности. Будем использовать модель функции принадлежности, введенные в главе 3. Выбранные экспертом параметры <img align="absmiddle" width=13 height=20 src="8_3_files/image014.gif"> и <img align="absmiddle" width=13 height=16 src="8_3_files/image015.gif"> для разных лингвистических оценок, которые используются в правилах <img align="absmiddle" width=67 height=29 src="8_3_files/image011.gif">, представлены в табл.&nbsp;8.12. </p>
+  <p>Полученные при этом функции принадлежности показаны на рис. 8.12.</p>
+
+  <p>Таблица 8.12. Параметры функций принадлежности до настройки</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Лингвистические оценки переменных</p>
+   </td>
+   <td colspan="2">   <p>Параметр</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=65 height=37   src="8_3_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=20   src="8_3_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=16   src="8_3_files/image015.gif"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>низкая (Н)</p>
+   </td>
+   <td>   <p>100</p>
+   </td>
+   <td>   <p>50</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>ниже среднего (нС)</p>
+   </td>
+   <td>   <p>160</p>
+   </td>
+   <td>   <p>30</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>средняя (С)</p>
+   </td>
+   <td>   <p>195</p>
+   </td>
+   <td>   <p>25</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>выше среднего (вС)</p>
+   </td>
+   <td>   <p>222</p>
+   </td>
+   <td>   <p>20</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>высокая (В)</p>
+   </td>
+   <td>   <p>260</p>
+   </td>
+   <td>   <p>30</p>
+   </td>
+  </tr>
+ </table>
+
+  <p><img width=647 height=239 src="8_3_files/image017.gif"></p>
+  <p>Помимо выбранных выше двухпараметрических функций принадлежности, могут быть использованы и другие функции, например, треугольные или трапециевидные [85], содержащие три и четыре настраиваемых параметра, соответственно.</p>
+  <p>Обозначим через <img align="absmiddle" width=55 height=41 src="8_3_files/image018.gif"> диапазон возможных значений количества заболеваний. Разобьем этот диапазон на пять частей:</p>
+  <p><img width=322 height=68 src="8_3_files/image019.gif"></p>
+  <p>которые ассоциируются с лингвистическими оценками: низкая (Н), ниже среднего (нС), средняя (С), выше среднего (вС), высокая (В). Тогда, используя нечетко-логические операции <i>min</i> (И), <i>max</i> (ИЛИ) и операцию дефаззификации для преобразования функции принадлежности к четкому числу, можно записать модель прогнозирования в явном виде:</p>
+  <p><img align="absmiddle" width=467 height=335 src="8_3_files/image020.gif"></p>
+
+  <p><img align="absmiddle" width=468 height=335 src="8_3_files/image021.gif"></p>
+
+  <p><img align="absmiddle" width=417 height=241 src="8_3_files/image022.gif"></p>
+  <p><img align="absmiddle" width=523 height=273 src="8_3_files/image023.gif"></p>
+
+  <p><img width=609 height=325 src="8_3_files/image024.gif"><br>При помощи полученной модели можно грубо прогнозировать количество заболеваний, как показано на рис. 8.13. </p>
+  <p>Для повышения точности прогноза необходимо перейти к настройке модели. </p>
+  <p><b><a name="4"></a>8.3.4. Настройка модели прогнозирования</b></p>
+  <p>Задача настройки состоит в подборе таких параметров <img align="absmiddle" width=13 height=20 src="8_3_files/image014.gif"> и <img align="absmiddle" width=13 height=16 src="8_3_files/image015.gif"> функций принадлежности лингвистических оценок (рис. 8.12), которые обеспечат минимум расхождения между теоретическим и экспериментальным количеством заболеваний. В соответствии с методом наименьших квадратов эта задача формулируется так:</p>
+  <p>найти такие параметры <img align="absmiddle" width=13 height=20 src="8_3_files/image014.gif"> и <img align="absmiddle" width=13 height=16 src="8_3_files/image015.gif">, что</p>
+
+  <p><img align="absmiddle" width=600 height=140 src="8_3_files/image025.gif"></p>
+
+  <p>где <img align="absmiddle" width=24 height=39 src="8_3_files/image005.gif">,<img align="absmiddle" width=25 height=37 src="8_3_files/image006.gif">,<img align="absmiddle" width=45 height=37 src="8_3_files/image026.gif">,<img align="absmiddle" width=43 height=37 src="8_3_files/image027.gif"> - прогнозные количества заболеваний, которые зависят от параметров <img align="absmiddle" width=13 height=20 src="8_3_files/image014.gif"> и <img align="absmiddle" width=13 height=16 src="8_3_files/image015.gif"> функций принадлежности, </p>
+  <p><img align="absmiddle" width=24 height=39 src="8_3_files/image028.gif">,<img align="absmiddle" width=25 height=37 src="8_3_files/image029.gif">,<img align="absmiddle" width=43 height=37 src="8_3_files/image030.gif">,<img align="absmiddle" width=43 height=37 src="8_3_files/image031.gif"> - экспериментальные количества заболеваний, </p>
+  <p><img align="absmiddle" width=20 height=20 src="8_3_files/image032.gif"> - число циклов, которые используются для настройки модели.</p>
+  <p>После настройки модели прогнозирования при <img align="absmiddle" width=47 height=20 src="8_3_files/image033.gif">, что соответствует использованию данных за 1982 - 1993 годы, получены параметры функций принадлежности, показанные в табл. 8.13. </p>
+
+  <p>Таблица 8.13. Параметры функций принадлежности после настройки</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Лингвистические оценки переменных</p>
+   </td>
+   <td colspan="2">   <p>Параметр</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=65 height=37   src="8_3_files/image016.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=20   src="8_3_files/image014.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=13 height=16   src="8_3_files/image015.gif"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>низкая (Н)</p>
+   </td>
+   <td>   <p>100.385</p>
+   </td>
+   <td>   <p>14.148</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>ниже среднего (нС)</p>
+   </td>
+   <td>   <p>146.602</p>
+   </td>
+   <td>   <p>21.046</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>средняя (С)</p>
+   </td>
+   <td>   <p>195.650</p>
+   </td>
+   <td>   <p>7.621</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>выше среднего (вС)</p>
+   </td>
+   <td>   <p>234.457</p>
+   </td>
+   <td>   <p>19.760</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>высокая (В)</p>
+   </td>
+   <td>   <p>251.836</p>
+   </td>
+   <td>   <p>36.640</p>
+   </td>
+  </tr>
+ </table>
+
+  <p>Задача оптимизации решалась генетическим алгоритмом. Функции принадлежности после настройки приведены на рис. 8.14. В расчет принималось: <img align="absmiddle" width=59 height=28 src="8_3_files/image034.gif">, <img align="absmiddle" width=72 height=29 src="8_3_files/image035.gif">, <img align="absmiddle" width=75 height=29 src="8_3_files/image036.gif">, <img align="absmiddle" width=76 height=31 src="8_3_files/image037.gif">, <img align="absmiddle" width=77 height=29 src="8_3_files/image038.gif">, <img align="absmiddle" width=60 height=28 src="8_3_files/image039.gif">.</p>
+  <p><img width=668 height=219 src="8_3_files/image040.gif"></p>
+  <p>Использование настроенных функций принадлежности дает модель прогнозирования, которая достаточно близка к экспериментальным данным (рис. 8.15).</p>
+  <p><img width=628 height=339 src="8_3_files/image041.gif"></p>
+  <p>Поскольку экспериментальные значения количества заболеваний в 1994-1997 годах не использовались при настройке модели, то близкие результаты теории и эксперимента в этих годах свидетельствуют о достаточном для практики качестве построенной модели прогнозирования. Ошибка модели прогноза, а также прогноз количества заболеваний аппендикулярным перитонитом до 2001 года представлены в табл. 8.14.</p>
+
+  <p>Таблица 8.14. Экспериментальное и теоретическое количество заболеваний.</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Год</p>
+   </td>
+   <td>   <p>1982</p>
+   </td>
+   <td>   <p>1983</p>
+   </td>
+   <td>   <p>1984</p>
+   </td>
+   <td>   <p>1985</p>
+   </td>
+   <td>   <p>1986</p>
+   </td>
+   <td>   <p>1987</p>
+   </td>
+   <td>   <p>1988</p>
+   </td>
+   <td>   <p>1989</p>
+   </td>
+   <td>   <p>1990</p>
+   </td>
+   <td>   <p>1991</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Эксперимент</p>
+   </td>
+   <td>   <p>109</p>
+   </td>
+   <td>   <p>143</p>
+   </td>
+   <td>   <p>161</p>
+   </td>
+   <td>   <p>136</p>
+   </td>
+   <td>   <p>161</p>
+   </td>
+   <td>   <p>163</p>
+   </td>
+   <td>   <p>213</p>
+   </td>
+   <td>   <p>220</p>
+   </td>
+   <td>   <p>162</p>
+   </td>
+   <td>   <p>194</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Теория</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>163</p>
+   </td>
+   <td>   <p>135</p>
+   </td>
+   <td>   <p>158</p>
+   </td>
+   <td>   <p>165</p>
+   </td>
+   <td>   <p>199</p>
+   </td>
+   <td>   <p>222</p>
+   </td>
+   <td>   <p>159</p>
+   </td>
+   <td>   <p>201</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Ошибка</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>14</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Год</p>
+   </td>
+   <td>   <p>1992</p>
+   </td>
+   <td>   <p>1993</p>
+   </td>
+   <td>   <p>1994</p>
+   </td>
+   <td>   <p>1995</p>
+   </td>
+   <td>   <p>1996</p>
+   </td>
+   <td>   <p>1997</p>
+   </td>
+   <td>   <p>1998</p>
+   </td>
+   <td>   <p>1999</p>
+   </td>
+   <td>   <p>2000</p>
+   </td>
+   <td>   <p>2001</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Эксперимент</p>
+   </td>
+   <td>   <p>164</p>
+   </td>
+   <td>   <p>196</p>
+   </td>
+   <td>   <p>245</p>
+   </td>
+   <td>   <p>252</p>
+   </td>
+   <td>   <p>240</p>
+   </td>
+   <td>   <p>225</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Теория</p>
+   </td>
+   <td>   <p>168</p>
+   </td>
+   <td>   <p>198</p>
+   </td>
+   <td>   <p>234</p>
+   </td>
+   <td>   <p>247</p>
+   </td>
+   <td>   <p>231</p>
+   </td>
+   <td>   <p>232</p>
+   </td>
+   <td>   <p>154</p>
+   </td>
+   <td>   <p>199</p>
+   </td>
+   <td>   <p>163</p>
+   </td>
+   <td>   <p>195</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Ошибка</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>11</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+ </table>
+ 
+   
+ 
+
+
+
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="8_4.php">К следующему разделу</a> \ <a class="menu1"
+    href="8_2.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

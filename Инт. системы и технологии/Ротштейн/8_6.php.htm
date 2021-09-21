@@ -1,0 +1,1103 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="8_6.php_files/default.css" type="text/css"></head><body margin="" height="0" leftmargin="0" topmargin="0" background="8_6.php_files/8_6.htm" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="8_6.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="8_6.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_6.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_6.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_6.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_6.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_6.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_6.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="8_6.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="8_6.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="8_6.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="8_6.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="8_6.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="8_6.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="8_6.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="8_6.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="8_6.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="8_6.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="8_6.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="8_6.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/8_6.php"><span class="text1">Вход</span></a></td>
+<td><img src="8_6.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php">К предыдущему разделу </a></p>
+
+ 
+
+
+ 
+<p><b>8.6. Оценка дипломных проектов</b></p>
+
+  <p>Усовершенствование
+системы оценки качества дипломного проектирования представляет интерес
+в двух аспектах: информационном и управленческом. Информационный аспект
+связан с возможностью создания автоматизированных банков данных,
+содержащих информацию о личных и профессиональных качествах
+студента-дипломника. Управленческий аспект состоит в том, что во время
+дипломирования студент-дипломник должен иметь возможность оперативно
+прогнозировать свою будущую оценку и вносить коррективы для ее
+улучшения. </p>
+  <p>Известная методика оценки дипломных проектов и
+работ [11] базируется на скаляризации векторного критерия качества при
+помощи весовых коэффициентов. Последние выбираются экспертно, отображая
+важность каждого частичного показателя качества и его вклад в
+интегральный показатель, который оценивается по традиционной пяти
+бальной системе.</p>
+  <p>Не останавливаясь подробно на известных из
+теории много-критериаль-ной оценки трудностях в подборе весовых
+коэффициентов, следует признать, что главным недостатком методики [11]
+является то, что она весьма далека от реальной схемы рассуждений,
+которыми пользуются квалифицированные специалисты (члены комиссии) при
+оценке работы дипломника. Эти рассуждения выглядят примерно так:</p>
+
+  <p><i>ЕСЛИ
+работа актуальна, выполнена самостоятельно, решения глубоко обоснованы,
+оформление отвечает стандартам, результаты пригодны к внедрению, во
+время защиты даются четкие ответы на вопросы,</i></p>
+  <p><i>ТО дипломник заслуживает отличной оценки.</i></p>
+
+  <p>Рассуждения
+такого рода, зафиксированные в виде словесных инструкций (нечетких
+алгоритмов) есть, как правило, на всех выпускающих кафедрах. Поэтому
+целесообразно их непосредственное использование для оценки качества
+дипломного проектирования [39].</p>
+
+
+  <p><b><a name="1"></a>8.6.1.&nbsp;Интегральные и частные показатели</b></p>
+
+  <p>Процесс
+дипломного проектирования начинается с получения задания и
+заканчивается публичной защитой проекта перед членами государственной
+экзаменационной комиссии (ГЭК). При этом источниками первичной
+информации о качестве деятельности студента-дипломника являются:
+руководитель проекта, который располагает сведениями о работе студента
+во время дипломирования; рецензент (оппонент), который оценивает
+дипломный проект как конечный продукт, не имея информации о личных
+качествах дипломника; члены ГЭК, которые принимают конечное решение с
+учетом качества защиты проекта.</p>
+  <p>Обозначим <img src="8_6.php_files/image001.gif" align="absmiddle" height="19" width="17">
+- интегральный показатель качества дипломного проектирования. Для
+оценки этого показателя с учетом трех названных выше источников
+информации выделим:</p>
+  <p><img src="8_6.php_files/image002.gif" align="absmiddle" height="19" width="21"> - качество процесса подготовки дипломного проекта, которое оценивается, руководителем на основе таких частных показателей: <img src="8_6.php_files/image003.gif" align="absmiddle" height="29" width="23">-добро-совестность студента дипломника; <img src="8_6.php_files/image004.gif" align="absmiddle" height="29" width="27"> - умение самостоятельно работать с литературой; <img src="8_6.php_files/image005.gif" align="absmiddle" height="31" width="25"> - достижение цели, поставленной руководителем; <img src="8_6.php_files/image006.gif" align="absmiddle" height="29" width="27"> - объем самостоятельно полученных результатов;</p>
+  <p><img src="8_6.php_files/image007.gif" align="absmiddle" height="19" width="16"> - качество дипломного проекта как продукта, которое оценивается рецензентом на основе таких частных показателей: <img src="8_6.php_files/image008.gif" align="absmiddle" height="29" width="24"> - обоснование актуальности; <img src="8_6.php_files/image009.gif" align="absmiddle" height="29" width="27"> - качество обзора литературы; <img src="8_6.php_files/image010.gif" align="absmiddle" height="31" width="27"> - новизна работы; <img src="8_6.php_files/image011.gif" align="absmiddle" height="29" width="27"> - глубина обоснования решений; <img src="8_6.php_files/image012.gif" align="absmiddle" height="31" width="27"> - возможность практического использования; <img src="8_6.php_files/image013.gif" align="absmiddle" height="31" width="27"> - соблюдение стандартов; <img src="8_6.php_files/image014.gif" align="absmiddle" height="31" width="27"> - качество графических материалов; <img src="8_6.php_files/image015.gif" align="absmiddle" height="31" width="27"> - грамотность изложения; <img src="8_6.php_files/image016.gif" align="absmiddle" height="31" width="27"> - научно-технический уровень разработки;</p>
+  <p><img src="8_6.php_files/image017.gif" height="553" width="633"></p>
+
+  <p><img src="8_6.php_files/image018.gif" align="absmiddle" height="19" width="17"> - качество защиты дипломного проекта, которое оценивается членами ГЭК на основе таких частных показателей:  <img src="8_6.php_files/image019.gif" align="absmiddle" height="29" width="21"> - качество доклада; <img src="8_6.php_files/image020.gif" align="absmiddle" height="29" width="25"> - качество чертежей; <img src="8_6.php_files/image021.gif" align="absmiddle" height="31" width="24"> - качество ответов на вопросы; <img src="8_6.php_files/image022.gif" align="absmiddle" height="29" width="25"> - общая оценка работы.</p>
+  <p>Иерархия показателей качества показана на рис. 8.21 в виде дерева вывода, которому соответствует система соотношений:</p>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">  <tbody><tr>   <td>   <p><img src="8_6.php_files/image023.gif" align="absmiddle" height="32" width="143">,</p>
+   </td>
+   <td align="right">   <p>(8.16)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_6.php_files/image024.gif" align="absmiddle" height="32" width="183">,</p>
+   </td>
+   <td align="right">   <p>(8.17)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_6.php_files/image025.gif" align="absmiddle" height="32" width="175">,</p>
+   </td>
+   <td align="right">   <p>(8.18)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_6.php_files/image026.gif" align="absmiddle" height="32" width="169"></p>
+   </td>
+   <td align="right">   <p>(8.19)</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Этим
+соотношениям будут поставлены в соответствие нечеткие логические
+уравнения, которые позволяют определять уровень показателя <img src="8_6.php_files/image001.gif" align="absmiddle" height="19" width="17"> по максимуму функции принадлежности.</p>
+
+  <p><b><a name="2"></a>8.6.2. Уровни качества</b></p>
+  <p>Традиционная
+5-ти-бальная система оценки качества знаний не позволяет учитывать
+различные градации (оттенки) качества, например, <i>твердая четверка, четверка с натяжкой </i>и т.д. Поэтому оценку качества дипломного проектирования будем проводить на 7-ми уровнях: <img src="8_6.php_files/image027.gif" align="absmiddle" height="29" width="19"> - очень низкий; <img src="8_6.php_files/image028.gif" align="absmiddle" height="29" width="23"> - низкий; <img src="8_6.php_files/image029.gif" align="absmiddle" height="31" width="21"> - ниже среднего; <img src="8_6.php_files/image030.gif" align="absmiddle" height="29" width="23"> - средний; <img src="8_6.php_files/image031.gif" align="absmiddle" height="31" width="21"> - выше среднего; <img src="8_6.php_files/image032.gif" align="absmiddle" height="31" width="23"> - высокий; <img src="8_6.php_files/image033.gif" align="absmiddle" height="31" width="23"> - очень высокий.</p>
+  <p><img src="8_6.php_files/image034.gif" height="356" width="341"></p>
+  <p>Чем
+больше уровней имеет показатель качества, тем точнее его оценка. Но
+использование более 9 уровней нецелесообразно, поскольку из психологии
+известно, что в оперативной памяти человека удерживается одновременно
+не больше, чем 7<span style="font-family: Symbol;">+</span>2 понятий
+[64]. Переход от введенной 7-ми уровневой системы к традиционной
+5-ти-бальной системе может осуществляется по-разному в зависимости от
+так называемой <i>планки учебного заведения</i>. Она зависит от многих
+факторов, среди которых важнейшими являются уровни квалификации,
+требовательности и принципиальности руководителя проекта, рецензента и
+членов ГЭК. Из рис.&nbsp;8.22 видно, что снижение планки осуществляется
+с переходом от варианта а), где она самая высокая, к варианту в), где
+она самая низкая.</p>
+
+
+
+  <p><b><a name="3"></a>8.6.3.&nbsp;Оценка частных показателей по принципу термометра</b></p>
+  <p>Особенность частных показателей <img src="8_6.php_files/image035.gif" align="absmiddle" height="29" width="65">, <img src="8_6.php_files/image036.gif" align="absmiddle" height="31" width="67"> и <img src="8_6.php_files/image037.gif" align="absmiddle" height="29" width="64">,
+состоит в том, что все они имеют качественный характер, т.е. не имеют
+точного количественного измерения. Поэтому при оценке одного и того же
+показателя несколькими экспертами могут возникать разные мнения. Кроме
+того эксперт не всегда способен словесно оценить частный показатель,
+хотя интуитивно ощущает его уровень. Для преодоления этих трудностей
+можно оценивать частичные показатели по <i>принципу термометра</i> (рис.&nbsp;8.23).</p>
+  <p><img src="8_6.php_files/image038.gif" height="161" width="609"></p>
+  <p>Удобство
+такого подхода состоит в том, что разные по смыслу частные показатели
+определяются как лингвистические переменные, заданные на едином
+универсальном множестве </p>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">  <tbody><tr>   <td>   <p><img src="8_6.php_files/image039.gif" align="absmiddle" height="52" width="100">    ,</p>
+   </td>
+   <td align="right">   <p>(8.20)</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>которым
+является шкала термометра. Снижение субъективизма может быть достигнуто
+за счет использования рекомендаций из табл. 8.&nbsp;23. Например,
+закрашенная часть шкалы на рис.&nbsp;8.23 для показателя "НОВИЗНА
+РАБОТЫ", соответствует уровню перспективных образцов.</p>
+
+  <p><b><a name="4"></a>8.6.4. Оценка интегрального показателя</b></p>
+  <p>Таблица 8.23. Рекомендации по оценке частных показателей качества </p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>Частный</p>
+   </td>
+   <td colspan="4" align="center">   <p>Уровни оценки   показателей</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>показатель</p>
+   </td>
+   <td>   <p>Минимальный уровень</p>
+   </td>
+   <td colspan="2" align="center">   <p>Средний   уровень</p>
+   </td>
+   <td>   <p>Максимальный   уровень</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Новизна работы</p>
+   </td>
+   <td>   <p>Ниже среднего уровня</p>
+   </td>
+   <td>   <p>Уровень средних   образцов</p>
+   </td>
+   <td>   <p>Перспективные   образцы</p>
+   </td>
+   <td>   <p>Оригинальные   идеи</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Качество   обзора литературы</p>
+   </td>
+   <td>   <p>Недостаточный анализ</p>
+   </td>
+   <td>   <p>Отечественная   литература</p>
+   </td>
+   <td>   <p>Современная   отечественная литература</p>
+   </td>
+   <td>   <p>Новая   отечественная и зарубежная литература</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Глубина обоснования   решений</p>
+   </td>
+   <td>   <p>Вариантные   расчеты отсутствуют</p>
+   </td>
+   <td colspan="2" align="center">   <p>Есть   результаты только одного варианта</p>
+   </td>
+   <td>   <p>Обоснован   выбор оптимального варианта</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Возможность   практического использования</p>
+   </td>
+   <td>   <p>Нет   конкретных практических рекомендаций</p>
+   </td>
+   <td colspan="2" align="center">   <p>Результаты   имеют рекомендационный характер</p>
+   </td>
+   <td>   <p>Возможное непосредственное   использование</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Качество графического   материала</p>
+   </td>
+   <td>   <p>Не раскрывают   смысл проекта</p>
+   </td>
+   <td colspan="2" align="center">   <p>Не полностью   раскрывают смысл, есть погрешность в оформлении</p>
+   </td>
+   <td>   <p>Полностью раскрывают   смысл и отвечают ГОСТ</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Грамотность   изложения</p>
+   </td>
+   <td>   <p>Много стилистических   и грамматических ошибок</p>
+   </td>
+   <td colspan="2" align="center">   <p>Есть   отдельные грамматические ошибки</p>
+   </td>
+   <td>   <p>Текст   читается легко, ошибки отсутствуют</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Научно-технический   уровень</p>
+   </td>
+   <td>   <p>Использование   ЭВМ отсутствует или носит второстепенный характер</p>
+   </td>
+   <td colspan="2" align="center">   <p>Современные   пакеты программ в основной части </p>
+   </td>
+   <td>   <p>Оригинальные   программно-технические средства в основной части работы</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Качество доклада</p>
+   </td>
+   <td>   <p>Не раскрывает   тему проекта</p>
+   </td>
+   <td>   <p>Не соблюден   регламент, недостаточно раскрыта тема проекта</p>
+   </td>
+   <td>   <p>Есть ошибки в   регламенте и использовании плакатов</p>
+   </td>
+   <td>   <p>Соблюдение   времени, раскрытие актуальности, новизны, метода с использования плакатов</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Качество чертежей</p>
+   </td>
+   <td>   <p>Не отвечают   докладу, выполнены на низком уровне</p>
+   </td>
+   <td>   <p>Не полностью   отвечают содержанию доклада, есть ошибки в оформлении и отклонение от   стандартов</p>
+   </td>
+   <td>   <p>Есть незначительные   погрешности в оформлении</p>
+   </td>
+   <td>   <p>Полностью отвечают   содержанию доклада, дополняют его, отвечают требованиям стандартов</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Качество ответов   на вопросы</p>
+   </td>
+   <td>   <p>Не может   ответить на дополнительные вопросы</p>
+   </td>
+   <td>   <p>Знание основного   материала</p>
+   </td>
+   <td>   <p>Высокая эрудиция,   нет существенных ошибок</p>
+   </td>
+   <td>   <p>Ответы   точные, высокий уровень эрудиции</p>
+   </td>
+  </tr>
+ </tbody></table>
+ <p><img src="8_6.php_files/image040.gif" height="311" width="331"></p>
+ <p>Предположим, что лингвистические переменные <img src="8_6.php_files/image035.gif" align="absmiddle" height="29" width="65">, <img src="8_6.php_files/image036.gif" align="absmiddle" height="31" width="67">, <img src="8_6.php_files/image037.gif" align="absmiddle" height="29" width="64">и <img src="8_6.php_files/image002.gif" align="absmiddle" height="19" width="21">, <img src="8_6.php_files/image007.gif" align="absmiddle" height="19" width="16">, <img src="8_6.php_files/image018.gif" align="absmiddle" height="19" width="17">
+оцениваются нечеткими термами: Н - низкий, нС - ниже среднего, С -
+средний, вС - выше среднего, В - высокий, которые определены с помощью
+функций принадлежности (рис. 8.24). Пользуясь нечеткими термами,
+зададим знания о соотношениях (8.16-8.19), в виде матриц, фрагменты
+которых представлены в табл. 8.24-8.27. Общее количество групп строчек
+в этих матрицах составляет 5+5+5+7. Каждая группа строчек отображает
+условное высказывание, которое связывает нечеткие значения входных и
+выходных переменных. Например, из табл. 8.24 видно, что условием очень
+высокого (<img src="8_6.php_files/image033.gif" align="absmiddle" height="31" width="23">) качества дипломного проектирования (<img src="8_6.php_files/image001.gif" align="absmiddle" height="19" width="17">) является высказывание:</p>
+
+  <p>ЕСЛИ (<img src="8_6.php_files/image002.gif" align="absmiddle" height="19" width="21">=В) И (<img src="8_6.php_files/image007.gif" align="absmiddle" height="19" width="16">=В) И (<img src="8_6.php_files/image018.gif" align="absmiddle" height="19" width="17">=В) ИЛИ (<img src="8_6.php_files/image002.gif" align="absmiddle" height="19" width="21">=вС) И (<img src="8_6.php_files/image007.gif" align="absmiddle" height="19" width="16">=В) И (<img src="8_6.php_files/image018.gif" align="absmiddle" height="19" width="17">=В), </p>
+  <p>ТО <img src="8_6.php_files/image041.gif" align="absmiddle" height="31" width="55">.</p>
+
+  <table border="0" cellpadding="2" cellspacing="2">  <tbody><tr>   <td colspan="4">   <p>Таблица 8.24. Фрагмент знаний о соотношениях (8.16)</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td colspan="5">   <p>Таблица 8.25. Фрагмент знаний о соотношениях (8.17)</p>
+   </td>
+  </tr>
+  </tbody></table>
+<table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><img src="8_6.php_files/image002.gif" align="absmiddle" height="19" width="21"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image007.gif" align="absmiddle" height="19" width="16"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image018.gif" align="absmiddle" height="19" width="17"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image001.gif" align="absmiddle" height="19" width="17"></p>
+   </td>
+   <td rowspan="12">   <p>&nbsp;</p>
+   </td>
+   <td width="65">   <p><img src="8_6.php_files/image003.gif" align="absmiddle" height="29" width="23"></p>
+   </td>
+   <td width="65">   <p><img src="8_6.php_files/image042.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td width="65">   <p><img src="8_6.php_files/image005.gif" align="absmiddle" height="31" width="25"></p>
+   </td>
+   <td width="65">   <p><img src="8_6.php_files/image043.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td width="65">   <p><img src="8_6.php_files/image002.gif" align="absmiddle" height="19" width="21"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image033.gif" align="absmiddle" height="31" width="23"></p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>С</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image032.gif" align="absmiddle" height="31" width="23"></p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>нС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image027.gif" align="absmiddle" height="29" width="19"></p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Y</p>
+   </td>
+   <td>   <p>Yc</p>
+   </td>
+   <td>   <p>Y</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   
+   <td colspan="4" rowspan="4" width="325"> <p>&nbsp;</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+  </tr>
+  <tr>   
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr>   
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+  </tr>
+  <tr>  
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+  </tr>
+ </tbody></table>
+<br><br>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr style="border: medium none ;">   <td colspan="10" style="border: medium none ;"><p>Таблица 8.26. Фрагмент знаний о соотношениях (8.18)</p>
+   </td>
+   <td style="border: medium none ;">&nbsp;</td>
+   <td colspan="5" style="border: medium none ;">   <p>Таблица 8.27. Фрагмент знаний о соотношениях(8.19)</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_6.php_files/image044.gif" align="absmiddle" height="29" width="23"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image009.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image010.gif" align="absmiddle" height="31" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image011.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image012.gif" align="absmiddle" height="31" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image013.gif" align="absmiddle" height="31" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image014.gif" align="absmiddle" height="31" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image015.gif" align="absmiddle" height="31" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image016.gif" align="absmiddle" height="31" width="27"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image007.gif" align="absmiddle" height="19" width="16"></p>
+   </td>
+   <td rowspan="11">&nbsp;</td>
+   <td>   <p><img src="8_6.php_files/image045.gif" align="absmiddle" height="29" width="23"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image020.gif" align="absmiddle" height="29" width="25"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image021.gif" align="absmiddle" height="31" width="24"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image022.gif" align="absmiddle" height="29" width="25"></p>
+   </td>
+   <td>   <p><img src="8_6.php_files/image018.gif" align="absmiddle" height="19" width="17"></p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+   <td>   <p>...</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>нС</p>
+   </td>
+   <td>   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+
+  </tr>
+  <tr>   <td>   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+
+  </tr>
+ </tbody></table>
+
+  <p>Нечеткие
+логические уравнения, поставленные в соответствие табл. 8.24-8.27,
+позволяют оценивать интегральное качество дипломного проектирования для
+фиксированных значений частных показателей. (табл.&nbsp;8.28).
+Автоматизированная система оценки качества дипломного проектирования
+описана в [39]. </p>
+  <p>Опыт применения системы показал, что она
+дает ряд позитивных эффектов, которые способствуют повышению качества
+дипломного проектирования. Во-первых, студент-дипломник может
+оперативно прогнозировать свою оценку, тем самым управляя качеством
+собственной деятельности во время дипломирования. Во-вторых, благодаря
+существованию формализованного бланка оценки частных показателей,
+заведующий кафедрой может оперативно контролировать качество и
+объективность отзывов, которые подают руководитель и рецензент на
+каждый дипломный проект. В-третьих, выпускающая кафедра накапливает
+банк данных о качестве деятельности всех своих выпускников.
+В-четвертых, появляется возможность оценки <i>планки учебного заведения</i>,
+благодаря сопоставлению расчетных 7-ми уровневых оценок, и
+окончательных оценок по пятибалльной системе, которые выставляет ГЭК
+(рис. 8.22).</p>
+
+  <p><b><a name="5"></a>8.6.5. Возможные обобщения</b></p>
+  <p>Задача
+оценки качества дипломного проектирования, один из методов решения
+которой предложен в этом разделе, принадлежит к широкому классу задач
+оценки качества интеллектуальной деятельности. Типичными
+представителями таких видов деятельности являются: подготовка статей,
+диссертаций, инновационных проектов и другой технической продукции.</p>
+  <p>Использование
+нечеткой логики для решения такого рода задач позволяет максимально
+приблизить математическую модель оценки качества к логике</p>
+  <p><img src="8_6.php_files/image046.gif" height="720" width="685"></p>
+  <p>рассуждений
+квалифицированных специалистов, принимающих оценочные решения.
+Построение нечетких экспертных систем, которые основаны на предложенной
+методике, дает возможность не только оценить качество интеллектуальной
+деятельности, но и создает условия для ее проектирования, т.е. такого
+управления частными показателями, при котором интегральный показатель
+качества будет принимать желаемое значение.</p>
+ 
+   
+ 
+
+
+
+ 
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="8_6.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="8_6.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="8_6.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="8_6.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="8_6.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

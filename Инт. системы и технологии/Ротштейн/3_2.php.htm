@@ -1,0 +1,277 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="3_2.php_files/default.css" type="text/css"></head><body leftmargin="0" topmargin="0" background="3_2.php_files/3_2.htm" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="3_2.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="3_2.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="3_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="3_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="3_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="3_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="3_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="3_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="3_2.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="3_2.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="3_2.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="3_2.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="3_2.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="3_2.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="3_2.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="3_2.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="3_2.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="3_2.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="3_2.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="3_2.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/3_2.php"><span class="text1">Вход</span></a></td>
+<td><img src="3_2.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+<td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/3_3.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php">К предыдущему разделу </a></p>
+<p><b>3.2. Объекты с дискретным выходом</b></p>
+<p><b><a name="1"></a>3.2.1.&nbsp;Постановка задачи</b></p>
+<p>Будем считать известными:</p>
+<p>· множество решений <img src="3_2.php_files/image190.gif" align="absmiddle" height="39" width="207">, соответствующих выходной переменной <img src="3_2.php_files/image004.gif" align="absmiddle" height="20" width="16">,</p>
+<p>· множество входных переменных <img src="3_2.php_files/image191.gif" align="absmiddle" height="55" width="176">,</p>
+<p>· диапазоны количественного изменения каждой входной переменной <img src="3_2.php_files/image053.gif" align="absmiddle" height="52" width="119">, <img src="3_2.php_files/image040.gif" align="absmiddle" height="31" width="53"> ,</p>
+<p>· функции принадлежностей, позволяющие представлять переменные <img src="3_2.php_files/image030.gif" align="absmiddle" height="31" width="21">, <img src="3_2.php_files/image027.gif" align="absmiddle" height="29" width="52"> в виде нечетких множеств (3.6) или (3.8),</p>
+<p>· матрица знаний, определенная по правилам, введенным в разделе 3.1.3.</p>
+<p>Требуется: разработать алгоритм принятия решения, позволяющий фиксированному вектору входных переменных <img src="3_2.php_files/image192.gif" align="absmiddle" height="47" width="196">, <img src="3_2.php_files/image193.gif" align="absmiddle" height="52" width="116"> поставить в соответствие решение <img src="3_2.php_files/image194.gif" align="absmiddle" height="24" width="48">.</p>
+<p>Задача аппроксимации объекта с дискретным выходом схематически
+показана на рис. 3.2, где подчеркивается, что входы объекта могут
+задаваться тремя способами: а)&nbsp;числом, б)&nbsp;2-лингвистическим
+термом, в)&nbsp;3-по принципу термометра.</p>
+<p>Идея метода, предлагаемого ниже для решения этой задачи состоит в
+использовании нечетких логических уравнений. Эти уравнения строятся на
+базе матрицы знаний или изоморфной ей системы логических высказываний
+(3.10) и позволяют вычислять значения функций принадлежности различных
+решений при фиксированных значениях входных переменных объекта. В
+качестве искомого решения выбирается решение с наибольшим значением
+функции принадлежности.</p>
+
+
+<p><b><a name="2"></a>3.2.2.&nbsp;Нечеткие логические уравнения</b></p>
+
+<p>Лингвистические оценки <img src="3_2.php_files/image175.gif" align="absmiddle" height="41" width="36"> переменных <img src="3_2.php_files/image015.gif" align="absmiddle" height="31" width="64">, входящих в логические высказывания о решениях <img src="3_2.php_files/image036.gif" align="absmiddle" height="35" width="27"> (3.10), будем рассматривать как нечеткие множества, определенные на универсальных множествах <img src="3_2.php_files/image195.gif" align="absmiddle" height="44" width="125">, <img src="3_2.php_files/image027.gif" align="absmiddle" height="29" width="52">, <img src="3_2.php_files/image057.gif" align="absmiddle" height="32" width="60">.</p>
+<p>Пусть <img src="3_2.php_files/image196.gif" align="absmiddle" height="51" width="93"> - функция принадлежности параметра <img src="3_2.php_files/image197.gif" align="absmiddle" height="55" width="120"> нечеткому терму <img src="3_2.php_files/image175.gif" align="absmiddle" height="41" width="36">, <img src="3_2.php_files/image027.gif" align="absmiddle" height="29" width="52">, <img src="3_2.php_files/image057.gif" align="absmiddle" height="32" width="60">, <img src="3_2.php_files/image177.gif" align="absmiddle" height="41" width="75">;</p>
+<p><img src="3_2.php_files/image198.gif" align="absmiddle" height="48" width="173"> - зависящая от <img src="3_2.php_files/image002.gif" align="absmiddle" height="16" width="15"> переменных функция принадлежности вектора входных переменных <img src="3_2.php_files/image199.gif" align="absmiddle" height="39" width="173">значению выходной переменной <img src="3_2.php_files/image178.gif" align="absmiddle" height="35" width="56">, <img src="3_2.php_files/image057.gif" align="absmiddle" height="32" width="60">.</p>
+
+<p><img src="3_2.php_files/image200.gif" height="665" width="618"></p>
+<p>Связь между этими функциями определяется нечеткой базой знаний(3.11) и может быть представлена в виде следующих уравнений:</p>
+<p><img src="3_2.php_files/image201.gif" align="absmiddle" height="163" width="553"></p>
+<p><img src="3_2.php_files/image202.gif" align="absmiddle" height="163" width="567"></p>
+<p><b>. . .</b></p>
+<p><img src="3_2.php_files/image203.gif" align="absmiddle" height="163" width="580"></p>
+<p>где <img src="3_2.php_files/image204.gif" align="absmiddle" height="15" width="16"> - логическое ИЛИ, <img src="3_2.php_files/image205.gif" align="absmiddle" height="15" width="16"> - логическое И.</p>
+<p>Эти нечеткие логические уравнения получены из нечеткой базы знаний (3.11) путем замены лингвистических термов <img src="3_2.php_files/image175.gif" align="absmiddle" height="41" width="36"> и <img src="3_2.php_files/image036.gif" align="absmiddle" height="35" width="27"> на соответствующие функции принадлежности, а операций <img src="3_2.php_files/image179.gif" align="absmiddle" height="27" width="29">и <img src="3_2.php_files/image180.gif" align="absmiddle" height="27" width="29"> - на операции <img src="3_2.php_files/image204.gif" align="absmiddle" height="15" width="16"> и <img src="3_2.php_files/image205.gif" align="absmiddle" height="15" width="16">.</p>
+<p>Кратко систему логических уравнений можно записать следующим образом:</p>
+<p><table border="0" width="100%">
+  <tbody><tr>
+    <td align="left"><img src="3_2.php_files/image206.gif" align="absmiddle" height="83" width="373">, <img src="3_2.php_files/image057.gif" align="absmiddle" height="32" width="60"> . </td>
+    <td align="right">(3.13)</td>
+  </tr>
+</tbody></table></p>
+
+<p><b><a name="3"></a>3.2.3.&nbsp;Алгоритм аппроксимации</b></p>
+<p>Принятие решения <img src="3_2.php_files/image207.gif" align="absmiddle" height="39" width="235">, которое соответствует вектору фиксированных значений входных переменных <img src="3_2.php_files/image192.gif" align="absmiddle" height="47" width="196">, будем осуществлять в такой последовательности.</p>
+<p>1°. Зафиксируем вектор значений входных переменных </p>
+
+<p><img src="3_2.php_files/image208.gif" align="absmiddle" height="47" width="191"> .</p>
+
+<p>2°. Зададим функции принадлежности нечетких термов, используемых в
+нечеткой базе знаний (3.11) и определим значения этих функций для
+заданных значений входных переменных <img src="3_2.php_files/image209.gif" align="absmiddle" height="37" width="69">.</p>
+<p>3°. Используя логические уравнения (3.13) вычислим многомерные функции принадлежности <img src="3_2.php_files/image210.gif" align="absmiddle" height="53" width="189"> вектора <img src="3_2.php_files/image028.gif" align="absmiddle" height="28" width="32"> для всех значений <img src="3_2.php_files/image036.gif" align="absmiddle" height="35" width="27">, <img src="3_2.php_files/image057.gif" align="absmiddle" height="32" width="60"> выходной переменной <img src="3_2.php_files/image004.gif" align="absmiddle" height="20" width="16">. При этом логические операции И(<img src="3_2.php_files/image205.gif" align="absmiddle" height="15" width="16">) и ИЛИ (<img src="3_2.php_files/image204.gif" align="absmiddle" height="15" width="16">) над функциями принадлежности заменяются на операции min и max.</p>
+<p><img src="3_2.php_files/image211.gif" align="absmiddle" height="32" width="253">,</p>
+<p><img src="3_2.php_files/image212.gif" align="absmiddle" height="32" width="256">.</p>
+<p>4°. Определим значение <img src="3_2.php_files/image213.gif" align="absmiddle" height="43" width="27">, функция принадлежности которого максимальна:</p>
+<p><img src="3_2.php_files/image214.gif" align="absmiddle" height="71" width="464">.</p>
+<p>Это и будет искомым решением для вектора значений входных переменных <img src="3_2.php_files/image208.gif" align="absmiddle" height="47" width="191">.</p>
+<p>Таким образом, предложенный алгоритм использует идею идентификации
+лингвистического терма по максимуму функции принадлежности, и
+обобщающий эту идею на всю матрицу знаний.</p>
+<p>Вычислительная часть предложенного алгоритма легко реализуется на
+матрице значений функций принадлежности, полученной из матрицы знаний,
+путем выполнения операций min и max (рис. 3.3).</p>
+<p>Приведенный алгоритм нахождения дискретных значений <img src="3_2.php_files/image215.gif" align="absmiddle" height="45" width="164">&nbsp;выходной переменной <img src="3_2.php_files/image004.gif" align="absmiddle" height="20" width="16"> по заданному вектору фиксированных значений входных переменных <img src="3_2.php_files/image192.gif" align="absmiddle" height="47" width="196"> и матрице знаний позволяет аппроксимировать объект <img src="3_2.php_files/image216.gif" align="absmiddle" height="49" width="204">&nbsp;с дискретным выходом.</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/3_3.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php">К предыдущему разделу </a></p>
+
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="3_2.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="3_2.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="3_2.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="3_2.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="3_2.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

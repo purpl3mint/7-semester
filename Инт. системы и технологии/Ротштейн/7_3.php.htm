@@ -1,0 +1,366 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="7_3.php_files/default.css" type="text/css"></head><body margin="" height="0" leftmargin="0" topmargin="0" background="7_3.php_files/7_3.htm" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="7_3.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="7_3.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="7_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="7_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="7_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="7_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="7_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="7_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="7_3.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="7_3.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="7_3.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="7_3.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="7_3.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="7_3.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="7_3.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="7_3.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="7_3.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="7_3.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="7_3.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="7_3.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/7_3.php"><span class="text1">Вход</span></a></td>
+<td><img src="7_3.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/7_2.php">К предыдущему разделу </a></p>
+
+ 
+  <p><b>7.3. Многокритериальный анализ вариантов</b></p>
+
+  <p>Анализ
+вариантов по многим критериям - это важная задача принятия решений,
+которая возникает не только в технике, но и в экономике, образовании'
+политике и т. д.. </p>
+  <p>Известные методики многокритериального
+анализа, которые используются в технических системах [52],
+предусматривают преобразование вектора частичных критериев, которыми
+оценивается система, к скалярному интегральному критерию. Существенное
+ограничение такого подхода состоит в том, что он плохо приспособлен к
+качественным критериям, которые оцениваются экспертными методами.</p>
+  <p>Методика,
+которая предлагается в этой работе, не требует ни количественной оценки
+частичных критериев, ни процедуры скаляризации. Она использует
+информацию о качестве вариантов в виде парных сравнений типа: </p>
+  <p>по критерию А вариант 1 <i>приблизительно такой же</i>, как вариант 2, </p>
+  <p>по критерию В вариант 1 <i>намного лучше,</i> чем вариант 2 и т.п. </p>
+
+  <p><b><a name="1"></a>7.3.1. Общие принципы</b></p>
+  <p>Будем считать известными: </p>
+  <p><img src="7_3.php_files/image116.gif" align="absmiddle" height="47" width="189">- множество вариантов (аналогов), которые подлежат многокритериальному анализу; </p>
+  <p><img src="7_3.php_files/image117.gif" align="absmiddle" height="47" width="201"> - множество количественных и качественных критериев, которыми оцениваются варианты. </p>
+  <p>Задача состоит в том, чтобы упорядочить элементы множества <img src="7_3.php_files/image118.gif" align="absmiddle" height="20" width="17"> по критериям из множества <img src="7_3.php_files/image119.gif" align="absmiddle" height="20" width="17">.</p>
+  <p>Для решения этой задачи предлагается использование следующих принципов: </p>
+  <p><i>Принцип&nbsp;1</i>
+рассмотрение критериев как нечетких множеств, которые заданы на
+универсальных множествах вариантов с помощью функции принадлежности. </p>
+  <p><i>Принцип&nbsp;2</i>
+определение функций принадлежности нечетких множеств на основе
+экспертной информации о парных сравнениях вариантов с помощью
+9-тибальной шкалы Саати. </p>
+  <p><i>Принцип&nbsp;3</i> ранжирование
+вариантов на основе пересечения нечетких множеств - критериев, которые
+отвечают известной в теории принятия решений схеме Беллмана - Заде. </p>
+  <p><i>Принцип&nbsp;4</i>
+ранжирование критериев методом парных сравнений и учет полученных
+рангов как степеней концентрации соответствующих функции
+принадлежности. </p>
+
+
+  <p><b><a name="2"></a>7.3.2. Критерии как нечеткие множества</b></p>
+
+  <p>Пусть <img src="7_3.php_files/image120.gif" align="absmiddle" height="39" width="65"> - число в диапазоне [0,1], которое характеризирует уровень оценки варианта <img src="7_3.php_files/image121.gif" align="absmiddle" height="31" width="59"> по критерию <img src="7_3.php_files/image122.gif" align="absmiddle" height="27" width="63">: чем больше число <img src="7_3.php_files/image123.gif" align="absmiddle" height="39" width="65">, тем выше оценка варианта по критерию <img src="7_3.php_files/image122.gif" align="absmiddle" height="27" width="63">, <img src="7_3.php_files/image124.gif" align="absmiddle" height="32" width="56">, <img src="7_3.php_files/image125.gif" align="absmiddle" height="32" width="60">. Тогда критерий <img src="7_3.php_files/image126.gif" align="absmiddle" height="31" width="56"> можно представить в виде нечеткого множества <img src="7_3.php_files/image127.gif" align="absmiddle" height="32" width="20">, которое задано на универсальном множестве <img src="7_3.php_files/image118.gif" align="absmiddle" height="20" width="17"> таким образом: </p>
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="7_3.php_files/image128.gif" align="absmiddle" height="87" width="300">,                         </td>
+      <td align="right">(7.14)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>где <img src="7_3.php_files/image123.gif" align="absmiddle" height="39" width="65"> - степень принадлежности элемента <img src="7_3.php_files/image129.gif" align="absmiddle" height="31" width="20"> к нечеткому множеству <img src="7_3.php_files/image127.gif" align="absmiddle" height="32" width="20">.</p>
+  <p>Чтобы
+определить степени принадлежности, которые входят в (7.14)'
+воспользуемся методом, предложенным в работе [17]. Для этого сформируем
+матрицы парных сравнений вариантов по каждому критерию. Общее
+количество таких матриц совпадает с количеством критериев и равняется <i>m.</i> </p>
+  <p>Для критерия  <img src="7_3.php_files/image122.gif" align="absmiddle" height="27" width="63"> матрица парных сравнений имеет вид: </p>
+
+  <p><i>          </i><i><img src="7_3.php_files/image130.gif" align="absmiddle" height="29" width="21">       <img src="7_3.php_files/image131.gif" align="absmiddle" height="29" width="25">     . . .    <img src="7_3.php_files/image132.gif" align="absmiddle" height="31" width="25"></i></p>
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="7_3.php_files/image133.gif" align="absmiddle" height="25" width="13"><img src="7_3.php_files/image134.gif" align="absmiddle" height="148" width="292"> ,                         </td>
+      <td align="right">(7.15)</td>
+    </tr>
+  </tbody></table>
+  </p>
+  <p>где элемент <img src="7_3.php_files/image135.gif" align="absmiddle" height="43" width="28"> оценивается экспертом за 9-тибальной шкалой  Саати:</p>
+  <p>1 - если <i>отсутствует преимущество</i> варианта <img src="7_3.php_files/image136.gif" align="absmiddle" height="35" width="25"> над вариантом <img src="7_3.php_files/image129.gif" align="absmiddle" height="31" width="20">;</p>
+  <p>3 - если имеется <i>слабое преимущество</i> <img src="7_3.php_files/image136.gif" align="absmiddle" height="35" width="25"> над <img src="7_3.php_files/image129.gif" align="absmiddle" height="31" width="20">; </p>
+  <p>5 - если имеется <i>существенное преимущество</i> <img src="7_3.php_files/image136.gif" align="absmiddle" height="35" width="25"> над <img src="7_3.php_files/image129.gif" align="absmiddle" height="31" width="20">; </p>
+  <p>7 - если имеется <i>явное преимущество</i> <img src="7_3.php_files/image136.gif" align="absmiddle" height="35" width="25"> над <img src="7_3.php_files/image129.gif" align="absmiddle" height="31" width="20">; </p>
+  <p>9- если имеется <i>абсолютное преимущество</i> <img src="7_3.php_files/image136.gif" align="absmiddle" height="35" width="25"> над <img src="7_3.php_files/image129.gif" align="absmiddle" height="31" width="20">; </p>
+  <p>2,4,6,8 - <i>промежуточные</i> сравнительные оценки. </p>
+  <p>Знание матрицы (7.15) позволяет с использованием метода Саати проранжировать каждый вариант <img src="7_3.php_files/image137.gif" align="absmiddle" height="25" width="57"> по каждому критерию <img src="7_3.php_files/image138.gif" align="absmiddle" height="25" width="56">.
+Для вычисления рангов в соответствии с методикой, впервые предложенной
+в работе [49] и далее развивающейся в работе [48], необходимо найти
+собственный вектор матрицы (7.15). Для получения первых приближений
+искомых характеристик рангов можно пользоваться процедурой,
+предложенной в [75], которая предполагает, что матрица (7.15) имеет
+такие свойства: </p>
+  <p> - она диагональна' то есть <img src="7_3.php_files/image139.gif" align="absmiddle" height="39" width="28">=1' <img src="7_3.php_files/image140.gif" align="absmiddle" height="29" width="53">;</p>
+  <p> - элементы' которые симметричны относительно главной диагонали' связаны зависимостью  <img src="7_3.php_files/image135.gif" align="absmiddle" height="43" width="28">=<img src="7_3.php_files/image141.gif" align="absmiddle" height="71" width="40">;</p>
+  <p> - она транзитивна' т.&nbsp;е. <img src="7_3.php_files/image142.gif" align="absmiddle" height="44" width="107"><img src="7_3.php_files/image143.gif" align="absmiddle" height="27" width="13">.</p>
+  <p>Наличие этих свойств позволяет определить все элементы матрицы (7.15) по элементам одной из строк. Если известна <i>k</i>-тая строка' т.&nbsp;е. элементы <img src="7_3.php_files/image144.gif" align="absmiddle" height="44" width="31">' то произвольный элемент <img src="7_3.php_files/image135.gif" align="absmiddle" height="43" width="28"> определяется так: </p>
+
+  <p><img src="7_3.php_files/image145.gif" align="absmiddle" height="81" width="92">     <img src="7_3.php_files/image146.gif" align="absmiddle" height="32" width="96">   <img src="7_3.php_files/image147.gif" align="absmiddle" height="29" width="63"></p>
+
+  <p>После
+определения всех элементов матрицы (7.15) степени принадлежности'
+необходимые для формирования нечеткого множества (7.14)' вычисляются по
+формуле [75]: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="7_3.php_files/image148.gif" align="absmiddle" height="65" width="249"> .                              </td>
+      <td align="right">(7.16)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>Уточнение
+оценок рангов может быть выполнено с использованием метода анализа
+иерархий [48] на основе матрицы (7.15), не обладающей вышеуказанными
+ограничениями: транзитивностью и симметричностью. </p>
+
+
+  <p><b><a name="3"></a>7.3.3. Равновесные критерии</b></p>
+
+  <p>Базируясь на принципе Беллмана-Заде [5], наилучшей системой будем считать ту, которая одновременно лучшая по критериям <img src="7_3.php_files/image149.gif" align="absmiddle" height="29" width="21"><i>,</i><img src="7_3.php_files/image150.gif" align="absmiddle" height="29" width="25">, ... , <img src="7_3.php_files/image151.gif" align="absmiddle" height="31" width="29">.
+Поэтому нечеткое множество, которое необходимо для рейтингового
+анализа, определяется в виде пересечения (интегральный критерий оценки
+систем): </p>
+
+  <p><img src="7_3.php_files/image152.gif" align="absmiddle" height="32" width="187"> . </p>
+
+  <p>Учитывая то' что в теории нечетких множеств операции пересечения <img src="7_3.php_files/image153.gif" align="absmiddle" height="17" width="21"> соответствует <i>min</i>' получаем: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="7_3.php_files/image154.gif" align="absmiddle" height="132" width="525">. </td>
+      <td align="right">(7.17)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>Согласно с полученным множеством <img src="7_3.php_files/image036.gif" align="absmiddle" height="19" width="20">'<i> </i>наилучшей системой следует считать тот вариант' для которого степень принадлежности (числитель) является наибольшей. </p>
+
+  <p><b><a name="4"></a>7.3.4. Неравновесные критерии</b></p>
+
+  <p>Пусть <img src="7_3.php_files/image155.gif" align="absmiddle" height="29" width="25">' <img src="7_3.php_files/image156.gif" align="absmiddle" height="29" width="29">' ..., <img src="7_3.php_files/image157.gif" align="absmiddle" height="31" width="33"> - коэффициенты относительной важности (или ранги) критериев <img src="7_3.php_files/image149.gif" align="absmiddle" height="29" width="21"><i>,</i><img src="7_3.php_files/image150.gif" align="absmiddle" height="29" width="25">, ... , <img src="7_3.php_files/image151.gif" align="absmiddle" height="31" width="29">  такие' что <img src="7_3.php_files/image158.gif" align="absmiddle" height="31" width="181">. Для определения коэффициентов <img src="7_3.php_files/image159.gif" align="absmiddle" height="35" width="29"><b>, <img src="7_3.php_files/image160.gif" align="absmiddle" height="32" width="61"> </b>необходимо сформировать матрицу парных сравнений важности критериев <img src="7_3.php_files/image161.gif" align="absmiddle" height="35" width="59">' аналогичную (7.15)' и воспользоваться формулой (7.16). </p>
+  <p>При наличии коэффициентов важности <img src="7_3.php_files/image159.gif" align="absmiddle" height="35" width="29"><b>, <img src="7_3.php_files/image160.gif" align="absmiddle" height="32" width="61"></b> формула (7.17) имеет вид: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="7_3.php_files/image162.gif" align="absmiddle" height="132" width="569"> . </td>
+      <td align="right">(7.18)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>где степень <img src="7_3.php_files/image159.gif" align="absmiddle" height="35" width="29"> свидетельствует о концентрации нечеткого множества <img src="7_3.php_files/image163.gif" align="absmiddle" height="36" width="24"> в соответствии с мерой важности критерия <img src="7_3.php_files/image161.gif" align="absmiddle" height="35" width="59">.</p>
+
+ 
+
+
+ 
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/7_2.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="7_3.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="7_3.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="7_3.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="7_3.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="7_3.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

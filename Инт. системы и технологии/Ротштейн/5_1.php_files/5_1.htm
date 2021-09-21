@@ -1,0 +1,365 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169670875"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/5_1.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="5_2.php">К следующему разделу</a> \ <a class="menu1"
+    href="4_4.php">К предыдущему разделу </a></p>
+ 
+
+<p>ГЛАВА 5</p>
+  <p><img width=597 height=2 src="5_1_files/image001.gif"></p>
+  <p><b>ГЕНЕТИЧЕСКАЯ  НАСТРОЙКА ЛИНГВИСТИЧЕСКИХ  МОДЕЛЕЙ</b></p>
+  <p>Эта глава содержит модели и алгоритмы настройки нечетких баз знаний с применением генетических алгоритмов оптимизации. Настройке подлежат формы функций принадлежности и веса правил. Рассматриваются задачи настройки для параметрического и <img align="absmiddle" width=17 height=16 src="5_1_files/image002.gif">-уровневого представления функций принадлежности. Глава написана по материалам работ [<32,67,71-73].</p>
+  <p><b>5.1.&nbsp;Задачи оптимальной настройки</b></p>
+  <p><b><a name="1"></a>5.1.1. Веса правил</b></p>
+
+  <p>Уверенность эксперта в каждом правиле ЕСЛИ-ТО, входящем в нечеткую базу знаний (3.10), может быть различной. Для отражения значимости правил в работах [32,67] введены их веса.</p>
+  <p><b>Определение 5.1.</b> Весом правила </i> называется число в интервале [0,1], которое характеризует субъективную меру уверенности эксперта в этом правиле.</p>
+  <p>С учетом весов правил нечеткая база знаний (3.10) о неизвестной зависимости <img align="absmiddle" width=197 height=43 src="5_1_files/image003.gif"> примет следующий вид:</p>
+  <p>ЕСЛИ <img align="absmiddle" width=71 height=35 src="5_1_files/image004.gif"> И <img align="absmiddle" width=73 height=35 src="5_1_files/image005.gif"> И  <b>. . .</b> И <img align="absmiddle" width=73 height=35 src="5_1_files/image006.gif">  (с весом <img align="absmiddle" width=29 height=25 src="5_1_files/image007.gif">)</p>
+  <p>ИЛИ <img align="absmiddle" width=72 height=35 src="5_1_files/image008.gif"> И <img align="absmiddle" width=73 height=35 src="5_1_files/image009.gif"> И  <b>. . .</b> И <img align="absmiddle" width=73 height=35 src="5_1_files/image010.gif">  (с весом <img align="absmiddle" width=31 height=25 src="5_1_files/image011.gif">)</p>
+  <p>ИЛИ   <b>. . .</b> </p>
+  <p>ИЛИ   <img align="absmiddle" width=80 height=43 src="5_1_files/image012.gif"> И <img align="absmiddle" width=83 height=43 src="5_1_files/image013.gif"> И  <b>. . .</b> И <img align="absmiddle" width=77 height=39 src="5_1_files/image014.gif">  (с весом <img align="absmiddle" width=36 height=32 src="5_1_files/image015.gif">), </p>
+  <p>ТО <img align="absmiddle" width=44 height=25 src="5_1_files/image016.gif">, ИНАЧЕ</p>
+  <p>ЕСЛИ <img align="absmiddle" width=72 height=35 src="5_1_files/image017.gif"> И <img align="absmiddle" width=75 height=35 src="5_1_files/image018.gif"> И  <b>. . .</b> И <img align="absmiddle" width=75 height=35 src="5_1_files/image019.gif">  (с весом <img align="absmiddle" width=31 height=25 src="5_1_files/image020.gif">)</p>
+  <p>ИЛИ   <img align="absmiddle" width=73 height=35 src="5_1_files/image021.gif"> И <img align="absmiddle" width=76 height=35 src="5_1_files/image022.gif"> И  <b>. . .</b> И <img align="absmiddle" width=76 height=35 src="5_1_files/image023.gif">  (с весом <img align="absmiddle" width=32 height=25 src="5_1_files/image024.gif">)</p>
+  <p>ИЛИ   <b>. . .</b>&nbsp;</p>
+  <p>ИЛИ   <img align="absmiddle" width=84 height=43 src="5_1_files/image025.gif"> И <img align="absmiddle" width=81 height=39 src="5_1_files/image026.gif"> И  <b>. . .</b> И <img align="absmiddle" width=81 height=39 src="5_1_files/image027.gif">  (с весом <img align="absmiddle" width=41 height=32 src="5_1_files/image028.gif">),</p>
+  <p>ТО <img align="absmiddle" width=48 height=25 src="5_1_files/image029.gif">, ИНАЧЕ <b>. . .</b>&nbsp;</p>
+  <p>ЕСЛИ <img align="absmiddle" width=73 height=35 src="5_1_files/image030.gif"> И <img align="absmiddle" width=76 height=35 src="5_1_files/image031.gif"> И  <b>. . .</b> И <img align="absmiddle" width=76 height=35 src="5_1_files/image032.gif">  (с весом <img align="absmiddle" width=33 height=25 src="5_1_files/image033.gif">)</p>
+  <p>ИЛИ   <img align="absmiddle" width=76 height=35 src="5_1_files/image034.gif"> И <img align="absmiddle" width=79 height=35 src="5_1_files/image035.gif"> И  <b>. . .</b> И <img align="absmiddle" width=79 height=35 src="5_1_files/image036.gif">  (с весом <img align="absmiddle" width=36 height=25 src="5_1_files/image037.gif">)</p>
+  <p>ИЛИ   <b>. . .</b>&nbsp;</p>
+  <p>ИЛИ   <img align="absmiddle" width=88 height=43 src="5_1_files/image038.gif"> И <img align="absmiddle" width=92 height=39 src="5_1_files/image039.gif"> И  <b>. . .</b> И <img align="absmiddle" width=87 height=39 src="5_1_files/image040.gif">  (с весом <img align="absmiddle" width=48 height=32 src="5_1_files/image041.gif">),</p>
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left">ТО <img align="absmiddle" width=51 height=25 src="5_1_files/image042.gif">,                                                                                                         </td>
+      <td align="right"> (5.1)</td>
+    </tr>
+  </table></p>
+  <p>где <img align="absmiddle" width=27 height=35 src="5_1_files/image043.gif"> - класс решения, в который попадает значение выходной переменной, <img align="absmiddle" width=61 height=32 src="5_1_files/image044.gif">;</p>
+  <p><img align="absmiddle" width=36 height=41 src="5_1_files/image045.gif"> - лингвистическая оценка входной переменной <img align="absmiddle" width=17 height=25 src="5_1_files/image046.gif"> в <img align="absmiddle" width=15 height=16 src="5_1_files/image047.gif">-й строке <img align="absmiddle" width=12 height=20 src="5_1_files/image048.gif">-ой дизъюнкции, выбираемая из соответствующего терм-множества <img align="absmiddle" width=20 height=25 src="5_1_files/image049.gif"> <img align="absmiddle" width=53 height=29 src="5_1_files/image050.gif">, <img align="absmiddle" width=61 height=32 src="5_1_files/image044.gif">, <img align="absmiddle" width=76 height=41 src="5_1_files/image051.gif">;</p>
+  <p><img align="absmiddle" width=25 height=35 src="5_1_files/image052.gif"> - количество правил, определяющих значение выходной переменной <img align="absmiddle" width=56 height=35 src="5_1_files/image053.gif">;</p>
+  <p><img align="absmiddle" width=37 height=35 src="5_1_files/image054.gif"> - вес правила.</p>
+  <p>Модифицированной нечеткой базе знаний (5.1) будет соответствовать следующая система нечетких логических уравнений:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=425 height=85 src="5_1_files/image055.gif">, <img align="absmiddle" width=61 height=32 src="5_1_files/image044.gif"> .      </td>
+      <td align="right"> (5.2)</td>
+    </tr>
+</table></p>
+
+  <p>Учитывая то, что операциям <img align="absmiddle" width=16 height=15 src="5_1_files/image056.gif"> и <img align="absmiddle" width=16 height=15 src="5_1_files/image057.gif"> в теории нечетких множеств соответствуют операции <i>min</i> и <i>max</i> из (5.2) получим:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=489 height=91 src="5_1_files/image058.gif">, <img align="absmiddle" width=61 height=32 src="5_1_files/image044.gif"> .</td>
+      <td align="right"> (5.3)</td>
+    </tr>
+</table></p>
+
+  <p>После введения весов правил, в алгоритмах аппроксимации нелинейных объектов, изложенных в главе 3, меняются лишь соотношения для расчета выходных функций принадлежности.</p>
+
+
+  <p><b><a name="2"></a>5.1.2. Объект с непрерывным выходом</b></p>
+  <p>Модель объекта с непрерывным выходом имеет вид:</p>
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=161 height=33 src="5_1_files/image059.gif"> ,                                          </td>
+      <td align="right"> (5.4)</td>
+    </tr>
+</table></p>
+  <p>где    <img align="absmiddle" width=173 height=39 src="5_1_files/image060.gif"> - вектор входных переменных;</p>
+  <p><img align="absmiddle" width=164 height=39 src="5_1_files/image061.gif">- вектор весов правил из нечеткой базы знаний (5.1);</p>
+  <p><img align="absmiddle" width=176 height=56 src="5_1_files/image062.gif"> и <img align="absmiddle" width=177 height=56 src="5_1_files/image063.gif"> - векторы параметров настройки функций принадлежности (3.12);</p>
+  <p><img align="absmiddle" width=32 height=29 src="5_1_files/image064.gif"> - общее число строк в нечеткой базе знаний (5.1), </p>
+
+  <p><img align="absmiddle" width=177 height=31 src="5_1_files/image065.gif">;</p>
+
+  <p><img align="absmiddle" width=15 height=20 src="5_1_files/image066.gif"> - общее число термов в (5.1);</p>
+  <p><img align="absmiddle" width=19 height=19 src="5_1_files/image067.gif"> - оператор связи входы-выход, соответствующий применению соотношений (5.3), (3.12) и (3.18).</p>
+  <p>Пусть обучающая выборка задана в виде <img align="absmiddle" width=24 height=19 src="5_1_files/image068.gif"> пар экспериментальных данных:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=91 height=47 src="5_1_files/image069.gif">, <img align="absmiddle" width=63 height=29 src="5_1_files/image070.gif">,                                           </td>
+      <td align="right"> (5.5)</td>
+    </tr>
+</table></p>
+
+  <p>где <img align="absmiddle" width=187 height=47 src="5_1_files/image071.gif"> и <img align="absmiddle" width=24 height=33 src="5_1_files/image072.gif"> - входной вектор и соответствующее значение выходной переменной <img align="absmiddle" width=16 height=20 src="5_1_files/image073.gif"> для <img align="absmiddle" width=12 height=20 src="5_1_files/image074.gif">-ой пары <вход-выход>, <img align="absmiddle" width=116 height=52 src="5_1_files/image075.gif">.</p>
+  <p>В соответствии с методом наименьших квадратов задача оптимальной настройки нечеткой модели может быть сформулирована следующим образом:</p>
+  <p>найти вектор <img align="absmiddle" width=79 height=24 src="5_1_files/image076.gif">, который удовлетворяет ограничениям</p>
+
+  <p><img align="absmiddle" width=131 height=45 src="5_1_files/image077.gif">, <img align="absmiddle" width=59 height=29 src="5_1_files/image078.gif">, <img align="absmiddle" width=129 height=49 src="5_1_files/image079.gif">, <img align="absmiddle" width=129 height=49 src="5_1_files/image080.gif">, <img align="absmiddle" width=57 height=32 src="5_1_files/image081.gif">,</p>
+  <p>и обеспечивает</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=320 height=68 src="5_1_files/image082.gif"> .                    </td>
+      <td align="right"> (5.6)</td>
+    </tr>
+</table></p>
+
+
+  <p><b><a name="3"></a>5.1.3. Объект с дискретным выходом</b></p>
+
+  <p>Соотношения (5.3) позволяют вычислить вектор функций принадлежности выходной переменной <img align="absmiddle" width=16 height=20 src="5_1_files/image073.gif"> к различным классам решений <img align="absmiddle" width=28 height=35 src="5_1_files/image083.gif">:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=236 height=65 src="5_1_files/image084.gif">                                  </td>
+      <td align="right"> (5.7)</td>
+    </tr>
+</table></p>
+
+  <p>где <img align="absmiddle" width=21 height=19 src="5_1_files/image085.gif">, <img align="absmiddle" width=21 height=20 src="5_1_files/image086.gif">, <img align="absmiddle" width=17 height=19 src="5_1_files/image087.gif"> и <img align="absmiddle" width=17 height=20 src="5_1_files/image088.gif"> - векторы, введенные раннее. </p>
+  <p>Определим желаемый вектор функций принадлежности следующим образом:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=263 height=129 src="5_1_files/image089.gif">               </td>
+      <td align="right"> (5.8)</td>
+    </tr>
+</table></p>
+
+  <p>Пусть обучающая выборка задана в виде <img align="absmiddle" width=21 height=16 src="5_1_files/image090.gif"> пар экспериментальных данных:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=92 height=47 src="5_1_files/image091.gif">, <img align="absmiddle" width=63 height=29 src="5_1_files/image070.gif">,                                         </td>
+      <td align="right"> (5.9)</td>
+    </tr>
+</table></p>
+
+  <p>где<img align="absmiddle" width=168 height=47 src="5_1_files/image092.gif">и <img align="absmiddle" width=25 height=29 src="5_1_files/image093.gif">- входной вектор и соответствующий класс решений выходной переменной для <img align="absmiddle" width=12 height=20 src="5_1_files/image074.gif">-ой пары <вход-выход>, <img align="absmiddle" width=161 height=39 src="5_1_files/image094.gif"> .</p>
+  <p>Для нахождения вектора неизвестных параметров <img align="absmiddle" width=79 height=24 src="5_1_files/image076.gif">, который минимизирует разницу между теорией (5.7) и экспериментом (5.9), воспользуемся методом наименьших квадратов. Задача оптимальной настройки нечеткой модели формулируется следующим образом:</p>
+  <p>найти вектор <img align="absmiddle" width=89 height=32 src="5_1_files/image095.gif">, который удовлетворяет ограничениям</p>
+
+  <p><img align="absmiddle" width=131 height=45 src="5_1_files/image077.gif">, <img align="absmiddle" width=59 height=29 src="5_1_files/image078.gif">, <img align="absmiddle" width=129 height=49 src="5_1_files/image079.gif">, <img align="absmiddle" width=129 height=49 src="5_1_files/image080.gif">, <img align="absmiddle" width=57 height=32 src="5_1_files/image081.gif">,</p>
+
+  <p>и обеспечивает минимальное расстояние между желаемым и модельным векторами функций принадлежности</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=471 height=87 src="5_1_files/image096.gif"> ,    </td>
+      <td align="right">(5.10)</td>
+    </tr>
+</table></p>
+
+  <p>где</p>
+
+  <p><img align="absmiddle" width=253 height=95 src="5_1_files/image097.gif"></p>
+
+  <p>Для решения задач (5.6) и (5.10) в этой главе будут предложены генетические алгоритмы оптимизации.</p>
+
+
+  <p><b><a name="4"></a>5.1.4. Критерии качества идентификации</b></p>
+
+  <p><b>Объект с непрерывным выходом.</b> Пусть <img align="absmiddle" width=108 height=37 src="5_1_files/image098.gif">- нечеткая модель объекта после настройки, которая получена с помощью обучающей выборки объема <img align="absmiddle" width=21 height=16 src="5_1_files/image090.gif">. Для оценки качества нечеткой модели введем такой критерий:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=439 height=97 src="5_1_files/image099.gif">            </td>
+      <td align="right">(5.11)</td>
+    </tr>
+</table></p>
+
+  <p>где <img align="absmiddle" width=119 height=39 src="5_1_files/image100.gif">и <img align="absmiddle" width=23 height=32 src="5_1_files/image101.gif"> - модельный и экспериментальный выходы в точке <img align="absmiddle" width=511 height=47 src="5_1_files/image102.gif">, соответственно, <img align="absmiddle" width=57 height=39 src="5_1_files/image103.gif">- множество <img align="absmiddle" width=15 height=16 src="5_1_files/image104.gif">-ок типа <img align="absmiddle" width=28 height=31 src="5_1_files/image105.gif">, <img align="absmiddle" width=80 height=49 src="5_1_files/image106.gif">- мощность множества <img align="absmiddle" width=51 height=31 src="5_1_files/image107.gif">.</p>
+  <p>Введенный критерий (5.11) имеет смысл среднеквадратического отклонения теоретического и экспериментального выходов объекта на один элемент входного пространства. Зависимость этого критерия <img align="absmiddle" width=17 height=19 src="5_1_files/image108.gif"> от объема обучающей выборки <img align="absmiddle" width=24 height=19 src="5_1_files/image068.gif"> характеризует динамику обучения нечеткой модели.</p>
+
+  <p><b>Объект с дискретным выходом. </b>Пусть <img align="absmiddle" width=19 height=24 src="5_1_files/image109.gif"> - общее число ситуаций (образов) используемых для тестирования нечеткой модели. Для оценки качества нечеткого логического вывода в случае объекта с дискретным выходом <img align="absmiddle" width=188 height=39 src="5_1_files/image110.gif"> необходимо распределить <img align="absmiddle" width=19 height=24 src="5_1_files/image109.gif"> ситуаций согласно дереву, показанному на рис. 5.1.</p>
+  <p><img width=638 height=473 src="5_1_files/image111.gif"></p>
+  <p>На этом дереве обозначено:</p>
+  <p><img align="absmiddle" width=29 height=35 src="5_1_files/image112.gif"> - число ситуаций, требующих решения <img align="absmiddle" width=28 height=35 src="5_1_files/image083.gif">, т.е. </p>
+
+  <p><img align="absmiddle" width=183 height=31 src="5_1_files/image113.gif"> ,</p>
+
+  <p><img align="absmiddle" width=35 height=35 src="5_1_files/image114.gif"> - число ситуаций, в которых требовалось решение <img align="absmiddle" width=28 height=35 src="5_1_files/image083.gif">, но моделью принято решение <img align="absmiddle" width=23 height=31 src="5_1_files/image115.gif">, т.е.</p>
+
+  <p><img align="absmiddle" width=231 height=35 src="5_1_files/image116.gif">, <img align="absmiddle" width=63 height=32 src="5_1_files/image117.gif"> .</p>
+  <p>Согласно рис. 5.1, качество нечеткого логического вывода можно оценить следующим образом:</p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=88 height=73 src="5_1_files/image118.gif"> ,   <img align="absmiddle" width=92 height=73 src="5_1_files/image119.gif">  ,  <img align="absmiddle" width=121 height=72 src="5_1_files/image120.gif"> ,                   </td>
+      <td align="right">(5.12)</td>
+    </tr>
+</table></p>
+
+  <p>где <img align="absmiddle" width=29 height=53 src="5_1_files/image121.gif">- вероятность правильного принятия решения <img align="absmiddle" width=28 height=35 src="5_1_files/image083.gif">,</p>
+  <p><img align="absmiddle" width=35 height=53 src="5_1_files/image122.gif">- вероятность принятия решения <img align="absmiddle" width=23 height=31 src="5_1_files/image115.gif">, при условии объективной необходимости выбора решения <img align="absmiddle" width=28 height=35 src="5_1_files/image083.gif">,</p>
+  <p><img align="absmiddle" width=17 height=39 src="5_1_files/image123.gif">- осредненная вероятность принятия правильного решения.</p>
+  <p>Путем наблюдения за изменением вероятностей (5.12) от объема экспериментальных данных можно прослеживать динамику обучения нечеткой модели.</p>
+
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="5_2.php">К следующему разделу</a> \ <a class="menu1"
+    href="4_4.php">К предыдущему разделу </a></p>
+ 
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

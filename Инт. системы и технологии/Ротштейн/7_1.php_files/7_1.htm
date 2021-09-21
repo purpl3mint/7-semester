@@ -1,0 +1,462 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" margin height="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169671004"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/7_1.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="7_2.php">К следующему разделу</a> \ <a class="menu1"
+    href="6_3.php">К предыдущему разделу </a></p>
+
+ 
+<p>ГЛАВА 7</p>
+  <p><img width=597 height=2 src="7_1_files/image001.gif"></p>
+  <p><b>ФУНКЦИИ  ПРИНАДЛЕЖНОСТИ  И ПРИНЯТИЕ  РЕШЕНИЙ</b></p>
+  <p>В этой главе излагается метод  построения функций принадлежности нечетких множеств и его применение для сравнения вариантов решений по многим критериям. В основу многокритериального анализа вариантов положена процедура слияния нечётких целей и ограничений, известная как принцип Беллмана-Заде [5]. Глава базируется на работах [44,46,75].</p>
+  <p><b>7.1. Принцип слияния целей и ограничений</b></p>
+  <p>В общепринятом подходе главными элементами процесса принятия решения являются: а) множество альтернатив; б) множество ограничений, которые необходимо учитывать при выборе между различными альтернативами и в) функция предпочтительности, ставящая каждой альтернативе в соответствие выигрыш (или проигрыш), который будет получен в результате выбора этой альтернативы. </p>
+  <p>При рассмотрении этого процесса с более общих позиций принятия решений в нечётких условиях естественной представляется другая логическая схема, важнейшей чертой которой является симметрия по отношению к целям и ограничениям. Эта симметрия устраняет различия между целями и ограничениями и позволяет довольно просто сформировать на их основе решение. </p>
+  <p><b><a name="1"></a>7.1.1. Нечёткие цели и ограничения</b></p>
+  <p>Пусть <img align="absmiddle" width=79 height=29 src="7_1_files/image002.gif"> - заданное множество альтернатив. Тогда нечёткая цель, или просто цель, <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> будет отождествляться с фиксированным нечётким множеством <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> в <img align="absmiddle" width=23 height=20 src="7_1_files/image004.gif">. Например, если <img align="absmiddle" width=72 height=27 src="7_1_files/image005.gif"> (действительная прямая), а нечёткая цель формулируется как <i>"<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> должно быть значительно больше 10",</i> то ее можно представить как нечёткое множество в <img align="absmiddle" width=28 height=27 src="7_1_files/image007.gif"> с функцией принадлежности, имеющей, скажем, такой вид: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=281 height=84 src="7_1_files/image008.gif">                             </td>
+      <td align="right"> (7.1)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Аналогично цели <i>"<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> должно быть в окрестности 15"</i> может быть поставлено в соответствие нечёткое множество с функцией принадлежности: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=209 height=53 src="7_1_files/image009.gif">  ,                                 </td>
+      <td align="right"> (7.2)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Подобным же образом нечёткое ограничение, или просто ограничение, <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif"> в пространстве <img align="absmiddle" width=23 height=20 src="7_1_files/image004.gif"> определяется как некоторое расплывчатое множество в <img align="absmiddle" width=23 height=20 src="7_1_files/image004.gif">. Например, в случае <img align="absmiddle" width=72 height=27 src="7_1_files/image005.gif"> ограничение <i>"<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> должно находится в диапазоне 2-10</i>" может быть представлено нечётким множеством с функцией принадлежности, скажем, вида: </p>
+
+  <p><img align="absmiddle" width=213 height=53 src="7_1_files/image011.gif">,</p>
+
+  <p>где <img align="absmiddle" width=16 height=16 src="7_1_files/image012.gif"> - положительное число и <img align="absmiddle" width=21 height=16 src="7_1_files/image013.gif"> - четное положительное число, выбираемое так, чтобы передать смысл, в котором следует понимать "приближение" к заданному интервалу.</p>
+  <p>Важным аспектом приведенных выше определений является то, что и цель и ограничения рассматриваются как нечёткие множества в пространстве альтернатив; это дает возможность не делать между ними различия при формировании решения. </p>
+  <p>Действительно, предположим, например, что нечёткая цель <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> и нечёткое ограничение <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif"> заданы следующим образом: </p>
+  <p><img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif">: <img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> должно быть значительно больше 10 и </p>
+  <p><img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif">: <img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> должно быть в окрестности 15. </p>
+  <p>[<img align="absmiddle" width=60 height=29 src="7_1_files/image014.gif"> и <img align="absmiddle" width=60 height=29 src="7_1_files/image015.gif"> задаются соответственно формулами (7.1) и (7.2)]. Заметим, что цель <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> и ограничения <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif"> соединены между собою союзом "И", причём "И" соответствует пересечению нечётких множеств. Это означает, что в рассматриваемом примере совокупное влияние нечёткой цели <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> и нечёткого ограничения <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif"> на выбор альтернатив может быть представлено пересечением <img align="absmiddle" width=65 height=20 src="7_1_files/image016.gif">. Функция принадлежности для пересечения задается соотношением</p>
+
+  <p><img align="absmiddle" width=225 height=31 src="7_1_files/image017.gif"></p>
+  <p>или, в развернутой форме</p>
+
+  <p><img align="absmiddle" width=548 height=95 src="7_1_files/image018.gif"></p>
+
+  <p>Отметим, что в силу выпуклости расплывчатых множеств <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> и <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif"> множество <img align="absmiddle" width=65 height=20 src="7_1_files/image016.gif"> также является выпуклым. </p>
+
+  <p><b><a name="2"></a>7.1.2. Нечёткие решения</b></p>
+  <p>Обратимся теперь к понятию <i>решения.</i> Интуитивно ясно, что <i>решение</i> - это по существу выбор одной или нескольких из имеющихся альтернатив. Предыдущий пример наводит на мысль, что расплывчатое решение, или просто решение, следует определить как нечёткое множество в пространстве альтернатив, получающееся в результате пересечения заданных целей и ограничений. Следующее определение уточняет эту мысль. </p>
+  <p><b>Определение 7.1.</b> Пусть в пространстве альтернатив <img align="absmiddle" width=23 height=20 src="7_1_files/image004.gif"> заданы нечёткая цель <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> и нечёткое ограничение <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif">. Тогда нечёткое множество <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif">, образуемое пересечением <img align="absmiddle" width=21 height=20 src="7_1_files/image003.gif"> и <img align="absmiddle" width=20 height=20 src="7_1_files/image010.gif">, называется решением. В символической форме </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=109 height=20 src="7_1_files/image020.gif">                                                 </td>
+      <td align="right">(7.3) </td>
+    </tr>
+  </table>
+  </p>
+  <p>и соответственно <img align="absmiddle" width=145 height=27 src="7_1_files/image021.gif">. Взаимосвязь между <i>G</i> и <i>C</i> показана на рис.7.1</p>
+  <p><img width=394 height=260 src="7_1_files/image022.gif"><br>
+  Рис.7.1. Функции ограничения, цели и решения.</p>
+
+  <p>В более общем случае, если имеется <img align="absmiddle" width=16 height=16 src="7_1_files/image023.gif"> целей и <img align="absmiddle" width=21 height=16 src="7_1_files/image013.gif"> ограничений, то результирующее решение определяется пересечением всех заданных целей и ограничений, т.е. </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=331 height=25 src="7_1_files/image024.gif">                       </td>
+      <td align="right"> (7.4)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>и соответственно  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=427 height=33 src="7_1_files/image025.gif">             </td>
+      <td align="right"> (7.5)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Заметим, что в приведенном определении нечёткого решения цели и ограничения входят в выражение для <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif"> совершенно одинаковым образом, что и соответствует тождественности целей и ограничений в  логической схеме процесса принятия решений в нечётких условиях. </p>
+  <p>Коротко обобщенное определение решения можно сформулировать следующим образом: </p>
+  <p><i>Решение = Слияние целей и ограничений.</i> </p>
+  <p>В качестве иллюстрации к соотношению (7.5) рассмотрим простой пример, в котором <img align="absmiddle" width=128 height=25 src="7_1_files/image026.gif">, а <img align="absmiddle" width=27 height=27 src="7_1_files/image027.gif">, <img align="absmiddle" width=28 height=27 src="7_1_files/image028.gif">, <img align="absmiddle" width=25 height=27 src="7_1_files/image029.gif"> и <img align="absmiddle" width=27 height=27 src="7_1_files/image030.gif"> определяются табл. 7.1. Образуя конъюнкцию <img align="absmiddle" width=36 height=31 src="7_1_files/image031.gif">, <img align="absmiddle" width=37 height=31 src="7_1_files/image032.gif">, <img align="absmiddle" width=36 height=31 src="7_1_files/image033.gif"> и <img align="absmiddle" width=37 height=31 src="7_1_files/image034.gif">, получим таблицу значений для <img align="absmiddle" width=61 height=29 src="7_1_files/image035.gif"> (табл.7.2). Решение в этом случае есть расплывчатое множество</p>
+
+  <p><img align="absmiddle" width=20 height=19 src="7_1_files/image036.gif">={(2;0,1), (3; 0,4), (4; 0,7), (5; 0,8), (6; 0,6), (7; 0,4), (8; 0,2)}. </p>
+
+  <p>Заметим, что ни одно <img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> из <img align="absmiddle" width=23 height=20 src="7_1_files/image004.gif"> не принадлежит решению <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif"> полностью (т.е. со степенью принадлежности, равной 1). Это, конечно, является следствием того, что заданные цели и ограничения вступают в конфликт друг с другом, исключая тем самым возможность существования альтернативы, которая бы полностью им всем удовлетворяла. </p>
+  <p>Понятие решения как расплывчатого множества в пространстве альтернатив может по началу показаться несколько искусственным. На самом деле оно совершенно естественно, поскольку расплывчатое решение может рассматриваться как некоторая "инструкция", расплывчатость которой является следствием неточности формулировки поставленных целей и ограничений. Так, в приведенном примере <img align="absmiddle" width=27 height=27 src="7_1_files/image027.gif">, <img align="absmiddle" width=28 height=27 src="7_1_files/image028.gif">, <img align="absmiddle" width=25 height=27 src="7_1_files/image029.gif"> и <img align="absmiddle" width=27 height=27 src="7_1_files/image030.gif"> могли бы быть выражены следующими фразами: <i>"<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> следует взять близким к 5", "<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> следует взять близким к 3", "<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> следует взять близким к 4", "<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> следует взять близким к 6</i>". Тогда решение состоит в том, что "<i>следует взять</i>" <i>"<img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif">  близкое к 5</i>". При этом точное значение слова "<i>близко</i>" определяется в каждом случае значением соответствующей функции принадлежности. </p>
+  <p>Таблица 7.1. Определение нечётких целей и ограничений </p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p><img align="absmiddle" width=15 height=16   src="7_1_files/image037.gif"></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=36 height=31   src="7_1_files/image031.gif"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0.1</p>
+   </td>
+   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>0.8</p>
+   </td>
+   <td>   <p>1.0</p>
+   </td>
+   <td>   <p>0.7</p>
+   </td>
+   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>0.2</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=37 height=31   src="7_1_files/image032.gif"></p>
+   </td>
+   <td>   <p>0.1</p>
+   </td>
+   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>1.0</p>
+   </td>
+   <td>   <p>0.9</p>
+   </td>
+   <td>   <p>0.8</p>
+   </td>
+   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=36 height=31   src="7_1_files/image033.gif"></p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>0.9</p>
+   </td>
+   <td>   <p>1.0</p>
+   </td>
+   <td>   <p>0.8</p>
+   </td>
+   <td>   <p>0.7</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.2</p>
+   </td>
+   <td>   <p>0.1</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=37 height=31   src="7_1_files/image034.gif"></p>
+   </td>
+   <td>   <p>0.2</p>
+   </td>
+   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>0.7</p>
+   </td>
+   <td>   <p>0.9</p>
+   </td>
+   <td>   <p>1.0</p>
+   </td>
+   <td>   <p>0.8</p>
+   </td>
+   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>0.2</p>
+   </td>
+  </tr>
+ </table>
+
+  <p>Таблица 7.2. Определение нечёткого решения</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p><img align="absmiddle" width=15 height=16   src="7_1_files/image037.gif"></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>5</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+   <td>   <p>7</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=32 height=27   src="7_1_files/image038.gif"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0,1</p>
+   </td>
+   <td>   <p>0,4</p>
+   </td>
+   <td>   <p>0,7</p>
+   </td>
+   <td>   <p>0,8</p>
+   </td>
+   <td>   <p>0,6</p>
+   </td>
+   <td>   <p>0,4</p>
+   </td>
+   <td>   <p>0,2</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+ </table>
+
+  <p>Как следует выполнять расплывчатые инструкции типа "<i><img align="absmiddle" width=17 height=16 src="7_1_files/image006.gif"> следует взять близким к 5</i>"? Хотя на вопросы такого типа не представляется возможным дать универсальный ответ, во многих случаях все же разумно выбрать те альтернативы, которые имеют максимальную степень принадлежности к <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif">. В нашем примере этому соответствует <img align="absmiddle" width=55 height=21 src="7_1_files/image039.gif">.</p>
+  <p>В определении нечёткого решения <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif"> как пересечения или, в более общем смысле, как слияния цели и ограничений подразумевается, что все входящие в <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif"> цели и ограничения имеют в некотором смысле одинаковую важность. Однако встречаются ситуации, в которых некоторые цели и, возможно, некоторые ограничения являются более важными, чем остальные. В таких случаях решение <img align="absmiddle" width=23 height=20 src="7_1_files/image019.gif"> может быть выражено выпуклой комбинацией целей и ограничений с весовыми коэффициентами, характеризующими относительную важность составляющих элементов. Таким образом, <img align="absmiddle" width=61 height=29 src="7_1_files/image035.gif"> может быть записано в виде: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=343 height=64 src="7_1_files/image040.gif">                      </td>
+      <td align="right"> (7.6)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>где <img align="absmiddle" width=21 height=27 src="7_1_files/image041.gif"> и <img align="absmiddle" width=27 height=31 src="7_1_files/image042.gif"> - функции принадлежности, такие, что </p>
+
+  <p><img align="absmiddle" width=183 height=68 src="7_1_files/image043.gif"></p>
+  <p>С учетом этого ограничения <img align="absmiddle" width=51 height=29 src="7_1_files/image044.gif"> и <img align="absmiddle" width=55 height=32 src="7_1_files/image045.gif"> могут быть подобраны так, чтобы передавать относительную важность целей <img align="absmiddle" width=127 height=27 src="7_1_files/image046.gif"> и ограничений <img align="absmiddle" width=131 height=27 src="7_1_files/image047.gif">. В частности, если <img align="absmiddle" width=96 height=20 src="7_1_files/image048.gif">, получится любое расплывчатое множество, содержащееся в <img align="absmiddle" width=64 height=21 src="7_1_files/image049.gif"> и включающее <img align="absmiddle" width=64 height=20 src="7_1_files/image050.gif">. Отметим, что формула (7.6) напоминает известный способ сведения векторного критерия к скалярному с помощью образования линейной комбинации компонент векторной функции цели. </p>
+
+
+
+
+
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="7_2.php">К следующему разделу</a> \ <a class="menu1"
+    href="6_3.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

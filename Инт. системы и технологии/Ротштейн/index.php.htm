@@ -1,0 +1,381 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="index.php_files/default.css" type="text/css"></head><body leftmargin="0" topmargin="0" background="index.php_files/index.htm" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="index.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="index.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="index.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="index.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="index.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="index.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="index.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="index.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="index.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="index.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="index.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="index.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="index.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="index.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="index.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="index.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="index.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="index.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="index.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="index.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/index.php"><span class="text1">Вход</span></a></td>
+<td><img src="index.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">15 ноября приглашаем на русскоязычный вебинар по MATLAB компании MathWorks.</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+  <tbody><tr>
+   <td width="10"></td>
+    <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+    <p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    
+    <p>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php">1. Введение в интеллектуальные технологии</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php">&nbsp;&nbsp;&nbsp;1.1. Нечеткие множества</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.1. Основные понятия теории нечетких множеств</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.2. Свойства нечетких множеств</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.3. Операции над нечеткими множествами</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.4. Некоторые дополнительные понятия</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.5. Нечеткие отношения</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.6. Нечеткие числа</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_1.php#7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.7. Нечеткость и вероятность</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php">&nbsp;&nbsp;&nbsp;1.2. Генетические алгоритмы</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.1. Принципы построения генетических алгоритмов </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.2. Основные операции генетических алгоритмов </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.3. Стратегии поиска</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.4. Отличие от классического поиска </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.5. Преимущества генетических алгоритмов</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.6. Терминология</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php#7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.7. Примеры генетической оптимизации</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php">&nbsp;&nbsp;&nbsp;1.3. Нейронные сети</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1. Основные понятия</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.2. Имитация нервных клеток </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.3. Математическая модель нейрона </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.4. Обучение нейронных сетей</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.5. Метод обратного распространения ошибки</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/1_3.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.6. Алгоритм настройки нейронной сети </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php">2. Методологические аспекты</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php">&nbsp;&nbsp;&nbsp;2.1. Лингвистические правила в принятии решений</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.1. Автоматическое управление </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.2. Cитуационное управление </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.3. Медицинская диагностика </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.4. Многокритериальная оценка </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.5. Многофакторный анализ </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_2.php">&nbsp;&nbsp;&nbsp;2.2. Принятие решений и идентификация</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/2_3.php">&nbsp;&nbsp;&nbsp;2.3. Принципы лингвистического моделирования </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php">3. Лингвистическая аппроксимация </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php">&nbsp;&nbsp;&nbsp;3.1. Формализация исходной информации</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1.1. Входы и выходы объекта</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1.2. Лингвистические переменные</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1.3. Нечеткая база знаний</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_1.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1.4. Функции принадлежности</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_2.php">&nbsp;&nbsp;&nbsp;3.2.  Объекты с дискретным выходом </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_2.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.1. Постановка задачи </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_2.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.2. Нечеткие логические уравнения </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_2.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.3. Алгоритм аппроксимации</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_3.php">&nbsp;&nbsp;&nbsp;3.3. Объекты с непрерывным выходом </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_3.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.1. Постановка задачи </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_3.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.2. Алгоритм аппроксимации  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_4.php">&nbsp;&nbsp;&nbsp;3.4. Применение композиционного правила вывода </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_4.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.1. Постановка задачи </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_4.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.2. Нечеткий логический вывод </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_4.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.3 Интерпретация вывода </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_5.php">&nbsp;&nbsp;&nbsp;3.5. Иерархические объекты </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_5.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.1. Обобщенное дерево логического вывода</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/3_5.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.2. Нечеткие логические уравнения </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_1.php">4. Аналитико - лингвистическая  аппроксимация</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_1.php">&nbsp;&nbsp;&nbsp;4.1. Нечеткое представление неопределеннных параметров </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_2.php">&nbsp;&nbsp;&nbsp;4.2. Учет влияющих факторов </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_3.php">&nbsp;&nbsp;&nbsp;4.3. Нечеткое обобщение аналитических моделей </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_3.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3.1. Принцип обобщения Заде </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_3.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3.2. &#945;-уровневый принцип обобщения</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_3.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3.3. Модифицированный принцип обобщения </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/4_4.php">&nbsp;&nbsp;&nbsp;4.4. Методика нечеткого обобщения аналитических моделей </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_1.php">5. Генетическая настройка лингвистических моделей </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_1.php">&nbsp;&nbsp;&nbsp;5.1. Cадачи оптимальной настройки </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1.1. Веса правил  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1.2. Объект с непрерывным выходом </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_1.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1.3. Объект с дискретным выходом  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_1.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1.4. Критерии качества идентификации  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php">&nbsp;&nbsp;&nbsp;5.2. Настройка параметрических функций принадлежности </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.1. Кодирование  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.2. Скрещивание  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.3. Мутация  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.4. Функция соответствия </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.5. Выбор родителей  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.6. Генерация популяции  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php#7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.7. Генетический алгоритм  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php">&nbsp;&nbsp;&nbsp;5.3. Настройки &#945;-уровневых функций принадлежности</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.1. Аналитические модели функций принадлежности  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.2. Настройки модели с дискретным выходом  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.3. Настройки модели с непрерывным выходом </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.4. Кодирование и скрещивание  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.5. Мутация  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.6. Функция соответствия </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.7. Генерация популяции  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_3.php#8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.8. Генетический алгоритм  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php">&nbsp;&nbsp;&nbsp;5.4. Компьютерные эксперименты  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.1. Методика экспериментов </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.2. Объекты с непрерывным выходом  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.3. Объекты с дискретным выходом </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.4. Исследование &#945;-уровневой настройки</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_5.php">&nbsp;&nbsp;&nbsp;5.5. Извлечение знаний из экспериментальных данных  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_5.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.5.1. Постановка задачи  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_5.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.5.2. Критерий оптимизации </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_5.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.5.3. Генетический алгоритм оптимизации  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_5.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.5.4. Пример </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/5_6.php">&nbsp;&nbsp;&nbsp;5.6. Объект "много входов - много выходов"</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_1.php">6. Нейронная настройка лингвистических моделей  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_1.php">&nbsp;&nbsp;&nbsp;6.1. Нейронная идентификация  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.1. Нейронная сеть как универсальный аппроксиматор </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.2. Обучение нейронной сети  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_1.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.3. Компьютерные эксперименты  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_2.php">&nbsp;&nbsp;&nbsp;6.2. Нейро-лингвистическая идентификация  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_2.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2.1. Лингвистический аппроксиматор  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_2.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2.2. Нейро-лингвистический аппроксиматор  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_2.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2.3. Обучения нейро-нечеткой сети </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_2.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2.4. Компьютерные эксперименты  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/6_3.php">&nbsp;&nbsp;&nbsp;6.3. Сравнение с нейронной идентификацией </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_1.php">7. Функции принадлежности и принятие решений  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_1.php">&nbsp;&nbsp;&nbsp;7.1. Принцип слияния целей и ограничений  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.1. Нечёткие цели и ограничения  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.2. Нечёткие решения </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_2.php">&nbsp;&nbsp;&nbsp;7.2. Метод построения функции принадлежности  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_2.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2.1. Постановка задачи  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_2.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2.2. Основные определения и соотношения </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_2.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2.3. Алгоритм построения функций принадлежности </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_3.php">&nbsp;&nbsp;&nbsp;7.3. Многокритериальный анализ вариантов  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_3.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3.1. Общие принципы </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_3.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3.2. Критерии как нечеткие множества  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_3.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3.3. Равновесные критерии </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_3.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3.4. Неравновесные критерии </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php">&nbsp;&nbsp;&nbsp;7.4. Пример многокритериального анализа </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4.1.Критерии оценки вариантов </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4.2. Парные сравнения </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4.3.Матрицы парных сравнений  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4.4. Критерии как нечеткие множества  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4.5. Случай равновесных критериев </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/7_4.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4.6. Случай неравновесных критериев </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_1.php">8. Прикладные системы идентификации </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_1.php">&nbsp;&nbsp;&nbsp;8.1. Система FUZZY EXPERT </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_1.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.1. Структура системы  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_1.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.2. Экранные формы </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php">&nbsp;&nbsp;&nbsp;8.2. Диагностика ишемической болезни сердца </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.1. Типы диагнозов и параметры состояния больного  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.2. Нечеткая база знаний </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.3. Нечеткие логические уравнения  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.4. Грубые функции принадлежности  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.5. Алгоритм принятия решения  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_2.php#6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.6. Тонкая настройка нечеткой базы знаний  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php">&nbsp;&nbsp;&nbsp;8.3. Прогнозирование количества заболеваний </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.1. Экспериментальные данные </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.2. Экспертно-лингвистические закономерности </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.3. Модель прогнозирования </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.4. Настройка модели прогнозирования </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_4.php">&nbsp;&nbsp;&nbsp;8.4. Идентификация коэффициента сцепления "автомобиль-дорога"</a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_4.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.1. Методика идентификации </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_4.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.2. Структурная идентификация  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_4.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.3. Параметрическая идентификация  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_4.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.4. Пример и сравнение с действующей методикой </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php">&nbsp;&nbsp;&nbsp;8.5. Многофакторный анализ технологического процесса биоконверсии </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.1. Этапы и принципы моделирования </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.2. Дерево вывода  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.3. Нечеткие матрицы знаний  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.4. Нечеткий логический вывод и дефаззификация </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_5.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.5. Примеры моделирования  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_6.php">&nbsp;&nbsp;&nbsp;8.6. Оценка дипломных проектов  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_6.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.1. Интегральные и частные показатели  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_6.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.2. Уровни качества  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_6.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.3. Оценка частных показателей по принципу термометра  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_6.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.4. Оценка интегрального показателя  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_6.php#5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.5. Возможные обобщения  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php">&nbsp;&nbsp;&nbsp;8.7. Оценка кредитоспособности инновационных проектов </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.7.1. Типы решений и частные показатели качества </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.7.2. Нечеткие базы знаний </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.7.3. Функции принадлежности и примеры оценки  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_8.php">&nbsp;&nbsp;&nbsp;8.8. Управление динамической системой </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_8.php#1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.8.1. Объект управления  </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_8.php#2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.8.2. Классическая модель управления </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_8.php#3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.8.3. Нечеткая модель управления </a><br>
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/8_8.php#4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.8.4. Связь с функциями Ляпунова</a><br>
+
+<a href="http://matlab.exponenta.ru/fuzzylogic/book5/references.php">Список литературы</a>
+    </p>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 24.11.06</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2006 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="index.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="index.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="index.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="index.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="index.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

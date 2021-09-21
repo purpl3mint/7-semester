@@ -1,0 +1,407 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169670733"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/2_1.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+  <tr>
+   <td width="10" ></td>
+    <td ><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+    <p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="2_2.php">К следующему разделу</a> \ <a class="menu1"
+    href="1_3.php">К предыдущему разделу </a></p>
+ 
+<p>ГЛАВА 2</p>
+  <p><img width=597 height=2 src="2_1_files/image001.gif"><b>&nbsp;</b></p>
+ <p><b>МЕТОДОЛОГИЧЕСКИЕ  АСПЕКТЫ </b></p>
+ <p><b>2.1.&nbsp;Лингвистические правила в принятии решений</b></p>
+
+  <p>В этом разделе показывается, что различные по физическому смыслу задачи принятия решений, возникающие в управлении, прогнозировании, диагностике, и других областях кибернетики, сводятся к идентификации нелинейных объектов с одним выходом и многими входами. Особенность рассматриваемых задач заключается в том, что в каждой из них взаимосвязь переменных "вход-выход" задается в виде экспертных высказываний: ЕСЛИ &lt;входы&gt;, ТО &lt;выход&gt;, представляющих собой нечеткие базы знаний.</p>
+
+
+  <p><b><a name="1"></a>2.1.1. Автоматическое управление</b></p>
+
+  <p>Типичным представителем задач этого класса является управление контейнерным краном. Эта задача состоит в построении регулятора, который осуществляет погрузку контейнеров на корабль с железнодорожной платформы или обратно (рис. 2.1). </p>
+  <p>Во время погрузки кран подбирает контейнер с платформы при помощи гибких кабелей, присоединенных к башне. После этого башня крана передвигается по горизонтальной колее. При движении контейнер начинает колебаться в воздухе. Колебания не создают проблем при транспортировке, но затрудняют  и задерживают остановку контейнера при его погрузке на платформу. Поскольку время погрузки напрямую влияет на себестоимость , то возникает задача доставки контейнера к цели за минимальное время. </p>
+ <p>Попытки автоматизировать управление краном предпринимались при помощи ПИД-регуляторов. Однако, применение таких регуляторов, а также различных моделей классической теории управления оказывается неэффективным из-за большой нелинейности задачи, а также трудностей учета различных возмущений, таких как порывы ветра и др [82].</p>
+ <p><img width=545 height=320   src="2_1_files/image002.gif"><br>Рис. 2.1. Процесс погрузки контейнерным краном</p>
+ <p>С другой стороны, с этой, непростой для классической теории управления задачей, легко справляется опытный оператор-крановщик, не составляя и не решая дифференциальных уравнений движения груза. Наблюдая за деятельностью оператора, можно заметить, что он управляет краном на основе следующих рассуждений.</p>
+  <p>Подняв контейнер, оператор запускает двигатель со средней скоростью, чтобы определить каким будет колебание контейнера. В зависимости от реакции, задается такая скорость двигателя, чтобы контейнер был слегка позади башни крана. В этой позиции обеспечивается наибольшая скорость движения при минимальном колебании груза. Приближаясь к цели, оператор уменьшает мощность двигателя или даже прилагает отрицательную мощность для торможения. Поэтому контейнер уходит чуть-чуть вперед башни крана. После этого башня крана достигает цели и скорость, а вместе с ней и колебания контейнера, быстро уменьшаются до нуля. </p>
+  <p>Приведенные выше рассуждения нетрудно преобразовать в систему высказываний ЕСЛИ &lt;входы&gt;, ТО &lt;выход&gt;, в которых входные и выходные переменные оцениваются словесными (нечеткими) термами.</p>
+  <p>Входные переменные: </p>
+  <p>·&nbsp; расстояние между башней крана и целью (<i>большое, среднее, малое, нулевое, груз за целью</i>),</p>
+  <p>·&nbsp; угол между контейнером и башней крана (<i>большой положительный, малый положительный, нулевой, малый отрицательный, большой отрицательный</i>).</p>
+  <p>Выходная переменная:</p>
+  <p>·&nbsp; мощность двигателя (<i>большая, средняя, нулевая, средняя отрицательная</i>).</p>
+  <p>С использованием этих переменных и их лингвистических оценок можно записать набор правил, которые выражают алгоритм деятельности опытного оператора-крановщика [82]:</p>
+
+  <p>ЕСЛИ расстояние <i>большое</i> И угол <i>нулевой</i>, <br>
+  ТО мощность двигателя <i>средняя;</i></p>
+
+  <p>ЕСЛИ расстояние <i>большое</i> И угол <i>малый отрицательный</i>, <br>
+  ТО мощность двигателя <i>большая; </i></p>
+
+  <p>ЕСЛИ расстояние <i>большое</i> И угол <i>большой отрицательный</i>, <br>
+  ТО мощность двигателя <i>средняя; </i></p>
+
+  <p>ЕСЛИ расстояние <i>среднее</i> И угол <i>малый отрицательный</i>, <br>
+  ТО мощность двигателя <i>средняя; </i></p>
+
+  <p>ЕСЛИ расстояние <i>нулевое</i> И угол <i>нулевой</i>, <br>
+  ТО мощность двигателя <i>нулевая.</i> </p>
+
+
+  <p><b><a name="2"></a>2.1.2. Ситуационное управление</b></p>
+
+  <p>Типичным представителем задач этого класса является управление светофором. Безуспешность попыток решения этой задачи с помощью классической теории управления подробно обсуждается в [29]. Однако опытный оператор-регулировщик успешно управляет  перекрестком, не формализуя объект управления с помощью различного рода уравнений. Идея переноса опыта человека, осуществляющего управление, на техническое устройство может быть положена в основу создания автоматического контроллера.</p>
+  <p>В [25] рассматривается перекресток с односторонним движением. Автоматический контроллер должен включать зеленый свет таким образом, чтобы время задержки транспортного средства на перекрестке было минимально. Весь временной промежуток управления в 57 секунд разбивается на 5 временных интервалов по 7, 17, 27, 37, 47 секунд, соответственно. В каждый десятисекундный интервал времени изменяется алгоритм управления, использующий правила ЕСЛИ &lt;входы&gt;, ТО &lt;выход&gt;.</p>
+  <p>Входные переменные:</p>
+  <p>·&nbsp; время от начала десятисекундного интервала (<i>очень короткое, короткое, среднее, длительное,&nbsp;очень длительное</i>), <br>
+  ·&nbsp; количество транспортных средств, прибывших на перекресток справа (<i>почти нет, очень мало, мало, среднее, много, слишком много</i>), <br>
+  ·&nbsp; длина очереди (<i>очень маленькая, маленькая, незначительная, средняя, длинная, очень длинная</i>). </p>
+  <p>Выходная переменная:</p>
+  <p>·&nbsp; время до отключения зеленого света светофора (<i>очень короткое, короткое, среднее, длительное,&nbsp;очень длительное</i>). </p>
+  <p>Фрагмент нечеткой базы знаний, связывающей входные и выходную переменные выглядит следующим образом [25]:</p>
+
+  <p>ЕСЛИ время <i>очень короткое</i> И количество <i>почти нет</i> И длина <i>любая</i>, <br>
+  ТО время до отключения зеленого света  <i>очень короткое; </i></p>
+
+  <p>ЕСЛИ время <i>короткое</i> И количество <i>очень</i> <i>мало</i> И длина <i>очень </i><br>
+  <i>&nbsp;маленькая</i>, <br>
+  ТО время до отключения зеленого света <i>короткое; </i></p>
+
+  <p>ЕСЛИ время <i>среднее </i>И количество <i>мало</i> И длина <i>очень маленькая</i>, <br>
+  ТО время до отключения зеленого света <i>среднее; </i></p>
+
+  <p>ЕСЛИ время <i>длительное </i>И количество <i>среднее </i>И длина <i>очень </i><br>
+  <i>&nbsp;маленькая</i>, <br>
+  ТО время до отключения зеленого света <i>длительное. </i></p>
+
+
+  <p><b><a name="3"></a>2.1.3.&nbsp;Медицинская диагностика</b></p>
+
+  <p>Одной из типичных задач этого класса является дифференциальная диагностика ишемической болезни сердца (ИБС). Суть задачи состоит в отнесении больного с заданными параметрами состояния к одному из шести классов ИБС, принятых в клинической практике [40].</p>
+  <p>Входные переменные - это параметры состояния больного:</p>
+  <p>·&nbsp; возраст,<br>
+  ·&nbsp; инструментальная опасность, которая определяется параметрами:<br>
+  ·&nbsp; двойное произведение (ДП) пульса на артериальное давление,<br>
+  ·&nbsp; толерантность к физической нагрузке,<br>
+  ·&nbsp; прирост ДП на один кг веса тела больного,<br>
+  ·&nbsp; прирост ДП на один кГм нагрузки,<br>
+  ·&nbsp; максимальное потребление кислорода на один кг веса тела больного,<br>
+  ·&nbsp; прирост ДП в ответ на субмаксимальную нагрузку<br>
+  ·&nbsp; биохимическая опасность которая определяется параметрами:<br>
+  ·&nbsp; аденозинтрифосфорная кислота - АТФ,<br>
+  ·&nbsp; аденозиндифосфорная кислота - АДФ,<br>
+  ·&nbsp; аденозинмонофосфорная кислота - АМФ,<br>
+  ·&nbsp; коэффициент фосфорилирования,<br>
+  ·&nbsp; коэффициент отношения содержания молочной и пировиноградной кислот.</p>
+  <p>Выходная переменная:</p>
+  <p>·&nbsp; диагноз больного, который принадлежит к одному из шести классов тяжести ИБС:<br>
+  <i>1- нейроциркуляторная дистония (НЦД) легкой степени, </i><br>
+  <i>2-НЦД средней степени, </i><br>
+  <i>3-НЦД тяжелой степени, </i><br>
+  <i>4-стенокардия первого функционального класса, </i><br>
+  <i>5-стенокардия второго функционального класса, </i><br>
+  <i>6-cтенокардия третьего функционального класса.</i> </p>
+  <p>Фрагмент иерархической базы знаний, связывающей диагноз с параметрами состояния больного, выглядит следующим образом (по данным В.М.&nbsp;Шеверды):</p>
+  <p>ЕСЛИ возраст больного <i>низкий</i><br>
+  И инструментальная опасность <i>низкая</i><br>
+  И биохимическая опасность <i>низкая</i>,<br>
+  ТО диагноз - <i>НЦД легкой степени; </i><br>
+  ЕСЛИ ДП пульса на артериальное давление <i>высокое</i> <br>
+  И толерантность к физической нагрузке <i>высокая</i><br>
+  И прирост ДП на один кг веса тела больного <i>высокий</i><br>
+  И прирост ДП на один кГм нагрузки <i>низкий</i> <br>
+  И максимальное потребление кислорода на один кг веса тела <br>
+  style='margin-left:1.0cm;text-indent:36.0pt'>&nbsp;больного <i>высокое</i><br>
+  И прирост ДП в ответ на субмаксимальную нагрузку <i>высокий</i>,<br>
+  ТО инструментальная опасность <i>низкая; </i></p>
+  <p>ЕСЛИ АТФ <i>высокая</i><br>
+  И АДФ <i>высокая</i><br>
+  И АМФ <i>высокая</i><br>
+  И коэффициент фосфорилирования <i>высокий</i><br>
+  И коэффициент отношения молочной и пировиноградной кислот <br>
+  <i>высокий</i>,<br>
+  ТО биохимическая опасность <i>низкая</i>.</p>
+
+
+  <p><b><a name="4"></a>2.1.4. Многокритериальная оценка</b></p>
+
+  <p>Типичным примером такой задачи является экспертиза различных проектов, включая инновационные [39]. Суть задача состоит в отнесении проекта к одному из классов качества, которые используются для принятия решения о финансировании или отклонении проекта. </p>
+  <p>Входные переменные -это частные показатели качества, оцениваемые экспертом на основе информации, представленной заявителем проекта:</p>
+  <p>·&nbsp; уровень предприятия-заявителя, который определяется параметрами:<br>
+  ·&nbsp; уровень руководителя, оцениваемый параметрами:<br>
+  ·&nbsp; коммуникабельность,<br>
+  ·&nbsp; надежность,<br>
+  ·&nbsp; образование,<br>
+  ·&nbsp; опыт работы руководителя,<br>
+  ·&nbsp; комфортность;<br>
+  ·&nbsp; активы предприятия, <br>
+  ·&nbsp; пассивы предприятия, <br>
+  ·&nbsp; балансовая прибыль предприятия, <br>
+  ·&nbsp; дебиторская задолженность предприятия, <br>
+  ·&nbsp; кредиторская задолженность предприятия; <br>
+  ·&nbsp; технико-экономический уровень проекта, который оценивается параметрами: <br>
+  ·&nbsp; масштаб проекта, <br>
+  ·&nbsp; новизна проекта, <br>
+  ·&nbsp; приоритетность направления, <br>
+  ·&nbsp; степень проработки, <br>
+  ·&nbsp; правовая защищенность, <br>
+  ·&nbsp; экологический уровень, <br>
+  ·&nbsp; уровень ожидаемых продаж;<br>
+  ·&nbsp; финансовый уровень предприятия-заявителя, который определяется параметрами: <br>
+  ·&nbsp; соотношение собственных средств к средствам инновационного фонда, <br>
+  ·&nbsp; возвращаемость инновационных средств. </p>
+  <p>Выходная переменная:</p>
+  <p>·&nbsp; интегральная оценка качества проекта, используемая для принятия решения <i>(1-финансировать, 2-финансировать после доработки, 3-финансировать при наличии средств, 4-отклонить). </i></p>
+  <p>Для оценки входных переменных удобно использовать единую систему качественных термов: <i>очень низкий, низкий, ниже среднего, средний, выше среднего, высокий, очень высокий</i>. Тогда фрагмент иерархической базы знаний, связывающий выходную и входные переменные нетрудно записать в следующем виде (по данным Н.И.&nbsp;Петренко): </p>
+
+  <p>ЕСЛИ уровень предприятия-заявителя <i>выше среднего</i> <br>
+  И технико-экономический уровень проекта <i>выше среднего</i> <br>
+  И уровень ожидаемых продаж <i>высокий</i><br>
+  И финансовый уровень предприятия-заявителя <i>средний</i>,<br>
+  ТО решение - <i>финансировать после доработки; </i><br>
+  ЕСЛИ уровень руководителя <i>высокий</i><br>
+  И активы <i>высокие</i><br>
+  И пассивы <i>высокие</i><br>
+  И балансовая прибыль <i>средняя</i><br>
+  И дебиторская задолженность <i>выше средней</i><br>
+  И кредиторская задолженность <i>низкая</i>,<br>
+  ТО уровень предприятия-заявителя <i>высокий; </i></p>
+  <p>ЕСЛИ коммуникабельность <i>выше среднего</i><br>
+  И надежность <i>высокая</i><br>
+  И образование <i>выше среднего</i><br>
+  И опыт работы руководителя <i>высокий</i><br>
+  И комфортность <i>средняя,</i><br>
+  ТО уровень руководителя <i>выше среднего;</i></p>
+  <p>ЕСЛИ масштаб проекта <i>высокий</i><br>
+  И новизна проекта <i>высокая</i><br>
+  И приоритетность направления <i>высокая</i><br>
+  И степень проработки <i>высокая</i><br>
+  И правовая защищенность <i>высокая</i><br>
+  И экологический уровень <i>высокий,</i><br>
+  ТО технико-экономический уровень проекта <i>выше среднего;</i></p>
+
+  <p>ЕСЛИ соотношение собственных средств к средствам инновационного <br>
+  &nbsp;&nbsp;фонда <i>выше среднего</i> <br>
+  И возвращаемость инновационных средств <i>высокая</i>, <br>
+  ТО финансовый уровень предприятия-заявителя <i>выше среднего</i>.</p>
+
+
+  <p><b><a name="5"></a>2.1.5. &nbsp;Многофакторный анализ</b></p>
+
+  <p>Проиллюстрируем задачу многофакторного анализа на примере технологического процесса биоконверсии [41]. В ходе выполнения такого процесса осуществляется преобразование отходов сельскохозяйственного производства в биогаз, который используется в дальнейшем как топливо. При проектировании и управлении процессом необходимо прогнозировать количество получаемого биогаза в зависимости от различных сырьевых, технологических и аппаратурных факторов.</p>
+  <p>Входные переменные - это факторы, влияющие на выход биогаза:</p>
+  <p>·&nbsp; качество исходного сырья, зависящее от факторов: <br>
+  ·&nbsp; источник сырья (<i>дойные коровы</i>, <i>бычки, свиньи</i>, <i>куры</i>, <i>индюки</i>), <br>
+  ·&nbsp; влажность сырья (<i>низкая</i>, <i>нормальная</i>, <i>высокая</i>), <br>
+  ·&nbsp; гранулометрический состав (<i>измельчено</i>, <i>не измельчено</i>), <br>
+  ·&nbsp; количество летучих жидких кислот (<i>норма</i>, <i>много</i>), <br>
+  ·&nbsp; водородный показатель (<i>кислый</i>, <i>нормальный</i>, <i>щелочной</i>); <br>
+  ·&nbsp; качество технологического процесса, зависящее от факторов: <br>
+  ·&nbsp; время сбраживания (<i>малое</i>, <i>нормальное</i>, <i>повышенное</i>), <br>
+  ·&nbsp; температура сбраживания (<i>психрофильная</i>, <i>мезофильная</i>, <i>термофильная</i>), <br>
+  ·&nbsp; стабильность температурного режима (<i>высокая</i>, <i>удовлетворительная</i>, <i>низкая</i>), <br>
+  ·&nbsp; качество перемешивания (<i>без перемешивания</i>, <i>минимальное</i>, <i>нормальное</i>), <br>
+  ·&nbsp; концентрация метаногенной флоры (<i>низкая</i>, <i>средняя</i>, <i>высокая</i>), <br>
+  ·&nbsp; доза загрузки реактора(<i>низкая</i>, <i>средняя</i>, <i>высокая</i>); <br>
+  ·&nbsp; качество аппаратуры, зависящее от факторов: <br>
+  ·&nbsp; тип биореактора (<i>примитивный</i>, <i>традиционный</i>, <i>модифицированный</i>), <br>
+  ·&nbsp; степень иммобилизации (<i>незначительная</i>, <i>достаточная</i>, <i>высокая</i>), <br>
+  ·&nbsp; качество вспомогательного оборудования (<i>низкое</i>, <i>среднее</i>, <i>высокое</i>), <br>
+  ·&nbsp; качество аппаратно-схемного оформления (<i>низкое</i>, <i>среднее</i>, <i>высокое</i>). </p>
+  <p>Выходная переменная:</p>
+  <p>·&nbsp; объем биогаза. на выходе процесса который оценивается на семи уровнях: <i>очень высокий, высокий, выше среднего, средний, ниже среднего, низкий, очень низкий.</i></p>
+  <p>Фрагмент иерархической базы знаний, связывающей количество получаемого  биогаза с влияющими факторами выглядит так (по данным Е.П.&nbsp;Ларюшкина):</p>
+
+  <p>ЕСЛИ качество исходного сырья <i>низкое</i><br>
+  И качество технологического процесса <i>низкое</i><br>
+  И качество аппаратуры <i>низкое</i>,<br>
+  ТО объем биогаза. на выходе <i>очень низкий</i>.</p>
+
+  <p>ЕСЛИ источник сырья <i>дойные коровы</i><br>
+  И влажность сырья <i>низкая</i><br>
+  И гранулометрический состав <i>не измельчено</i><br>
+  И количество летучих жидких кислот <i>много</i><br>
+  И водородный показатель <i>кислый,</i><br>
+  ТО качество исходного сырья <i>низкое</i>.</p>
+
+  <p>ЕСЛИ время сбраживания <i>малое</i><br>
+  И температура сбраживания <i>термофильная</i><br>
+  И стабильность температурного режима <i>удовлетворительная</i><br>
+  И качество перемешивания<i> минимальное</i><br>
+  И концентрация метаногенной флоры <i>высокая</i><br>
+  И доза загрузки реактора<i> высокая,</i><br>
+  ТО качество технологического процесса <i>высокое</i>.</p>
+
+  <p>ЕСЛИ тип биореактора <i>традиционный</i><br>
+  И степень иммобилизации <i>высокая</i><br>
+  И качество вспомогательного оборудования <i>среднее</i><br>
+  И качество аппаратно-схемного оформления <i>высокое</i>,<br>
+  ТО качество аппаратуры <i>высокое</i>.</p>
+ 
+    </p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="2_2.php">К следующему разделу</a> \ <a class="menu1"
+    href="1_3.php">К предыдущему разделу </a></p>
+    </td>
+  </tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

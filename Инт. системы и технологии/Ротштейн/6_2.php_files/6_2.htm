@@ -1,0 +1,1285 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" margin height="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169671002"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/6_2.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="6_3.php">К следующему разделу</a> \ <a class="menu1"
+    href="6_1.php">К предыдущему разделу </a></p>
+
+  <p><strong>6.2. Нейро-лингвистическая идентификация</strong></p>
+
+  <p><b><a name="1"></a>6.2.1. Лингвистический аппроксиматор</b></p>
+
+  <p>Рассматривается объект вида</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=184 height=39 src="6_files/image116.gif"> ,                                    </td>
+      <td align="right">(6.18)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>для которого связь <входы(<img align="absmiddle" width=20 height=31 src="6_files/image117.gif">)-выход( <i>y </i>)> можно представить в виде экспертной матрицы знаний, показанной в табл.6.5. </p>
+
+  <p>Таблица 6.5. Экспертная матрица знаний</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>№</p>
+   </td>
+   <td colspan="4">   <p>ЕСЛИ  &lt;входы&gt;</p>
+   </td>
+   <td>   <p>ТО &lt;выход&gt;</p>
+   </td>
+   <td>   <p>Вес правила</p>
+   </td>
+  </tr>
+  <tr>   <td> &nbsp; 
+   </td>
+   <td>   <p><img align="absmiddle" width=20 height=29 src="6_files/image118.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=29 src="6_files/image119.gif"></p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=24 height=31 src="6_files/image120.gif"></p>
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+  </tr>
+  <tr>   <td>   <p>11<br>
+   &nbsp;<br>
+   12<br>
+   :<br>
+   &nbsp;<br>
+   1<i>k</i><sub>1</sub></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=37   src="6_files/image121.gif"><br>
+   <img align="absmiddle" width=32 height=37   src="6_files/image122.gif"><br>
+   :<br>
+   <img align="absmiddle" width=36 height=44   src="6_files/image123.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=37   src="6_files/image124.gif"></p>
+   <p><img align="absmiddle" width=32 height=37   src="6_files/image125.gif"></p>
+   <p>:</p>
+   <p><img align="absmiddle" width=36 height=44   src="6_files/image126.gif"></p>
+   </td>
+   <td>   <p>:<br>
+   &nbsp;<br>
+   :<br>
+   :<br>
+   &nbsp;<br>
+   :</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=31 height=39   src="6_files/image127.gif"><br>
+   <img align="absmiddle" width=32 height=37   src="6_files/image125.gif"><br>
+   :<br>
+   <img align="absmiddle" width=36 height=44   src="6_files/image128.gif"></p>
+   </td>
+   <td>   <p><i>&nbsp;</i><br>
+   <i>&nbsp;</i><br>
+   <img align="absmiddle" width=21 height=29 src="6_files/image129.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=35 height=29   src="6_files/image130.gif"><br>
+   &nbsp;<br>
+   <img align="absmiddle" width=35 height=29   src="6_files/image131.gif"><br>
+   :<br>
+   <img align="absmiddle" width=41 height=39   src="6_files/image132.gif"></p>
+   </td>
+  </tr>
+  <tr>   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+  </tr>
+  <tr>   <td>   <p>:</p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+   <td>   <p>:</p>
+   </td>
+  </tr>
+  <tr>   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+   <td> &nbsp; 
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>  m</i>1&nbsp;<br>
+   <i>  m</i>2<br>
+     :<br>
+   <img align="absmiddle" width=41   height=31 src="6_files/image133.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=36 height=37   src="6_files/image134.gif"><br>
+   <img align="absmiddle" width=39 height=37   src="6_files/image135.gif"><br>
+   :<br>
+   <img align="absmiddle" width=51 height=45   src="6_files/image136.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=36 height=37   src="6_files/image137.gif"><br>
+   <img align="absmiddle" width=39 height=37   src="6_files/image138.gif"><br>
+   :<br>
+   <img align="absmiddle" width=51 height=45   src="6_files/image139.gif"></p>
+   </td>
+   <td>   <p>:<br>
+   &nbsp;<br>
+   :<br>
+   :<br>
+   &nbsp;<br>
+   :</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=36 height=39   src="6_files/image140.gif"><br>
+   <img align="absmiddle" width=39 height=37   src="6_files/image138.gif"><br>
+   :<br>
+   <img align="absmiddle" width=51 height=44   src="6_files/image141.gif"></p>
+   </td>
+   <td>   <p><i>&nbsp;</i><br>
+   <i>&nbsp;</i><br>
+   <img align="absmiddle" width=29 height=31 src="6_files/image142.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=37 height=31   src="6_files/image143.gif"><br>
+   &nbsp;<br>
+   <img align="absmiddle" width=41 height=31   src="6_files/image144.gif"><br>
+   :<br>
+   <img align="absmiddle" width=56 height=40   src="6_files/image145.gif"></p>
+   </td>
+  </tr>
+ </table>
+
+  <p>Этой матрице соответствует нечеткая база знаний:</p>
+
+  <p>ЕСЛИ         <img align="absmiddle" width=97 height=52 src="6_files/image146.gif"> И :<img align="absmiddle" width=89 height=49 src="6_files/image147.gif"> И : <img align="absmiddle" width=101 height=47 src="6_files/image148.gif"> (с весом <img align="absmiddle" width=33 height=35 src="6_files/image149.gif">):</p>
+
+  <p>   : ИЛИ <img align="absmiddle" width=111 height=68 src="6_files/image150.gif"> И :<img align="absmiddle" width=103 height=65 src="6_files/image151.gif"> И : <img align="absmiddle" width=115 height=65 src="6_files/image152.gif"> (с весом  <img align="absmiddle" width=44 height=43 src="6_files/image153.gif">),</p>
+  <p>ТО  <img align="absmiddle" width=55 height=35 src="6_files/image154.gif">,  <img align="absmiddle" width=61 height=32 src="6_files/image155.gif">,                                                                                  (6.19)</p>
+
+  <p>где <img align="absmiddle" width=28 height=41 src="6_files/image156.gif"> - лингвистический терм, оценивающий переменную <img align="absmiddle" width=20 height=31 src="6_files/image117.gif"> в строке <img align="absmiddle" width=53 height=35 src="6_files/image157.gif">;</p>
+  <p><img align="absmiddle" width=24 height=35 src="6_files/image158.gif">- количество строк-конъюнкций, соответствующих классу <img align="absmiddle" width=25 height=35 src="6_files/image159.gif"> выходной переменной <i>y</i>;</p>
+  <p><img align="absmiddle" width=36 height=35 src="6_files/image160.gif">- число в диапазоне [0,1], характеризующее субъективную меру уверенности эксперта в части высказывания с номером <img align="absmiddle" width=53 height=35 src="6_files/image157.gif">.</p>
+
+  <p>Классы <img align="absmiddle" width=25 height=35 src="6_files/image159.gif">, <img align="absmiddle" width=61 height=32 src="6_files/image155.gif">, формируются путем квантования диапазона <img align="absmiddle" width=69 height=51 src="6_files/image161.gif">выходной переменной на <img align="absmiddle" width=19 height=16 src="6_files/image162.gif"> уровней: </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img width=409 height=110 src="6_files/image163.gif">.             </td>
+      <td align="right">(6.20)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Нечеткой базе знаний (6.19) соответствует следующая аппроксимация объекта (6.18): </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=392 height=88 src="6_files/image164.gif">,               </td>
+      <td align="right">(6.21)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=363 height=84 src="6_files/image165.gif"> ,                 </td>
+      <td align="right">(6.22)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=241 height=127 src="6_files/image166.gif"> ,    <img align="absmiddle" width=53 height=29 src="6_files/image167.gif">,   <img align="absmiddle" width=61 height=32 src="6_files/image155.gif">, <img align="absmiddle" width=59 height=35 src="6_files/image168.gif">,       </td>
+      <td align="right">(6.23)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>где  <img align="absmiddle" width=63 height=43 src="6_files/image169.gif"> - функция принадлежности выхода <i>y</i> к классу <img align="absmiddle" width=43 height=35 src="6_files/image170.gif"> <img align="absmiddle" width=92 height=47 src="6_files/image171.gif"> ;</p>
+  <p>      <img align="absmiddle" width=63 height=39 src="6_files/image172.gif"> - функция принадлежности переменной <img align="absmiddle" width=20 height=31 src="6_files/image117.gif"> к терму <img align="absmiddle" width=28 height=41 src="6_files/image156.gif">;</p>
+  <p><img align="absmiddle" width=33 height=41 src="6_files/image173.gif">, <img align="absmiddle" width=33 height=41 src="6_files/image174.gif">- параметры настройки функций принадлежности.</p>
+
+
+  <p><b><a name="2"></a>6.2.2. Нейро-лингвистический аппроксиматор</b></p>
+
+  <p>В этом разделе предлагается способ представления лингвистической информации об объекте (6.18) в виде специальной <i>нейро-нечеткой</i> сети, изоморфной базе знаний (6.19). Структура такой сети представлена на рис.6.7, а содержание узлов показано в табл.6.6.</p>
+
+
+<p><img width=567   height=399 src="6_files/image175.gif"><br>
+   Рис.6.7 Структура   нейро-нечеткой сети</p>
+
+  <p>Из рис.6.7 видно, что нейро-нечеткая сеть имеет пять слоев:</p>
+  <p><i>слой 1</i> - входы объекта идентификации;</p>
+  <p><i>слой 2</i> - нечеткие термы, используемые в базе знаний (6.19);</p>
+  <p><i>слой 3</i> - строки-конъюнкции нечеткой базы знаний (6.19);</p>
+  <p><i>слой 4</i> - правила, объединяемые в классы <img align="absmiddle" width=28 height=35 src="6_files/image176.gif">, <img align="absmiddle" width=61 height=32 src="6_files/image155.gif">;</p>
+  <p><i>слой 5</i> - операция дефаззификации (6.21), т. е. преобразование результатов нечеткого логического вывода в четкое число.</p>
+  <p>Число узлов в нейро-нечеткой сети определяется так:</p>
+  <p><i>слой 1</i> - по количеству входов объекта идентификации;</p>
+  <p><i>слой 2</i> - по количеству нечетких термов в базе знаний (6.19);</p>
+  <p><i>слой 3</i> - по количеству строк-конъюнкций в базе знаний;</p>
+  <p><i>слой 4</i> - по количеству классов, на которые разбивается диапазон выходной переменной.</p>
+
+  <p>Таблица 6.6. Элементы нейро-нечеткой сети</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Узел</p>
+   </td>
+   <td>   <p>Название</p>
+   </td>
+   <td>   <p>Функция</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img width=76   height=40 src="6_files/image177.gif"></b></p>
+   </td>
+   <td>   <p>Вход</p>
+   </td>
+   <td>   <p><i> <img align="absmiddle" width=44 height=16   src="6_files/image178.gif"></i></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img width=95 height=59 src="6_files/image179.gif"></p>
+   </td>
+   <td>   <p>Нечеткий</p>
+   <p>терм</p>
+   </td>
+   <td>   <p><i><img align="absmiddle" width=91 height=32 src="6_files/image180.gif"></i></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img width=133   height=87 src="6_files/image181.gif"></p>
+   </td>
+   <td>   <p>Нечеткое правило</p>
+   </td>
+   <td>   <p><i><img align="absmiddle" width=75 height=65 src="6_files/image182.gif"></i></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img width=124 height=78 src="6_files/image183.gif"></p>
+   </td>
+   <td>   <p>Класс правил</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=75 height=65 src="6_files/image184.gif"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img width=123   height=68 src="6_files/image185.gif"></b></p>
+   </td>
+   <td><p>Дефаззификация</p>
+   </td>
+   <td>   <p><img align="absmiddle" width=197 height=72 src="6_files/image186.gif"></p>
+   </td>
+  </tr>
+ </table>
+
+  <p>Дуги графа взвешиваются следующим образом:</p>
+  <p>единицей - дуги между 1-м и 2-м слоями;</p>
+  <p>функциями принадлежности входа к нечеткому терму - дуги между 2-м и 3-м слоями;</p>
+  <p>весами правил - дуги между 3-м и 4-м слоями;</p>
+  <p>единицей - дуги между 4-м и 5-м слоями.</p>
+  <p>В табл.6.6 обозначено:</p>
+  <p><img align="absmiddle" width=52 height=32 src="6_files/image187.gif"> - функция принадлежности переменной <img align="absmiddle" width=15 height=16 src="6_files/image188.gif"> к терму <img align="absmiddle" width=16 height=19 src="6_files/image189.gif">;</p>
+  <p><img align="absmiddle" width=28 height=40 src="6_files/image190.gif"> - центр класса <img align="absmiddle" width=104 height=51 src="6_files/image191.gif">.</p>
+  <p>При определении элементов <i>нечеткое правило</i> и <i>класс правил</i>, входящих в табл.6.6, нечетко-логические операции <i>min</i> и <i>max</i> из формулы (6.22) заменены арифметическими операциями умножения и сложения. Возможность такой замены обоснована в работе [85]. Здесь это позволяет получить аналитические выражения, удобные для дифференцирования.</p>
+  <p><b><a name="3"></a>6.2.3. Обучение нейро-нечеткой сети</b></p>
+
+  <p>Суть обучения состоит в подборе таких весов дуг, которые минимизируют различие между результатами нейро-нечеткой аппроксимации и реальным поведением объекта. Для обучения используется система рекуррентных соотношений:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=280 height=69 src="6_files/image192.gif"> ,                          </td>
+      <td align="right">(6.24)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=271 height=76 src="6_files/image193.gif"> ,         </td>
+      <td align="right">(6.25)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=272 height=76 src="6_files/image194.gif"> , <img align="absmiddle" width=61 height=32 src="6_files/image155.gif">, <img align="absmiddle" width=53 height=29 src="6_files/image167.gif"> , <img align="absmiddle" width=56 height=35 src="6_files/image195.gif">, &nbsp;   </td>
+      <td align="right">(6.26)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>минимизирующих критерий</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=153 height=48 src="6_files/image196.gif"> ,                                       </td>
+      <td align="right">(6.27)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>применяемый в теории нейронных сетей, где:</p>
+  <p><img align="absmiddle" width=24 height=32 src="6_files/image197.gif"> и <img align="absmiddle" width=21 height=31 src="6_files/image198.gif">- теоретический и экспериментальный выходы объекта (6.18) на <img align="absmiddle" width=12 height=17 src="6_files/image199.gif">-м шаге обучения;</p>
+  <p><img align="absmiddle" width=56 height=35 src="6_files/image200.gif">, <img align="absmiddle" width=53 height=41 src="6_files/image201.gif">, <img align="absmiddle" width=53 height=41 src="6_files/image202.gif"> - веса правил (<img align="absmiddle" width=17 height=16 src="6_files/image203.gif">) и параметры функций принадлежности (<img align="absmiddle" width=13 height=20 src="6_files/image204.gif">,<img align="absmiddle" width=13 height=16 src="6_files/image205.gif">) на <img align="absmiddle" width=12 height=17 src="6_files/image199.gif">-м шаге обучения;</p>
+  <p><span style='font-family:Symbol'>h</span>- параметр обучения, который может выбираться в соответствии с рекомендациями работы [53].</p>
+  <p>Частные производные, входящие в соотношения (6.24)-(6.26), характеризуют чувствительность ошибки (<img align="absmiddle" width=25 height=31 src="6_files/image206.gif">) к изменению параметров нейро-нечеткой сети, и вычисляются следующим образом:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=244 height=81 src="6_files/image207.gif">,                               </td>
+      <td align="right">(6.28)</td>
+    </tr>
+  </table>
+  </p>
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=267 height=84 src="6_files/image208.gif">,                             </td>
+      <td align="right">(6.29)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=268 height=84 src="6_files/image209.gif">,                            </td>
+      <td align="right">(6.30)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>где</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=169 height=60 src="6_files/image210.gif">,                                       </td>
+      <td align="right">(6.31)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=452 height=168 src="6_files/image211.gif"> ,        </td>
+      <td align="right">(6.32)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=248 height=121 src="6_files/image212.gif"> ,                              </td>
+      <td align="right">(6.33)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=403 height=117 src="6_files/image213.gif"> ,             </td>
+      <td align="right">(6.34)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=216 height=81 src="6_files/image214.gif"> ,                                 </td>
+      <td align="right">(6.35)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=367 height=148 src="6_files/image215.gif"> ,                 </td>
+      <td align="right">(6.36)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=367 height=141 src="6_files/image216.gif">  .                </td>
+      <td align="right">(6.37)</td>
+    </tr>
+  </table>
+  </p>
+
+
+  <p>Аналогично правилу, алгоритм обучения нейро-нечеткой сети состоит из двух фаз. На первой фазе вычисляется модельное значение выхода объекта (<img align="absmiddle" width=16 height=20 src="6_files/image217.gif">), соответствующее заданной архитектуре сети. На второй фазе вычисляется значение невязки (<img align="absmiddle" width=25 height=31 src="6_files/image206.gif">) и по формулам (6.28)-(6.37) пересчитываются веса межнейронных связей.</p>
+
+
+  <p><b><a name="4"></a>6.2.4. Компьютерные эксперименты</b></p>
+
+  <p><b>Эксперимент 1.</b> Для генерации экспертно-экспериментальной информации использовался нелинейный объект пятого порядка:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=473 height=49 src="6_files/image218.gif">, <i>x </i><span style='font-family:Symbol'>О</span> [0,1] . </td>
+      <td align="right">(6.38)</td>
+    </tr>
+  </table>
+  </p>
+
+  <p>Поведение этого объекта показано на рис.6.8 жирной линией. </p>
+  <p>Наблюдая поведение объекта, нетрудно описать его базой знаний:</p>
+
+  <p>ЕСЛИ <i>x </i>= <i>А</i><sub>1 </sub>= <i>около</i> 0   ТО <i>y </i>= <img align="absmiddle" width=24 height=29 src="6_files/image219.gif"><span style='font-family:Symbol'>О</span>[0,0.4]</p>
+
+  <p>ЕСЛИ <i>x </i>= <i>А</i><sub>2 </sub>= <i>около </i>0,15   ТО <i>y </i>= <img align="absmiddle" width=27 height=31 src="6_files/image220.gif"><span style='font-family:Symbol'>О</span>[0.7, 0.9]</p>
+
+  <p>ЕСЛИ <i>x </i>= <i>А</i><sub>3 </sub>= <i>около</i> 0,4   ТО <i>y </i>= <img align="absmiddle" width=25 height=31 src="6_files/image221.gif"><span style='font-family:Symbol'>О</span>[0.45,0.55]</p>
+
+  <p>ЕСЛИ <i>x </i>= <i>А</i><sub>4 </sub>= <i>около</i> 0,6   ТО <i>y </i>= <img align="absmiddle" width=27 height=29 src="6_files/image222.gif"><span style='font-family:Symbol'>О</span>[0.55, 0.7]</p>
+
+  <p>ЕСЛИ <i>x </i>= <i>А</i><sub>5 </sub>= <i>около </i>0,85   ТО <i>y </i>= <img align="absmiddle" width=27 height=29 src="6_files/image223.gif"><span style='font-family:Symbol'>О</span>[0.4,0.45]</p>
+
+  <p>ЕСЛИ <i>x </i>= <i>А</i><sub>6 </sub>= <i>около</i> 1   ТО <i>y </i>= <img align="absmiddle" width=27 height=31 src="6_files/image224.gif"><span style='font-family:Symbol'>О</span>[0.9, 1].</p>
+  <p>Функции принадлежности нечетких термов, используемых в этой базе знаний, выбирались экспертно (рис.6.9а).</p>
+  <p><img width=631 height=642 src="6_files/image225.gif">Структура нейро-нечеткой сети, соответствующей рассматриваемому объекту, представлена на рис.6.10. Эта сеть с выбранными функциями принадлежности обеспечивает грубую аппроксимацию объекта, показанную на рис.6.8 тонкой линией.</p>
+
+  <p>В результате обучения сети по соотношениям (6.24) - (6.37) получена модель объекта, которая показана на рис.6.8 пунктиром. Функции принадлежности нечетких термов после обучения приведены на рис.6.9б. Значения настраиваемых параметров (<img align="absmiddle" width=13 height=20 src="6_files/image204.gif">,<img align="absmiddle" width=13 height=16 src="6_files/image205.gif">) функций принадлежности, а также весов нечетких правил приведены в табл. 6.7 и 6.8. </h6>
+<p><img width=477 height=357 src="6_files/image226.gif"><br>
+Рис.6.10 Нейро-нечеткая сеть для идентификации   объекта (6.38)</p>
+  <p>Таблица 6.7. Параметры функций принадлежности</p>
+ <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Термы</p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=24 height=29   src="6_files/image227.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image228.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=27 height=31   src="6_files/image229.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image230.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image231.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image232.gif"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>До</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=20   src="6_files/image204.gif"></i></b></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0.15</p>
+   </td>
+   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>0.85</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+  </tr>
+  <tr>   <p>обучения</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=16   src="6_files/image205.gif"></i></b></p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>После </p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=20   src="6_files/image204.gif"></i></b></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0.13</p>
+   </td>
+   <td>   <p>0.41</p>
+   </td>
+   <td>   <p>0.63</p>
+   </td>
+   <td>   <p>0.85</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>обучения</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=16   src="6_files/image205.gif"></i></b></p>
+   </td>
+   <td>   <p>0.02</p>
+   </td>
+   <td>   <p>0.04</p>
+   </td>
+   <td>   <p>0.05</p>
+   </td>
+   <td>   <p>0.05</p>
+   </td>
+   <td>   <p>0.04</p>
+   </td>
+   <td>   <p>0.01</p>
+   </td>
+  </tr>
+ </table>
+  <p>Таблица 6.8. Веса правил</p>
+    <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Вес правила</p>   </td>
+   <td>   <p><b><i><img align="absmiddle" width=35 height=29 src="6_files/image233.gif"></i></b></p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=37 height=31 src="6_files/image234.gif"></i></b></p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=37 height=31 src="6_files/image235.gif"></i></b></p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=39 height=29 src="6_files/image236.gif"></i></b></p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=37 height=31 src="6_files/image237.gif"></i></b></p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=37 height=31 src="6_files/image238.gif"></i></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>До обучения</p>   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>После обучения</p>
+   </td>
+   <td>   <p>0.9997</p>
+   </td>
+   <td>   <p>0.9985</p>
+   </td>
+   <td>   <p>0.9988</p>
+   </td>
+   <td>   <p>0.9985</p>
+   </td>
+   <td>   <p>0.9984</p>
+   </td>
+   <td>   <p>0.9975</p>
+   </td>
+  </tr>
+ </table>
+
+  <p><b>Эксперимент 2.</b> Нелинейный объект-эталон представлен в виде:</p>
+
+  <p><b><img align="absmiddle" width=352 height=49 src="6_files/image239.gif"> </b>,</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=209 height=63 src="6_files/image240.gif"> , <img align="absmiddle" width=97 height=37 src="6_files/image241.gif"> ,  <img align="absmiddle" width=100 height=37 src="6_files/image242.gif"> ,        </td>
+      <td align="right">(6.39)</td>
+    </tr>
+  </table>
+  </p>
+  <p>и имеет форму, изображенную на рис.6.11а.</p>
+  <p><img width=716 height=496 src="6_files/image243.gif"><br>
+  Рис.6.11 Внешний вид эталона (а) и модели: </p>
+  <p>Нечеткая база знаний, описывающая поведение данного объекта, сформирована из 49 правил типа:</p>
+
+  <p>ЕСЛИ  <i>x</i><sub>1</sub> = <img align="absmiddle" width=24 height=31 src="6_files/image246.gif"> И <i>x</i><sub>2 </sub>= <img align="absmiddle" width=24 height=31 src="6_files/image247.gif"> ТО  <i>y </i>=<img align="absmiddle" width=29 height=35 src="6_files/image248.gif"> .</p>
+
+  <p>Эти правила сведены в матрицу: </p>
+
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td> &nbsp; 
+   </td>
+   <td>   <p><i>A</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>A</i><sub>2</sub></p>
+   </td>
+   <td>   <p><i>A</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>A</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>A</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>A</i><sub>6</sub></p>
+   </td>
+   <td>   <p><i>A</i><sub>7</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>2</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>2</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>2</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>6</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>5</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><i>B</i><sub>7</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>2</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>4</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>3</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>1</sub></p>
+   </td>
+   <td>   <p><i>C</i><sub>2</sub></p>
+   </td>
+  </tr>
+ </table>
+
+  <p>где    1) <i>А</i><sub>1</sub>=<i>В</i><sub>1</sub>=<i>около</i> 0, <i>А</i><sub>2</sub>=<i>В</i><sub>2</sub>=<i>около</i> 0.5, <i>А</i><sub>3</sub>=<i>В</i><sub>3</sub>=<i>около</i> 1.5, <i>А</i><sub>4</sub>=<i>В</i><sub>4</sub>=<i>около</i> 3, <i>А</i><sub>5</sub>=<i>В</i><sub>5</sub>=<i>около</i> 4.5, <i>А</i><sub>6</sub>=<i>В</i><sub>6</sub>=<i>около</i> 5.5, <i>А</i><sub>7</sub>=<i>В</i><sub>7</sub>=<i>около</i> 6 - лингвистические термы входных переменных <img align="absmiddle" width=23 height=29 src="6_files/image249.gif"> и <img align="absmiddle" width=27 height=29 src="6_files/image250.gif">;</p>
+  <p>2) <i>С</i><sub>1</sub>=[-5.08, -4.5], <i>С</i><sub>2</sub>=[-4.5, -3], <i>С</i><sub>3</sub>=[-3, -0.5], <i>С</i><sub>4</sub>=[-0.5, 0], <i>С</i><sub>5</sub>=[0, 0.855] - классы выходной переменной <i>y</i>.</p>
+  <p>Начальные веса всех правил приравнивались к 1.</p>
+  <p>Функции принадлежности нечетких термов входных переменных до настройки показаны на рис.6.12а.</p>
+
+   <p><img width=736 height=546 src="6_files/image252.gif"><br>
+   Рис.6.12 Функции принадлежности входных термов: </p>
+  <p>Структура нейро-нечеткой сети, соответствующей рассматриваемому объекту, представлена на рис.6.13. Эта сеть с выбранными функциями принадлежности обеспечивает грубую аппроксимацию объекта, показанную на рис.6.11б.</p>
+  <p>В результате обучения сети по соотношениям (6.24) - (6.37) получена модель объекта, которая показана на рис.6.11в. Функции принадлежности нечетких термов после обучения приведены на рис.6.12б,в. Значения настраиваемых параметров (<i>b</i>,<i>c</i>) функций принадлежности, а также весов нечетких правил приведены в табл. 6.9-6.11.</p>
+<p><img width=626   height=920 src="6_files/image256.gif"><br>
+   Рис.6.13 Нейро-нечеткая сеть для идентификации объекта (6.39)</p>
+  <p>Таблица 6.9. Параметры функций принадлежности термов переменной <i>x</i><sub>1</sub></p>
+    <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td colspan="2">   <p>Термы</p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=24 height=29   src="6_files/image227.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image228.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=27 height=31   src="6_files/image229.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image230.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image231.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image232.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image257.gif"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>До</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=20   src="6_files/image204.gif"></i></b></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>1.5</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4.5</p>
+   </td>
+   <td>   <p>5.5</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>обучения</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=16   src="6_files/image205.gif"></i></b></p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>После </p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=20   src="6_files/image204.gif"></i></b></p>
+   </td>
+   <td>   <p>-0.16</p>
+   </td>
+   <td>   <p>0.54</p>
+   </td>
+   <td>   <p>1.53</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4.46</p>
+   </td>
+   <td>   <p>5.45</p>
+   </td>
+   <td>   <p>6.16</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>обучения</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=16   src="6_files/image205.gif"></i></b></p>
+   </td>
+   <td>   <p>0.24</p>
+   </td>
+   <td>   <p>0.17</p>
+   </td>
+   <td>   <p>0.16</p>
+   </td>
+   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.13</p>
+   </td>
+   <td>   <p>0.18</p>
+   </td>
+   <td>   <p>0.21</p>
+   </td>
+  </tr>
+ </table>
+  <p>Таблица 6.10. Параметры функций принадлежности термов переменной <i>x</i><sub>2</sub></p>
+    <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td colspan="2">   <p>Термы</p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=25 height=29   src="6_files/image258.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image259.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=27 height=31   src="6_files/image260.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image261.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image262.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image263.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image264.gif"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>До</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=20   src="6_files/image204.gif"></i></b></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>1.5</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4.5</p>
+   </td>
+   <td>   <p>5.5</p>
+   </td>
+   <td>   <p>6</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>обучения</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=16   src="6_files/image205.gif"></i></b></p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.5</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>После </p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=20   src="6_files/image204.gif"></i></b></p>
+   </td>
+   <td>   <p>-0.19</p>
+   </td>
+   <td>   <p>0.53</p>
+   </td>
+   <td>   <p>1.52</p>
+   </td>
+   <td>   <p>3.01</p>
+   </td>
+   <td>   <p>4.46</p>
+   </td>
+   <td>   <p>5.44</p>
+   </td>
+   <td>   <p>6.14</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>обучения</p>
+   </td>
+   <td>   <p><b><i><img align="absmiddle" width=13 height=16   src="6_files/image205.gif"></i></b></p>
+   </td>
+   <td>   <p>0.14</p>
+   </td>
+   <td>   <p>0.18</p>
+   </td>
+   <td>   <p>0.19</p>
+   </td>
+   <td>   <p>0.27</p>
+   </td>
+   <td>   <p>0.1</p>
+   </td>
+   <td>   <p>0.12</p>
+   </td>
+   <td>   <p>0.2</p>
+   </td>
+  </tr>
+ </table>
+
+  <p >Таблица 6.11. Итоговые веса правил</p>
+    <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Термы</p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=24 height=29   src="6_files/image227.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image228.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=27 height=31   src="6_files/image229.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image230.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image231.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image232.gif"></b></p>
+   </td>
+   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image257.gif"></b></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=24 height=29   src="6_files/image265.gif"></b></p>
+   </td>
+   <td>   <p>0.9995</p>
+   </td>
+   <td>   <p>0.9954</p>
+   </td>
+   <td>   <p>0.9479</p>
+   </td>
+   <td>   <p>0.9989</p>
+   </td>
+   <td>   <p>0.9761</p>
+   </td>
+   <td>   <p>0.9738</p>
+   </td>
+   <td>   <p>0.9785</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image259.gif"></b></p>
+   </td>
+   <td>   <p>0.9969</p>
+   </td>
+   <td>   <p>0.9014</p>
+   </td>
+   <td>   <p>0.9998</p>
+   </td>
+   <td>   <p>0.9989</p>
+   </td>
+   <td>   <p>0.9997</p>
+   </td>
+   <td>   <p>0.9366</p>
+   </td>
+   <td>   <p>0.9451</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=27 height=31   src="6_files/image260.gif"></b></p>
+   </td>
+   <td>   <p>0.9894</p>
+   </td>
+   <td>   <p>0.9999</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0.9998</p>
+   </td>
+   <td>   <p>0.958</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=28 height=29   src="6_files/image261.gif"></b></p>
+   </td>
+   <td>   <p>0.9862</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0.9834</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0.9993</p>
+   </td>
+   <td>   <p>0.9976</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image262.gif"></b></p>
+   </td>
+   <td>   <p>0.9938</p>
+   </td>
+   <td>   <p>0.9995</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0.9995</p>
+   </td>
+   <td>   <p>0.9688</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image263.gif"></b></p>
+   </td>
+   <td>   <p>0.997</p>
+   </td>
+   <td>   <p>0.8971</p>
+   </td>
+   <td>   <p>0.9994</p>
+   </td>
+   <td>   <p>0.9983</p>
+   </td>
+   <td>   <p>0.9991</p>
+   </td>
+   <td>   <p>0.934</p>
+   </td>
+   <td>   <p>0.9245</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><b><img align="absmiddle" width=28 height=31   src="6_files/image264.gif"></b></p>
+   </td>
+   <td>   <p>0.9995</p>
+   </td>
+   <td>   <p>0.9986</p>
+   </td>
+   <td>   <p>0.9536</p>
+   </td>
+   <td>   <p>0.9988</p>
+   </td>
+   <td>   <p>0.98</p>
+   </td>
+   <td>   <p>0.9831</p>
+   </td>
+   <td>   <p>0.9806</p>
+   </td>
+  </tr>
+ </table>
+
+
+
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="6_3.php">К следующему разделу</a> \ <a class="menu1"
+    href="6_1.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

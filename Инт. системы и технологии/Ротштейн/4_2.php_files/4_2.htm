@@ -1,0 +1,284 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169670862"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/4_2.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="4_3.php">К следующему разделу</a> \ <a class="menu1"
+    href="4_1.php">К предыдущему разделу </a></p>
+
+  <p><b>4.2. Учет  влияющих  факторов</b></p>
+
+  <p>В настоящем разделе излагается способ учета качественных и количественных факторов, влияющих на значения неопределенных параметров, используемых в аналитических моделях. Классификация таких факторов, как правило, определяется структурой объекта и условиями его функционирования.</p>
+
+  <p><b>Определение&nbsp;4.4</b>. <i>Базой знаний</i> о влиянии факторов </p>
+
+  <p><img align="absmiddle" width=181 height=47 src="4_1_files/image124.gif"></p>
+
+  <p>на значение параметра <img align="absmiddle" width=15 height=20 src="4_1_files/image002.gif"> будем называть следующую систему логических высказываний: </p>
+  <p>ЕСЛИ <img align="absmiddle" width=89 height=44 src="4_1_files/image125.gif"> И <img align="absmiddle" width=93 height=44 src="4_1_files/image126.gif"> И  <b>. . .</b> И <img align="absmiddle" width=93 height=44 src="4_1_files/image127.gif">  ИЛИ</p>
+  <p>&nbsp;<img align="absmiddle" width=91 height=44 src="4_1_files/image128.gif"> И <img align="absmiddle" width=95 height=44 src="4_1_files/image129.gif"> И  <b>. . .</b> И <img align="absmiddle" width=93 height=44 src="4_1_files/image130.gif">  ИЛИ   <b>. . .</b> </p>
+  <p>&nbsp;<img align="absmiddle" width=96 height=60 src="4_1_files/image131.gif"> И <img align="absmiddle" width=100 height=60 src="4_1_files/image132.gif"> И  <b>. . .</b> И <img align="absmiddle" width=100 height=55 src="4_1_files/image133.gif">,</p>
+  <p>ТО <img align="absmiddle" width=45 height=29 src="4_1_files/image134.gif">, ИНАЧЕ</p>
+  <p>ЕСЛИ <img align="absmiddle" width=91 height=44 src="4_1_files/image135.gif"> И <img align="absmiddle" width=95 height=44 src="4_1_files/image136.gif"> И  <b>. . .</b> И <img align="absmiddle" width=95 height=44 src="4_1_files/image137.gif">  ИЛИ</p>
+  <p>&nbsp;<img align="absmiddle" width=93 height=44 src="4_1_files/image138.gif"> И <img align="absmiddle" width=96 height=44 src="4_1_files/image139.gif"> И  <b>. . .</b> И <img align="absmiddle" width=96 height=44 src="4_1_files/image140.gif">  ИЛИ   <b>. . .</b>&nbsp;</p>
+  <p>&nbsp;<img align="absmiddle" width=103 height=60 src="4_1_files/image141.gif"> И <img align="absmiddle" width=105 height=60 src="4_1_files/image142.gif"> И  <b>. . .</b> И <img align="absmiddle" width=107 height=55 src="4_1_files/image143.gif">,</p>
+  <p>ТО <img align="absmiddle" width=49 height=29 src="4_1_files/image144.gif">, ИНАЧЕ <b>. . .</b>&nbsp;</p>
+  <p>ЕСЛИ <img align="absmiddle" width=93 height=44 src="4_1_files/image145.gif"> И <img align="absmiddle" width=97 height=44 src="4_1_files/image146.gif"> И  <b>. . .</b> И <img align="absmiddle" width=97 height=44 src="4_1_files/image147.gif">  ИЛИ</p>
+  <p>&nbsp;<img align="absmiddle" width=97 height=44 src="4_1_files/image148.gif"> И <img align="absmiddle" width=101 height=44 src="4_1_files/image149.gif"> И  <b>. . .</b> И <img align="absmiddle" width=100 height=44 src="4_1_files/image150.gif">  ИЛИ   <b>. . .</b>&nbsp;</p>
+  <p>&nbsp;<img align="absmiddle" width=109 height=60 src="4_1_files/image151.gif"> И <img align="absmiddle" width=115 height=60 src="4_1_files/image152.gif"> И  <b>. . .</b> И <img align="absmiddle" width=113 height=55 src="4_1_files/image153.gif">,</p>
+  <p style='text-indent:36.0pt;line-height:97%'>ТО <img align="absmiddle" width=53 height=31 src="4_1_files/image154.gif">,                                                                                     </p>
+
+  <p>где <img align="absmiddle" width=116 height=49 src="4_1_files/image155.gif"> - лингвистическая оценка параметра <img align="absmiddle" width=15 height=20 src="4_1_files/image002.gif">, определяемая из терм-множества <img align="absmiddle" width=180 height=39 src="4_1_files/image156.gif">;</p>
+  <p><img align="absmiddle" width=35 height=41 src="4_1_files/image157.gif">- лингвистическая оценка фактора <img align="absmiddle" width=20 height=31 src="4_1_files/image158.gif">, выбираемая из терм-множества <img align="absmiddle" width=231 height=72 src="4_1_files/image159.gif">в <img align="absmiddle" width=15 height=23 src="4_1_files/image160.gif">-ой дизъюнкции, <img align="absmiddle" width=63 height=29 src="4_1_files/image161.gif">, <img align="absmiddle" width=67 height=32 src="4_1_files/image162.gif">, <img align="absmiddle" width=81 height=37 src="4_1_files/image163.gif">; </p>
+  <p><img align="absmiddle" width=25 height=28 src="4_1_files/image164.gif"> - количество правил, определяющих значение параметра <img align="absmiddle" width=61 height=35 src="4_1_files/image165.gif"></p>
+  <p>Используя операции <img align="absmiddle" width=31 height=28 src="4_1_files/image166.gif">(ИЛИ) и <img align="absmiddle" width=31 height=28 src="4_1_files/image167.gif">(И), систему логических высказываний из определения 4.4. можно переписать в более компактном виде: </p>
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=352 height=73 src="4_1_files/image168.gif">                 </td>
+      <td align="right">(4.15)</td>
+    </tr>
+</table></p>
+  <p><b>Определение 4.5.</b>  <img align="absmiddle" width=37 height=24 src="4_3_files/image001.gif"><i>-формой</i> неопределенного параметра <img align="absmiddle" width=15 height=20 src="4_3_files/image002.gif"> будем называть следующую информацию:</p>
+  <p>&nbsp; диапазон изменения параметра <img align="absmiddle" width=89 height=41 src="4_3_files/image003.gif">;</p>
+  <p>&nbsp; терм-множество лингвистических оценок параметра <img align="absmiddle" width=15 height=20 src="4_3_files/image002.gif">: </p>
+
+  <p><img align="absmiddle" width=180 height=39 src="4_3_files/image004.gif"></p>
+
+  <p>&nbsp; множество факторов <img align="absmiddle" width=169 height=39 src="4_3_files/image005.gif">, влияющих на значение параметра <img align="absmiddle" width=15 height=20 src="4_3_files/image002.gif"> в диапазоне <img align="absmiddle" width=61 height=41 src="4_3_files/image006.gif">;</p>
+  <p>&nbsp; терм-множества для лингвистических факторов <img align="absmiddle" width=20 height=31 src="4_3_files/image007.gif">:</p>
+
+  <p><img align="absmiddle" width=201 height=65 src="4_3_files/image008.gif">,  <img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif"> ;</p>
+
+  <p>&nbsp; универсальные множества для нечеткой оценки факторов <img align="absmiddle" width=23 height=31 src="4_3_files/image010.gif">:</p>
+
+  <p><img align="absmiddle" width=67 height=31 src="4_3_files/image011.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif"> ;</p>
+
+  <p>&nbsp; функции принадлежности <img align="absmiddle" width=99 height=53 src="4_3_files/image012.gif"> факторов <img align="absmiddle" width=20 height=31 src="4_3_files/image007.gif"> лингвистическим термам <img align="absmiddle" width=23 height=39 src="4_3_files/image013.gif">, <img align="absmiddle" width=139 height=37 src="4_3_files/image014.gif"> ; </p>
+  <p>&nbsp; база знаний о влиянии факторов<img align="absmiddle" width=179 height=39 src="4_3_files/image015.gif"> на значение параметра <img align="absmiddle" width=15 height=20 src="4_3_files/image002.gif">; </p>
+  <p>&nbsp; вектор текущих значений влияющих факторов <img align="absmiddle" width=192 height=47 src="4_3_files/image016.gif">, где <img align="absmiddle" width=69 height=39 src="4_3_files/image017.gif">, <img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif">.</p>
+  <p>Наличие этой информации позволяет реализовать следующий алгоритм.</p>
+
+  <p><b>Алгоритм преобразования <img align="absmiddle" width=37 height=24 src="4_3_files/image001.gif"> - формы к <img align="absmiddle" width=12 height=20 src="4_3_files/image018.gif">- форме</b></p>
+
+  <p>1°. Обозначить:</p>
+  <p><img align="absmiddle" width=112 height=56 src="4_3_files/image019.gif"> - функции принадлежности термов <img align="absmiddle" width=37 height=41 src="4_3_files/image020.gif">;</p>
+  <p><img align="absmiddle" width=83 height=51 src="4_3_files/image021.gif"> - функции принадлежности термов <img align="absmiddle" width=21 height=35 src="4_3_files/image022.gif">, <img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif">,  <img align="absmiddle" width=60 height=32 src="4_3_files/image023.gif">, <img align="absmiddle" width=76 height=41 src="4_3_files/image024.gif"> .</p>
+  <p>2°. В базе знаний (4.15) заменить нечеткие значения факторов <img align="absmiddle" width=65 height=31 src="4_3_files/image025.gif"> и параметра <img align="absmiddle" width=15 height=20 src="4_3_files/image002.gif"> соответствующими функциями принадлежности. Операции <img align="absmiddle" width=31 height=28 src="4_3_files/image026.gif"> и <img align="absmiddle" width=31 height=28 src="4_3_files/image027.gif">заменить операциями  <img align="absmiddle" width=59 height=15 src="4_3_files/image028.gif">:</p>
+
+  <p><img align="absmiddle" width=339 height=79 src="4_3_files/image029.gif"> .</p>
+
+  <p>3°. Вычислить степени принадлежности значения параметра <img align="absmiddle" width=15 height=20 src="4_3_files/image002.gif"> к лингвистическим термам <img align="absmiddle" width=21 height=35 src="4_3_files/image022.gif">, <img align="absmiddle" width=60 height=32 src="4_3_files/image023.gif">:</p>
+
+  <p><img align="absmiddle" width=447 height=93 src="4_3_files/image030.gif">,</p>
+
+  <p>где операции <img align="absmiddle" width=59 height=15 src="4_3_files/image028.gif"> отождествляются с операциями min и max соответственно. </p>
+  <p>4°. Выбрать терм <img align="absmiddle" width=20 height=29 src="4_3_files/image031.gif">, для которого</p>
+
+  <p><img align="absmiddle" width=360 height=60 src="4_3_files/image032.gif"> . </p>
+
+  <p><b>Пример&nbsp;4.5.</b> Пусть вероятность <img align="absmiddle" width=17 height=19 src="4_3_files/image033.gif"> безошибочного выполнения человеком-оператором некоторой операции находиться в диапазоне [0.95, 0.99] и зависит от таких факторов: <img align="absmiddle" width=20 height=29 src="4_3_files/image034.gif">- квалификация человека-оператора; <img align="absmiddle" width=24 height=29 src="4_3_files/image035.gif">- напряженность работы; <img align="absmiddle" width=23 height=31 src="4_3_files/image036.gif">-уровень утомленности. Экспертная база знаний имеет вид:</p>
+
+  <p>ЕСЛИ (<img align="absmiddle" width=20 height=29 src="4_3_files/image034.gif">= B )  И  (<img align="absmiddle" width=24 height=29 src="4_3_files/image035.gif">= Н )   И  (<img align="absmiddle" width=23 height=31 src="4_3_files/image036.gif">= Н ),    ТО   <img align="absmiddle" width=32 height=19 src="4_3_files/image037.gif"> В, </p>
+
+  <p>ЕСЛИ (<img align="absmiddle" width=20 height=29 src="4_3_files/image034.gif">= С )  И  (<img align="absmiddle" width=24 height=29 src="4_3_files/image035.gif">= вС ) И  (<img align="absmiddle" width=23 height=31 src="4_3_files/image036.gif">= нС ),   ТО   <img align="absmiddle" width=32 height=19 src="4_3_files/image037.gif"> С,</p>
+
+  <p>ЕСЛИ (<img align="absmiddle" width=20 height=29 src="4_3_files/image034.gif">= Н )  И  (<img align="absmiddle" width=24 height=29 src="4_3_files/image035.gif">= В )   И  (<img align="absmiddle" width=23 height=31 src="4_3_files/image036.gif">= В ),    ТО   <img align="absmiddle" width=32 height=19 src="4_3_files/image037.gif"> Н,</p>
+
+  <p>где нечеткие термы имеют функции принадлежности, изображенные на рис.4.10 (Н - низкий, нС - ниже среднего, С - средний, вС - выше среднего, В - высокий). </p>
+
+  <p><img width=548 height=236 src="4_3_files/image038.gif"></p>
+  <p>Рис. 4.10. Кусочно-линейные функции принадлежности </p>
+  <p>нечетких термов</p>
+
+  <p>Пусть текущей ситуации отвечают такие уровни влияющих факторов: <img align="absmiddle" width=40 height=37 src="4_3_files/image039.gif">вС, <img align="absmiddle" width=41 height=37 src="4_3_files/image040.gif">нС, <img align="absmiddle" width=40 height=39 src="4_3_files/image041.gif">Н. Возникает вопрос: каким будет уровень вероятности <img align="absmiddle" width=17 height=19 src="4_3_files/image033.gif">?</p>
+  <p>Из базы знаний получаем следующую систему нечетких логических уравнений:</p>
+
+  <p><img align="absmiddle" width=352 height=39 src="4_3_files/image042.gif">  ,</p>
+  <p><img align="absmiddle" width=364 height=39 src="4_3_files/image043.gif">  ,</p>
+  <p><img align="absmiddle" width=352 height=39 src="4_3_files/image044.gif">  .</p>
+
+  <p>Используя приведенные уравнения, вычислим степени принадлежности значений параметра <img align="absmiddle" width=17 height=19 src="4_3_files/image033.gif">:</p>
+
+  <p><img align="absmiddle" width=624 height=129 src="4_3_files/image045.gif"></p>
+  <p class=MsoNormal><img align="absmiddle" width=639 height=129 src="4_3_files/image046.gif">  <img align="absmiddle" width=623 height=135 src="4_3_files/image047.gif"></p>
+
+  <p>Поскольку наибольшую принадлежность имеет терм В, то неопределенная вероятность <img align="absmiddle" width=17 height=19 src="4_3_files/image033.gif"> записывается в виде <i>l</i>-формы:</p>
+
+  <p><img align="absmiddle" width=32 height=25 src="4_3_files/image048.gif"> &lt; 0.95, 0.99, <i>высокий</i> &gt; , </p>
+
+  <p>и <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-формы :</p>
+
+  <p><img align="absmiddle" width=419 height=37 src="4_3_files/image050.gif">  .</p>
+
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="4_3.php">К следующему разделу</a> \ <a class="menu1"
+    href="4_1.php">К предыдущему разделу </a></p>
+
+
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

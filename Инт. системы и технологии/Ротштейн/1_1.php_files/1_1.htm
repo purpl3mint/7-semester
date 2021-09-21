@@ -1,0 +1,430 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169670733"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/1_1.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+  <tr>
+   <td width="10" ></td>
+    <td ><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+    <p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="1_2.php">К следующему разделу</a></p>
+  <p>ГЛАВА 1</p>
+  <p><img width=597 height=2 src="1_1_files/image001.gif"></p>
+  <p><b>ВВЕДЕНИЕ  В  ИНТЕЛЛЕКТУАЛЬНЫЕ  ТЕХНОЛОГИИ </b></p>
+  <p><b>1.1.&nbsp;Нечеткие множества</b></p>
+  <p>Этот раздел написан по материалам работ [15,18,25]. С дополнительными сведениями по нечетким множествам можно познакомиться по работам [26,57,64,80,83-85].</p>
+  <p>Теория множеств представляет собой мощный инструмент математики. Однако, лежащая в ее основе аксиома исключенного третьего, утверждающая, что элемент либо принадлежит множеству либо не принадлежит, часто делает эту теорию неприменимой в реальных задачах, в которых применяются нечеткие оценки, такие как: <большая прибыль>, <высокое давление>, <умеренная температура>, <надежные инструменты>, <безопасные условия> и т.п. К сожалению, подобные высказывания не могут быть адекватно формализованы обычными математическими методами.</p>
+  <p>Если мы хотим учесть точное значение нечеткого терма, то четкое разделение элементов (например значений давления) на те, которые принадлежат терму <высокое>, и те, которые не принадлежат, является искусственным. Это происходит в первую очередь потому, что некоторые значения могут восприниматься как <высокое давление с некоторой натяжкой>, <не совсем высокое давление>, <не совсем невысокое давление> и др.</p>
+  <p>Попытка развития формального аппарата для вовлечения частичной принадлежности в теорию множеств была предпринята в середине 60-х годов Заде [15]. Он ввел понятие нечеткого множества как собрания элементов, которые могут принадлежать этому множеству со степенью от 0 до 1. Причем 0 обозначает абсолютную непринадлежность, а 1 - абсолютную принадлежность множеству. Это было сделано путем применения понятия функции принадлежности, которая ставит в соответствие каждому элементу универсального множества число из интервала [0,1], обозначающее степень принадлежности. Понятие функции принадлежности является обобщением понятия характеристической функции четкого множества, которая оперирует значениями <img align="absmiddle" width=44 height=24 src="1_1_files/image002.gif">. Поэтому основные свойства и операции над нечеткими множествами, введенные Заде и его многочисленными последователями, являются обобщениями соответствующих свойств и операций классической теории множеств. </p>
+  <p>С момента своего возникновения теория нечетких множеств вызвала беспрецедентный рост интереса практически во всех отраслях науки и техники.</p>
+  <p><b><a name="1"></a>1.1.1. Основные понятия теории нечетких множеств</b></p>
+  <p>Пусть <img align="absmiddle" width=64 height=24 src="1_1_files/image003.gif"> - универсальное множество, т.е. полное множество, охватывающее всю проблемную область. </p>
+  <p><b>Определение&nbsp;1.1.</b>&nbsp;<i>Нечеткое множество</i> <img align="absmiddle" width=55 height=21 src="1_1_files/image004.gif"> представляет собой набор пар <img align="absmiddle" width=135 height=60 src="1_1_files/image005.gif">, где <img align="absmiddle" width=48 height=20 src="1_1_files/image006.gif"> и <img align="absmiddle" width=135 height=32 src="1_1_files/image007.gif"> - функция принадлежности, которая представляет собой некоторую субъективную меру соответствия элемента <img align="absmiddle" width=15 height=16 src="1_1_files/image008.gif"> нечеткому множеству <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif">.  </p>
+  <p><img align="absmiddle" width=61 height=32 src="1_1_files/image010.gif"> может принимать значения от нуля, который обозначает абсолютную не принадлежность, до единицы, которая, наоборот, говорит об абсолютной принадлежности элемента <img align="absmiddle" width=15 height=16 src="1_1_files/image008.gif"> нечеткому множеству <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif">. Иногда удобно рассматривать значение <img align="absmiddle" width=61 height=32 src="1_1_files/image010.gif"> как степень совместимости элемента <img align="absmiddle" width=15 height=16 src="1_1_files/image008.gif"> с размытым понятием, представленным нечетким множеством <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif">.</p>
+  <p>Часто нечеткое множество <img align="absmiddle" width=55 height=21 src="1_1_files/image004.gif"> и его функцию принадлежности <img align="absmiddle" width=61 height=32 src="1_1_files/image010.gif"> рассматривают как взаимозаменяемые понятия.</p>
+  <p>Если множество <img align="absmiddle" width=52 height=32 src="1_1_files/image011.gif"> заменить на <img align="absmiddle" width=44 height=24 src="1_1_files/image002.gif">, то функция принадлежности будет представлять собой характеристическую функцию обыкновенного (не нечеткого) множества. </p>
+  <p>Если нечеткое множество <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> определено на конечном универсальном множестве <img align="absmiddle" width=187 height=45 src="1_1_files/image012.gif">, то его удобно обозначать следующим образом:</p>
+  <p><img align="absmiddle" width=569 height=68 src="1_1_files/image013.gif">, </p>
+  <p>где  <<img align="absmiddle" width=107 height=39 src="1_1_files/image014.gif">> - пара <функция принадлежности / элемент>, называемая <i>синглтоном</i>, а < + > - обозначает совокупность пар.</p>
+  <p><b>Пример&nbsp;1.1.</b> Пусть <img align="absmiddle" width=145 height=25 src="1_1_files/image015.gif">. Тогда нечеткое множество <большие числа> может быть представлено следующим образом: </p>
+  <p><img align="absmiddle" width=32 height=19 src="1_1_files/image016.gif"><большие числа>=0.2/6 + 0.5/7 + 0.8/8 + 1/9 + 1/10.</p>
+  <p>Это можно понимать следующим образом: 9 и 10 с абсолютной уверенностью можно отнести к <большим числам>, 8 есть <большое число> со степенью 0.8 и т.д. 1,2,...5 абсолютно не являются <большими числами>.</p>
+  <p>На практике удобно использовать кусочно-линейную аппроксимацию функции принадлежности нечеткого множества как это показано на рис. 1.1, так как требуется только два значения - <img align="absmiddle" width=15 height=28 src="1_1_files/image017.gif"> и <img align="absmiddle" width=15 height=28 src="1_1_files/image018.gif">. </p>
+  <p><img width=561 height=273 src="1_1_files/image019.gif"></p>
+  <p>В случае непрерывного множества <img align="absmiddle" width=21 height=19 src="1_1_files/image020.gif"> используется следующее обозначение:</p>
+  <p><img align="absmiddle" width=149 height=57 src="1_1_files/image021.gif">  .</p>
+  <p>(Знак <img align="absmiddle" width=24 height=36 src="1_1_files/image022.gif"> в этих формулах обозначают совокупность пар <img align="absmiddle" width=84 height=33 src="1_1_files/image023.gif">) .</p>
+  <p><b><a name="2"></a>1.1.2. Свойства нечетких множеств</b></p>
+  <p>а) нечеткое множество <img align="absmiddle" width=55 height=21 src="1_1_files/image004.gif"> <i>пустое</i>, т.е. <img align="absmiddle" width=51 height=20 src="1_1_files/image024.gif">, если <img align="absmiddle" width=91 height=32 src="1_1_files/image025.gif">, <img align="absmiddle" width=60 height=20 src="1_1_files/image026.gif">.</p>
+  <p>б) нечеткие множества <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> и <img align="absmiddle" width=55 height=21 src="1_1_files/image027.gif"><i>эквивалентны</i>, т.е. <img align="absmiddle" width=48 height=19 src="1_1_files/image028.gif">, если </p>
+  <p><img align="absmiddle" width=140 height=32 src="1_1_files/image029.gif">, <img align="absmiddle" width=60 height=20 src="1_1_files/image026.gif">.</p>
+  <p>в) нечеткое множество <img align="absmiddle" width=55 height=21 src="1_1_files/image004.gif"> является подмножеством нечеткого множества <img align="absmiddle" width=55 height=21 src="1_1_files/image027.gif">, т.е. <img align="absmiddle" width=51 height=21 src="1_1_files/image030.gif">, если <img align="absmiddle" width=141 height=32 src="1_1_files/image031.gif">, <img align="absmiddle" width=60 height=20 src="1_1_files/image026.gif">.</p>
+  <p><b>Пример&nbsp;1.2.</b> Пусть <img align="absmiddle" width=95 height=24 src="1_1_files/image032.gif">, </p>
+  <p><img align="absmiddle" width=32 height=19 src="1_1_files/image016.gif">0.3/1 + 0.5/2 + 1/3, </p>
+  <p><img align="absmiddle" width=32 height=19 src="1_1_files/image033.gif">0.4/1 + 0.6/2 + 1/3. </p>
+  <p>Тогда <img align="absmiddle" width=51 height=21 src="1_1_files/image030.gif">.</p>
+  <p><i>Кардинальное число</i> (мощность) нечеткого множества</p>
+  <p><img align="absmiddle" width=593 height=71 src="1_1_files/image034.gif"></p>
+  <p>находится следующим образом:</p>
+  <p><img align="absmiddle" width=200 height=68 src="1_1_files/image035.gif">.</p>
+  <p><b>Пример 1.3.</b> Если <img align="absmiddle" width=116 height=25 src="1_1_files/image036.gif"> и <img align="absmiddle" width=32 height=19 src="1_1_files/image016.gif">0.1/1 + 0.4/2 + 0.7/3 + 1/4, </p>
+  <p>то <img align="absmiddle" width=53 height=20 src="1_1_files/image037.gif">=2.2.</p>
+  <p><b><a name="3"></a>1.1.3. Операции над нечеткими множествами</b></p>
+  <p>а) <i>Дополнением</i> нечеткого множества <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> называется нечеткое множество <img align="absmiddle" width=29 height=19 src="1_1_files/image038.gif">, функция принадлежности которого равна:</p>
+  <p><img align="absmiddle" width=175 height=32 src="1_1_files/image039.gif">, <img align="absmiddle" width=60 height=20 src="1_1_files/image026.gif">.</p>
+  <p>б) <i>Пересечением</i> двух нечетких множеств <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> и <img align="absmiddle" width=56 height=21 src="1_1_files/image040.gif"> называется нечеткое множество <img align="absmiddle" width=52 height=19 src="1_1_files/image041.gif">, функция принадлежности которого равна:</p>
+  <p><img align="absmiddle" width=240 height=32 src="1_1_files/image042.gif">, <img align="absmiddle" width=60 height=20 src="1_1_files/image026.gif">,</p>
+  <p>где <img align="absmiddle" width=16 height=15 src="1_1_files/image043.gif"> - знак операции минимума.</p>
+  <p>в) <i>Объединением</i> двух нечетких множеств <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> и <img align="absmiddle" width=56 height=21 src="1_1_files/image040.gif"> называется нечеткое множество <img align="absmiddle" width=52 height=19 src="1_1_files/image044.gif">, функция принадлежности которого равна:</p>
+  <p><img align="absmiddle" width=247 height=32 src="1_1_files/image045.gif">, <img align="absmiddle" width=60 height=20 src="1_1_files/image026.gif">,</p>
+  <p><img align="absmiddle" width=16 height=15 src="1_1_files/image046.gif"> - знак операции максимума.</p>
+  <p><b>Пример 1.4.</b>&nbsp;Пусть <img align="absmiddle" width=145 height=25 src="1_1_files/image047.gif">, </p>
+  <p><img align="absmiddle" width=32 height=19 src="1_1_files/image016.gif"> <малые числа> = 1/1 + 1/2 + 0.8/3 + 0.5/4 + 0.3/5 + 0.1/6,</p>
+  <p><img align="absmiddle" width=32 height=19 src="1_1_files/image033.gif"> <большие числа> = 0.1/5 + 0.2/6 + 0.5/7 + 0.8/8 + 1/9 + 1/10, </p>
+  <p>Тогда</p>
+  <p><img align="absmiddle" width=44 height=19 src="1_1_files/image048.gif"> <НЕ малые числа> = 0.2/3 + 0.5/4 + 0.7/5 + 0.9/6 + 1/7 + 1/8 + 1/9 +1/10, </p>
+  <p><img align="absmiddle" width=52 height=19 src="1_1_files/image041.gif">= <малые числа> И <большие числа> = 0.1/5 + 0.1/6, </p>
+  <p><img align="absmiddle" width=52 height=19 src="1_1_files/image044.gif">= <малые числа> ИЛИ <большие числа> = 1/1 + 1/2 + 0.8/3 + 0.5/4 + 0.3/5 + 0.2/6 + 0.5/7 + 0.8/8 + 1/9 + 1/10. </p>
+  <p>Приведенные определения операций над нечеткими множествами являются наиболее распространенными, однако существуют и другие определения, использующие <img align="absmiddle" width=25 height=17 src="1_1_files/image049.gif"> и <img align="absmiddle" width=27 height=16 src="1_1_files/image050.gif"> нормы [84].</p>
+  <p><b>Определение 1.2.</b> <img align="absmiddle" width=25 height=17 src="1_1_files/image049.gif"><i>нормой</i> называется отображение <img align="absmiddle" width=12 height=17 src="1_1_files/image051.gif">: </p>
+  <p><img align="absmiddle" width=167 height=32 src="1_1_files/image052.gif">, </p>
+  <p>если:</p>
+  <p>&nbsp;а)  <i>a t </i>1<i> = a</i></p>
+  <p>&nbsp;б)  <i>a t b</i> = <i>b t a </i></p>
+  <p>&nbsp;в)  <i>a t b</i> <img align="absmiddle" width=15 height=17 src="1_1_files/image053.gif"><i> c t d</i>,  если <i>a</i> <img align="absmiddle" width=15 height=17 src="1_1_files/image053.gif"> <i>c</i>,  <i>b</i> <img align="absmiddle" width=15 height=17 src="1_1_files/image053.gif"> <i>d</i></p>
+  <p>&nbsp;г)  <i>a t b t c</i> = <i>a t </i>(<i>b t c</i>).</p>
+  <p>Примеры <img align="absmiddle" width=25 height=17 src="1_1_files/image049.gif">норм:</p>
+  <p>&nbsp;<img align="absmiddle" width=133 height=24 src="1_1_files/image054.gif"> - наиболее распространенная,</p>
+  <p>&nbsp;<img align="absmiddle" width=35 height=20 src="1_1_files/image055.gif">,</p>
+  <p>&nbsp;<img align="absmiddle" width=285 height=68 src="1_1_files/image056.gif">, <img align="absmiddle" width=41 height=24 src="1_1_files/image057.gif"> .</p>
+  <p><b>Определение 1.3.</b> <img align="absmiddle" width=27 height=16 src="1_1_files/image050.gif"><i>нормой</i> называется отображение <img align="absmiddle" width=13 height=16 src="1_1_files/image058.gif">: </p>
+  <p><img align="absmiddle" width=167 height=32 src="1_1_files/image052.gif">, </p>
+  <p>если: </p>
+  <p>&nbsp;а)  <i>a s </i>0<i> = a</i></p>
+  <p>&nbsp;б)  <i>a s b</i> = <i>b s a </i></p>
+  <p>&nbsp;в)  <i>a s b</i> <img align="absmiddle" width=15 height=17 src="1_1_files/image053.gif"><i> c s d</i>,  если <i>a</i> <img align="absmiddle" width=15 height=17 src="1_1_files/image053.gif"> <i>c</i>,  <i>b</i> <img align="absmiddle" width=15 height=17 src="1_1_files/image053.gif"> <i>d</i></p>
+  <p>&nbsp;г)  <i>a s b s c</i> = <i>a s </i>(<i>b s c</i>).</p>
+  <p>Примеры <img align="absmiddle" width=27 height=16 src="1_1_files/image050.gif">норм:</p>
+  <p><img align="absmiddle" width=137 height=24 src="1_1_files/image059.gif"> - наиболее распространенная,</p>
+  <p><img align="absmiddle" width=89 height=20 src="1_1_files/image060.gif"></p>
+  <p><img align="absmiddle" width=160 height=55 src="1_1_files/image061.gif">, <img align="absmiddle" width=41 height=24 src="1_1_files/image057.gif">.</p>
+  <p><b><a name="4"></a>1.1.4. Некоторые дополнительные понятия </b></p>
+  <p><b>Определение 1.4.</b> <img align="absmiddle" width=31 height=16 src="1_1_files/image062.gif"><i>срезом (множеством уровня </i><img align="absmiddle" width=17 height=16 src="1_1_files/image063.gif">) нечеткого множества <img align="absmiddle" width=55 height=21 src="1_1_files/image004.gif">, называется (четкое) множество <img align="absmiddle" width=73 height=31 src="1_1_files/image064.gif"> такое, что</p>
+  <p><img align="absmiddle" width=252 height=55 src="1_1_files/image065.gif">, <img align="absmiddle" width=95 height=32 src="1_1_files/image066.gif">.</p>
+  <p><b>Пример 1.5.</b>&nbsp;Если <img align="absmiddle" width=32 height=19 src="1_1_files/image067.gif">1/1 + 0.8/2 + 0.5/3 + 0.1/4, то <img align="absmiddle" width=161 height=31 src="1_1_files/image068.gif">, <img align="absmiddle" width=141 height=31 src="1_1_files/image069.gif">, <img align="absmiddle" width=80 height=29 src="1_1_files/image070.gif">.</p>
+  <p><i>Принцип обобщения</i> [15] дает формальный аппарат для переноса операций (арифметических, алгебраических) с обычных множеств на нечеткие.</p>
+  <p>Пусть функция <img align="absmiddle" width=17 height=24 src="1_1_files/image071.gif"> представляет собой отображение <img align="absmiddle" width=81 height=24 src="1_1_files/image072.gif"> и <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> есть нечеткое множество в <img align="absmiddle" width=21 height=19 src="1_1_files/image020.gif">. В соответствии с принципом обобщения, функция <img align="absmiddle" width=17 height=24 src="1_1_files/image071.gif"> отображает нечеткое множество <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> в нечеткое множество <img align="absmiddle" width=51 height=21 src="1_1_files/image073.gif"> такое, что:</p>
+
+  <p><img align="absmiddle" width=341 height=97 src="1_1_files/image074.gif">.</p>
+
+  <p><b>Пример 1.6.</b>&nbsp;Пусть <img align="absmiddle" width=132 height=25 src="1_1_files/image075.gif">, <img align="absmiddle" width=167 height=25 src="1_1_files/image076.gif"> и <img align="absmiddle" width=71 height=24 src="1_1_files/image077.gif">. <br> Если теперь <img align="absmiddle" width=32 height=19 src="1_1_files/image016.gif">0.1/1 + 0.2/2 + 0.7/3 + 1/4, то <img align="absmiddle" width=32 height=19 src="1_1_files/image033.gif">0.1/3 + 0.2/4 + 0.7/5 +1/6.</p>
+
+
+  <p><b><a name="5"></a>1.1.5. Нечеткие отношения</b></p>
+
+  <p>Пусть <img align="absmiddle" width=195 height=39 src="1_1_files/image078.gif"> и <img align="absmiddle" width=193 height=39 src="1_1_files/image079.gif">.</p>
+
+  <p><b>Определение 1.5.</b> <i>Нечетким отношением <img align="absmiddle" width=17 height=19 src="1_1_files/image080.gif"></i> называется нечеткое множество, определенное на декартовом произведении <img align="absmiddle" width=49 height=19 src="1_1_files/image081.gif">, которому соответствует функция принадлежности <img align="absmiddle" width=151 height=32 src="1_1_files/image082.gif">.</p>
+  <p><img align="absmiddle" width=80 height=33 src="1_1_files/image083.gif"> отражает силу зависимости между <img align="absmiddle" width=48 height=20 src="1_1_files/image006.gif"> и <img align="absmiddle" width=44 height=24 src="1_1_files/image084.gif">.</p>
+
+  <p><b>Пример 1.7.</b> Пусть <img align="absmiddle" width=36 height=19 src="1_1_files/image085.gif">{ конь, осел } и <img align="absmiddle" width=32 height=19 src="1_1_files/image086.gif">{ мул, корова }. Нечеткое отношение <подобный> может быть определено следующим образом: </p>
+
+  <p><img align="absmiddle" width=32 height=19 src="1_1_files/image087.gif"><подобный> = 0.8/(конь, мул) + 0.4/(конь, корова) + 0.9/(осел, мул) + 0.5/(осел, корова)   ,</p>
+
+  <p>т.&nbsp;е. конь похож на мула со степенью 0.8, конь похож на корову со степенью 0.4 и т.д.</p>
+
+  <p><b>Определение 1.6.</b>&nbsp; Если <img align="absmiddle" width=83 height=21 src="1_1_files/image088.gif"> и <img align="absmiddle" width=79 height=21 src="1_1_files/image089.gif">, то <i>max-min композицией</i> называется нечеткое множество <img align="absmiddle" width=44 height=20 src="1_1_files/image090.gif">, определенное на <img align="absmiddle" width=51 height=19 src="1_1_files/image091.gif">, функция принадлежности которого имеет вид:</p>
+
+  <p><img align="absmiddle" width=345 height=61 src="1_1_files/image092.gif"></p>
+
+  <p>Max-min композиция позволяет ответить на вопрос, какое нечеткое множество в <img align="absmiddle" width=16 height=19 src="1_1_files/image093.gif"> следует поставить в соответствие нечеткому множеству <img align="absmiddle" width=61 height=23 src="1_1_files/image094.gif">, если известно, что нечеткое множество <img align="absmiddle" width=51 height=21 src="1_1_files/image073.gif"> соответствует нечеткому множеству <img align="absmiddle" width=55 height=21 src="1_1_files/image004.gif">.</p>
+  <p>Операция нахождения такого соответствия называется <i>нечетким логическим выводом</i> и выполняется по следующей формуле:</p>
+
+  <p><img align="absmiddle" width=192 height=24 src="1_1_files/image095.gif">,</p>
+
+  <p>где    <img align="absmiddle" width=17 height=19 src="1_1_files/image080.gif"> - нечеткое отношение:</p>
+
+  <p><img align="absmiddle" width=425 height=72 src="1_1_files/image096.gif">,</p>
+
+  <p><img align="absmiddle" width=12 height=12 src="1_1_files/image097.gif">- max-min композиция, в соответствии с которой:</p>
+
+  <p><img align="absmiddle" width=387 height=72 src="1_1_files/image098.gif"> ,</p>
+
+  <p><img align="absmiddle" width=83 height=23 src="1_1_files/image099.gif">, <img align="absmiddle" width=77 height=23 src="1_1_files/image100.gif">.</p>
+
+
+  <p><b><a name="6"></a>1.1.6. Нечеткие числа</b></p>
+
+  <p>Введенный принцип обобщения является служит для переноса четких отношений в нечеткие. Например, его можно применить для определения нечеткой арифметики.</p>
+
+  <p><b>Определение 1.7.</b>&nbsp;<i>Нечеткое число</i> это нечеткое множество <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif">, определенное на множестве действительных чисел <img align="absmiddle" width=19 height=20 src="1_1_files/image101.gif">, если его функция принадлежности нормальна  и выпукла, т.&nbsp;е.</p>
+
+  <p><img align="absmiddle" width=123 height=52 src="1_1_files/image102.gif"> ,</p>
+
+  <p><img align="absmiddle" width=348 height=47 src="1_1_files/image103.gif"> . </p>
+
+  <p>Примеры нечетких чисел: <около 5>, <чуть больше 7>.</p>
+  <p>В соответствии с принципом обобщения, арифметические операции над нечеткими числами имеют вид:</p>
+
+  <p>·&nbsp;&nbsp; сложение <img align="absmiddle" width=320 height=55 src="1_1_files/image104.gif">, <img align="absmiddle" width=95 height=24 src="1_1_files/image105.gif"></p>
+
+  <p>·&nbsp;&nbsp; вычитание <img align="absmiddle" width=319 height=55 src="1_1_files/image106.gif">, <img align="absmiddle" width=95 height=24 src="1_1_files/image105.gif"></p>
+
+  <p>·&nbsp;&nbsp; умножение <img align="absmiddle" width=313 height=55 src="1_1_files/image107.gif">, <img align="absmiddle" width=95 height=24 src="1_1_files/image105.gif"></p>
+
+  <p>·&nbsp;&nbsp; деление <img align="absmiddle" width=360 height=55 src="1_1_files/image108.gif">, <img align="absmiddle" width=95 height=24 src="1_1_files/image105.gif"></p>
+
+  <p>К сожалению, использование принципа обобщения для определения арифметических операций над нечеткими числами в общем  довольно неэффективно. Поэтому часто предполагается, что нечеткие числа представляются в <img align="absmiddle" width=28 height=19 src="1_1_files/image109.gif">-форме, что соответствует описанию левой (left) и правой (right) частей функции.</p>
+  <p>Нечеткое число <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> представляется в <img align="absmiddle" width=28 height=19 src="1_1_files/image109.gif">-форме, если:</p>
+
+  <p><img align="absmiddle" width=300 height=124 src="1_1_files/image110.gif">,</p>
+
+  <p>где <img align="absmiddle" width=16 height=19 src="1_1_files/image111.gif"> и <img align="absmiddle" width=17 height=19 src="1_1_files/image080.gif"> - функции, обладающие свойствами:</p>
+
+  <p>а) <img align="absmiddle" width=115 height=24 src="1_1_files/image112.gif"></p>
+  <p>б) <img align="absmiddle" width=68 height=24 src="1_1_files/image113.gif"></p>
+  <p>в) <img align="absmiddle" width=16 height=19 src="1_1_files/image111.gif"> монотонно убывает она промежутке <img align="absmiddle" width=71 height=32 src="1_1_files/image114.gif">.</p>
+
+  <p>Здесь <img align="absmiddle" width=19 height=16 src="1_1_files/image115.gif">- среднее значение нечеткого числа <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif">, <img align="absmiddle" width=17 height=16 src="1_1_files/image063.gif">-отклонение слева, <img align="absmiddle" width=15 height=23 src="1_1_files/image116.gif">- отклонение справа.</p>
+  <p>Если <img align="absmiddle" width=72 height=23 src="1_1_files/image117.gif">, то нечеткое число <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> переходит в четкое число <img align="absmiddle" width=19 height=16 src="1_1_files/image115.gif">.</p>
+  <p>Таким образом, <img align="absmiddle" width=28 height=19 src="1_1_files/image109.gif">-форму нечеткого числа <img align="absmiddle" width=17 height=19 src="1_1_files/image009.gif"> можно представить в виде тройки <img align="absmiddle" width=196 height=37 src="1_1_files/image118.gif">. Арифметические операции над нечеткими числами можно определить через операции над соответствующими им тройками:</p>
+
+  <p><img align="absmiddle" width=571 height=79 src="1_1_files/image119.gif"> </p>
+
+  <p><img align="absmiddle" width=583 height=79 src="1_1_files/image120.gif"></p>
+
+  <p><img align="absmiddle" width=645 height=79 src="1_1_files/image121.gif"></p>
+  <p>На практике <img align="absmiddle" width=28 height=19 src="1_1_files/image109.gif">-представление упрощается за счет применения линейных функций, что приводит к треугольным нечетким числам (рис. 1.2а), которые имеют функцию принадлежности вида:</p>
+
+  <p><img align="absmiddle" width=365 height=103 src="1_1_files/image122.gif">,</p>
+
+  <p>Кроме того, получили распространение трапециевидные формы функций принадлежности (рис. 1.2б), которые имеют функции принадлежности вида:</p>
+
+  <p><img align="absmiddle" width=371 height=145 src="1_1_files/image123.gif">    .</p>
+  <p><img width=628 height=292 src="1_1_files/image124.gif"></p>
+  <p><b><a name="7"></a>1.1.7.</b>&nbsp;<b>Нечеткость и вероятность </b></p>
+
+  <p>Новички в теории нечетких множеств часто пытаются сопоставить ее с теорией вероятности. Однако, обе эти теории трудно сравнивать поскольку они по-разному формализуют неопределенность. В теории вероятностей рассматривается статистическая неопределенность, например, <i>вероятность поражения цели равна</i> 0.9. Теория нечетких множеств позволяет работать с лингвистической неопределенностью, например, <i>меткий стрелок</i>. Эти виды неопределенности формализуются с помощью:</p>
+  <p>·&nbsp;&nbsp; функций распределения - в теории вероятностей,</p>
+  <p>·&nbsp;&nbsp; функций принадлежности - в теории нечетких множеств.</p>
+  <p>Принципиальное различие двух указанных распределений иллюстрирует пример, который любит приводить основоположник теории нечетких множеств Л. Заде [85].</p>
+
+  <p><b>Пример 1.8.</b> Рассмотрим  утверждение <Автор съедает <img align="absmiddle" width=21 height=19 src="1_1_files/image020.gif"> яиц на завтрак>,</p>
+
+  <p><img align="absmiddle" width=131 height=25 src="1_1_files/image125.gif">.</p>
+
+  <p>Величине <img align="absmiddle" width=21 height=19 src="1_1_files/image020.gif">, которая является неопределенным параметром, могут соответствовать распределения возможности и вероятности.</p>
+  <p>Распределение возможности <img align="absmiddle" width=67 height=29 src="1_1_files/image126.gif"> может быть интерпретировано как степень (субъективная мера) легкости, с которой Автор съедает <img align="absmiddle" width=15 height=16 src="1_1_files/image127.gif"> яиц. Для определения вероятностного распределения <img align="absmiddle" width=65 height=29 src="1_1_files/image128.gif"> необходимо проследить за Автором на протяжение 100 дней.</p>
+  <p>Оба распределения представлены ниже.</p>
+  <p>Распределение возможности и вероятности</p>
+  <table border=1 cellspacing=2 cellpadding=2>
+    <tr>
+     <td width=95>   <p><img align="absmiddle" width=15 height=16   src="1_1_files/image127.gif"></p>
+   </td>
+   <td width=57>   <p>1</p>
+   </td>
+   <td width=57>   <p>2</p>
+   </td>
+   <td width=57>   <p>3</p>
+   </td>
+   <td width=57>   <p>4</p>
+   </td>
+   <td width=57>   <p>5</p>
+   </td>
+   <td width=57>   <p>6</p>
+   </td>
+   <td width=57>   <p>7</p>
+   </td>
+   <td width=57>   <p>8</p>
+   </td>
+  </tr>
+  <tr>   <td width=95>   <p><img align="absmiddle" width=76 height=37   src="1_1_files/image129.gif"></p>
+   </td>
+   <td width=57>   <p>1</p>
+   </td>
+   <td width=57>   <p>1</p>
+   </td>
+   <td width=57>   <p>1</p>
+   </td>
+   <td width=57>   <p>1</p>
+   </td>
+   <td width=57>   <p>0.8</p>
+   </td>
+   <td width=57>   <p>0.6</p>
+   </td>
+   <td width=57>   <p>0.4</p>
+   </td>
+   <td width=57>   <p>0.2</p>
+   </td>
+  </tr>
+  <tr>   <td width=95>   <p><img align="absmiddle" width=75 height=37   src="1_1_files/image130.gif"></p>
+   </td>
+   <td width=57>   <p>0.1</p>
+   </td>
+   <td width=57>   <p>0.8</p>
+   </td>
+   <td width=57>   <p>0.1</p>
+   </td>
+   <td width=57>   <p>0</p>
+   </td>
+   <td width=57>   <p>0</p>
+   </td>
+   <td width=57>   <p>0</p>
+   </td>
+   <td width=57>   <p>0</p>
+   </td>
+   <td width=57>   <p>0</p>
+   </td>
+  </tr>
+ </table>
+
+  <p>Мы видим, что высокая степень возможности <img align="absmiddle" width=67 height=29 src="1_1_files/image126.gif"> никак не означает такую же высокую степень вероятности <img align="absmiddle" width=65 height=29 src="1_1_files/image128.gif">. Но бесспорно одно: <i>если событие невозможно, то оно также и невероятно.</i></p>
+  <p>Принципиальное отличие теории вероятности от теории возможности состоит в том, что в этих теориях по-разному выполняется аксиома дополнения:</p>
+
+  <p><img align="absmiddle" width=147 height=33 src="1_1_files/image131.gif"> - для теории вероятности.</p>
+  <p><img align="absmiddle" width=143 height=33 src="1_1_files/image132.gif">  - для теории возможности.</p>
+
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="1_2.php">К следующему разделу</a></p>
+    </p>
+    </td>
+  </tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

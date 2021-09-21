@@ -1,0 +1,1049 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="8_8.php_files/default.css" type="text/css"></head><body margin="" height="0" leftmargin="0" topmargin="0" background="8_8.php_files/8_8.htm" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="8_8.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="8_8.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_8.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_8.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_8.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_8.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_8.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_8.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="8_8.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="8_8.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="8_8.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="8_8.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="8_8.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="8_8.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="8_8.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="8_8.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="8_8.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="8_8.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="8_8.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="8_8.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/8_8.php"><span class="text1">Вход</span></a></td>
+<td><img src="8_8.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php">К предыдущему разделу </a></p>
+
+ 
+
+
+<p><b>8.8. Управление динамической системой</b></p>
+
+  <p>Понятие
+динамической системы традиционно связывается с ее количественным
+описанием на языке дифференциальных (или других) уравнений [7].
+Классическая теория автоматического регулирования (управления)
+предполагает, что такие уравнения можно построить на основе законов
+физики: механики, термодинамики, электромагнетизма [3]. Построение
+уравнений динамики требует глубокого понимания процессов, происходящих
+в объекте управления, и высокой физико-математической квалификации
+[20]. Между тем, человек способен управлять сложными объектами, не
+составляя и не решая никаких уравнений. Вспомним, например, с какой
+легкостью водитель паркует автомобиль. Даже новичок, впервые севший за
+руль, может управлять автомобилем, выполняя словесные команды
+инструктора, сидящего рядом.</p>
+  <p>Уникальным свойством человека является его способность к обучению и оценке наблюдаемых параметров на естественном языке: <i>малая </i>скорость, <i>большое </i>расстояние
+и т.п. Возможность формализации естественно-языковых высказываний
+обеспечивается теорией нечетких множеств. В этом разделе показывается,
+что, настраивая нечеткую базу знаний, можно управлять динамическим
+объектом не менее эффективно, чем с помощью классической теории
+управления.</p>
+
+
+  <p><b><a name="1"></a>8.8.1. Объект управления</b></p>
+
+  <p>В
+качестве объекта управления рассматривается перевернутый маятник (рис.
+8.26), т.&nbsp;е. стержень, зафиксированный относительно тележки с
+возможностью колебаний в продольно-вертикальной плоскости.</p>
+
+
+  <p><img src="8_8.php_files/image001.gif" height="349" width="523"></p>
+  <p>Задача
+системы управления состоит в удержании перевернутого маятника в
+вертикальном положении за счет смещения тележки. Более привычный
+вариант такой задачи - это удерживание в вертикальном положении палки
+на пальце. В [3] показано, что к такому классу задач сводится
+моделирование ракеты, сверхзвукового самолета, состава барж, толкаемых
+буксиром - всех тех объектов, в которых центр масс и точка приложения
+силы не совпадают. </p>
+  <p>Прежде чем перейти к дифференциальным
+уравнениям, описывающим управление перевернутым маятником, отметим что
+вертикальное положение палки на пальце достигается с помощью простых
+правил: </p>
+  <p>ЕСЛИ угол отклонения палки от вертикали <i>большой</i>, ТО следует <i>быстро</i> перемещаться в том же направлении.</p>
+  <p>ЕСЛИ угол отклонения палки от вертикали <i>малый</i>, ТО следует осуществить <i>малое</i> перемещение в том же направлении.</p>
+  <p>ЕСЛИ угол отклонения палки от вертикали равен <i>нулю</i>, ТО <i>не</i> <i>следует перемещаться</i> вообще.</p>
+
+
+  <p><b><a name="2"></a>8.8.2. Классическая модель управления</b></p>
+
+  <p>Следуя [23], введем обозначения (рис. 8.26): <img src="8_8.php_files/image002.gif" align="absmiddle" height="20" width="12"> - длина маятника, <img src="8_8.php_files/image003.gif" align="absmiddle" height="16" width="19"> - масса маятника, <img src="8_8.php_files/image004_002.gif" align="absmiddle" height="19" width="24"> - масса тележки, <img src="8_8.php_files/image005_002.gif" align="absmiddle" height="20" width="16"> - ускорение свободного падения, <img src="8_8.php_files/image006_002.gif" align="absmiddle" height="16" width="15"> - управляющая сила, приложенная к тележке, <img src="8_8.php_files/image007.gif" align="absmiddle" height="31" width="27"> и <img src="8_8.php_files/image008.gif" align="absmiddle" height="35" width="28"> - горизонтальная и вертикальная составляющие сил, действующих на маятник, <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"> - угол отклонения маятника от вертикали, <img src="8_8.php_files/image010_002.gif" align="absmiddle" height="19" width="13"> - момент второго порядка в плоскости качания маятника, <img src="8_8.php_files/image011.gif" align="absmiddle" height="53" width="73">.</p>
+  <p>Уравнение движения перевернутого маятника как объекта управления можно записать следующим образом [23]:</p>
+  <p>крутящий момент относительно точки G</p>
+
+  <p><img src="8_8.php_files/image012_002.gif" align="absmiddle" height="39" width="199"> ;</p>
+
+  <p>смещение проекции точки G на ось y</p>
+
+  <p><img src="8_8.php_files/image013.gif" align="absmiddle" height="60" width="416"> ; </p>
+
+  <p>смещение проекции точки G на ось x</p>
+
+  <p><img src="8_8.php_files/image014.gif" align="absmiddle" height="60" width="432"> ; </p>
+  <p>перемещение тележки (параллельно оси x)</p>
+
+  <p><img src="8_8.php_files/image015_002.gif" align="absmiddle" height="31" width="101"> . </p>
+
+  <p>Линейная аппроксимация этих уравнений при условии управления углом <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"> в достаточно малой области (<img src="8_8.php_files/image016.gif" align="absmiddle" height="20" width="65">, <img src="8_8.php_files/image017_002.gif" align="absmiddle" height="20" width="67">, <img src="8_8.php_files/image018_002.gif" align="absmiddle" height="25" width="51">, <img src="8_8.php_files/image019.gif" align="absmiddle" height="29" width="59">) позволяет упростить такую систему уравнений и привести ее к виду:</p>
+
+  <p><img src="8_8.php_files/image020_002.gif" align="absmiddle" height="39" width="129"> ; </p>
+
+  <p><img src="8_8.php_files/image021.gif" align="absmiddle" height="35" width="103"> ; </p>
+
+  <p><img src="8_8.php_files/image022_002.gif" align="absmiddle" height="35" width="117"> ; </p>
+
+  <p><img src="8_8.php_files/image015_002.gif" align="absmiddle" height="31" width="101">.</p>
+
+  <p>Подставляя в первое уравнение выражения для <img src="8_8.php_files/image007.gif" align="absmiddle" height="31" width="27"> и <img src="8_8.php_files/image008.gif" align="absmiddle" height="35" width="28">, найденные из остальных уравнений, получим дифференциальное уравнение движения перевернутого маятника в форме</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_8.php_files/image023.gif" align="absmiddle" height="55" width="239">    .                           </td>
+      <td align="right">(8.26)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>Для
+удерживания маятника в вертикальном положении с помощью обычной системы
+управления с обратной связью зададим управляющую переменную в виде:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_8.php_files/image024_002.gif" align="absmiddle" height="28" width="92">  ,                                              </td>
+      <td align="right">(8.27)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>что соответствует пропорционально-дифференциальному (ПД) регулятору.</p>
+  <p>Для обеспечения устойчивости выберем значения коэффициентов:</p>
+
+  <p><img src="8_8.php_files/image025.gif" align="absmiddle" height="20" width="64"> , <img src="8_8.php_files/image026.gif" align="absmiddle" height="23" width="53">,</p>
+
+  <p>что дает отрицательные значения корней</p>
+
+  <p><img src="8_8.php_files/image027.gif" align="absmiddle" height="29" width="89">  ,  <img src="8_8.php_files/image028.gif" align="absmiddle" height="29" width="103"></p>
+
+  <p>в характеристическом уравнении </p>
+  <p><img src="8_8.php_files/image029.gif" align="absmiddle" height="55" width="317">,</p>
+  <p>соответствующем (8.26).</p>
+  <p>Таким образом, для удержания перевернутого маятника в вертикальном положении можно использовать управляющее воздействие </p>
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_8.php_files/image030.gif" align="absmiddle" height="25" width="113">      </td>
+      <td align="right">(8.28)</td>
+    </tr>
+  </tbody></table>
+  </p>
+  <p>при котором уравнение устойчивого движения имеет вид:</p>
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_8.php_files/image031.gif" align="absmiddle" height="55" width="311">         </td>
+      <td align="right">(8.29)</td>
+    </tr>
+  </tbody></table>
+  </p>
+  <p>В табл.&nbsp;8.36 приведена динамика изменения переменных <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15">(рад) и <img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15">(рад/с) полученная из (8.29) методом Рунге-Кутта, при различных начальных условиях: <img src="8_8.php_files/image033.gif" align="absmiddle" height="29" width="21">, <img src="8_8.php_files/image034.gif" align="absmiddle" height="29" width="27"> и <img src="8_8.php_files/image035.gif" align="absmiddle" height="31" width="25">. При решении уравнения (8.29) использовались следующие значения параметров:</p>
+  <p><img src="8_8.php_files/image036.gif" align="absmiddle" height="20" width="79">кг, <img src="8_8.php_files/image037.gif" align="absmiddle" height="20" width="65">кг, <img src="8_8.php_files/image038.gif" align="absmiddle" height="20" width="48"> см, <img src="8_8.php_files/image039.gif" align="absmiddle" height="24" width="59"> м/с<sup>2</sup> .</p>
+
+  <p>Таблица 8.36. Поведение перевернутого маятника под управлением ПД-регулятора&nbsp;&nbsp;</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td colspan="2">   <p><img src="8_8.php_files/image033.gif" align="absmiddle" height="29" width="21"></p>
+   </td>
+   <td colspan="2">   <p><img src="8_8.php_files/image034.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td colspan="2">   <p><img src="8_8.php_files/image035.gif" align="absmiddle" height="31" width="25"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_8.php_files/image040.gif" align="absmiddle" height="17" width="12"></p>
+   </td>
+   <td>   <p><img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"></p>
+   </td>
+   <td>   <p><img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15"></p>
+   </td>
+   <td>   <p><img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"></p>
+   </td>
+   <td>   <p><img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15"></p>
+   </td>
+   <td>   <p><img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"></p>
+   </td>
+   <td>   <p><img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.0</p>
+   </td>
+   <td>   <p>0.175</p>
+   </td>
+   <td>   <p>0.0000</p>
+   </td>
+   <td>   <p>0.105</p>
+   </td>
+   <td>   <p>0.0000</p>
+   </td>
+   <td>   <p>0.035</p>
+   </td>
+   <td>   <p>0.0000</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.1</p>
+   </td>
+   <td>   <p>0.150</p>
+   </td>
+   <td>   <p>-0.3523</p>
+   </td>
+   <td>   <p>0.090</p>
+   </td>
+   <td>   <p>-0.2114</p>
+   </td>
+   <td>   <p>0.030</p>
+   </td>
+   <td>   <p>-0.0705</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.2</p>
+   </td>
+   <td>   <p>0.115</p>
+   </td>
+   <td>   <p>-0.3261</p>
+   </td>
+   <td>   <p>0.069</p>
+   </td>
+   <td>   <p>-0.1957</p>
+   </td>
+   <td>   <p>0.023</p>
+   </td>
+   <td>   <p>-0.0652</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.3</p>
+   </td>
+   <td>   <p>0.086</p>
+   </td>
+   <td>   <p>-0.2540</p>
+   </td>
+   <td>   <p>0.052</p>
+   </td>
+   <td>   <p>-0.1524</p>
+   </td>
+   <td>   <p>0.017</p>
+   </td>
+   <td>   <p>-0.0508</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.4</p>
+   </td>
+   <td>   <p>0.064</p>
+   </td>
+   <td>   <p>-0.1908</p>
+   </td>
+   <td>   <p>0.039</p>
+   </td>
+   <td>   <p>-0.1145</p>
+   </td>
+   <td>   <p>0.013</p>
+   </td>
+   <td>   <p>-0.0382</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.5</p>
+   </td>
+   <td>   <p>0.048</p>
+   </td>
+   <td>   <p>-0.1421</p>
+   </td>
+   <td>   <p>0.029</p>
+   </td>
+   <td>   <p>-0.0852</p>
+   </td>
+   <td>   <p>0.010</p>
+   </td>
+   <td>   <p>-0.0284</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.6</p>
+   </td>
+   <td>   <p>0.035</p>
+   </td>
+   <td>   <p>-0.1056</p>
+   </td>
+   <td>   <p>0.021</p>
+   </td>
+   <td>   <p>-0.0633</p>
+   </td>
+   <td>   <p>0.007</p>
+   </td>
+   <td>   <p>-0.0211</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.7</p>
+   </td>
+   <td>   <p>0.026</p>
+   </td>
+   <td>   <p>-0.0784</p>
+   </td>
+   <td>   <p>0.016</p>
+   </td>
+   <td>   <p>-0.0470</p>
+   </td>
+   <td>   <p>0.005</p>
+   </td>
+   <td>   <p>-0.0157</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.8</p>
+   </td>
+   <td>   <p>0.020</p>
+   </td>
+   <td>   <p>-0.0582</p>
+   </td>
+   <td>   <p>0.012</p>
+   </td>
+   <td>   <p>-0.0349</p>
+   </td>
+   <td>   <p>0.004</p>
+   </td>
+   <td>   <p>-0.0116</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>0.9</p>
+   </td>
+   <td>   <p>0.015</p>
+   </td>
+   <td>   <p>-0.0432</p>
+   </td>
+   <td>   <p>0.009</p>
+   </td>
+   <td>   <p>-0.0259</p>
+   </td>
+   <td>   <p>0.003</p>
+   </td>
+   <td>   <p>-0.0086</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.0</p>
+   </td>
+   <td>   <p>0.011</p>
+   </td>
+   <td>   <p>-0.0321</p>
+   </td>
+   <td>   <p>0.006</p>
+   </td>
+   <td>   <p>-0.0193</p>
+   </td>
+   <td>   <p>0.002</p>
+   </td>
+   <td>   <p>-0.0064</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.1</p>
+   </td>
+   <td>   <p>0.008</p>
+   </td>
+   <td>   <p>-0.0238</p>
+   </td>
+   <td>   <p>0.005</p>
+   </td>
+   <td>   <p>-0.0143</p>
+   </td>
+   <td>   <p>0.002</p>
+   </td>
+   <td>   <p>-0.0048</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.2</p>
+   </td>
+   <td>   <p>0.006</p>
+   </td>
+   <td>   <p>-0.0177</p>
+   </td>
+   <td>   <p>0.004</p>
+   </td>
+   <td>   <p>-0.0106</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0035</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.3</p>
+   </td>
+   <td>   <p>0.004</p>
+   </td>
+   <td>   <p>-0.0131</p>
+   </td>
+   <td>   <p>0.003</p>
+   </td>
+   <td>   <p>-0.0079</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0026</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.4</p>
+   </td>
+   <td>   <p>0.003</p>
+   </td>
+   <td>   <p>-0.0098</p>
+   </td>
+   <td>   <p>0.002</p>
+   </td>
+   <td>   <p>-0.0059</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0020</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.5</p>
+   </td>
+   <td>   <p>0.002</p>
+   </td>
+   <td>   <p>-0.0072</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0043</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0014</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.6</p>
+   </td>
+   <td>   <p>0.002</p>
+   </td>
+   <td>   <p>-0.0054</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0032</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0011</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.7</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0040</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0024</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0008</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.8</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0030</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0018</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0006</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1.9</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0022</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0013</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0004</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2.0</p>
+   </td>
+   <td>   <p>0.001</p>
+   </td>
+   <td>   <p>-0.0016</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0010</p>
+   </td>
+   <td>   <p>0.000</p>
+   </td>
+   <td>   <p>-0.0003</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>В дальнейшем табл. 8.36 будет использована как обучающая выборка для настройки нечеткой модели управления.</p>
+
+  <p><b><a name="3"></a>8.8.3. Нечеткая модель управления</b></p>
+  <p>Зависимость управления <img src="8_8.php_files/image006_002.gif" align="absmiddle" height="16" width="15"> от переменных <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"> и <img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15"> представим в виде базы знаний, сформированной из 25-ти экспертных правил типа:</p>
+
+  <p>Если <img src="8_8.php_files/image041.gif" align="absmiddle" height="31" width="53"> И <img src="8_8.php_files/image042.gif" align="absmiddle" height="35" width="55">, ТО <img src="8_8.php_files/image043.gif" align="absmiddle" height="35" width="59">, <img src="8_8.php_files/image044.gif" align="absmiddle" height="29" width="53">, <img src="8_8.php_files/image045.gif" align="absmiddle" height="32" width="59">.</p>
+
+  <p>Эти правила сведены в матрицу <img src="8_8.php_files/image046.gif" align="absmiddle" height="20" width="37">:</p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody><tr>
+  <td>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td rowspan="7">   <p>Угол отклонения, <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"></p>
+   </td>
+   <td colspan="6">   <p>Скорость   изменения угла, <img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15"></p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>оБ</p>
+   </td>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>бП</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>оБ</p>
+   </td>
+   <td>   <p>обО</p>
+   </td>
+   <td>   <p>обО</p>
+   </td>
+   <td>   <p>бО</p>
+   </td>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>обО</p>
+   </td>
+   <td>   <p>бО</p>
+   </td>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>П</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>бО</p>
+   </td>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>бП</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>бП</p>
+   </td>
+   <td>   <p>обП</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>бП</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>бП</p>
+   </td>
+   <td>   <p>обП</p>
+   </td>
+   <td>   <p>обП</p>
+   </td>
+  </tr>
+ </tbody></table>
+ </td>
+ <td align="right">(8.30)</td>
+</tr>
+</tbody></table>
+
+  <p>где переменные <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"> и <img src="8_8.php_files/image032.gif" align="absmiddle" height="25" width="15"> оцениваются на пяти уровнях:</p>
+
+  <p><img src="8_8.php_files/image047.gif" align="absmiddle" height="29" width="60"> = <i>отрицательный большой (оБ)</i>, </p>
+  <p><img src="8_8.php_files/image048.gif" align="absmiddle" height="29" width="67"> = <i>отрицательный (О)</i>, </p>
+  <p><img src="8_8.php_files/image049.gif" align="absmiddle" height="31" width="65"> = <i>нулевой (Н)</i>, </p>
+  <p><img src="8_8.php_files/image050.gif" align="absmiddle" height="29" width="67"> = <i>положительный (П)</i>, </p>
+  <p><img src="8_8.php_files/image051.gif" align="absmiddle" height="31" width="65"> = <i>положительный большой (пБ)</i>.</p>
+
+  <p>а переменная <img src="8_8.php_files/image006_002.gif" align="absmiddle" height="16" width="15"> оценивается на семи уровнях:</p>
+
+  <p><img src="8_8.php_files/image052.gif" align="absmiddle" height="25" width="21"> - <i>очень большая отрицательная (обО)</i>, </p>
+  <p><img src="8_8.php_files/image053.gif" align="absmiddle" height="25" width="24"> - <i>большая отрицательная (бО)</i>, </p>
+  <p><img src="8_8.php_files/image054.gif" align="absmiddle" height="25" width="23"> - <i>отрицательная (О)</i>, </p>
+  <p><img src="8_8.php_files/image055.gif" align="absmiddle" height="25" width="24"> - <i>нулевая (Н)</i>, </p>
+  <p><img src="8_8.php_files/image056.gif" align="absmiddle" height="25" width="23"> - <i>положительная (П)</i>, </p>
+  <p><img src="8_8.php_files/image057.gif" align="absmiddle" height="25" width="24">- <i>большая положительная (бП)</i>, </p>
+  <p><img src="8_8.php_files/image058.gif" align="absmiddle" height="25" width="24"> - <i>очень большая положительная (обП)</i>.</p>
+  <p>В
+качестве обучающей выборки для настройки нечеткой базы знаний (8.30)
+использовались данные из табл. 8.36 и соотношение (8.28). Задача
+настройки состояла в подборе таких функций принадлежности нечетких
+термов <img src="8_8.php_files/image059.gif" align="absmiddle" height="31" width="21">и <img src="8_8.php_files/image060.gif" align="absmiddle" height="31" width="21"> (<img src="8_8.php_files/image044.gif" align="absmiddle" height="29" width="53">)
+и таких весов правил в (8.30), при которых достигается минимальное
+расхождение между теоретическим (база знаний (8.30)) и
+экспериментальным (табл. 8.36 и формула (8.28)) управлениями.
+Полученные функции принадлежности представлены на рис. 8.27.</p>
+  <p>Веса нечетких&nbsp;правил&nbsp;после&nbsp;настройки&nbsp;соответствуют элементам&nbsp;матрицы:</p>
+
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td rowspan="7"> Угол отклонения, <img src="8_8.php_files/image062.gif" align="absmiddle" height="19" width="13">
+   </td>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td colspan="5" align="center">   <p>Скорость изменения угла, <img src="8_8.php_files/image061.gif" align="absmiddle" height="24" width="13"></p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p>оБ</p>
+   </td>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>бП</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>оБ</p>
+   </td>
+   <td>   <p>0.9837</p>
+   </td>
+   <td>   <p>0.3490</p>
+   </td>
+   <td>   <p>0.7902</p>
+   </td>
+   <td>   <p>0.8841</p>
+   </td>
+   <td>   <p>0.9015</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>О</p>
+   </td>
+   <td>   <p>0.3490</p>
+   </td>
+   <td>   <p>0.9111</p>
+   </td>
+   <td>   <p>0.3901</p>
+   </td>
+   <td>   <p>0.7509</p>
+   </td>
+   <td>   <p>0.2199</p>
+   </td>
+  </tr>
+  <tr>
+   
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>0.7902</p>
+   </td>
+   <td>   <p>0.3901</p>
+   </td>
+   <td>   <p>0.7981</p>
+   </td>
+   <td>   <p>0.6381</p>
+   </td>
+   <td>   <p>0.5594</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>П</p>
+   </td>
+   <td>   <p>0.8841</p>
+   </td>
+   <td>   <p>0.7509</p>
+   </td>
+   <td>   <p>0.6381</p>
+   </td>
+   <td>   <p>0.3690</p>
+   </td>
+   <td>   <p>0.5114</p>
+   </td>
+  </tr>
+  <tr>
+   <td>   <p>бП</p>
+   </td>
+   <td>   <p>0.9015</p>
+   </td>
+   <td>   <p>0.2199</p>
+   </td>
+   <td>   <p>0.5594</p>
+   </td>
+   <td>   <p>0.5114</p>
+   </td>
+   <td>   <p>0.8708</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Сравнение динамики изменения угла <img src="8_8.php_files/image009_002.gif" align="absmiddle" height="20" width="15"> для классической и нечеткой модели при различных начальных условиях (<img src="8_8.php_files/image063.gif" align="absmiddle" height="29" width="20">,<img src="8_8.php_files/image064.gif" align="absmiddle" height="29" width="24">,<img src="8_8.php_files/image065.gif" align="absmiddle" height="31" width="23">) представлено на рис. 8.28.</p>
+  <p><img src="8_8.php_files/image066.gif" height="529" width="552"></p>
+ 
+ 
+   
+ 
+
+<p><b><a name="4"></a>8.8.4. Связь с функциями Ляпунова</b></p>
+
+  <p>Покажем,
+что известные в теории устойчивости функции Ляпунова можно использовать
+для синтеза нечетких правил управления динамической системой.</p>
+  <p>Второй,
+или прямой, метод Ляпунова [20] позволяет исследовать устойчивость
+решений нелинейных дифференциальных уравнений, не производя решения
+самих уравнений. Критерий устойчивости был разработан Ляпуновым на
+основании следующего простого физического представления о положении
+равновесия: равновесное состояние системы асимптотически устойчиво,
+если все траектории процесса, начинающиеся достаточно близко от точки
+равновесия, идут таким образом, что приводят к минимуму, подходящим
+образом определенную, &lt;энергетическую&gt; функцию, причем положение
+локального минимума энергии соответствует самой точке равновесия.</p>
+  <p>Рассмотрим использование этого критерия применительно к общему нелинейному уравнению:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><b><img src="8_8.php_files/image001_002.gif" align="absmiddle" height="25" width="73"></b> ,  <img src="8_8.php_files/image002_002.gif" align="absmiddle" height="31" width="80"><b>  ,                                    </b>  </td>
+      <td align="right">(8.31)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>где <i>x</i> - вектор состояния системы.</p>
+  <p>Предположим, что <img src="8_8.php_files/image003_002.gif" align="absmiddle" height="25" width="68"> и функция <i>f</i> непрерывна в окрестности начала координат.</p>
+
+  <p><b>Определение функции Ляпунова. </b>Функция <img src="8_8.php_files/image004.gif" align="absmiddle" height="24" width="39"> называется <i>функцией Ляпунова</i> (энергетической функцией) системы (8.31), если:</p>
+
+  <p>1)&nbsp;<img src="8_8.php_files/image005.gif" align="absmiddle" height="24" width="67"> ,</p>
+
+  <p>2)&nbsp;<img src="8_8.php_files/image006.gif" align="absmiddle" height="24" width="68"> для всех <img src="8_8.php_files/image007_002.gif" align="absmiddle" height="20" width="44"> в окрестности начала координат,</p>
+
+  <p>3)&nbsp;<img src="8_8.php_files/image008_002.gif" align="absmiddle" height="55" width="89"> вдоль траектории системы (8.31).</p>
+
+  <p>Основной результат, полученный Ляпуновым, был сформулирован в виде следующей теоремы об устойчивости.</p>
+
+  <p><b>Теорема Ляпунова об устойчивости. </b>Положение равновесия <img src="8_8.php_files/image009.gif" align="absmiddle" height="20" width="44"> системы (8.31) асимптотически устойчиво в том и только в том случае, если существует функция Ляпунова <img src="8_8.php_files/image004.gif" align="absmiddle" height="24" width="39"> системы.</p>
+  <p>Подчеркнем,
+что метод Ляпунова требует знания уравнений динамики системы. Нас же
+будет интересовать случай, когда такие уравнения отсутствуют.</p>
+  <p>Вернемся к перевернутому маятнику (рис.8.26) и предположим, что известна лишь следующая априорная информация:</p>
+  <p>а) состояния системы определяются координатами <img src="8_8.php_files/image010.gif" align="absmiddle" height="29" width="52"> и <img src="8_8.php_files/image011_002.gif" align="absmiddle" height="32" width="56">;</p>
+  <p>б) <img src="8_8.php_files/image012.gif" align="absmiddle" height="29" width="25"> пропорционально управлению <i>u</i>, т.е. если <i>u</i> возрастает (убывает), то <img src="8_8.php_files/image013_002.gif" align="absmiddle" height="29" width="24"> возрастает (убывает).</p>
+  <p>Для применения теоремы Ляпунова к перевернутому маятнику, выберем кандидатом на функцию Ляпунова следующую функцию:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_8.php_files/image014_002.gif" align="absmiddle" height="47" width="188"> .                                    </td>
+      <td align="right">(8.32)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>Поскольку <img src="8_8.php_files/image015.gif" align="absmiddle" height="24" width="80"> и <img src="8_8.php_files/image016_002.gif" align="absmiddle" height="29" width="100">, то для того, чтобы <img src="8_8.php_files/image017.gif" align="absmiddle" height="29" width="72"> была функцией Ляпунова, необходимо обеспечить:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_8.php_files/image018.gif" align="absmiddle" height="53" width="348">.                    </td>
+      <td align="right">(8.33)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>Нечеткую базу знаний об управлении <img src="8_8.php_files/image019_002.gif" align="absmiddle" height="37" width="123"> сформулируем как условия выполнения последнего неравенства. Для этого рассмотрим три случая.</p>
+
+  <p>Если <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> и <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> имеют противоположные знаки, то <img src="8_8.php_files/image022.gif" align="absmiddle" height="29" width="72"> и неравенство (8.33) будет выполняться при <img src="8_8.php_files/image023_002.gif" align="absmiddle" height="29" width="76">.</p>
+
+  <p>Если <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> и <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> положительны, то (8.33) будет выполняться при <img src="8_8.php_files/image024.gif" align="absmiddle" height="29" width="73">.</p>
+
+  <p>Если <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> и <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> отрицательны, то (8.33) будет выполняться при <img src="8_8.php_files/image025_002.gif" align="absmiddle" height="29" width="73">.</p>
+
+  <p>Используя приведенные рассуждения и априорную информацию о том, что <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> <i>пропорционально</i> <i>u</i>, получаем четыре нечетких правила устойчивого управления перевернутым маятником:</p>
+
+  <p>ЕСЛИ <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> <i>положительный </i>И <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> <i>отрицательный</i>,</p>
+  <p>      ТО <i>u</i> <i>нулевой</i>,</p>
+
+  <p>ЕСЛИ <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> <i>отрицательный</i> И <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> <i>положительный</i>,</p>
+  <p>      ТО <i>u</i> <i>нулевой</i>,</p>
+
+  <p>ЕСЛИ <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> <i>положительный</i> И <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"> <i>положительный</i>,</p>
+  <p>      ТО <i>u</i> <i>большой отрицательный</i>,</p>
+
+  <p>ЕСЛИ <img src="8_8.php_files/image020.gif" align="absmiddle" height="29" width="20"> <i>отрицательный</i> И <img src="8_8.php_files/image021_002.gif" align="absmiddle" height="29" width="24"><i> отрицательный</i>,</p>
+  <p>      ТО <i>u</i> <i>большой положительный</i>.</p>
+  <p>Настройка этой базы знаний может производиться путем подбора формы функций принадлежности соответствующих термов.</p>
+  <p>Принципиальные отличия классической и нечеткой систем управления представлены в табл. 8.37.</p>
+
+  <p>Таблица 8.37. Сравнение систем управления</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>Тип системы</p>
+   </td>
+   <td>   <p>Достоинства</p>
+   </td>
+   <td>   <p>Недостатки</p>
+   </td>
+  </tr>
+  <tr>   <td>
+   <p>Классическая</p>
+   </td>
+   <td>   <p>Если имеется модель системы, адекватно описывающая   ее динамику, то можно обойтись без настройки модели</p>
+   </td>
+   <td>   <p>Трудно   получить дифференциальные уравнения, адекватно описывающие динамику системы с   учетом различных нелинейных возмущений</p>
+   </td>
+  </tr>
+  <tr>   <td>
+   <p>Нечеткая</p>
+   </td>
+   <td>   <p>Дифференциальные   уравнения не нужны. Модель динамики системы легко записывается в виде   лингвистических правил.</p>
+   </td>
+   <td>
+   <p>Требуется   настройка лингвистической модели.</p>
+   </td>
+  </tr>
+ </tbody></table>
+ 
+
+
+ 
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_7.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="8_8.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="8_8.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="8_8.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="8_8.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="8_8.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

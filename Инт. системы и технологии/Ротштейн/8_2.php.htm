@@ -1,0 +1,3797 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="8_2.php_files/default.css" type="text/css"></head><body margin="" height="0" leftmargin="0" topmargin="0" background="8_2.php_files/8_2.htm" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="8_2.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="8_2.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="8_2.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="8_2.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="8_2.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="8_2.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="8_2.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="8_2.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="8_2.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="8_2.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="8_2.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="8_2.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="8_2.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="8_2.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="8_2.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/8_2.php"><span class="text1">Вход</span></a></td>
+<td><img src="8_2.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_1.php">К предыдущему разделу </a></p>
+
+ 
+
+
+  <p><b>8.2. Диагностика ишемической болезни сердца</b></p>
+  <p>Ишемическая
+болезнь сердца (ИБС) является одной из наиболее распространенных причин
+снижения работоспособности и смерти людей в зрелом возрасте. Успешность
+лечения ИБС определяется возможностью ее дифференциальной диагностики,
+то есть отнесения к одному из принятых в клинической практике уровней
+тяжести [40]: нейроциркуляторной дистонии и стенокардии. Качество
+диагностики сильно зависит от квалификации врача. Это обуславливает
+актуальность создания компьютерной системы интеллектуальной поддержки
+принятия диагностических решений. </p>
+  <p><b><a name="1"></a>8.2.1.&nbsp;Типы диагнозов и параметры состояния больного</b></p>
+
+  <p>В соответствии со сложившейся клинической практикой тяжесть ИБС будем определять на следующих уровнях (от низшего к высшему):</p>
+
+  <p><img src="8_2.php_files/image010_002.gif" align="absmiddle" height="29" width="21"> - нейроциркуляторная дистония (НЦД) легкой степени;</p>
+
+  <p><img src="8_2.php_files/image011.gif" align="absmiddle" height="29" width="25"> - НЦД средней степени;</p>
+
+  <p><img src="8_2.php_files/image012.gif" align="absmiddle" height="31" width="24"> - НЦД тяжелой степени;</p>
+
+  <p><img src="8_2.php_files/image013.gif" align="absmiddle" height="29" width="25"> - стенокардия первого функционального класса;</p>
+
+  <p><img src="8_2.php_files/image014_002.gif" align="absmiddle" height="31" width="24"> - стенокардия второго функционального класса;</p>
+
+  <p><img src="8_2.php_files/image015.gif" align="absmiddle" height="31" width="24"> - стенокардия третьего функционального класса.</p>
+
+  <p>Перечисленные уровни <img src="8_2.php_files/image016_002.gif" align="absmiddle" height="31" width="67">
+будем считать типами диагнозов, которые подлежат распознаванию. При
+установлении диагноза ИБС для конкретного больного будем принимать во
+внимание следующие основные параметры, которые измеряются в
+лабораторных условиях (возможные диапазоны изменения указаны в скобках):</p>
+
+  <p><img src="8_2.php_files/image017.gif" align="absmiddle" height="25" width="19">-&nbsp;возраст больного (31-57 лет),</p>
+ 
+ 
+
+<p><img src="8_2.php_files/image001.gif" align="absmiddle" height="25" width="21">-&nbsp;двойное произведение (ДП) пульса на артериальное давление (147-405 условных единиц - у.е.),</p>
+
+  <p><img src="8_2.php_files/image002.gif" align="absmiddle" height="25" width="20">-&nbsp;толерантность к физической нагрузке (90-1200 кгм/мин),</p>
+
+  <p><img src="8_2.php_files/image003.gif" align="absmiddle" height="25" width="21">-&nbsp;прирост ДП на один кг веса тела больного (0.6-3.9 у.е.),</p>
+
+  <p><img src="8_2.php_files/image004.gif" align="absmiddle" height="25" width="21">-&nbsp;прирост ДП на один кГм нагрузки (0.1-0.4 у.е.),</p>
+
+  <p><img src="8_2.php_files/image005.gif" align="absmiddle" height="25" width="21">-&nbsp;аденозинтрифосфорная кислота АТФ (34.5-66.2 ммоль/л),</p>
+
+  <p><img src="8_2.php_files/image006.gif" align="absmiddle" height="25" width="21">-&nbsp;аденозиндифосфорная кислота АДФ (11.9-29.2 ммоль/л),</p>
+
+  <p><img src="8_2.php_files/image007.gif" align="absmiddle" height="25" width="21">-&nbsp;аденозинмонофосфорная кислота АМФ (3.6-27.1 ммоль/л),</p>
+
+  <p><img src="8_2.php_files/image008.gif" align="absmiddle" height="25" width="21">-&nbsp;коэффициент фосфорилирования (1-5.7 у.е.),</p>
+
+  <p><img src="8_2.php_files/image009.gif" align="absmiddle" height="25" width="28">-&nbsp;максимальное потребление кислорода на один кг веса тела больного (10.5-40.9 млитр/мин кг),</p>
+
+  <p><img src="8_2.php_files/image010.gif" align="absmiddle" height="25" width="27">-&nbsp;прирост ДП в ответ на субмаксимальную нагрузку ( 46-312 у. е.),</p>
+
+  <p><img src="8_2.php_files/image011_002.gif" align="absmiddle" height="25" width="28">-&nbsp;коэффициент отношения содержания молочной и пировиноградной кислот (3.9-22.8 у.е.) .</p>
+
+  <p>Перечисленные
+параметры (кроме возраста) измеряются в лабораторных условиях после
+работы больного на велоэргометре. Задача диагностики состоит в том,
+чтобы каждому сочетанию значений параметров поставить в соответствие
+одно из решений: <img src="8_2.php_files/image012_002.gif" align="absmiddle" height="35" width="27"> <img src="8_2.php_files/image013_002.gif" align="absmiddle" height="44" width="79">.</p>
+
+
+  <p><b><a name="2"></a>8.2.2.&nbsp;Нечеткая база знаний</b></p>
+
+  <p>Параметры <img src="8_2.php_files/image014.gif" align="absmiddle" height="29" width="72">,
+определенные выше, будем рассматривать как лингвистические переменные.
+Кроме того, введем следующие лингвистические переменные (рис. 8.6):</p>
+  <p><img src="8_2.php_files/image015_002.gif" align="absmiddle" height="20" width="16"> - опасность &nbsp;ИБС, которая измеряется уровнями <img src="8_2.php_files/image016.gif" align="absmiddle" height="31" width="67">; <img src="8_2.php_files/image017_002.gif" align="absmiddle" height="20" width="16"> - инструментальная опасность, которая зависит от параметров <img src="8_2.php_files/image018.gif" align="absmiddle" height="33" width="172">; <img src="8_2.php_files/image019.gif" align="absmiddle" height="13" width="12">&nbsp;- биохимическая опасность, которая зависит от параметров <img src="8_2.php_files/image020.gif" align="absmiddle" height="33" width="114">.</p>
+  <p>Структура
+модели для дифференциальной диагностики ИБС показана на рис. 8.6. в
+виде дерева логического вывода, отвечающего соотношениям:</p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_2.php_files/image021.gif" align="absmiddle" height="39" width="149"> ,                                          </td>
+      <td align="right"> (8.1)</td>
+    </tr>
+  </tbody></table>
+  </p>
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_2.php_files/image022.gif" align="absmiddle" height="43" width="296"> ,                       </td>
+      <td align="right"> (8.2)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_2.php_files/image023.gif" align="absmiddle" height="39" width="253"> .                              </td>
+      <td align="right"> (8.3)</td>
+    </tr>
+  </tbody></table>
+  </p>
+
+
+  <p><img src="8_2.php_files/image024.gif" height="412" width="462"></p>
+  <p>Для оценки значений лингвистических переменных <img src="8_2.php_files/image025.gif" align="absmiddle" height="25" width="60">, а также <img src="8_2.php_files/image026.gif" align="absmiddle" height="17" width="15"> и <img src="8_2.php_files/image019.gif" align="absmiddle" height="13" width="12">,
+будем использовать единую шкалу качественных термов: Н - низкий, нС -
+ниже среднего, С - средний, вС - выше среднего, В - высокий. Каждый из
+этих термов представляет нечеткое множество, заданное с помощью
+соответствующей функции принадлежности.</p>
+  <p>Пользуясь введенными
+качественными термами и знаниями эксперта (врач-терапевт В.М. Шеверда)
+представим соотношения 8.1-8.3 в виде табл. 8.1-8.3.</p>
+
+  <p><b><a name="3"></a>8.2.3. Нечеткие логические уравнения</b></p>
+
+  <p>Используя табл. 8.1-8.3 и операции <img src="8_2.php_files/image027.gif" align="absmiddle" height="13" width="13"> (И - min ) и <img src="8_2.php_files/image028.gif" align="absmiddle" height="15" width="16">
+(ИЛИ - max), легко записать систему нечетких логических уравнений,
+связывающих функции принадлежности диагнозов и входных переменных:</p>
+
+  <p>Таблица 8.1. Знания о соотношении (8.1)</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><img src="8_2.php_files/image029.gif" align="absmiddle" height="21" width="17"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image026.gif" align="absmiddle" height="17" width="15"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image030.gif" align="absmiddle" height="13" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image031.gif" align="absmiddle" height="17" width="15"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Н</p>
+   <p>Н</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p><img src="8_2.php_files/image032.gif" align="absmiddle" height="21" width="19"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>нС</p>
+   <p>С</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>нС</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p><img src="8_2.php_files/image033.gif" align="absmiddle" height="21" width="23"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>С</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>вС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p><img src="8_2.php_files/image034.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   <p>С</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p><img src="8_2.php_files/image035.gif" align="absmiddle" height="21" width="21"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>С</p>
+   <p>вС</p>
+   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p><img src="8_2.php_files/image036.gif" align="absmiddle" height="21" width="21"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>В</p>
+   <p>вС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>В</p>
+   <p>В</p>
+   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p><img src="8_2.php_files/image037.gif" align="absmiddle" height="21" width="23"></p>
+   </td>
+  </tr>
+ </tbody></table>
+  <p>Таблица 8.2. Знания о соотношении (8.2)</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><img src="8_2.php_files/image038.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image039.gif" align="absmiddle" height="21" width="19"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image040.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image041.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image042.gif" align="absmiddle" height="21" width="27"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image043.gif" align="absmiddle" height="21" width="24"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image026.gif" align="absmiddle" height="17" width="15"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>В</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>В</p>
+   <p>В</p>
+   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   <p>В</p>
+   <p>В</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>Н</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>В</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>С</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>В</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>нС</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>С</p>
+   <p>вС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>С</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>С</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>С</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>нС</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   <p>нС</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>С</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>С</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>Н</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>вС</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>Н</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>Н</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>В</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p>Таблица 8.3. Знания о соотношении (8.3)</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p><img src="8_2.php_files/image044.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image045.gif" align="absmiddle" height="21" width="21"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image046.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image047.gif" align="absmiddle" height="21" width="20"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image048.gif" align="absmiddle" height="21" width="25"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image030.gif" align="absmiddle" height="13" width="13"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>В</p>
+   <p>вС</p>
+   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>В</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>В</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>Н</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>вС</p>
+   <p>С</p>
+   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>вС</p>
+   <p>В</p>
+   </td>
+   <td>   <p>С</p>
+   <p>С</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>В</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>нС</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>С</p>
+   <p>вС</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>вС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   <p>С</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>С</p>
+   <p>вС</p>
+   </td>
+   <td>   <p>вС</p>
+   <p>С</p>
+   <p>С</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>С</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>нС</p>
+   <p>вС</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>С</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>С</p>
+   <p>С</p>
+   </td>
+   <td>   <p>С</p>
+   <p>нС</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>С</p>
+   <p>нС</p>
+   <p>С</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>вС</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>Н</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>нС</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>Н</p>
+   <p>Н</p>
+   <p>Н</p>
+   </td>
+   <td>   <p>нС</p>
+   <p>Н</p>
+   <p>нС</p>
+   </td>
+   <td>   <p>&nbsp;</p>
+   <p>В</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+  <p><img src="8_2.php_files/image049.gif" align="absmiddle" height="100" width="612"></p>
+
+  <p><img src="8_2.php_files/image050.gif" align="absmiddle" height="100" width="631"></p>
+
+  <p><img src="8_2.php_files/image051.gif" align="absmiddle" height="100" width="616"></p>
+
+  <p><img src="8_2.php_files/image052.gif" align="absmiddle" height="97" width="517"></p>
+  <p><img src="8_2.php_files/image053.gif" align="absmiddle" height="97" width="499"></p>
+
+  <p><img src="8_2.php_files/image054.gif" align="absmiddle" height="100" width="643"></p>
+
+  <p><img src="8_2.php_files/image055.gif" align="absmiddle" height="123" width="496"></p>
+
+  <p><img src="8_2.php_files/image056.gif" align="absmiddle" height="123" width="536"></p>
+
+  <p><img src="8_2.php_files/image057.gif" align="absmiddle" height="123" width="516"></p>
+
+  <p><img src="8_2.php_files/image058.gif" align="absmiddle" height="123" width="548"></p>
+
+  <p><img src="8_2.php_files/image059.gif" align="absmiddle" height="123" width="628"></p>
+
+  <p><img src="8_2.php_files/image060.gif" align="absmiddle" height="123" width="500"></p>
+
+  <p><img src="8_2.php_files/image061.gif" align="absmiddle" height="123" width="519"></p>
+
+  <p><img src="8_2.php_files/image062.gif" align="absmiddle" height="123" width="504"></p>
+
+  <p><img src="8_2.php_files/image063.gif" align="absmiddle" height="123" width="512"></p>
+
+  <p><img src="8_2.php_files/image064.gif" align="absmiddle" height="123" width="637"></p>
+
+  <p>Общее
+число нечетких логических уравнений составляет 16. Заметим, что веса
+правил не указаны, поскольку при грубой настройке их значения равны
+единицам.</p>
+
+
+  <p><b><a name="4"></a>8.2.4 Грубые функции принадлежности</b></p>
+
+  <p>В общем случае каждая входная переменная <img src="8_2.php_files/image065.gif" align="absmiddle" height="29" width="71">
+имеют свои собственные функции принадлежности нечетким термам (Н, нС,
+С, вС, В), которые используются в уравнениях (8.4)-(8.6). Для упрощения
+моделирования будем использовать для всех переменных <img src="8_2.php_files/image066.gif" align="absmiddle" height="21" width="55">
+только одну форму функций принадлежности, которая показана на
+рис.&nbsp;8.7. Для этого приведем интервалы изменения каждой переменной
+к одному универсальному интервалу <img src="8_2.php_files/image067.gif" align="absmiddle" height="32" width="56"> с помощью следующих соотношений:</p>
+  <p><img src="8_2.php_files/image068.gif" align="absmiddle" height="39" width="156">  ,  <img src="8_2.php_files/image069.gif" align="absmiddle" height="85" width="104"> , <img src="8_2.php_files/image070.gif" align="absmiddle" height="24" width="163"> ,</p>
+  <p>где  <img src="8_2.php_files/image071.gif" align="absmiddle" height="60" width="88"> - интервал изменения переменной <img src="8_2.php_files/image072.gif" align="absmiddle" height="31" width="21">,  <img src="8_2.php_files/image073.gif" align="absmiddle" height="29" width="60"> .</p>
+  <p>Аналитическая модель функций принадлежности (рис. 8.7):</p>
+  <p>
+  <table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="8_2.php_files/image074.gif" align="absmiddle" height="87" width="181">   ,                                    </td>
+      <td align="right"> (8.7)</td>
+    </tr>
+  </tbody></table>
+  </p>
+  <p>а ее параметры <img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"> и <img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13">
+приведены в табл. 8.4. Выбор таких функций обусловлен тем, что они
+являются хорошими аппроксимациями функций принадлежности, полученных от
+эксперта методом парных сравнений:</p>
+  <p>Таблица 8.4. Параметры грубых функций принадлежности (рис. 8.7)</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>Терм</p>
+   </td>
+   <td>   <p>Н</p>
+   </td>
+   <td>   <p>нС</p>
+   </td>
+   <td>   <p>С</p>
+   </td>
+   <td>   <p>вС</p>
+   </td>
+   <td>   <p>В</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"></p>
+   </td>
+   <td>   <p>0.923</p>
+   </td>
+   <td>   <p>0.923</p>
+   </td>
+   <td>   <p>0.923</p>
+   </td>
+   <td>   <p>0.923</p>
+   </td>
+   <td>   <p>0.923</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+ 
+  <p><b><a name="5"></a>8.2.5. Алгоритм принятия решения</b></p>
+  <p>Нечеткие
+логические уравнения (8.4)-(8.6) вместе с функциями принадлежности
+нечетких термов (8.7) позволяют принимать решение об уровне ИБС по
+следующему алгоритму:</p>
+  <p>1°.&nbsp;Зафиксируем значения параметров состояния больного</p>
+
+  <p><img src="8_2.php_files/image078.gif" align="absmiddle" height="55" width="209">.</p>
+
+  <p>2°.&nbsp;Используя модель (8.7) и параметры <img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"> и <img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"> из табл.&nbsp;8.4, определим значения функций принадлежности <img src="8_2.php_files/image079.gif" align="absmiddle" height="55" width="97">, при фиксированных значениях параметров <img src="8_2.php_files/image080.gif" align="absmiddle" height="39" width="25">, <img src="8_2.php_files/image081.gif" align="absmiddle" height="29" width="60">.</p>
+  <p>3°.&nbsp;Используя логические уравнения (8.4)-(8.6), вычислим значения функций принадлежности <img src="8_2.php_files/image082.gif" align="absmiddle" height="53" width="192"> при векторе состояния <img src="8_2.php_files/image083.gif" align="absmiddle" height="47" width="199"> для всех диагнозов <img src="8_2.php_files/image084.gif" align="absmiddle" height="31" width="112">. При этом, логические операции И(<img src="8_2.php_files/image085.gif" align="absmiddle" height="15" width="16">) и ИЛИ(<img src="8_2.php_files/image028.gif" align="absmiddle" height="15" width="16">) над функциями принадлежности заменяются операциями <img src="8_2.php_files/image086.gif" align="absmiddle" height="19" width="33"> и <img src="8_2.php_files/image087.gif" align="absmiddle" height="16" width="36">:</p>
+
+  <p><img src="8_2.php_files/image088.gif" align="absmiddle" height="32" width="255">,</p>
+
+  <p><img src="8_2.php_files/image089.gif" align="absmiddle" height="32" width="257">.</p>
+
+  <p>4°.&nbsp;Определим решение <img src="8_2.php_files/image090.gif" align="absmiddle" height="43" width="27">, для которого:</p>
+
+  <p><img src="8_2.php_files/image091.gif" align="absmiddle" height="75" width="475">.</p>
+
+  <p><b>Пример 8.1.</b> Пусть некоторому больному соответствуют следующие количественные значения параметров состояния:</p>
+
+  <p><img src="8_2.php_files/image092.gif" align="absmiddle" height="27" width="36">53  лет,                     <img src="8_2.php_files/image093.gif" align="absmiddle" height="27" width="36"> 175 у.е. ,           <img src="8_2.php_files/image094.gif" align="absmiddle" height="27" width="33"> 507 кгм/мин,       </p>
+
+  <p><img src="8_2.php_files/image095.gif" align="absmiddle" height="27" width="36">2.4 у.е. ,                   <img src="8_2.php_files/image096.gif" align="absmiddle" height="27" width="36"> 0.25 у.е.,            <img src="8_2.php_files/image097.gif" align="absmiddle" height="27" width="36">60.7 ммоль/л,</p>
+
+  <p><img src="8_2.php_files/image098.gif" align="absmiddle" height="27" width="35"> 26.14 ммоль/л,        <img src="8_2.php_files/image099.gif" align="absmiddle" height="27" width="36"> 10.4 ммоль/л ,   <img src="8_2.php_files/image100.gif" align="absmiddle" height="27" width="36"> 3.9 у.е.,</p>
+
+  <p><img src="8_2.php_files/image101.gif" align="absmiddle" height="27" width="41"> 22.4 млитр/мин кг,<img src="8_2.php_files/image102.gif" align="absmiddle" height="27" width="40"> 172 у.е.,            <img src="8_2.php_files/image103.gif" align="absmiddle" height="27" width="40">26.1 у.е.</p>
+
+  <p>Используя модель (8.7) и значения параметров <img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"> и <img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"> из табл. 8.4 находим значения функций принадлежности в точках <img src="8_2.php_files/image080.gif" align="absmiddle" height="39" width="25">, <img src="8_2.php_files/image073.gif" align="absmiddle" height="29" width="60"> для всех нечетких термов  и представим их в табл. 8.5.</p>
+  <p>Подставляя полученные значения в уравнение (8.5), находим:</p>
+
+  <p><img src="8_2.php_files/image104.gif" align="absmiddle" height="91" width="345"></p>
+
+  <p>Аналогично: <img src="8_2.php_files/image105.gif" align="absmiddle" height="31" width="107"> , <img src="8_2.php_files/image106.gif" align="absmiddle" height="31" width="100"> , <img src="8_2.php_files/image107.gif" align="absmiddle" height="31" width="105"> , <img src="8_2.php_files/image108.gif" align="absmiddle" height="31" width="100"> .</p>
+
+  <p>В соответствии с уравнением (8.6):</p>
+
+  <p><img src="8_2.php_files/image109.gif" align="absmiddle" height="89" width="305"></p>
+
+  <p>Аналогично: <img src="8_2.php_files/image110.gif" align="absmiddle" height="29" width="105"> , <img src="8_2.php_files/image111.gif" align="absmiddle" height="29" width="97"> , <img src="8_2.php_files/image112.gif" align="absmiddle" height="29" width="104">, <img src="8_2.php_files/image113.gif" align="absmiddle" height="29" width="97"> .</p>
+
+  <p>Таблица 8.5. Значения функций принадлежности <img src="8_2.php_files/image114.gif" align="absmiddle" height="47" width="84"></p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>№</p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image080.gif" align="absmiddle" height="39" width="25"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image115.gif" align="absmiddle" height="24" width="22"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image116.gif" align="absmiddle" height="39" width="66"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image117.gif" align="absmiddle" height="39" width="71"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image118.gif" align="absmiddle" height="39" width="63"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image119.gif" align="absmiddle" height="39" width="69"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image120.gif" align="absmiddle" height="39" width="63"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>1</p>
+   </td>
+   <td>   <p>53</p>
+   </td>
+   <td>   <p>3.259</p>
+   </td>
+   <td>   <p>0.074</p>
+   </td>
+   <td>   <p>0.143</p>
+   </td>
+   <td>   <p>0.349</p>
+   </td>
+   <td>   <p>0.927</p>
+   </td>
+   <td>   <p>0.608</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>2</p>
+   </td>
+   <td>   <p>175</p>
+   </td>
+   <td>   <p>0.679</p>
+   </td>
+   <td>   <p>0.649</p>
+   </td>
+   <td>   <p>0.892</p>
+   </td>
+   <td>   <p>0.328</p>
+   </td>
+   <td>   <p>0.136</p>
+   </td>
+   <td>   <p>0.072</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>3</p>
+   </td>
+   <td>   <p>507</p>
+   </td>
+   <td>   <p>1.503</p>
+   </td>
+   <td>   <p>0.274</p>
+   </td>
+   <td>   <p>0.771</p>
+   </td>
+   <td>   <p>0.775</p>
+   </td>
+   <td>   <p>0.275</p>
+   </td>
+   <td>   <p>0.120</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>4</p>
+   </td>
+   <td>   <p>2.4</p>
+   </td>
+   <td>   <p>2.182</p>
+   </td>
+   <td>   <p>0.152</p>
+   </td>
+   <td>   <p>0.379</p>
+   </td>
+   <td>   <p>0.963</p>
+   </td>
+   <td>   <p>0.560</p>
+   </td>
+   <td>   <p>0.205</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>5</p>
+   </td>
+   <td>   <p>0.25</p>
+   </td>
+   <td>   <p>1.362</p>
+   </td>
+   <td>   <p>0.315</p>
+   </td>
+   <td>   <p>0.867</p>
+   </td>
+   <td>   <p>0.676</p>
+   </td>
+   <td>   <p>0.241</p>
+   </td>
+   <td>   <p>0.109</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>6</p>
+   </td>
+   <td>   <p>60.7</p>
+   </td>
+   <td>   <p>2.996</p>
+   </td>
+   <td>   <p>0.087</p>
+   </td>
+   <td>   <p>0.176</p>
+   </td>
+   <td>   <p>0.462</p>
+   </td>
+   <td>   <p>1.000</p>
+   </td>
+   <td>   <p>0.458</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>7</p>
+   </td>
+   <td>   <p>26.14</p>
+   </td>
+   <td>   <p>3.255</p>
+   </td>
+   <td>   <p>0.074</p>
+   </td>
+   <td>   <p>0.142</p>
+   </td>
+   <td>   <p>0.343</p>
+   </td>
+   <td>   <p>0.911</p>
+   </td>
+   <td>   <p>0.635</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>8</p>
+   </td>
+   <td>   <p>10.4</p>
+   </td>
+   <td>   <p>1.157</p>
+   </td>
+   <td>   <p>0.389</p>
+   </td>
+   <td>   <p>0.972</p>
+   </td>
+   <td>   <p>0.545</p>
+   </td>
+   <td>   <p>0.201</p>
+   </td>
+   <td>   <p>0.095</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>9</p>
+   </td>
+   <td>   <p>3.9</p>
+   </td>
+   <td>   <p>2.468</p>
+   </td>
+   <td>   <p>0.123</p>
+   </td>
+   <td>   <p>0.283</p>
+   </td>
+   <td>   <p>0.795</p>
+   </td>
+   <td>   <p>0.751</p>
+   </td>
+   <td>   <p>0.266</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>10</p>
+   </td>
+   <td>   <p>22.4</p>
+   </td>
+   <td>   <p>1.791</p>
+   </td>
+   <td>   <p>0.210</p>
+   </td>
+   <td>   <p>0.576</p>
+   </td>
+   <td>   <p>0.951</p>
+   </td>
+   <td>   <p>0.368</p>
+   </td>
+   <td>   <p>0.149</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>11</p>
+   </td>
+   <td>   <p>172</p>
+   </td>
+   <td>   <p>1.647</p>
+   </td>
+   <td>   <p>0.239</p>
+   </td>
+   <td>   <p>0.670</p>
+   </td>
+   <td>   <p>0.872</p>
+   </td>
+   <td>   <p>0.318</p>
+   </td>
+   <td>   <p>0.133</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>12</p>
+   </td>
+   <td>   <p>26.1</p>
+   </td>
+   <td>   <p>3.376</p>
+   </td>
+   <td>   <p>0.070</p>
+   </td>
+   <td>   <p>0.131</p>
+   </td>
+   <td>   <p>0.310</p>
+   </td>
+   <td>   <p>0.857</p>
+   </td>
+   <td>   <p>0.687</p>
+   </td>
+  </tr>
+ </tbody></table>
+  <p>Наконец, в соответствии с уравнением (8.4) находим:</p>
+  <p><img src="8_2.php_files/image121.gif" align="absmiddle" height="63" width="237"></p>
+  <p><img src="8_2.php_files/image122.gif" align="absmiddle" height="20" width="277"></p>
+  <p>Аналогично: <img src="8_2.php_files/image123.gif" align="absmiddle" height="37" width="139">, <img src="8_2.php_files/image124.gif" align="absmiddle" height="37" width="136">, <img src="8_2.php_files/image125.gif" align="absmiddle" height="37" width="139">, <img src="8_2.php_files/image126.gif" align="absmiddle" height="37" width="137"> , <img src="8_2.php_files/image127.gif" align="absmiddle" height="37" width="139"> .</p>
+
+  <p>Поскольку наибольшее значение функции принадлежности соответствует решению <img src="8_2.php_files/image128.gif" align="absmiddle" height="25" width="21">, то в качестве диагноза выбираем НЦД тяжелой степени.</p>
+
+
+  <p><b><a name="6"></a>8.2.6. Тонкая настройка нечеткой базы знаний</b></p>
+  <p>В
+качестве обучающей выборки для тонкой настройки нечеткой модели
+использовались реальные истории болезни с верифицированными диагнозами.
+Задача оптимизации решалась с помощью генетического алгоритма. В
+результате была получена настроенная модель, в которую входят параметры
+функций принадлежности (<img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"> и <img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13">)
+из табл. 8.6 и веса правил из табл. 8.7-8.9. Графики функций
+принадлежности после настройки показаны на рис. 8.8. Сравнение
+врачебного и компьютерного диагнозов для 65-ти больных представлено в
+табл.&nbsp;8.10. Легко видеть, что только в одном случае (**)
+компьютерное решение (<img src="8_2.php_files/image129.gif" align="absmiddle" height="29" width="27">) слишком далеко от реального диагноза (<img src="8_2.php_files/image130.gif" align="absmiddle" height="29" width="27">).
+В 8-ми случаях (*) компьютерные и врачебные диагнозы находятся в
+соседних классах решений. В остальных случаях наблюдается полное
+совпадение компьютерного и врачебного диагнозов. Это свидетельствует о
+высоком, с точки зрения практического использования, качестве
+построенной экспертной системы.</p>
+
+  <p>Таблица 8.6. Параметры <img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"> и <img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"> функций принадлежности после настройки</p>
+  <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td colspan="2">   <p>Н</p>
+   </td>
+   <td colspan="2">   <p>нС</p>
+   </td>
+   <td colspan="2">   <p>С</p>
+   </td>
+   <td colspan="2">   <p>вС</p>
+   </td>
+   <td colspan="2">   <p>В</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>&nbsp;</p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image075.gif" align="absmiddle" height="20" width="13"></p>
+   </td>
+   <td>   <p><img src="8_2.php_files/image076.gif" align="absmiddle" height="16" width="13"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image131.gif" align="absmiddle" height="29" width="19"></p>
+   </td>
+   <td>   <p>32.58</p>
+   </td>
+   <td>   <p>23.33</p>
+   </td>
+   <td>   <p>38.21</p>
+   </td>
+   <td>   <p>9.80</p>
+   </td>
+   <td>   <p>43.39</p>
+   </td>
+   <td>   <p>11.92</p>
+   </td>
+   <td>   <p>51.07</p>
+   </td>
+   <td>   <p>16.01</p>
+   </td>
+   <td>   <p>56.74</p>
+   </td>
+   <td>   <p>22.62</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image132.gif" align="absmiddle" height="29" width="21"></p>
+   </td>
+   <td>   <p>128.00</p>
+   </td>
+   <td>   <p>57.31</p>
+   </td>
+   <td>   <p>186.39</p>
+   </td>
+   <td>   <p>87.84</p>
+   </td>
+   <td>   <p>235.24</p>
+   </td>
+   <td>   <p>80.39</p>
+   </td>
+   <td>   <p>332.76</p>
+   </td>
+   <td>   <p>109.61</p>
+   </td>
+   <td>   <p>389.33</p>
+   </td>
+   <td>   <p>162.75</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image133.gif" align="absmiddle" height="31" width="20"></p>
+   </td>
+   <td>   <p>182.46</p>
+   </td>
+   <td>   <p>807.90</p>
+   </td>
+   <td>   <p>509.02</p>
+   </td>
+   <td>   <p>242.91</p>
+   </td>
+   <td>   <p>648.08</p>
+   </td>
+   <td>   <p>575.61</p>
+   </td>
+   <td>   <p>922.18</p>
+   </td>
+   <td>   <p>261.01</p>
+   </td>
+   <td>   <p>1105.75</p>
+   </td>
+   <td>   <p>568.27</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image134.gif" align="absmiddle" height="29" width="21"></p>
+   </td>
+   <td>   <p>0.600</p>
+   </td>
+   <td>   <p>0.761</p>
+   </td>
+   <td>   <p>1.288</p>
+   </td>
+   <td>   <p>0.985</p>
+   </td>
+   <td>   <p>1.847</p>
+   </td>
+   <td>   <p>0.386</p>
+   </td>
+   <td>   <p>2.852</p>
+   </td>
+   <td>   <p>1.421</p>
+   </td>
+   <td>   <p>3.900</p>
+   </td>
+   <td>   <p>0.064</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image135.gif" align="absmiddle" height="31" width="21"></p>
+   </td>
+   <td>   <p>0.117</p>
+   </td>
+   <td>   <p>0.055</p>
+   </td>
+   <td>   <p>0.217</p>
+   </td>
+   <td>   <p>0.026</p>
+   </td>
+   <td>   <p>0.322</p>
+   </td>
+   <td>   <p>0.179</p>
+   </td>
+   <td>   <p>0.422</p>
+   </td>
+   <td>   <p>0.079</p>
+   </td>
+   <td>   <p>0.530</p>
+   </td>
+   <td>   <p>0.066</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image136.gif" align="absmiddle" height="31" width="21"></p>
+   </td>
+   <td>   <p>34.48</p>
+   </td>
+   <td>   <p>7.88</p>
+   </td>
+   <td>   <p>47.34</p>
+   </td>
+   <td>   <p>40.20</p>
+   </td>
+   <td>   <p>51.94</p>
+   </td>
+   <td>   <p>8.90</p>
+   </td>
+   <td>   <p>59.48</p>
+   </td>
+   <td>   <p>21.90</p>
+   </td>
+   <td>   <p>69.49</p>
+   </td>
+   <td>   <p>8.08</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image137.gif" align="absmiddle" height="31" width="21"></p>
+   </td>
+   <td>   <p>11.90</p>
+   </td>
+   <td>   <p>4.04</p>
+   </td>
+   <td>   <p>16.28</p>
+   </td>
+   <td>   <p>4.04</p>
+   </td>
+   <td>   <p>21.56</p>
+   </td>
+   <td>   <p>11.31</p>
+   </td>
+   <td>   <p>25.03</p>
+   </td>
+   <td>   <p>4.04</p>
+   </td>
+   <td>   <p>27.99</p>
+   </td>
+   <td>   <p>13.19</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image138.gif" align="absmiddle" height="31" width="20"></p>
+   </td>
+   <td>   <p>3.60</p>
+   </td>
+   <td>   <p>5.42</p>
+   </td>
+   <td>   <p>8.61</p>
+   </td>
+   <td>   <p>10.79</p>
+   </td>
+   <td>   <p>15.93</p>
+   </td>
+   <td>   <p>0.24</p>
+   </td>
+   <td>   <p>19.03</p>
+   </td>
+   <td>   <p>25.09</p>
+   </td>
+   <td>   <p>27.10</p>
+   </td>
+   <td>   <p>5.42</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image139.gif" align="absmiddle" height="31" width="21"></p>
+   </td>
+   <td>   <p>1.00</p>
+   </td>
+   <td>   <p>1.08</p>
+   </td>
+   <td>   <p>2.18</p>
+   </td>
+   <td>   <p>1.08</p>
+   </td>
+   <td>   <p>3.18</p>
+   </td>
+   <td>   <p>3.37</p>
+   </td>
+   <td>   <p>4.02</p>
+   </td>
+   <td>   <p>1.20</p>
+   </td>
+   <td>   <p>5.70</p>
+   </td>
+   <td>   <p>1.08</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image140.gif" align="absmiddle" height="31" width="28"></p>
+   </td>
+   <td>   <p>9.01</p>
+   </td>
+   <td>   <p>18.62</p>
+   </td>
+   <td>   <p>16.69</p>
+   </td>
+   <td>   <p>8.50</p>
+   </td>
+   <td>   <p>21.63</p>
+   </td>
+   <td>   <p>17.92</p>
+   </td>
+   <td>   <p>32.44</p>
+   </td>
+   <td>   <p>8.88</p>
+   </td>
+   <td>   <p>36.24</p>
+   </td>
+   <td>   <p>10.14</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image141.gif" align="absmiddle" height="29" width="27"></p>
+   </td>
+   <td>   <p>46.00</p>
+   </td>
+   <td>   <p>30.15</p>
+   </td>
+   <td>   <p>144.32</p>
+   </td>
+   <td>   <p>157.80</p>
+   </td>
+   <td>   <p>200.10</p>
+   </td>
+   <td>   <p>147.95</p>
+   </td>
+   <td>   <p>270.43</p>
+   </td>
+   <td>   <p>5.96</p>
+   </td>
+   <td>   <p>335.18</p>
+   </td>
+   <td>   <p>193.27</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img src="8_2.php_files/image142.gif" align="absmiddle" height="29" width="28"></p>
+   </td>
+   <td>   <p>3.90</p>
+   </td>
+   <td>   <p>6.07</p>
+   </td>
+   <td>   <p>10.48</p>
+   </td>
+   <td>   <p>6.07</p>
+   </td>
+   <td>   <p>19.47</p>
+   </td>
+   <td>   <p>24.04</p>
+   </td>
+   <td>   <p>22.81</p>
+   </td>
+   <td>   <p>10.87</p>
+   </td>
+   <td>   <p>30.20</p>
+   </td>
+   <td>   <p>6.07</p>
+   </td>
+  </tr>
+ </tbody></table>
+
+
+ 
+ 
+<table border="0" cellpadding="0" cellspacing="10" width="80%">
+  <tbody><tr>
+    <td valign="top" width="50%">
+    <p>Таблица 8.7. Веса правил в Табл. 8.2 до (<img src="8_2.php_files/image143.gif" align="absmiddle" height="31" width="28">) и после (<img src="8_2.php_files/image144.gif" align="absmiddle" height="31" width="29">) настройки</p>
+        <table border="1" cellpadding="2" cellspacing="2">      <tbody><tr>       <td>       <p><img src="8_2.php_files/image026.gif" align="absmiddle" height="17" width="15"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image151.gif" align="absmiddle" height="21" width="23"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image152.gif" align="absmiddle" height="21" width="24"></p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>Н</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.500</p>
+       <p>0.734</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>нС</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.632</p>
+       <p>0.500</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>С</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.757</p>
+       <p>0.470</p>
+       <p>0.473</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>вС</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.527</p>
+       <p>0.480</p>
+       <p>0.664</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>В</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.499</p>
+       <p>0.806</p>
+       <p>0.499</p>
+       </td>
+      </tr>
+     </tbody></table>
+    </td>
+    <td valign="top">
+<p>Таблица 8.8. Веса правил в табл. 8.3 до (<img src="8_2.php_files/image143.gif" align="absmiddle" height="31" width="28">) и после (<img src="8_2.php_files/image144.gif" align="absmiddle" height="31" width="29">) настройки</p>
+        <table border="1" cellpadding="2" cellspacing="2">      <tbody><tr>       <td>       <p><img src="8_2.php_files/image030.gif" align="absmiddle" height="13" width="13"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image151.gif" align="absmiddle" height="21" width="23"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image152.gif" align="absmiddle" height="21" width="24"></p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>Н</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.744</p>
+       <p>0.500</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>нС</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.500</p>
+       <p>0.400</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>С</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.500</p>
+       <p>0.565</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>вС</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.771</p>
+       <p>0.500</p>
+       <p>0.500</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p>В</p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.500</p>
+       <p>0.500</p>
+       </td>
+      </tr>
+     </tbody></table>
+  <p></p>
+    </td>
+  </tr>
+</tbody></table> 
+  
+  
+  
+    <p>Таблица 8.9. Веса правил в табл. 8.1 до (<img src="8_2.php_files/image143.gif" align="absmiddle" height="31" width="28">) и  после (<img src="8_2.php_files/image144.gif" align="absmiddle" height="31" width="29">) настройки</p>
+
+ <table border="1" cellpadding="2" cellspacing="2">      <tbody><tr>       <td>       <p><img src="8_2.php_files/image031.gif" align="absmiddle" height="17" width="15"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image145.gif" align="absmiddle" height="21" width="23"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image146.gif" align="absmiddle" height="21" width="24"></p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image031.gif" align="absmiddle" height="17" width="15"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image145.gif" align="absmiddle" height="21" width="23"></p>
+       </td>
+       <td>       <p><img src="8_2.php_files/image146.gif" align="absmiddle" height="21" width="24"></p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p><img src="8_2.php_files/image032.gif" align="absmiddle" height="21" width="19"></p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.934</p>
+       <p>0.500</p>
+       <p>0.419</p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       <p><img src="8_2.php_files/image035.gif" align="absmiddle" height="21" width="21"></p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.663</p>
+       <p>0.449</p>
+       <p>0.449</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p><img src="8_2.php_files/image147.gif" align="absmiddle" height="21" width="21"></p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.500</p>
+       <p>0.764</p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       <p><img src="8_2.php_files/image148.gif" align="absmiddle" height="21" width="20"></p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.499</p>
+       <p>0.500</p>
+       <p>0.770</p>
+       </td>
+      </tr>
+      <tr>       <td>       <p>&nbsp;</p>
+       <p><img src="8_2.php_files/image149.gif" align="absmiddle" height="21" width="21"></p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.428</p>
+       <p>0.500</p>
+       <p>0.724</p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       </td>
+       <td>       <p>&nbsp;</p>
+       <p><img src="8_2.php_files/image150.gif" align="absmiddle" height="21" width="21"></p>
+       </td>
+       <td>       <p>1.000</p>
+       <p>1.000</p>
+       <p>1.000</p>
+       </td>
+       <td>       <p>0.500</p>
+       <p>0.524</p>
+       <p>0.915</p>
+       </td>
+      </tr>
+     </tbody></table>
+<p><img src="8_2.php_files/image153.gif" height="888" width="649"></p>
+  <p>Таблица 8.10. Сравнение модельного и верифицированного диагнозов</p>
+   <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>&nbsp;</p>
+    </td>
+    <td colspan="12">   <p>Параметры состояния   больного</p>
+    </td>
+    <td colspan="2">   <p>Диагноз</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>№</p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image154.gif" align="absmiddle" height="22" width="17"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image155.gif" align="absmiddle" height="22" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image156.gif" align="absmiddle" height="23" width="19"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image157.gif" align="absmiddle" height="22" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image158.gif" align="absmiddle" height="23" width="19"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image159.gif" align="absmiddle" height="23" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image160.gif" align="absmiddle" height="23" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image161.gif" align="absmiddle" height="23" width="19"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image162.gif" align="absmiddle" height="23" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image163.gif" align="absmiddle" height="23" width="25"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image164.gif" align="absmiddle" height="22" width="24"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image165.gif" align="absmiddle" height="22" width="25"></p>
+    </td>
+    <td>   <p>1)</p>
+    </td>
+    <td>   <p>2)</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>1</p>
+    </td>
+    <td>   <p>31</p>
+    </td>
+    <td>   <p>324</p>
+    </td>
+    <td>   <p>980</p>
+    </td>
+    <td>   <p>2.8</p>
+    </td>
+    <td>   <p>0.12</p>
+    </td>
+    <td>   <p>50.07</p>
+    </td>
+    <td>   <p>22.76</p>
+    </td>
+    <td>   <p>8.05</p>
+    </td>
+    <td>   <p>3.7</p>
+    </td>
+    <td>   <p>34.2</p>
+    </td>
+    <td>   <p>266</p>
+    </td>
+    <td>   <p>19.3</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>2</p>
+    </td>
+    <td>   <p>36</p>
+    </td>
+    <td>   <p>330</p>
+    </td>
+    <td>   <p>900</p>
+    </td>
+    <td>   <p>2.9</p>
+    </td>
+    <td>   <p>0.14</p>
+    </td>
+    <td>   <p>56.52</p>
+    </td>
+    <td>   <p>24.33</p>
+    </td>
+    <td>   <p>9.02</p>
+    </td>
+    <td>   <p>4.1</p>
+    </td>
+    <td>   <p>29.7</p>
+    </td>
+    <td>   <p>242</p>
+    </td>
+    <td>   <p>21.0</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>3</p>
+    </td>
+    <td>   <p>39</p>
+    </td>
+    <td>   <p>260</p>
+    </td>
+    <td>   <p>800</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>0.18</p>
+    </td>
+    <td>   <p>51.73</p>
+    </td>
+    <td>   <p>25.62</p>
+    </td>
+    <td>   <p>8.53</p>
+    </td>
+    <td>   <p>4.2</p>
+    </td>
+    <td>   <p>28.5</p>
+    </td>
+    <td>   <p>194</p>
+    </td>
+    <td>   <p>23.8</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>4</p>
+    </td>
+    <td>   <p>42</p>
+    </td>
+    <td>   <p>272</p>
+    </td>
+    <td>   <p>867</p>
+    </td>
+    <td>   <p>2.5</p>
+    </td>
+    <td>   <p>0.28</p>
+    </td>
+    <td>   <p>59.31</p>
+    </td>
+    <td>   <p>28.44</p>
+    </td>
+    <td>   <p>8.53</p>
+    </td>
+    <td>   <p>4.0</p>
+    </td>
+    <td>   <p>28.7</p>
+    </td>
+    <td>   <p>198</p>
+    </td>
+    <td>   <p>19.4</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>5</p>
+    </td>
+    <td>   <p>48</p>
+    </td>
+    <td>   <p>287</p>
+    </td>
+    <td>   <p>491</p>
+    </td>
+    <td>   <p>2.2</p>
+    </td>
+    <td>   <p>0.24</p>
+    </td>
+    <td>   <p>52.77</p>
+    </td>
+    <td>   <p>21.61</p>
+    </td>
+    <td>   <p>8.53</p>
+    </td>
+    <td>   <p>3.5</p>
+    </td>
+    <td>   <p>25.3</p>
+    </td>
+    <td>   <p>156</p>
+    </td>
+    <td>   <p>20.5</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>6</p>
+    </td>
+    <td>   <p>53</p>
+    </td>
+    <td>   <p>175</p>
+    </td>
+    <td>   <p>507</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>0.25</p>
+    </td>
+    <td>   <p>60.70</p>
+    </td>
+    <td>   <p>26.14</p>
+    </td>
+    <td>   <p>10.40</p>
+    </td>
+    <td>   <p>3.9</p>
+    </td>
+    <td>   <p>22.4</p>
+    </td>
+    <td>   <p>172</p>
+    </td>
+    <td>   <p>26.1</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>7</p>
+    </td>
+    <td>   <p>45</p>
+    </td>
+    <td>   <p>247</p>
+    </td>
+    <td>   <p>728</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>0.34</p>
+    </td>
+    <td>   <p>62.06</p>
+    </td>
+    <td>   <p>26.14</p>
+    </td>
+    <td>   <p>5.55</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>26.5</p>
+    </td>
+    <td>   <p>144</p>
+    </td>
+    <td>   <p>22.9</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>8</p>
+    </td>
+    <td>   <p>52</p>
+    </td>
+    <td>   <p>231</p>
+    </td>
+    <td>   <p>768</p>
+    </td>
+    <td>   <p>1.5</p>
+    </td>
+    <td>   <p>0.36</p>
+    </td>
+    <td>   <p>62.77</p>
+    </td>
+    <td>   <p>23.01</p>
+    </td>
+    <td>   <p>6.83</p>
+    </td>
+    <td>   <p>2.5</p>
+    </td>
+    <td>   <p>20.0</p>
+    </td>
+    <td>   <p>158</p>
+    </td>
+    <td>   <p>23.8</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>9</p>
+    </td>
+    <td>   <p>32</p>
+    </td>
+    <td>   <p>151</p>
+    </td>
+    <td>   <p>610</p>
+    </td>
+    <td>   <p>1.3</p>
+    </td>
+    <td>   <p>0.42</p>
+    </td>
+    <td>   <p>54.49</p>
+    </td>
+    <td>   <p>23.91</p>
+    </td>
+    <td>   <p>5.55</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>19.8</p>
+    </td>
+    <td>   <p>104</p>
+    </td>
+    <td>   <p>25.7</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>10</p>
+    </td>
+    <td>   <p>45</p>
+    </td>
+    <td>   <p>177</p>
+    </td>
+    <td>   <p>542</p>
+    </td>
+    <td>   <p>1.6</p>
+    </td>
+    <td>   <p>0.48</p>
+    </td>
+    <td>   <p>62.06</p>
+    </td>
+    <td>   <p>26.14</p>
+    </td>
+    <td>   <p>5.55</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>21.7</p>
+    </td>
+    <td>   <p>120</p>
+    </td>
+    <td>   <p>28.1</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d6  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>11</p>
+    </td>
+    <td>   <p>38</p>
+    </td>
+    <td>   <p>128</p>
+    </td>
+    <td>   <p>349</p>
+    </td>
+    <td>   <p>1.4</p>
+    </td>
+    <td>   <p>0.48</p>
+    </td>
+    <td>   <p>67.03</p>
+    </td>
+    <td>   <p>24.46</p>
+    </td>
+    <td>   <p>5.20</p>
+    </td>
+    <td>   <p>1.9</p>
+    </td>
+    <td>   <p>13.9</p>
+    </td>
+    <td>   <p>92</p>
+    </td>
+    <td>   <p>30.2</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>12</p>
+    </td>
+    <td>   <p>38</p>
+    </td>
+    <td>   <p>145</p>
+    </td>
+    <td>   <p>304</p>
+    </td>
+    <td>   <p>1.2</p>
+    </td>
+    <td>   <p>0.56</p>
+    </td>
+    <td>   <p>64.15</p>
+    </td>
+    <td>   <p>25.62</p>
+    </td>
+    <td>   <p>7.11</p>
+    </td>
+    <td>   <p>2.6</p>
+    </td>
+    <td>   <p>14.4</p>
+    </td>
+    <td>   <p>74</p>
+    </td>
+    <td>   <p>25.5</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>13</p>
+    </td>
+    <td>   <p>40</p>
+    </td>
+    <td>   <p>327</p>
+    </td>
+    <td>   <p>930</p>
+    </td>
+    <td>   <p>2.2</p>
+    </td>
+    <td>   <p>0.24</p>
+    </td>
+    <td>   <p>59.31</p>
+    </td>
+    <td>   <p>25.62</p>
+    </td>
+    <td>   <p>7.56</p>
+    </td>
+    <td>   <p>3.3</p>
+    </td>
+    <td>   <p>35.4</p>
+    </td>
+    <td>   <p>347</p>
+    </td>
+    <td>   <p>18.9</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d2  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>14</p>
+    </td>
+    <td>   <p>38</p>
+    </td>
+    <td>   <p>348</p>
+    </td>
+    <td>   <p>952</p>
+    </td>
+    <td>   <p>1.8</p>
+    </td>
+    <td>   <p>0.20</p>
+    </td>
+    <td>   <p>34.48</p>
+    </td>
+    <td>   <p>20.79</p>
+    </td>
+    <td>   <p>9.56</p>
+    </td>
+    <td>   <p>5.7</p>
+    </td>
+    <td>   <p>34.2</p>
+    </td>
+    <td>   <p>352</p>
+    </td>
+    <td>   <p>21.6</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>15</p>
+    </td>
+    <td>   <p>34</p>
+    </td>
+    <td>   <p>307</p>
+    </td>
+    <td>   <p>800</p>
+    </td>
+    <td>   <p>1.9</p>
+    </td>
+    <td>   <p>0.21</p>
+    </td>
+    <td>   <p>57.90</p>
+    </td>
+    <td>   <p>25.08</p>
+    </td>
+    <td>   <p>6.83</p>
+    </td>
+    <td>   <p>2.9</p>
+    </td>
+    <td>   <p>30.1</p>
+    </td>
+    <td>   <p>304</p>
+    </td>
+    <td>   <p>19.3</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d4 **</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>16</p>
+    </td>
+    <td>   <p>48</p>
+    </td>
+    <td>   <p>284</p>
+    </td>
+    <td>   <p>738</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>0.26</p>
+    </td>
+    <td>   <p>62.06</p>
+    </td>
+    <td>   <p>25.08</p>
+    </td>
+    <td>   <p>8.53</p>
+    </td>
+    <td>   <p>3.4</p>
+    </td>
+    <td>   <p>29.7</p>
+    </td>
+    <td>   <p>339</p>
+    </td>
+    <td>   <p>20.4</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>17</p>
+    </td>
+    <td>   <p>35</p>
+    </td>
+    <td>   <p>174</p>
+    </td>
+    <td>   <p>600</p>
+    </td>
+    <td>   <p>1.7</p>
+    </td>
+    <td>   <p>0.32</p>
+    </td>
+    <td>   <p>55.18</p>
+    </td>
+    <td>   <p>24.46</p>
+    </td>
+    <td>   <p>8.56</p>
+    </td>
+    <td>   <p>3.8</p>
+    </td>
+    <td>   <p>27.2</p>
+    </td>
+    <td>   <p>312</p>
+    </td>
+    <td>   <p>22.0</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>18</p>
+    </td>
+    <td>   <p>49</p>
+    </td>
+    <td>   <p>229</p>
+    </td>
+    <td>   <p>515</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>0.30</p>
+    </td>
+    <td>   <p>61.34</p>
+    </td>
+    <td>   <p>22.20</p>
+    </td>
+    <td>   <p>6.83</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>22.4</p>
+    </td>
+    <td>   <p>300</p>
+    </td>
+    <td>   <p>23.4</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d4  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>19</p>
+    </td>
+    <td>   <p>58</p>
+    </td>
+    <td>   <p>265</p>
+    </td>
+    <td>   <p>421</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>0.26</p>
+    </td>
+    <td>   <p>60.07</p>
+    </td>
+    <td>   <p>22.76</p>
+    </td>
+    <td>   <p>4.08</p>
+    </td>
+    <td>   <p>1.8</p>
+    </td>
+    <td>   <p>17.7</p>
+    </td>
+    <td>   <p>258</p>
+    </td>
+    <td>   <p>23.8</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>20</p>
+    </td>
+    <td>   <p>49</p>
+    </td>
+    <td>   <p>330</p>
+    </td>
+    <td>   <p>650</p>
+    </td>
+    <td>   <p>1.5</p>
+    </td>
+    <td>   <p>0.25</p>
+    </td>
+    <td>   <p>69.49</p>
+    </td>
+    <td>   <p>25.08</p>
+    </td>
+    <td>   <p>6.83</p>
+    </td>
+    <td>   <p>2.5</p>
+    </td>
+    <td>   <p>20.3</p>
+    </td>
+    <td>   <p>244</p>
+    </td>
+    <td>   <p>22.0</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>21</p>
+    </td>
+    <td>   <p>48</p>
+    </td>
+    <td>   <p>187</p>
+    </td>
+    <td>   <p>475</p>
+    </td>
+    <td>   <p>1.4</p>
+    </td>
+    <td>   <p>0.34</p>
+    </td>
+    <td>   <p>60.39</p>
+    </td>
+    <td>   <p>23.31</p>
+    </td>
+    <td>   <p>5.55</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>21.4</p>
+    </td>
+    <td>   <p>204</p>
+    </td>
+    <td>   <p>22.7</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>22</p>
+    </td>
+    <td>   <p>42</p>
+    </td>
+    <td>   <p>224</p>
+    </td>
+    <td>   <p>400</p>
+    </td>
+    <td>   <p>1.5</p>
+    </td>
+    <td>   <p>0.39</p>
+    </td>
+    <td>   <p>55.18</p>
+    </td>
+    <td>   <p>21.05</p>
+    </td>
+    <td>   <p>7.11</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>20.4</p>
+    </td>
+    <td>   <p>215</p>
+    </td>
+    <td>   <p>22.5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>23</p>
+    </td>
+    <td>   <p>32</p>
+    </td>
+    <td>   <p>195</p>
+    </td>
+    <td>   <p>100</p>
+    </td>
+    <td>   <p>1.2</p>
+    </td>
+    <td>   <p>0.48</p>
+    </td>
+    <td>   <p>60.70</p>
+    </td>
+    <td>   <p>21.61</p>
+    </td>
+    <td>   <p>7.52</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>22.6</p>
+    </td>
+    <td>   <p>191</p>
+    </td>
+    <td>   <p>25.9</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>24</p>
+    </td>
+    <td>   <p>51</p>
+    </td>
+    <td>   <p>192</p>
+    </td>
+    <td>   <p>292</p>
+    </td>
+    <td>   <p>1.3</p>
+    </td>
+    <td>   <p>0.45</p>
+    </td>
+    <td>   <p>62.77</p>
+    </td>
+    <td>   <p>23.70</p>
+    </td>
+    <td>   <p>5.55</p>
+    </td>
+    <td>   <p>1.6</p>
+    </td>
+    <td>   <p>19.2</p>
+    </td>
+    <td>   <p>188</p>
+    </td>
+    <td>   <p>24.4</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>25</p>
+    </td>
+    <td>   <p>36</p>
+    </td>
+    <td>   <p>347</p>
+    </td>
+    <td>   <p>952</p>
+    </td>
+    <td>   <p>2.9</p>
+    </td>
+    <td>   <p>0.10</p>
+    </td>
+    <td>   <p>62.40</p>
+    </td>
+    <td>   <p>23.70</p>
+    </td>
+    <td>   <p>12.50</p>
+    </td>
+    <td>   <p>4.3</p>
+    </td>
+    <td>   <p>35.7</p>
+    </td>
+    <td>   <p>298</p>
+    </td>
+    <td>   <p>19.6</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>26</p>
+    </td>
+    <td>   <p>48</p>
+    </td>
+    <td>   <p>314</p>
+    </td>
+    <td>   <p>902</p>
+    </td>
+    <td>   <p>3.2</p>
+    </td>
+    <td>   <p>0.14</p>
+    </td>
+    <td>   <p>59.40</p>
+    </td>
+    <td>   <p>24.20</p>
+    </td>
+    <td>   <p>10.50</p>
+    </td>
+    <td>   <p>4.2</p>
+    </td>
+    <td>   <p>33.5</p>
+    </td>
+    <td>   <p>287</p>
+    </td>
+    <td>   <p>18.8</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>27</p>
+    </td>
+    <td>   <p>42</p>
+    </td>
+    <td>   <p>352</p>
+    </td>
+    <td>   <p>875</p>
+    </td>
+    <td>   <p>3.2</p>
+    </td>
+    <td>   <p>0.16</p>
+    </td>
+    <td>   <p>52.30</p>
+    </td>
+    <td>   <p>22.70</p>
+    </td>
+    <td>   <p>9.50</p>
+    </td>
+    <td>   <p>3.9</p>
+    </td>
+    <td>   <p>38.2</p>
+    </td>
+    <td>   <p>322</p>
+    </td>
+    <td>   <p>19.0</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>28</p>
+    </td>
+    <td>   <p>40</p>
+    </td>
+    <td>   <p>323</p>
+    </td>
+    <td>   <p>1040</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>0.20</p>
+    </td>
+    <td>   <p>59.60</p>
+    </td>
+    <td>   <p>25.20</p>
+    </td>
+    <td>   <p>8.80</p>
+    </td>
+    <td>   <p>3.2</p>
+    </td>
+    <td>   <p>30.4</p>
+    </td>
+    <td>   <p>290</p>
+    </td>
+    <td>   <p>18.2</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d2  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>29</p>
+    </td>
+    <td>   <p>41</p>
+    </td>
+    <td>   <p>377</p>
+    </td>
+    <td>   <p>988</p>
+    </td>
+    <td>   <p>2.9</p>
+    </td>
+    <td>   <p>0.09</p>
+    </td>
+    <td>   <p>60.40</p>
+    </td>
+    <td>   <p>24.30</p>
+    </td>
+    <td>   <p>10.20</p>
+    </td>
+    <td>   <p>3.4</p>
+    </td>
+    <td>   <p>32.5</p>
+    </td>
+    <td>   <p>275</p>
+    </td>
+    <td>   <p>17.7</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>30</p>
+    </td>
+    <td>   <p>34</p>
+    </td>
+    <td>   <p>309</p>
+    </td>
+    <td>   <p>932</p>
+    </td>
+    <td>   <p>3.2</p>
+    </td>
+    <td>   <p>0.15</p>
+    </td>
+    <td>   <p>60.80</p>
+    </td>
+    <td>   <p>25.40</p>
+    </td>
+    <td>   <p>9.40</p>
+    </td>
+    <td>   <p>4.4</p>
+    </td>
+    <td>   <p>31.5</p>
+    </td>
+    <td>   <p>312</p>
+    </td>
+    <td>   <p>18.5</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>31</p>
+    </td>
+    <td>   <p>52</p>
+    </td>
+    <td>   <p>279</p>
+    </td>
+    <td>   <p>1056</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>0.09</p>
+    </td>
+    <td>   <p>59.90</p>
+    </td>
+    <td>   <p>21.30</p>
+    </td>
+    <td>   <p>8.80</p>
+    </td>
+    <td>   <p>3.7</p>
+    </td>
+    <td>   <p>33.4</p>
+    </td>
+    <td>   <p>334</p>
+    </td>
+    <td>   <p>18.7</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+    <td>   <p>d1</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>32</p>
+    </td>
+    <td>   <p>44</p>
+    </td>
+    <td>   <p>376</p>
+    </td>
+    <td>   <p>895</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>0.18</p>
+    </td>
+    <td>   <p>61.50</p>
+    </td>
+    <td>   <p>23.60</p>
+    </td>
+    <td>   <p>9.50</p>
+    </td>
+    <td>   <p>3.6</p>
+    </td>
+    <td>   <p>30.4</p>
+    </td>
+    <td>   <p>312</p>
+    </td>
+    <td>   <p>20.1</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>33</p>
+    </td>
+    <td>   <p>46</p>
+    </td>
+    <td>   <p>304</p>
+    </td>
+    <td>   <p>929</p>
+    </td>
+    <td>   <p>2.6</p>
+    </td>
+    <td>   <p>0.22</p>
+    </td>
+    <td>   <p>58.20</p>
+    </td>
+    <td>   <p>25.10</p>
+    </td>
+    <td>   <p>10.70</p>
+    </td>
+    <td>   <p>3.8</p>
+    </td>
+    <td>   <p>32.5</p>
+    </td>
+    <td>   <p>346</p>
+    </td>
+    <td>   <p>19.2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>34</p>
+    </td>
+    <td>   <p>46</p>
+    </td>
+    <td>   <p>292</p>
+    </td>
+    <td>   <p>904</p>
+    </td>
+    <td>   <p>2.2</p>
+    </td>
+    <td>   <p>0.24</p>
+    </td>
+    <td>   <p>56.00</p>
+    </td>
+    <td>   <p>27.90</p>
+    </td>
+    <td>   <p>10.10</p>
+    </td>
+    <td>   <p>4.0</p>
+    </td>
+    <td>   <p>29.3</p>
+    </td>
+    <td>   <p>290</p>
+    </td>
+    <td>   <p>18.5</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>35</p>
+    </td>
+    <td>   <p>42</p>
+    </td>
+    <td>   <p>276</p>
+    </td>
+    <td>   <p>885</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>0.25</p>
+    </td>
+    <td>   <p>61.40</p>
+    </td>
+    <td>   <p>29.40</p>
+    </td>
+    <td>   <p>11.20</p>
+    </td>
+    <td>   <p>3.6</p>
+    </td>
+    <td>   <p>27.8</p>
+    </td>
+    <td>   <p>226</p>
+    </td>
+    <td>   <p>20.8</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>36</p>
+    </td>
+    <td>   <p>31</p>
+    </td>
+    <td>   <p>311</p>
+    </td>
+    <td>   <p>930</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>0.19</p>
+    </td>
+    <td>   <p>62.50</p>
+    </td>
+    <td>   <p>23.80</p>
+    </td>
+    <td>   <p>9.80</p>
+    </td>
+    <td>   <p>2.9</p>
+    </td>
+    <td>   <p>25.6</p>
+    </td>
+    <td>   <p>249</p>
+    </td>
+    <td>   <p>21.0</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d1  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>37</p>
+    </td>
+    <td>   <p>44</p>
+    </td>
+    <td>   <p>335</p>
+    </td>
+    <td>   <p>992</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>0.22</p>
+    </td>
+    <td>   <p>61.60</p>
+    </td>
+    <td>   <p>24.70</p>
+    </td>
+    <td>   <p>9.90</p>
+    </td>
+    <td>   <p>3.3</p>
+    </td>
+    <td>   <p>24.6</p>
+    </td>
+    <td>   <p>255</p>
+    </td>
+    <td>   <p>20.3</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>38</p>
+    </td>
+    <td>   <p>47</p>
+    </td>
+    <td>   <p>346</p>
+    </td>
+    <td>   <p>873</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>0.18</p>
+    </td>
+    <td>   <p>57.70</p>
+    </td>
+    <td>   <p>22.50</p>
+    </td>
+    <td>   <p>10.60</p>
+    </td>
+    <td>   <p>3.7</p>
+    </td>
+    <td>   <p>28.7</p>
+    </td>
+    <td>   <p>267</p>
+    </td>
+    <td>   <p>18.8</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+    <td>   <p>d2</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>39</p>
+    </td>
+    <td>   <p>48</p>
+    </td>
+    <td>   <p>288</p>
+    </td>
+    <td>   <p>804</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>0.27</p>
+    </td>
+    <td>   <p>60.00</p>
+    </td>
+    <td>   <p>22.20</p>
+    </td>
+    <td>   <p>11.50</p>
+    </td>
+    <td>   <p>3.5</p>
+    </td>
+    <td>   <p>20.9</p>
+    </td>
+    <td>   <p>275</p>
+    </td>
+    <td>   <p>19.5</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>40</p>
+    </td>
+    <td>   <p>50</p>
+    </td>
+    <td>   <p>316</p>
+    </td>
+    <td>   <p>875</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>0.31</p>
+    </td>
+    <td>   <p>61.40</p>
+    </td>
+    <td>   <p>24.00</p>
+    </td>
+    <td>   <p>9.30</p>
+    </td>
+    <td>   <p>2.8</p>
+    </td>
+    <td>   <p>22.5</p>
+    </td>
+    <td>   <p>302</p>
+    </td>
+    <td>   <p>21.2</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d4  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>41</p>
+    </td>
+    <td>   <p>51</p>
+    </td>
+    <td>   <p>292</p>
+    </td>
+    <td>   <p>774</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>0.28</p>
+    </td>
+    <td>   <p>62.50</p>
+    </td>
+    <td>   <p>25.90</p>
+    </td>
+    <td>   <p>8.80</p>
+    </td>
+    <td>   <p>3.0</p>
+    </td>
+    <td>   <p>26.7</p>
+    </td>
+    <td>   <p>277</p>
+    </td>
+    <td>   <p>22.5</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d4  *</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>42</p>
+    </td>
+    <td>   <p>54</p>
+    </td>
+    <td>   <p>315</p>
+    </td>
+    <td>   <p>766</p>
+    </td>
+    <td>   <p>2.2</p>
+    </td>
+    <td>   <p>0.22</p>
+    </td>
+    <td>   <p>53.70</p>
+    </td>
+    <td>   <p>26.20</p>
+    </td>
+    <td>   <p>8.70</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>21.4</p>
+    </td>
+    <td>   <p>265</p>
+    </td>
+    <td>   <p>20.5</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d4  *</p>
+    </td>
+   </tr>
+  </tbody></table>
+   <p>Продолжение табл. 8.10. Сравнение модельного и верифицированного диагнозов</p>
+   <table border="1" cellpadding="2" cellspacing="2">  <tbody><tr>   <td>   <p>&nbsp;</p>
+    </td>
+    <td colspan="12">   <p>Параметры состояния   больного</p>
+    </td>
+    <td colspan="2">   <p>Диагноз</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>№</p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image154.gif" align="absmiddle" height="22" width="17"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image155.gif" align="absmiddle" height="22" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image156.gif" align="absmiddle" height="23" width="19"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image157.gif" align="absmiddle" height="22" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image158.gif" align="absmiddle" height="23" width="19"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image159.gif" align="absmiddle" height="23" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image160.gif" align="absmiddle" height="23" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image161.gif" align="absmiddle" height="23" width="19"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image162.gif" align="absmiddle" height="23" width="20"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image163.gif" align="absmiddle" height="23" width="25"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image164.gif" align="absmiddle" height="22" width="24"></p>
+    </td>
+    <td>   <p><img src="8_2.php_files/image165.gif" align="absmiddle" height="22" width="25"></p>
+    </td>
+    <td>   <p>1)</p>
+    </td>
+    <td>   <p>2)</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>43</p>
+    </td>
+    <td>   <p>40</p>
+    </td>
+    <td>   <p>300</p>
+    </td>
+    <td>   <p>865</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>0.25</p>
+    </td>
+    <td>   <p>59.40</p>
+    </td>
+    <td>   <p>25.80</p>
+    </td>
+    <td>   <p>9.30</p>
+    </td>
+    <td>   <p>3.5</p>
+    </td>
+    <td>   <p>21.9</p>
+    </td>
+    <td>   <p>303</p>
+    </td>
+    <td>   <p>21.4</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>44</p>
+    </td>
+    <td>   <p>36</p>
+    </td>
+    <td>   <p>270</p>
+    </td>
+    <td>   <p>777</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>0.28</p>
+    </td>
+    <td>   <p>61.00</p>
+    </td>
+    <td>   <p>26.10</p>
+    </td>
+    <td>   <p>9.70</p>
+    </td>
+    <td>   <p>4.1</p>
+    </td>
+    <td>   <p>22.3</p>
+    </td>
+    <td>   <p>316</p>
+    </td>
+    <td>   <p>21.3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>45</p>
+    </td>
+    <td>   <p>34</p>
+    </td>
+    <td>   <p>275</p>
+    </td>
+    <td>   <p>859</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>0.30</p>
+    </td>
+    <td>   <p>62.50</p>
+    </td>
+    <td>   <p>27.00</p>
+    </td>
+    <td>   <p>9.60</p>
+    </td>
+    <td>   <p>4.2</p>
+    </td>
+    <td>   <p>24.0</p>
+    </td>
+    <td>   <p>295</p>
+    </td>
+    <td>   <p>22.5</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+    <td>   <p>d3</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>46</p>
+    </td>
+    <td>   <p>52</p>
+    </td>
+    <td>   <p>261</p>
+    </td>
+    <td>   <p>776</p>
+    </td>
+    <td>   <p>1.7</p>
+    </td>
+    <td>   <p>0.36</p>
+    </td>
+    <td>   <p>65.00</p>
+    </td>
+    <td>   <p>22.50</p>
+    </td>
+    <td>   <p>8.40</p>
+    </td>
+    <td>   <p>2.7</p>
+    </td>
+    <td>   <p>20.4</p>
+    </td>
+    <td>   <p>204</p>
+    </td>
+    <td>   <p>23.8</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>47</p>
+    </td>
+    <td>   <p>41</p>
+    </td>
+    <td>   <p>258</p>
+    </td>
+    <td>   <p>785</p>
+    </td>
+    <td>   <p>1.5</p>
+    </td>
+    <td>   <p>0.36</p>
+    </td>
+    <td>   <p>62.70</p>
+    </td>
+    <td>   <p>23.80</p>
+    </td>
+    <td>   <p>7.60</p>
+    </td>
+    <td>   <p>2.5</p>
+    </td>
+    <td>   <p>19.8</p>
+    </td>
+    <td>   <p>225</p>
+    </td>
+    <td>   <p>24.0</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>48</p>
+    </td>
+    <td>   <p>53</p>
+    </td>
+    <td>   <p>290</p>
+    </td>
+    <td>   <p>845</p>
+    </td>
+    <td>   <p>1.8</p>
+    </td>
+    <td>   <p>0.39</p>
+    </td>
+    <td>   <p>57.10</p>
+    </td>
+    <td>   <p>24.00</p>
+    </td>
+    <td>   <p>7.20</p>
+    </td>
+    <td>   <p>2.5</p>
+    </td>
+    <td>   <p>18.7</p>
+    </td>
+    <td>   <p>268</p>
+    </td>
+    <td>   <p>22.5</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>49</p>
+    </td>
+    <td>   <p>39</p>
+    </td>
+    <td>   <p>203</p>
+    </td>
+    <td>   <p>723</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>0.40</p>
+    </td>
+    <td>   <p>58.50</p>
+    </td>
+    <td>   <p>23.70</p>
+    </td>
+    <td>   <p>6.20</p>
+    </td>
+    <td>   <p>2.8</p>
+    </td>
+    <td>   <p>17.1</p>
+    </td>
+    <td>   <p>209</p>
+    </td>
+    <td>   <p>24.7</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>50</p>
+    </td>
+    <td>   <p>45</p>
+    </td>
+    <td>   <p>244</p>
+    </td>
+    <td>   <p>802</p>
+    </td>
+    <td>   <p>1.7</p>
+    </td>
+    <td>   <p>0.35</p>
+    </td>
+    <td>   <p>62.00</p>
+    </td>
+    <td>   <p>25.30</p>
+    </td>
+    <td>   <p>6.30</p>
+    </td>
+    <td>   <p>3.0</p>
+    </td>
+    <td>   <p>18.5</p>
+    </td>
+    <td>   <p>212</p>
+    </td>
+    <td>   <p>24.9</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>51</p>
+    </td>
+    <td>   <p>46</p>
+    </td>
+    <td>   <p>233</p>
+    </td>
+    <td>   <p>795</p>
+    </td>
+    <td>   <p>1.9</p>
+    </td>
+    <td>   <p>0.39</p>
+    </td>
+    <td>   <p>57.90</p>
+    </td>
+    <td>   <p>24.90</p>
+    </td>
+    <td>   <p>5.20</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>17.4</p>
+    </td>
+    <td>   <p>251</p>
+    </td>
+    <td>   <p>23.5</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>52</p>
+    </td>
+    <td>   <p>54</p>
+    </td>
+    <td>   <p>262</p>
+    </td>
+    <td>   <p>805</p>
+    </td>
+    <td>   <p>1.8</p>
+    </td>
+    <td>   <p>0.38</p>
+    </td>
+    <td>   <p>57.90</p>
+    </td>
+    <td>   <p>24.50</p>
+    </td>
+    <td>   <p>7.70</p>
+    </td>
+    <td>   <p>2.2</p>
+    </td>
+    <td>   <p>19.2</p>
+    </td>
+    <td>   <p>244</p>
+    </td>
+    <td>   <p>22.1</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+    <td>   <p>d4</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>53</p>
+    </td>
+    <td>   <p>51</p>
+    </td>
+    <td>   <p>245</p>
+    </td>
+    <td>   <p>595</p>
+    </td>
+    <td>   <p>1.3</p>
+    </td>
+    <td>   <p>0.44</p>
+    </td>
+    <td>   <p>64.20</p>
+    </td>
+    <td>   <p>26.40</p>
+    </td>
+    <td>   <p>5.60</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>16.5</p>
+    </td>
+    <td>   <p>204</p>
+    </td>
+    <td>   <p>24.7</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>54</p>
+    </td>
+    <td>   <p>40</p>
+    </td>
+    <td>   <p>209</p>
+    </td>
+    <td>   <p>772</p>
+    </td>
+    <td>   <p>1.5</p>
+    </td>
+    <td>   <p>0.45</p>
+    </td>
+    <td>   <p>60.20</p>
+    </td>
+    <td>   <p>27.80</p>
+    </td>
+    <td>   <p>5.90</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>14.7</p>
+    </td>
+    <td>   <p>195</p>
+    </td>
+    <td>   <p>25.0</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>55</p>
+    </td>
+    <td>   <p>42</p>
+    </td>
+    <td>   <p>198</p>
+    </td>
+    <td>   <p>621</p>
+    </td>
+    <td>   <p>1.4</p>
+    </td>
+    <td>   <p>0.42</p>
+    </td>
+    <td>   <p>58.80</p>
+    </td>
+    <td>   <p>25.20</p>
+    </td>
+    <td>   <p>6.10</p>
+    </td>
+    <td>   <p>2.6</p>
+    </td>
+    <td>   <p>12.2</p>
+    </td>
+    <td>   <p>225</p>
+    </td>
+    <td>   <p>24.5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>56</p>
+    </td>
+    <td>   <p>44</p>
+    </td>
+    <td>   <p>245</p>
+    </td>
+    <td>   <p>523</p>
+    </td>
+    <td>   <p>1.5</p>
+    </td>
+    <td>   <p>0.39</p>
+    </td>
+    <td>   <p>57.50</p>
+    </td>
+    <td>   <p>23.30</p>
+    </td>
+    <td>   <p>6.50</p>
+    </td>
+    <td>   <p>2.2</p>
+    </td>
+    <td>   <p>14.1</p>
+    </td>
+    <td>   <p>207</p>
+    </td>
+    <td>   <p>26.9</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>57</p>
+    </td>
+    <td>   <p>50</p>
+    </td>
+    <td>   <p>237</p>
+    </td>
+    <td>   <p>652</p>
+    </td>
+    <td>   <p>1.6</p>
+    </td>
+    <td>   <p>0.45</p>
+    </td>
+    <td>   <p>63.70</p>
+    </td>
+    <td>   <p>24.70</p>
+    </td>
+    <td>   <p>6.40</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>11.9</p>
+    </td>
+    <td>   <p>262</p>
+    </td>
+    <td>   <p>24.2</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>58</p>
+    </td>
+    <td>   <p>56</p>
+    </td>
+    <td>   <p>202</p>
+    </td>
+    <td>   <p>744</p>
+    </td>
+    <td>   <p>1.3</p>
+    </td>
+    <td>   <p>0.45</p>
+    </td>
+    <td>   <p>61.80</p>
+    </td>
+    <td>   <p>25.70</p>
+    </td>
+    <td>   <p>5.70</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>12.3</p>
+    </td>
+    <td>   <p>226</p>
+    </td>
+    <td>   <p>22.6</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>59</p>
+    </td>
+    <td>   <p>51</p>
+    </td>
+    <td>   <p>247</p>
+    </td>
+    <td>   <p>723</p>
+    </td>
+    <td>   <p>1.2</p>
+    </td>
+    <td>   <p>0.38</p>
+    </td>
+    <td>   <p>62.50</p>
+    </td>
+    <td>   <p>26.90</p>
+    </td>
+    <td>   <p>5.60</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>10.4</p>
+    </td>
+    <td>   <p>230</p>
+    </td>
+    <td>   <p>25.8</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+    <td>   <p>d5</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>60</p>
+    </td>
+    <td>   <p>48</p>
+    </td>
+    <td>   <p>192</p>
+    </td>
+    <td>   <p>516</p>
+    </td>
+    <td>   <p>1.1</p>
+    </td>
+    <td>   <p>0.52</p>
+    </td>
+    <td>   <p>60.10</p>
+    </td>
+    <td>   <p>22.70</p>
+    </td>
+    <td>   <p>5.50</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>9.9</p>
+    </td>
+    <td>   <p>200</p>
+    </td>
+    <td>   <p>22.9</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>61</p>
+    </td>
+    <td>   <p>39</p>
+    </td>
+    <td>   <p>188</p>
+    </td>
+    <td>   <p>446</p>
+    </td>
+    <td>   <p>1.2</p>
+    </td>
+    <td>   <p>0.48</p>
+    </td>
+    <td>   <p>59.00</p>
+    </td>
+    <td>   <p>23.50</p>
+    </td>
+    <td>   <p>5.20</p>
+    </td>
+    <td>   <p>2.4</p>
+    </td>
+    <td>   <p>9.5</p>
+    </td>
+    <td>   <p>212</p>
+    </td>
+    <td>   <p>26.7</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>62</p>
+    </td>
+    <td>   <p>49</p>
+    </td>
+    <td>   <p>212</p>
+    </td>
+    <td>   <p>406</p>
+    </td>
+    <td>   <p>0.9</p>
+    </td>
+    <td>   <p>0.56</p>
+    </td>
+    <td>   <p>61.70</p>
+    </td>
+    <td>   <p>26.00</p>
+    </td>
+    <td>   <p>5.30</p>
+    </td>
+    <td>   <p>1.9</p>
+    </td>
+    <td>   <p>8.2</p>
+    </td>
+    <td>   <p>225</p>
+    </td>
+    <td>   <p>29.4</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>63</p>
+    </td>
+    <td>   <p>45</p>
+    </td>
+    <td>   <p>247</p>
+    </td>
+    <td>   <p>527</p>
+    </td>
+    <td>   <p>0.7</p>
+    </td>
+    <td>   <p>0.51</p>
+    </td>
+    <td>   <p>62.60</p>
+    </td>
+    <td>   <p>27.40</p>
+    </td>
+    <td>   <p>5.10</p>
+    </td>
+    <td>   <p>2.0</p>
+    </td>
+    <td>   <p>7.4</p>
+    </td>
+    <td>   <p>197</p>
+    </td>
+    <td>   <p>28.5</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>64</p>
+    </td>
+    <td>   <p>44</p>
+    </td>
+    <td>   <p>206</p>
+    </td>
+    <td>   <p>448</p>
+    </td>
+    <td>   <p>0.8</p>
+    </td>
+    <td>   <p>0.55</p>
+    </td>
+    <td>   <p>57.40</p>
+    </td>
+    <td>   <p>22.10</p>
+    </td>
+    <td>   <p>6.30</p>
+    </td>
+    <td>   <p>2.1</p>
+    </td>
+    <td>   <p>7.4</p>
+    </td>
+    <td>   <p>188</p>
+    </td>
+    <td>   <p>30.1</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+   <tr>   <td>   <p>65</p>
+    </td>
+    <td>   <p>42</p>
+    </td>
+    <td>   <p>228</p>
+    </td>
+    <td>   <p>512</p>
+    </td>
+    <td>   <p>1.0</p>
+    </td>
+    <td>   <p>0.52</p>
+    </td>
+    <td>   <p>53.90</p>
+    </td>
+    <td>   <p>25.60</p>
+    </td>
+    <td>   <p>5.40</p>
+    </td>
+    <td>   <p>2.3</p>
+    </td>
+    <td>   <p>7.8</p>
+    </td>
+    <td>   <p>204</p>
+    </td>
+    <td>   <p>29.5</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+    <td>   <p>d6</p>
+    </td>
+   </tr>
+  </tbody></table>
+   <p><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+   <p>1) врачебный диагноз,</p>
+   <p>2) компьютерный диагноз.</p>
+   
+   
+ 
+
+
+
+ 
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_3.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/8_1.php">К предыдущему разделу </a></p>
+ 
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="8_2.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="8_2.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="8_2.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="8_2.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="8_2.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

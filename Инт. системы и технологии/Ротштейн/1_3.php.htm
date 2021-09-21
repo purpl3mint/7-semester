@@ -1,0 +1,676 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="1_3.php_files/default.css" type="text/css"></head><body leftmargin="0" topmargin="0" background="1_3.php_files/1_3.htm" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="1_3.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="1_3.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="1_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="1_3.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="1_3.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="1_3.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="1_3.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="1_3.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="1_3.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="1_3.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="1_3.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="1_3.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="1_3.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="1_3.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="1_3.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/1_3.php"><span class="text1">Вход</span></a></td>
+<td><img src="1_3.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+  <tbody><tr>
+   <td width="10"></td>
+    <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+    <p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php">К предыдущему разделу </a></p>
+ 
+<p><b>1.3. Нейронные сети</b></p>
+
+  <p>Этот раздел написан по
+материалам работ [8,12,60]. С дополнительными сведениями по нейронным
+сетям можно познакомиться в работах [1,4,19,65, 76,78,79,82]. </p>
+
+
+  <p><b><a name="1"></a>1.3.1. Основные понятия </b></p>
+
+  <p>Проблема
+машинной имитации человеческих мыслей воодушевляет ученых уже несколько
+столетий. Более 50 лет назад были созданы первые электронные модели
+нервных клеток. Кроме того, появлялись много работ по новым
+математическим моделям и обучающим алгоритмам. Сегодня так называемые <i>нейронные сети</i> представляют наибольший интерес в этой области. Они используют множество простых вычислительных элементов, называемых <i>нейронами</i>, каждый из которых имитирует поведение отдельной клетки человеческого мозга. Принято считать, что человеческий мозг - это <i>естественная нейронная сеть</i>, а модель мозга - это просто <i>нейронная сеть</i>. На рис. 1.9 показана базовая структура такой нейронной сети. </p>
+  <p><a name="_975405467"></a><b><img src="1_3.php_files/image001.gif" height="296" width="642"></b><b> </b></p>
+
+  <p>Рис. 1.9. Базовая структура нейронной сети</p>
+
+  <p>Каждый
+нейрон в нейронной сети осуществляет преобразование входных сигналов в
+выходной сигнал и связан с другими нейронами. Входные нейроны формируют
+так называемый интерфейс нейронной сети. Нейронная сеть, показанная на
+рис. 1.9, имеет слой, принимающий входные сигналы, и слой, генерирующий
+выходные сигналы. Информация вводится в нейронную сеть через входной
+слой. Все слои нейронной сети обрабатывают эти сигналы до тех пор, пока
+они не достигнут выходного слоя. </p>
+  <p>Задача нейронной сети -
+преобразование информации требуемым образом. Для этого сеть
+предварительно обучается. При обучении используются идеальные
+(эталонные) значения пар &lt;входы-выходы&gt; или &lt;учитель&gt;,
+который оценивает поведение нейронной сети. Для обучения используется
+так называемый обучающий алгоритм. Ненастроенная нейронная сеть не
+способна отображать желаемого поведения. Обучающий алгоритм
+модифицирует отдельные нейроны сети и веса ее связей таким образом,
+чтобы поведение сети соответствовало желаемому поведению. </p>
+
+
+  <p><b><a name="2"></a>1.3.2. Имитация нервных клеток</b></p>
+
+  <p>Исследователи
+в области нейронных сетей проанализировали множество моделей клеток
+человеческого мозга. Далее будут рассмотрены лишь те из них, которые
+наиболее часто используются в промышленных применениях. </p>
+  <p>Человеческий мозг состоит из более чем 10<sup>11</sup> нервных клеток, имеющих более 10<sup>14</sup>
+взаимосвязей. На рис. 1.10 показана упрощенная схема такого
+человеческого нейрона. Сама по себе клетка состоит из ядра и внешней
+электромембраны. Каждый нейрон имеет уровень активации, лежащий в
+диапазоне между максимумом и минимумом, следовательно, в отличие от
+булевой логики, существует более чем два уровня активации. </p>
+  <p>Для увеличения или уменьшения активности данного нейрона другими нейронами существуют так называемые <i>синапсы</i>.
+Они переносят величину активности от нейрона-отправителя к
+нейрону-получателю. Если синапс является возбуждающим, то величина
+активности нейрона-отправителя увеличивает активность
+нейрона-получателя. Если синапс является тормозящим, то величина
+активности нейрона-отправителя уменьшает активность нейрона-получателя.
+Синапсы различаются не только по признаку торможения или возбуждения
+нейрона-получателя, но также и по суммарному воздействию (синаптическая
+мощность). Выходной сигнал каждого нейрона передается по так
+называемому <i>аксону</i>, который заканчивается более чем 10000 синапсами, влияющими на другие нейроны. </p>
+  <p>Рассмотренная
+модель нейрона лежит в основе большинства сегодняшних применений
+нейронной сети. Отметим , что данная модель является лишь очень грубым
+приближением действительности. На самом деле мы не можем смоделировать
+даже один единственный человеческий нейрон; это выше человеческих
+возможностей в моделировании. Следовательно, любая работа, базирующаяся
+на этой простой модели нейрона, не способна точно имитировать
+человеческий мозг. Однако многие успешные применения, использующие этот
+метод, обеспечили успех нейронным сетям, базирующимся на простой модели
+нейрона. </p>
+  <p><b><img src="1_3.php_files/image002.gif" height="215" width="643"></b></p>
+  <p>Рис. 1.10. Упрощенная схема человеческого нейрона.</p>
+
+
+  <p><a name="3"></a><strong>1.3.3. Математическая модель нейрона</strong></p>
+
+  <p>Множество
+математических моделей нейрона может быть построено на базе простой
+концепции строения нейрона. На рис. 1.11 показана наиболее общая схема.
+Так называемая суммирующая функция объединяет все входные сигналы <img src="1_3.php_files/image003.gif" align="absmiddle" height="31" width="28">, которые поступают от нейронов-отправителей. Значением такого объединения является взвешенная сумма, где веса <img src="1_3.php_files/image004.gif" align="absmiddle" height="31" width="24">
+представляют собой синаптические мощности. Возбуждающие синапсы имеют
+положительные веса, а тормозящие синапсы - отрицательные веса. Для
+выражения нижнего уровня активации нейрона к взвешенной сумме
+прибавляется компенсация (смеще-ние)&nbsp;<span style="font-size: 14pt; font-family: Symbol;">Q</span>.</p>
+  <p><b><img src="1_3.php_files/image005.gif" height="334" width="644"></b></p>
+  <p>Рис. 1.11. Простая математическая модель нейрона.</p>
+  <p>Так называемая функция активации рассчитывает выходной сигнал нейрона <i>Y </i>по уровню активности <i>f</i>.
+Функция активации обычно является сигмоидной, как показано в правой
+нижней рамке на рис.1.11. Другими возможными видами функций активации
+являются линейная и радиально-симметричная функции, показанные на
+рис.1.12. </p>
+
+
+  <p><img src="1_3.php_files/image006.gif" height="154" width="548"></p>
+  <p>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; а) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; б)</p>
+
+  <p>Рис. 1.12. Функции активации нейронов: </p>
+  <p>(а) линейная, (б) радиально-симметрическая</p>
+
+
+
+  <p><b><a name="4"></a>1.3.4. Обучение нейронных сетей</b></p>
+
+  <p>Существует множество способов построения нейронных сетей. Они различаются своей архитектурой и методами обучения. </p>
+  <p>Первый
+шаг в проектировании нейронной сети состоит в ее обучении желаемому
+поведению. Это - фаза обучения. Для этого используется так называемая <i>обучающая выборка</i> или <i>учитель</i>.
+Учитель - это либо математическая функция, либо лицо, которое оценивает
+качество поведения нейронной сети. Поскольку нейронные сети в основном
+используются в сложных применениях, где нет хороших математических
+моделей, то обучения производится с помощью обучающей выборки, то есть
+эталонных пар &lt;входы-выходы&gt;. </p>
+  <p>После завершения
+обучения нейронная сеть готова к использованию. Это - рабочая фаза. В
+результате обучения нейронная сеть будет вычислять выходные сигналы,
+близкие к эталонным данным при соответствующих входных сигналах. При
+промежуточных входных сигналах сеть аппроксимирует необходимые выходные
+величины. Поведение нейронной сети в рабочей фазе детерминировано, то
+есть для каждой комбинации входных сигналов на выходе всегда будут одни
+и те же сигналы. На протяжение рабочей фазы нейронная сеть не
+обучается. Это очень важно для большинства технических применений,
+поскольку система не будет стремиться к экстремальному поведению. </p>
+  <p>Собаки
+Павлова. Как же обучается нейронная сеть? Как правило, это
+демонстрируется на примере известных собак Павлова. Когда он показывал
+собакам еду, у них выделялась слюна. В собачьих клетках устанавливались
+звоночки. Когда звонил звоночек, у собак не выделялась слюна,
+т.&nbsp;е. они не видели связи между звонком и едой. Тогда Павлов стал
+обучать собак иначе, каждый раз используя звоночек при предъявлении
+пищи. После этого, даже при отсутствии еды, наличие звоночка вызывало у
+собак слюну.</p>
+  <p>На рис. 1.13 показано, как простая модель
+нейрона может быть представлена на примере собаки Павлова. Имеется два
+входных нейрона: один из них соответствует тому, что собака видит пищу,
+другой - наличию звонка. Оба входных нейрона имеют связи с выходным
+нейроном. Эти связи соответствуют синапсам, а толщина линий - весам
+синапсов. Перед обучением собака реагирует лишь на еду, но не на
+звонок. Следовательно, линия между левым входным и выходным нейронами
+является жирной, в то время как линия между правым входным и выходным
+нейронами является очень тонкой. </p>
+
+  <p><b><img src="1_3.php_files/image007.gif" height="267" width="644"></b></p>
+  <p>Рис. 1.13. Принцип эксперимента Павлова над собаками. </p>
+
+
+  <p>Правило
+обучения Хебба. Совершенно очевидно, что звонок при предъявлении пищи
+вырабатывает ассоциацию между ним и едой. Следовательно, правая линия
+также становится толще, поскольку увеличивается вес синапса. На
+основании этих наблюдений Хебб в 1949 году предложил следующее
+обучающее правило:</p>
+  <p>Увеличивать вес активного входа нейрона, если выход этого нейрона должен быть активным. </p>
+  <p>Уменьшить вес активного входа нейрона, если выход этого нейрона не должен быть активным. </p>
+  <p>Это
+правило, названное правилом Хебба, предшествует всем обучающим
+правилам, включая наиболее используемый в настоящее время метод
+обратного распространения ошибки (error backpropagation algorithm). </p>
+  <p><a name="5"></a><b>1.3.5. Метод обратного распространения ошибки</b></p>
+
+  <p>Этот
+метод обучения многослойной нейронной сети называется обобщенным
+дельта-правилом или правилом error backpropagation (обратного
+распространения ошибки). Метод был предложен в 1986 г. Румельхартом,
+Макклеландом и Вильямсом. Это ознаменовало возрождение интереса к
+нейронным сетям, который стал угасать в начале 70-х годов. Позже было
+обнаружено, что Паркер опубликовал подобные результаты в 1982 г., а
+Вербос выполнил такую работу в 1984 г. Однако такова природа науки, что
+ученые, работающие независимо друг от друга, не могут использовать все
+то прогрессивное, что есть в других областях, и поэтому часто случается
+повторение уже достигнутого. Однако статья Руммельхарта и др.,
+опубликованная в журнале Nature (1986), является до сих пор наиболее
+цитируемой в этой области. </p>
+  <p>Обучение сети начинается с
+предъявления образа и вычисления соответствующей реакции. Сравнение с
+желаемой реакцией дает возможность изменять веса связей таким образом,
+чтобы сеть на следующем шаге могла выдавать более точный результат.
+Обучающее правило обеспечивает настройку весов связей. Информация о
+выходах сети является исходной для нейронов предыдущих слоев. Эти
+нейроны могут настраивать веса своих связей для уменьшения погрешности
+на следующем шаге. </p>
+  <p>Когда мы предъявляем ненастроенной сети
+входной образ, она будет выдавать некоторый случайный выход. Функция
+ошибки представляет собой разность между текущим выходом сети и
+идеальным выходом, который необходимо получить. Для успешного обучения
+сети требуется приблизить выход сети к желаемому выходу, т.&nbsp;е.
+последовательно уменьшать величину функции ошибки. Это достигается
+настройкой межнейронных связей. Обобщенное дельта-правило обучает сеть
+путем вычисления функции ошибки для заданного входа с последующим ее
+обратным распространением (вот откуда название&nbsp;!) от каждого слоя
+к предыдущему. Каждый нейрон в сети имеет свои веса, которые
+настраиваются, чтобы уменьшить величину функции ошибки. Для нейронов
+выходного слоя известны их фактические и желаемые значения выходов.
+Поэтому настройка весов связей для таких нейронов является относительно
+простой. Однако для нейронов предыдущих слоев настройка не столь
+очевидна. Интуитивно ясно, что нейроны внутренних слоев, которые
+связаны с выходами, имеющими большую погрешность, должны изменять свои
+веса значительно сильнее, чем нейроны, соединенные с почти корректными
+выходами. Другими словами, веса данного нейрона должны изменяться прямо
+пропорционально ошибке тех нейронов, с которыми данный нейрон связан.
+Вот почему обратное распространение этих ошибок через сеть позволяет
+корректно настраивать веса связей между всеми слоями. В этом случае
+величина функции ошибки уменьшается и сеть обучается. </p>
+  <p>Основные соотношения метода обратного распространения ошибки получены в [76] при следующих обозначениях: </p>
+
+  <p><img src="1_3.php_files/image008.gif" align="absmiddle" height="35" width="32">- величина функции ошибки для образа <i><img src="1_3.php_files/image009.gif" align="absmiddle" height="20" width="17"></i>;</p>
+  <p><img src="1_3.php_files/image010.gif" align="absmiddle" height="35" width="31">- желаемый выход нейрона <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15"> для образа <i><img src="1_3.php_files/image009.gif" align="absmiddle" height="20" width="17"></i>;</p>
+  <p><img src="1_3.php_files/image012.gif" align="absmiddle" height="35" width="35">- действительный выход нейрона <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15"> для образа <i><img src="1_3.php_files/image009.gif" align="absmiddle" height="20" width="17"></i>;</p>
+  <p><img src="1_3.php_files/image013.gif" align="absmiddle" height="35" width="31">- вес связи между <img src="1_3.php_files/image014.gif" align="absmiddle" height="19" width="12">-м и <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15">-м нейронами. </p>
+
+  <p>Пусть
+функция ошибки прямо пропорциональна квадрату разности между
+действительным и желательным выходами для всей обучающей выборки: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image015.gif" align="absmiddle" height="69" width="216">.</td>
+      <td align="right"> (1.1)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Множитель <img src="1_3.php_files/image016.gif" align="absmiddle" height="48" width="20"> вводится для упрощения операции дифференцирования. </p>
+  <p>Активация каждого нейрона <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15"> для образа <img src="1_3.php_files/image009.gif" align="absmiddle" height="20" width="17"> записывается в виде взвешенной суммы: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image017.gif" align="absmiddle" height="51" width="160">.</td>
+      <td align="right"> (1.2)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Выход каждого нейрона <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15"> является значением пороговой функции <img src="1_3.php_files/image018.gif" align="absmiddle" height="35" width="27">,
+которая активизируется взвешенной суммой. В многослойной сети это
+обычно сигмоидная функция, хотя может использоваться любая непрерывно
+дифференцируемая монотонная функция:</p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image019.gif" align="absmiddle" height="56" width="169">.</td>
+      <td align="right"> (1.3)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Можно записать по правилу цепочки: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image020.gif" align="absmiddle" height="73" width="203">.</td>
+      <td align="right"> (1.4)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Для второго сомножителя в (1.4), используя (1.2), получаем: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image021.gif" align="absmiddle" height="73" width="408">,</td>
+      <td align="right"> (1.5)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>поскольку <img src="1_3.php_files/image022.gif" align="absmiddle" height="73" width="81">, за исключением случая <img src="1_3.php_files/image023.gif" align="absmiddle" height="20" width="15">=<img src="1_3.php_files/image014.gif" align="absmiddle" height="19" width="12">, когда эта производная равна единице.</p>
+  <p>Изменение ошибки как функция изменения входов нейрона определяется так: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image024.gif" align="absmiddle" height="73" width="131">.</td>
+      <td align="right"> (1.6)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Поэтому (1.4) преобразуется к виду:</p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image025.gif" align="absmiddle" height="73" width="145">.</td>
+      <td align="right"> (1.7)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Следовательно, уменьшение величины <img src="1_3.php_files/image008.gif" align="absmiddle" height="35" width="32"> означает изменение веса пропорционально <img src="1_3.php_files/image026.gif" align="absmiddle" height="35" width="68">: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image027.gif" align="absmiddle" height="35" width="159">,</td>
+      <td align="right"> (1.8)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>где h - коэффициент пропорциональности, влияющий на скорость обучения.</p>
+  <p>Теперь нам необходимо знать значение <img src="1_3.php_files/image028.gif" align="absmiddle" height="35" width="35"> для каждого нейрона. Используя (1.6) и правило цепочки, можно записать: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image029.gif" align="absmiddle" height="73" width="279">.</td>
+      <td align="right"> (1.9)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Исходя из (1.3), записываем второй сомножитель в (1.9): </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image030.gif" align="absmiddle" height="73" width="193">.</td>
+      <td align="right">(1.10)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Теперь рассмотрим первый сомножитель в (1.9). Согласно (1.1), нетрудно получить: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image031.gif" align="absmiddle" height="73" width="189">.</td>
+      <td align="right">(1.11)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+  <p>Поэтому</p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image032.gif" align="absmiddle" height="49" width="271">.</td>
+      <td align="right">(1.12)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Последнее
+соотношение является полезным для выходных нейронов, поскольку для них
+известны целевые и действительные значения выходов. Однако для нейронов
+внутренних слоев целевые значения выходов не известны. </p>
+  <p>Таким образом, если нейрон <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15"><i> </i>- не выходной нейрон, то снова используя правило цепочки, а также соотношения (1.2) и (1.6), можно записать: </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image033.gif" align="absmiddle" height="73" width="481">,</td>
+      <td align="right">(1.13)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image034.gif" align="absmiddle" height="73" width="367">,</td>
+      <td align="right">(1.14)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Здесь сумма по <img src="1_3.php_files/image014.gif" align="absmiddle" height="19" width="12">
+исчезает, поскольку частная производная не равна нулю лишь в одном
+случае, так же как и в (1.5). Подставив (1.14) в (1.9), получим
+окончательное выражение:</p>
+
+  <p>
+  <table cellspasing="0" border="0" cellpadding="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="1_3.php_files/image035.gif" align="absmiddle" height="59" width="265">.</td>
+      <td align="right">(1.15)</td>
+    </tr><tr>
+  </tr></tbody></table>
+  </p>
+
+  <p>Уравнения (1.12) и (1.15) составляют основу метода обучения многослойной сети. </p>
+  <p>Преимущество
+использования сигмоидной функции в качестве нелинейного элемента
+состоит в том, что она очень напоминает шаговую функцию и, таким
+образом, может демонстрировать поведение, подобное естественному
+нейрону. Сигмоидная функция определяется как</p>
+
+  <p><img src="1_3.php_files/image036.gif" align="absmiddle" height="56" width="173"></p>
+
+  <p>и имеет диапазон 0 &lt; <i><img src="1_3.php_files/image037.gif" align="absmiddle" height="25" width="59"></i> &lt; 1. <img src="1_3.php_files/image023.gif" align="absmiddle" height="20" width="15"> - положительная константа, влияющая на растяжение функции: увеличение <img src="1_3.php_files/image023.gif" align="absmiddle" height="20" width="15"> сжимает функцию, а при <img src="1_3.php_files/image038.gif" align="absmiddle" height="20" width="55"> функция <i><img src="1_3.php_files/image037.gif" align="absmiddle" height="25" width="59"></i>
+приближается к функции Хевисайда. Этот коэффициент может использоваться
+в качестве параметра усиления, поскольку для слабых входных сигналов
+угол наклона будет довольно крутым и функция будет изменяться довольно
+быстро, производя значительное усиление сигнала. Для больших входных
+сигналов угол наклона и, соответственно, усиление будут намного
+меньшими. Это означает, что сеть может принимать большие сигналы и при
+этом оставаться чувствительной к слабым изменениям сигнала. </p>
+  <p>Однако
+главный смысл в использовании данной функции состоит в том, что она
+имеет простую производную, и это значительно облегчает применение
+backpropagation-метода. Если выход нейрона <img src="1_3.php_files/image012.gif" align="absmiddle" height="35" width="35"> задается как </p>
+
+  <p><img src="1_3.php_files/image039.gif" align="absmiddle" height="56" width="227"> ,</p>
+
+  <p>то производная по отношению к данному нейрону <img src="1_3.php_files/image040.gif" align="absmiddle" height="25" width="65"> вычисляется так:</p>
+
+  <p><img src="1_3.php_files/image041.gif" align="absmiddle" height="92" width="337"></p>
+
+  <p><img src="1_3.php_files/image042.gif" align="absmiddle" height="49" width="144"><img src="1_3.php_files/image043.gif" height="23" width="12">,</p>
+
+  <p>т.&nbsp;е. является простой функцией от выходов нейронов.</p>
+
+
+  <p><a name="6"></a>1.3.6. Алгоритм настройки нейронной сети</p>
+
+  <p>Ниже
+приведен алгоритм настройки многослойной нейронной сети с
+использованием backpropagation-правила обучения. Для его применения
+необходимо, чтобы нейроны имели непрерывно дифференцируемую нелинейную
+пороговую функцию активации. Пусть это будет сигмоидная функция <img src="1_3.php_files/image036.gif" align="absmiddle" height="56" width="173">, поскольку она имеет простую производную. </p>
+  <p>Алгоритм обучения состоит в следующем.</p>
+  <p>1°. Задать начальные значения весов и порогов каждого нейрона. </p>
+  <p>Всем весам и порогам присваиваются малые случайные значения. </p>
+  <p>2°. Представить входной и выходной образы из обучающей выборки. </p>
+  <p>Пусть </p>
+  <p><img src="1_3.php_files/image044.gif" align="absmiddle" height="43" width="219">- текущий входной образ,</p>
+  <p><img src="1_3.php_files/image045.gif" align="absmiddle" height="43" width="199"> - текущий выходной образ из обучающей выборки, где <img src="1_3.php_files/image046.gif" align="absmiddle" height="16" width="15"> - число нейронов входного слоя, <img src="1_3.php_files/image047.gif" align="absmiddle" height="16" width="19"> - число нейронов выходного слоя. При этом <img src="1_3.php_files/image048.gif" align="absmiddle" height="31" width="81"> (смещение) и <img src="1_3.php_files/image049.gif" align="absmiddle" height="31" width="56">. </p>
+  <p>При решении задач классификации образ <img src="1_3.php_files/image050.gif" align="absmiddle" height="35" width="28"> может состоять из нулей, кроме одного элемента, равного 1, который и будет определять класс текущего входного образа. </p>
+  <p>3°. Рассчитать действительные значения выходов<i>.</i> </p>
+  <p>Значения выходов нейронов каждого слоя рассчитываются как</p>
+
+  <p><img src="1_3.php_files/image051.gif" align="absmiddle" height="73" width="168"></p>
+
+  <p>и передаются на входы нейронов следующего слоя. Выходные значения нейронов выходного слоя равны <img src="1_3.php_files/image012.gif" align="absmiddle" height="35" width="35">.</p>
+  <p>4°.&nbsp;Провести модификацию весов связей. </p>
+  <p>Начиная от выходного слоя и, двигаясь в обратном направлении, необходимо изменять веса связей следующим образом: </p>
+
+  <p><img src="1_3.php_files/image052.gif" align="absmiddle" height="35" width="245"> ,</p>
+
+  <p>где<img src="1_3.php_files/image053.gif" align="absmiddle" height="35" width="35">- вес связи между <img src="1_3.php_files/image014.gif" align="absmiddle" height="19" width="12"><i>-</i>м и <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15">-м нейронами на <img src="1_3.php_files/image054.gif" align="absmiddle" height="17" width="12">-м шаге;</p>
+  <p>h - скорость обучения;</p>
+  <p><img src="1_3.php_files/image028.gif" align="absmiddle" height="35" width="35">- скорость изменения ошибки для нейрона <img src="1_3.php_files/image011.gif" align="absmiddle" height="23" width="15"> при предъявлении образа <img src="1_3.php_files/image009.gif" align="absmiddle" height="20" width="17">.</p>
+  <p>Для нейронов выходного слоя </p>
+
+  <p><img src="1_3.php_files/image055.gif" align="absmiddle" height="49" width="288"> ,</p>
+
+  <p>для нейронов внутренних слоев </p>
+
+  <p><img src="1_3.php_files/image056.gif" align="absmiddle" height="59" width="284"> ,</p>
+
+  <p>где под знаком суммы стоят величины, относящиеся к нейронам последующего слоя.</p>
+ 
+
+ 
+    <p></p>
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/2_1.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/1_2.php">К предыдущему разделу </a></p>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="1_3.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="1_3.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="1_3.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="1_3.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="1_3.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

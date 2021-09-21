@@ -1,0 +1,444 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>А.П.Ротштейн "Интеллектуальные технологии идентификации"</title>
+
+<meta name="Description" content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords" content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link rel="stylesheet" href="5_3.php_files/default.css" type="text/css"></head><body leftmargin="0" topmargin="0" background="5_3.php_files/5_3.htm" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td height="1"><img src="5_3.php_files/top100.gif" border="0" height="1"></td>
+</tr>
+</tbody></table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" height="116" width="780">
+<tbody><tr>
+<td colspan="6"><a href="http://matlab.exponenta.ru/default.php"><img src="5_3.php_files/new_01.gif" alt="На первую страницу" border="0" height="42" width="780"></a></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="black" height="16"><table border="0" cellpadding="0" cellspacing="0" height="16" width="100%"><tbody><tr>
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="5_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="5_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="5_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/mltb/default.php">Материалы</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="5_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="5_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center">&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</td>
+<td bgcolor="white" width="1"><img src="5_3.php_files/wdot.htm" height="1" width="1"></td>
+
+<td class="navblack" onmouseover="eval('this.className='+'&quot;navgray&quot;')" onmouseout="eval('this.className='+'&quot;navblack&quot;')" align="center"><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></td>
+
+
+</tr></tbody></table></td>
+<td rowspan="6" valign="top" width="125"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td bgcolor="white" width="1"></td>
+<td height="100%" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tbody><tr>
+<td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" height="16" width="124"> &nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></td>
+</tr>
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>
+    </td>    
+  </tr>
+
+
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>
+    </td>    
+  </tr>
+
+
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <tr><td bgcolor="white" height="1"></td></tr>
+  <tr>
+  <td class="navright" onmouseover="eval('this.className='+'&quot;navblack&quot;')" onmouseout="eval('this.className='+'&quot;navright&quot;')" width="124">
+&nbsp;&nbsp;&nbsp;<a style="color: white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>
+    </td>    
+  </tr>
+
+
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td colspan="6" bgcolor="white" height="1" valign="top"></td>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a href="http://matlab.exponenta.ru/mltb/default.php"><img src="5_3.php_files/mltb.gif" alt="Рубрика Matlab&amp;Toolboxes" border="0" width="315"></a></td>
+<td><img src="5_3.php_files/new1_12.gif" border="0" height="20" width="116"></td>
+<td><img src="5_3.php_files/new1_13.gif" height="20" width="87"></td>
+<td colspan="2"><img src="5_3.php_files/new1_14.gif" height="20" width="138"></td>
+</tr>
+
+<tr>
+<td colspan="4" background="5_3.php_files/m-block.gif" height="22" width="341"><script language="Javascript" type="text/javascript" src="5_3.php_files/newban.htm"></script></td>
+</tr>
+
+<tr>
+<td><img src="5_3.php_files/new1_22.gif" height="19" width="116"></td>
+<td><img src="5_3.php_files/new1_23.gif" height="19" width="87"></td>
+<td><img src="5_3.php_files/new1_241.gif" height="19" width="93"></td>
+<td><img src="5_3.php_files/new1_242.gif" height="19" width="45"></td>
+</tr>
+<tr>
+<td><img src="5_3.php_files/new1_27.gif" height="25" width="116"></td>
+<td><img src="5_3.php_files/new1_28.gif" height="25" width="87"></td>
+<td align="center" height="25" width="93"><a class="login" href="http://matlab.exponenta.ru/forum/login.php?redirect=../fuzzylogic/book5/5_3.php"><span class="text1">Вход</span></a></td>
+<td><img src="5_3.php_files/new1_291.gif" height="25" width="45"></td>
+</tr>
+</tbody></table>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="7" height="20" width="780">
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="http://matlab.exponenta.ru/fuzzylogic/index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p class="h2">А.П.Ротштейн "Интеллектуальные технологии идентификации"</p>
+ 
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php">К предыдущему разделу </a></p>
+
+  <p><b>5.3. Настройки <img src="5_3.php_files/image083.gif" align="absmiddle" height="15" width="15">-уровневых функций принадлежности</b></p>
+
+  <p>Функции принадлежности, которые использовались выше, настраивались лишь по двум параметрам: <img src="5_3.php_files/image008.gif" align="absmiddle" height="20" width="13"> - координата максимума; <img src="5_3.php_files/image084_002.gif" align="absmiddle" height="16" width="13"> - коэффициент сжатия-растяжения. В этом разделе используется <img src="5_3.php_files/image085.gif" align="absmiddle" height="16" width="17"> уровневое представление функций принадлежности, которые обеспечивают больше возможностей при настройке. </p>
+
+
+  <p><b><a name="1"></a>5.3.1. Аналитические модели функций принадлежности</b></p>
+
+  <p><b>Определение&nbsp;5.2.</b>&nbsp;Множеством уровня <img src="5_3.php_files/image086_002.gif" align="absmiddle" height="32" width="83"> нечеткого множества <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> в универсальном множестве <img src="5_3.php_files/image088.gif" align="absmiddle" height="20" width="19"> называется множество элементов <img src="5_3.php_files/image089.gif" align="absmiddle" height="20" width="47">, степени принадлежности которых нечеткому множеству <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> не меньше числа <img src="5_3.php_files/image085.gif" align="absmiddle" height="16" width="17">, т.е. если <img src="5_3.php_files/image090_002.gif" align="absmiddle" height="31" width="28">- множество <img src="5_3.php_files/image083.gif" align="absmiddle" height="15" width="15">-уровня для нечеткого множества <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17">, то </p>
+
+  <p><img src="5_3.php_files/image091_002.gif" align="absmiddle" height="57" width="215">.</p>
+
+  <p><b>Определение&nbsp;5.3.</b>&nbsp;Нечетким числом <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> называется такое нечеткое множество, для которого универсумом является множество действительных чисел <span style="font-size: 14pt; font-family: Symbol;">&#194;.</span></p>
+  <p><b>Определение&nbsp;5.4.</b>&nbsp;Нечеткое число <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> на действительной прямой выпукло, если для любых действительных чисел <img src="5_3.php_files/image092_002.gif" align="absmiddle" height="20" width="64"><span style="font-size: 14pt; font-family: Symbol;">&#194;</span>, <img src="5_3.php_files/image093_002.gif" align="absmiddle" height="23" width="72"> выполняется следующее соотношение:</p>
+
+  <p><img src="5_3.php_files/image094_002.gif" align="absmiddle" height="65" width="273">.</p>
+
+  <p><b>Определение&nbsp;5.5.</b>&nbsp;Нечеткое число <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> на действительной прямой называется нормальным, если <img src="5_3.php_files/image095.gif" align="absmiddle" height="57" width="145">.</p>
+  <p>Будем рассматривать нечеткие множества, которые соответствуют выпуклым и нормальным нечетким числам. Тогда нечеткое множество <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> можно представить в виде разложения:</p>
+
+  <p><img src="5_3.php_files/image096.gif" align="absmiddle" height="67" width="204"> ,</p>
+
+  <p>где <img src="5_3.php_files/image097.gif" align="absmiddle" height="40" width="37"><img src="5_3.php_files/image098.gif" align="absmiddle" height="47" width="64"> - нижняя (верхняя) граница нечеткого множества <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> на <img src="5_3.php_files/image083.gif" align="absmiddle" height="15" width="15">-уровне.</p>
+  <p>Ограничимся рассмотрением конечного числа (<img src="5_3.php_files/image099.gif" align="absmiddle" height="20" width="15">) <img src="5_3.php_files/image083.gif" align="absmiddle" height="15" width="15">-уровней:</p>
+
+  <p><img src="5_3.php_files/image100.gif" align="absmiddle" height="39" width="180">,  причем    <img src="5_3.php_files/image101.gif" align="absmiddle" height="31" width="212"> .</p>
+
+  <p>Это позволяет записать нечеткое множество <img src="5_3.php_files/image087.gif" align="absmiddle" height="25" width="17"> в следующем виде:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image102.gif" align="absmiddle" height="72" width="573">,</td>
+      <td align="right">(5.26)</td>
+    </tr>
+</tbody></table></p>
+ 
+<p>где <img src="5_3.php_files/image001.gif" align="absmiddle" height="40" width="43"><img src="5_3.php_files/image002.gif" align="absmiddle" height="47" width="69">нижняя (верхняя) граница нечеткого множества <img src="5_3.php_files/image003.gif" align="absmiddle" height="25" width="17"> на уровне <img src="5_3.php_files/image004.gif" align="absmiddle" height="31" width="25"> .</p>
+  <p>Достаточное условие выпуклости нечеткого множества <img src="5_3.php_files/image003.gif" align="absmiddle" height="25" width="17"> имеет вид:</p>
+
+  <p><img src="5_3.php_files/image005.gif" align="absmiddle" height="72" width="560"> .  (5.27)</p>
+
+  <p>Функции принадлежности нечеткого множества <img src="5_3.php_files/image003.gif" align="absmiddle" height="25" width="17"> можно поставить в соответствие код вида:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image006.gif" align="absmiddle" height="60" width="511">  ,    </td>
+      <td align="right">(5.28)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>как показано на рис. 5.5.</p>
+  <p><img src="5_3.php_files/image007.gif" height="401" width="611"></p>
+  <p>Прежде
+чем сформулировать аналитическую модель функции принадлежности, которая
+будет соответствовать коду (5.28), заметим следующее:</p>
+  <p>а) если <img src="5_3.php_files/image008_002.gif" align="absmiddle" height="48" width="87"> или <img src="5_3.php_files/image009.gif" align="absmiddle" height="41" width="87">, то <img src="5_3.php_files/image010.gif" align="absmiddle" height="49" width="127">. Это следует из определения множества <img src="5_3.php_files/image011.gif" align="absmiddle" height="16" width="17">-уровня;</p>
+  <p>б) если <img src="5_3.php_files/image012.gif" align="absmiddle" height="48" width="164"> как показано на рис. 5.6а, то значение <img src="5_3.php_files/image013.gif" align="absmiddle" height="49" width="84"> находится линейной интерполяцией по точкам <img src="5_3.php_files/image014.gif" align="absmiddle" height="60" width="103"> и <img src="5_3.php_files/image015.gif" align="absmiddle" height="60" width="136">.</p>
+  <p>в)&nbsp;если <img src="5_3.php_files/image016.gif" align="absmiddle" height="72" width="203">, то <img src="5_3.php_files/image017.gif" align="absmiddle" height="49" width="107">, поскольку <img src="5_3.php_files/image018.gif" align="absmiddle" height="31" width="59">.</p>
+  <p>г)&nbsp;если <img src="5_3.php_files/image019.gif" align="absmiddle" height="41" width="164">, как показано на рис. 5.6б, то значение <img src="5_3.php_files/image013.gif" align="absmiddle" height="49" width="84"> находится линейной интерполяцией по точкам <img src="5_3.php_files/image020.gif" align="absmiddle" height="47" width="103"> и <img src="5_3.php_files/image021.gif" align="absmiddle" height="47" width="136">.</p>
+  <p>д) если <img src="5_3.php_files/image022.gif" align="absmiddle" height="72" width="167">, то <img src="5_3.php_files/image023.gif" align="absmiddle" height="49" width="116"> .</p>
+
+  <p><img src="5_3.php_files/image024.gif" height="397" width="657"></p>
+  <p>Используя линейную интерполяцию по точкам <img src="5_3.php_files/image025.gif" align="absmiddle" height="57" width="128"> и <img src="5_3.php_files/image026.gif" align="absmiddle" height="57" width="135">, значения функции принадлежности в точке <img src="5_3.php_files/image027.gif" align="absmiddle" height="29" width="25">, (<img src="5_3.php_files/image028.gif" align="absmiddle" height="37" width="112">) можно найти по формуле: </p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image029.gif" align="absmiddle" height="75" width="463">  .       </td>
+      <td align="right">(5.29)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>Используя эту формулу, получаем модель функции принадлежности соответствующей коду (5.28):</p>
+
+  <p><img src="5_3.php_files/image030.gif" align="absmiddle" height="431" width="637"></p>
+
+
+  <p><b><a name="2"></a>5.3.2. Настройки  модели  с  дискретным  выходом </b></p>
+
+  <p>При
+настройке нечеткой модели будем пользоваться соотношением (5.3), в
+котором исходные функции принадлежности представлены моделью (5.30).
+Для упрощения ограничимся случаем, когда веса правил не настраиваются.
+Тогда общий вид нечеткой модели представляется следующим образом:</p>
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image031.gif" align="absmiddle" height="47" width="128"> ,  <img src="5_3.php_files/image032.gif" align="absmiddle" height="39" width="181">                           </td>
+      <td align="right">(5.31)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где    <img src="5_3.php_files/image033.gif" align="absmiddle" height="39" width="175"> - вектор входных переменных;</p>
+  <p><img src="5_3.php_files/image034.gif" align="absmiddle" height="33" width="29"> - вектор, в который сведены коды <img src="5_3.php_files/image035.gif" align="absmiddle" height="16" width="13"> (5.28) функций принадлежности всех термов, используемых в нечеткой базе знаний (5.1). Этот вектор выглядит так:</p>
+
+  <p><img src="5_3.php_files/image036.gif" height="650" width="600"></p>
+  <p>где    <img src="5_3.php_files/image037.gif" align="absmiddle" height="56" width="43"><img src="5_3.php_files/image038.gif" align="absmiddle" height="71" width="72"> - нижняя (верхняя) граница <img src="5_3.php_files/image039.gif" align="absmiddle" height="35" width="29">-уровня для <img src="5_3.php_files/image040.gif" align="absmiddle" height="20" width="17">-го терма оценки переменной <img src="5_3.php_files/image041.gif" align="absmiddle" height="31" width="21">, <img src="5_3.php_files/image042.gif" align="absmiddle" height="32" width="57">, <img src="5_3.php_files/image043.gif" align="absmiddle" height="37" width="67">, <img src="5_3.php_files/image044.gif" align="absmiddle" height="29" width="52">,</p>
+  <p><img src="5_3.php_files/image045.gif" align="absmiddle" height="20" width="15"> - число рассматриваемых <img src="5_3.php_files/image011.gif" align="absmiddle" height="16" width="17">-уровней,</p>
+  <p><img src="5_3.php_files/image046.gif" align="absmiddle" height="31" width="17"> - число термов оценки входной переменной <img src="5_3.php_files/image041.gif" align="absmiddle" height="31" width="21">.</p>
+  <p><img src="5_3.php_files/image047.gif" align="absmiddle" height="19" width="19"> - оператор связи входы-выход, соответствующий применению соотношений (5.3) и (5.30).</p>
+  <p>Пусть обучающая выборка задана в виде <img src="5_3.php_files/image048.gif" align="absmiddle" height="19" width="24"> пар экспериментальных данных (5.9). Для нахождения вектора <img src="5_3.php_files/image049.gif" align="absmiddle" height="33" width="31">
+(5.32), который минимизирует отклонение теории (5.31) от эксперимента
+(5.9), воспользуемся методом наименьших квадратов. Тогда задача
+оптимальной настройки нечеткой модели может быть сформулирована
+следующим образом: найти вектор <img src="5_3.php_files/image034.gif" align="absmiddle" height="33" width="29">,
+удовлетворяющий ограничениям (5.27), который обеспечивает минимальное
+отклонение между желаемым и модельным векторами выходных функций
+принадлежности, т.е.:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image050.gif" align="absmiddle" height="87" width="417">  ,     </td>
+      <td align="right">(5.33)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где    <img src="5_3.php_files/image051.gif" align="absmiddle" height="53" width="100"> - желаемый вектор функций принадлежности для <img src="5_3.php_files/image052.gif" align="absmiddle" height="20" width="12">-й эксперимен-таль-ной точки, определяемый соотношением (5.8).</p>
+
+
+  <p><b><a name="3"></a>5.3.3.  Настройки  модели  с  непрерывным  выходом</b></p>
+
+  <p>В случае настройки объекта с непрерывным выходом используется обучающая выборка (5.5) и модель вида:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image031.gif" align="absmiddle" height="47" width="128"> ,                                              </td>
+      <td align="right">(5.34)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>где    <img src="5_3.php_files/image034.gif" align="absmiddle" height="33" width="29"> - вектор, кодирующий функции принадлежности всех термов (5.32), </p>
+  <p><img src="5_3.php_files/image047.gif" align="absmiddle" height="19" width="19"> - оператор связи входы-выход, соответствующий применению соотношений (5.3),  (5.30) и (3.18).</p>
+  <p>Задача оптимальной настройки состоит в поиске вектора <img src="5_3.php_files/image034.gif" align="absmiddle" height="33" width="29">, который удовлетворяет ограничениям (5.27) и обеспечивает</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image053.gif" align="absmiddle" height="73" width="265"> .                            </td>
+      <td align="right">(5.35)</td>
+    </tr>
+</tbody></table></p>
+  <p><b><a name="4"></a>5.3.4. Кодирование  и  скрещивание</b></p>
+
+  <p>Код решения, т.е. хромосома задается вектором <img src="5_3.php_files/image034.gif" align="absmiddle" height="33" width="29"> (5.32).</p>
+  <p>Операция скрещивания хромосом производится по <img src="5_3.php_files/image011.gif" align="absmiddle" height="16" width="17">-уровням. Идея операции заключается в том, что <img src="5_3.php_files/image011.gif" align="absmiddle" height="16" width="17">-уровни хромосомы-отпрыска определяются как среднее арифметическое <img src="5_3.php_files/image011.gif" align="absmiddle" height="16" width="17">-уровней хромосом-родителей. В этом случае не нарушается условие выпуклости (5.27) Введем следующие обозначения:</p>
+
+  <p><img src="5_3.php_files/image054.gif" align="absmiddle" height="87" width="223"> - множество уровня <img src="5_3.php_files/image039.gif" align="absmiddle" height="35" width="29"> для <img src="5_3.php_files/image040.gif" align="absmiddle" height="20" width="17">-го нечеткого терма-оценки переменной <img src="5_3.php_files/image041.gif" align="absmiddle" height="31" width="21"> в хромосоме родителе <img src="5_3.php_files/image055.gif" align="absmiddle" height="29" width="23">;</p>
+
+  <p><img src="5_3.php_files/image056.gif" align="absmiddle" height="87" width="229"> - множество уровня <img src="5_3.php_files/image039.gif" align="absmiddle" height="35" width="29"> для <img src="5_3.php_files/image040.gif" align="absmiddle" height="20" width="17">-го нечеткого терма-оценки переменной <img src="5_3.php_files/image041.gif" align="absmiddle" height="31" width="21"> в хромосоме родителе <img src="5_3.php_files/image057.gif" align="absmiddle" height="29" width="27">;</p>
+
+  <p><img src="5_3.php_files/image058.gif" align="absmiddle" height="89" width="233"> - множество уровня <img src="5_3.php_files/image039.gif" align="absmiddle" height="35" width="29"> для <img src="5_3.php_files/image040.gif" align="absmiddle" height="20" width="17">-го нечеткого терма-оценки переменной <img src="5_3.php_files/image041.gif" align="absmiddle" height="31" width="21"> в хромосоме-отпрыске <img src="5_3.php_files/image059.gif" align="absmiddle" height="20" width="27">; <img src="5_3.php_files/image060.gif" align="absmiddle" height="32" width="57">, <img src="5_3.php_files/image061.gif" align="absmiddle" height="37" width="68">, <img src="5_3.php_files/image062.gif" align="absmiddle" height="29" width="52"> .</p>
+  <p>Тогда операцию скрещивания можно определить следующими соотношениями:</p>
+<table border="0">
+<tbody><tr>
+  <td>  <p><img src="5_3.php_files/image064.gif" align="absmiddle" height="105" width="307"></p>
+  <p><img src="5_3.php_files/image065.gif" align="absmiddle" height="111" width="311"></p>
+</td>
+  <td><img src="5_3.php_files/image063.gif" height="261" width="157"></td>
+</tr>
+</tbody></table>
+
+  <p>На рис. 5.7 приведен пример операции скрещивания для случая трех <img src="5_3.php_files/image011.gif" align="absmiddle" height="16" width="17">-уровней. В этом примере хромосомы родителей (<img src="5_3.php_files/image055.gif" align="absmiddle" height="29" width="23"> и <img src="5_3.php_files/image066.gif" align="absmiddle" height="29" width="27">) и отпрыска (<img src="5_3.php_files/image059.gif" align="absmiddle" height="20" width="27">) задаются следующим образом:</p>
+
+  <p><img src="5_3.php_files/image067.gif" align="absmiddle" height="37" width="173"> , <img src="5_3.php_files/image068.gif" align="absmiddle" height="37" width="187"> ,</p>
+
+  <p><img src="5_3.php_files/image069.gif" align="absmiddle" height="52" width="535"> .</p>
+
+  <p><img src="5_3.php_files/image070.gif" height="446" width="620"></p>
+  <p><b><a name="5"></a>5.3.5. Мутация</b></p>
+
+  <p>Каждый элемент вектора <img src="5_3.php_files/image049.gif" align="absmiddle" height="33" width="31"> может подвергнуться операции мутации с вероятностью <img src="5_3.php_files/image071.gif" align="absmiddle" height="31" width="33">. Идея операции мутации заключается в том, что выбранный элемент <img src="5_3.php_files/image072.gif" align="absmiddle" height="33" width="56"> случайно изменяется в пределах, не нарушающих условия выпуклости (5.27). Обозначим результат мутации элемента <img src="5_3.php_files/image072.gif" align="absmiddle" height="33" width="56"> через <img src="5_3.php_files/image073.gif" align="absmiddle" height="24" width="56">. Тогда операция мутации определяется следующим образом: </p>
+
+  <p><img src="5_3.php_files/image074.gif" align="absmiddle" height="447" width="616"></p>
+
+  <p>где <img src="5_3.php_files/image075.gif" align="absmiddle" height="49" width="159"> обозначает операцию нахождения равномерно распределенного на интервале <img src="5_3.php_files/image076.gif" align="absmiddle" height="45" width="60"> случайного числа.</p>
+  <p>На рис. 5.8 изображена операция мутации элемента <img src="5_3.php_files/image077.gif" align="absmiddle" height="56" width="45">, который принадлежит хромосоме <img src="5_3.php_files/image078.gif" align="absmiddle" height="20" width="16">. В результате мутации получилась новая хромосома <img src="5_3.php_files/image079.gif" align="absmiddle" height="29" width="28">:</p>
+
+  <p><img src="5_3.php_files/image080.gif" align="absmiddle" height="32" width="380"> .</p>
+
+  <p>Алгоритм мутации выглядит так:</p>
+
+  <p>1°. Для каждого элемента <img src="5_3.php_files/image081.gif" align="absmiddle" height="33" width="57"> генерируем случайное число <img src="5_3.php_files/image082.gif" align="absmiddle" height="33" width="191">. Если <img src="5_3.php_files/image083_002.gif" align="absmiddle" height="31" width="61">, то мутацию не производим, иначе переходим к шагу&nbsp;2.</p>
+  <p>2°. Осуществляем операцию мутации элемента <img src="5_3.php_files/image081.gif" align="absmiddle" height="33" width="57"> в соответствии с формулой (5.37).</p>
+
+  <p><img src="5_3.php_files/image084.gif" height="243" width="606"></p>
+  <p><b><a name="6"></a>5.3.6. Функция соответствия</b></p>
+
+  <p>Обозначим функцию соответствия хромосомы <img src="5_3.php_files/image049.gif" align="absmiddle" height="33" width="31"> через <img src="5_3.php_files/image085_002.gif" align="absmiddle" height="47" width="85">.
+По аналогии с разделом 5.2.4 в качестве функции соответствия будем
+использовать критерий оптимизации, взятый со знаком минус. Для объектов
+с дискретным выходом функция соответствия хромосомы <img src="5_3.php_files/image049.gif" align="absmiddle" height="33" width="31"> (5.32), полученная из критерия (5.33), будет иметь вид:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image086.gif" align="absmiddle" height="87" width="480"> .    </td>
+      <td align="right">(5.38)</td>
+    </tr>
+</tbody></table></p>
+
+  <p>Для объектов с непрерывным выходом функция соответствия, полученная из (5.35), имеет вид:</p>
+
+  <p><table border="0" width="100%">
+    <tbody><tr>
+      <td align="left"><img src="5_3.php_files/image087_002.gif" align="absmiddle" height="68" width="328">.                       </td>
+      <td align="right">(5.39)</td>
+    </tr>
+</tbody></table></p>
+
+  <p><b><a name="7"></a>5.3.7.  Генерация  популяции</b></p>
+
+  <p>В
+связи с большой размерностью задачи оптимизации рекомендуется исходную
+популяцию формировать при помощи генетического алгоритма, изложенного в
+разделе 5.2. Это значит, что полученные на его выходе нечеткие модели
+вида <img src="5_3.php_files/image088_002.gif" align="absmiddle" height="24" width="119"> следует преобразовать к виду <img src="5_3.php_files/image031.gif" align="absmiddle" height="47" width="128">, и использовать полученные векторы <img src="5_3.php_files/image034.gif" align="absmiddle" height="33" width="29"> в качестве исходных хромосом.</p>
+
+
+  <p><b><a name="8"></a>5.3.8. Генетический алгоритм</b></p>
+
+  <p>На каждой итерации генетического алгоритма размер популяции будет увеличиваться на <img src="5_3.php_files/image089_002.gif" align="absmiddle" height="31" width="53"> хромосом-отпрысков , где <img src="5_3.php_files/image090.gif" align="absmiddle" height="31" width="28"> - коэффициент скрещивания. Для того, чтобы сохранить постоянный размер популяции <img src="5_3.php_files/image091.gif" align="absmiddle" height="19" width="20">, перед следующей итерацией следует отбросить худшие (в смысле функции соответствия) <img src="5_3.php_files/image089_002.gif" align="absmiddle" height="31" width="53"> хромосом. С учетом этого генетический алгоритм имеет вид:</p>
+  <p>1°.&nbsp;Формируем исходную популяцию.</p>
+  <p>2°.&nbsp;Находим значение функции соответствия для каждой хромосомы, используя соотношения (5.38)-(5.39).</p>
+  <p>3°.&nbsp;Определяем <img src="5_3.php_files/image089_002.gif" align="absmiddle" height="31" width="53"> пар хромосом-родителей.</p>
+  <p>4°.&nbsp;Выполняем операцию скрещивания каждой пары хромосом-родителей в соответствии с соотношением 5.36.</p>
+  <p>5°.&nbsp;С вероятностью <img src="5_3.php_files/image071.gif" align="absmiddle" height="31" width="33"> осуществляем мутацию полученных хромосом-отпрысков.</p>
+  <p>6°.&nbsp;Из полученной популяции размером <img src="5_3.php_files/image092.gif" align="absmiddle" height="31" width="85"> хромосом отбрасываем <img src="5_3.php_files/image089_002.gif" align="absmiddle" height="31" width="53"> хромосом, имеющих худшие значения функции соответствия.</p>
+  <p>7°.&nbsp;Если получена хромосома <img src="5_3.php_files/image049.gif" align="absmiddle" height="33" width="31">, для которой <img src="5_3.php_files/image093.gif" align="absmiddle" height="47" width="113">, то конец алгоритма, иначе переходим к шагу&nbsp;8.</p>
+  <p>8°.&nbsp;Если
+не исчерпано заданное число шагов, то переходим к шагу&nbsp;2, иначе
+хромосома, имеющая наибольшее значение функции соответствия <img src="5_3.php_files/image094.gif" align="absmiddle" height="47" width="84"> представляет найденное субоптимальное решение.</p>
+
+
+    <p><a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/index.php">В оглавление книги</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/5_4.php">К следующему разделу</a> \ <a class="menu1" href="http://matlab.exponenta.ru/fuzzylogic/book5/5_2.php">К предыдущему разделу </a></p>
+
+ 
+ 
+ 
+</td>
+</tr>
+</tbody></table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tbody><tr>
+<td colspan="2" align="center" bgcolor="#ffce9d" height="2"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция "Проектирование научных и инженерных приложений в среде MATLAB" (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com/" target="_blank" class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru/" target="_blank" class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target="_blank" class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></tbody></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="5_3.php_files/orphus.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tbody><tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="5_3.php_files/banner.htm" marginwidth="0" marginheight="0" frameborder="0" height="60" scrolling="no" width="468"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align="right"></p><div align="right"><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="5_3.php_files/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" border="0" height="31" width="88"></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target="_tophref=&quot;http://top.list.ru/jump?from=239195&quot;"><imgsrc="http: //top.list.ru/counter?id="239195;t=69;l=1&quot;border=0" height="31" width="38alt=&quot;TopList&quot;"></imgsrc="http:></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><a href="http://click.hotlog.ru/?58396" target="_top"><img src="5_3.php_files/count.gif" alt="HotLog" border="0" height="31" width="88"></a><noscript><a
+href=http://click.hotlog.ru/?58396
+target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33"
+border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><a href="http://top.mail.ru/jump?from=239195" target="_top"><img src="5_3.php_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="38"></a><!-- <noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER--></div></td> </tr>
+</tbody></table>
+
+
+</body></html>

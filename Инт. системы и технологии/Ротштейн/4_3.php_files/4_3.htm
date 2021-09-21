@@ -1,0 +1,631 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</title>
+<meta name="Description"
+content="Консультационный центр MATLAB: раздел Fuzzy Logic Toolbox, интеллектуальные технологии идентификации">
+<meta name="Keywords"
+content="MATLAB, Matlab, матлаб, МАТЛАБ, Fuzzy Logic Toolbox, ">
+<link REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+</head>
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" background="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1"><img src="http://counter.rambler.ru/top100.cnt?636597" height="1" border="0"></td>
+</tr>
+</table>
+
+<!--<marquee border="1" width="775" height="13"><strong><font color="BLUE">Уважаемые коллеги! Поздравляем с Новым Годом и Рождеством! Желаем счастья, здоровья, успехов!</font></strong></marquee>-->
+
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 height="116" width="780">
+<TR>
+<TD colspan=6><a href="http://matlab.exponenta.ru/default.php"><IMG SRC="http://matlab.exponenta.ru/images/new_01.gif" WIDTH=780 HEIGHT=42 border=0 alt="На первую страницу"></a></TD>
+</TR>
+<TR>
+<TD valign="top" colspan=6 height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD colspan=5 bgcolor="black" height="16"><TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="16" ><TR>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/seminar/default.php">Семинары</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/lection/default.php">Обучение</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/money/default.php">Лицензирование</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="/mltb/default.php ">Материалы</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/subscribe/default.php">Подписка</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')>&nbsp;<a class="topnav" href="http://matlab.exponenta.ru/forum/default.php">Форум</a>&nbsp;</TD><TD width="1" bgcolor="white"><img src="images/wdot.gif" width="1" height="1"></TD>
+<TD align="center" class="navblack" onmouseover=eval('this.className='+'"navgray"')  onmouseout=eval('this.className='+'"navblack"')><a class="topnav" href="http://matlab.exponenta.ru/registr/default.php">Регистрация</a></TD>
+</TABLE></TD>
+<TD width="125" rowspan=6 valign="top"><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%" height="100%">
+<TR>
+<TD bgcolor="white" width="1"></TD>
+<TD HEIGHT=100% valign="top">
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 width="100%" height="100%">
+<TR>
+<TD class="navright" WIDTH=124 height="16" onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')> &nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/matlab/default.php">Matlab</a></TD>
+</TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/curvefitting/index.php">Toolboxes</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/simulink/default.php">Simulink</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/aerospace/index.php">Blocksets</a>    </TD>      </TR>
+<!--  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/femlab/default.php">Femlab</a>    </TD>      </TR>
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/applarea/all.php">3rd-Party Products</a>    </TD>      </TR>
+-->
+  <TR><TD bgcolor="white" height="1"></td></TR>  <TR>  <TD class="navright" WIDTH=124 onmouseover=eval('this.className='+'"navblack"')  onmouseout=eval('this.className='+'"navright"')>&nbsp;&nbsp;&nbsp;<a style="color:white;" href="http://matlab.exponenta.ru/books/default.php">Полезное</a>    </TD>      </TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD colspan=6 valign="top" height="1" bgcolor="white"></TD>
+</TR>
+<TR>
+<TD valign="top" rowspan="4"><a href="http://matlab.exponenta.ru/mltb/default.php"><IMG SRC="http://matlab.exponenta.ru/images/mltb.gif" WIDTH=315 border="0" alt="Рубрика Matlab&Toolboxes"></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_12.gif" WIDTH=116 HEIGHT=20 border="0"></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_13.gif" WIDTH=87 HEIGHT=20></TD>
+<TD colspan=2><IMG SRC="http://matlab.exponenta.ru/images/new1_14.gif" WIDTH=138 HEIGHT=20></TD>
+</TR>
+
+<TR>
+<TD colspan=4 background="/images/m-block.gif" WIDTH=341 HEIGHT=22><script language="Javascript" type="text/javascript" src="http://allsoft.ru/ads/newban.php?Code=MATLABTOP&t=top&rnd=1169670867"></script></TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_22.gif" WIDTH=116 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_23.gif" WIDTH=87 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_241.gif" WIDTH=93 HEIGHT=19></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_242.gif" WIDTH=45 HEIGHT=19></TD>
+</TR>
+<TR>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_27.gif" WIDTH=116 HEIGHT=25></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_28.gif" WIDTH=87 HEIGHT=25></TD>
+<TD WIDTH=93 HEIGHT=25 align="center"><a class="login"  href="../../forum/login.php?redirect=../fuzzylogic/book5/4_3.php"><span class="text1">Вход</span></a></TD>
+<TD><IMG SRC="http://matlab.exponenta.ru/images/new1_291.gif" WIDTH=45 HEIGHT=25></TD>
+</TR>
+</TABLE>
+
+<!--<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="780" height="20" border="1">
+<TR>
+<TD><marquee behavior="scroll" direction="left" scrollamount="1" scrolldelay="30" truespeed style="color: #0000FF"><a href="http://allsoft.ru/ads/re.php?id=5744" target="_blank">Поздравляем с Новым Годом и Рождеством! Желаем здоровья, счастья, успехов!</a></marquee></TD>
+</TR>
+</TABLE>-->
+
+<div align="right">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=7 width="780" height="20">
+<TR>
+<TD></TD>
+</TR>
+</TABLE>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="780">
+<tr>
+ <td width="10"></td>
+  <td><h1 class="h1"><a class="h1" href="../index.php">Проектирование систем управления\Fuzzy Logic Toolbox</a></h1>
+<p Class="h2">А.П.Ротштейн &quot;Интеллектуальные технологии идентификации&quot;</p>
+ 
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="4_4.php">К следующему разделу</a> \ <a class="menu1"
+    href="4_2.php">К предыдущему разделу </a></p>
+
+  <p><b>4.3. Нечеткое обобщение аналитических моделей</b></p>
+
+  <p>В этом разделе вводится принцип обобщения, который позволяет преобразовать аналитические модели таким образом, чтобы в качестве их параметров можно было использовать нечеткие числа.</p>
+
+
+  <p><b><a name="1"></a>4.3.1. Принцип обобщения Заде</b></p>
+
+  <p><b>Определение&nbsp;4.6.</b> Если задана функция от <img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif"> переменных <img align="absmiddle" width=110 height=39 src="4_3_files/image052.gif"> и аргументы <img align="absmiddle" width=20 height=31 src="4_3_files/image007.gif"> - суть нечеткие числа <img align="absmiddle" width=23 height=25 src="4_3_files/image053.gif"> с носителями supp&nbsp;<img align="absmiddle" width=113 height=39 src="4_3_files/image054.gif">, <img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif"> то нечеткое число <img align="absmiddle" width=185 height=39 src="4_3_files/image055.gif"> определяется следующим образом [6,15]: </p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=581 height=131 src="4_3_files/image056.gif">  </td>
+      <td align="right">(4.16)</td>
+    </tr>
+</table></p>
+
+  <p>Реализация этого принципа осуществляется   по   следующему алгоритму.</p>
+  <p>I°<i>.&nbsp;</i>Зафиксировать значение <img align="absmiddle" width=57 height=33 src="4_3_files/image057.gif">.</p>
+  <p>2°.Найти все <img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif">-ки <img align="absmiddle" width=173 height=49 src="4_3_files/image058.gif">, удовлетворяющие условиям: </p>
+
+  <p><img align="absmiddle" width=221 height=49 src="4_3_files/image059.gif">, <img align="absmiddle" width=125 height=44 src="4_3_files/image060.gif"> , <img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif">, <img align="absmiddle" width=59 height=32 src="4_3_files/image061.gif"> . </p>
+
+  <p>3°.Степень принадлежности элемента <img align="absmiddle" width=24 height=33 src="4_3_files/image062.gif"> нечеткому числу <img align="absmiddle" width=17 height=27 src="4_3_files/image063.gif"> определить по формуле: </p>
+
+  <p><img align="absmiddle" width=589 height=71 src="4_3_files/image064.gif"> .</p>
+
+  <p>4°. Проверить условие &quot;Взяты все элементы <img align="absmiddle" width=24 height=33 src="4_3_files/image062.gif">?&quot;. Если &quot;да&quot;, то перейти к шагу 5, иначе зафиксировать новое значение <img align="absmiddle" width=24 height=33 src="4_3_files/image062.gif"> и<i> </i>перейти к шагу&nbsp;2. </p>
+  <p>5°. Конец. </p>
+
+  <p><b>Пример&nbsp;4.6.</b> Пусть заданы нечеткие числа</p>
+
+  <p><img align="absmiddle" width=16 height=23 src="4_3_files/image065.gif">=0/1+1/2+1/3+0/4 и <img align="absmiddle" width=16 height=27 src="4_3_files/image066.gif">=0/2+1/3+1/4+0/8. </p>
+
+  <p>Требуется найти нечеткое число <img align="absmiddle" width=68 height=27 src="4_3_files/image067.gif"> с использованием принципа обобщения. </p>
+  <p><i>Решение.</i> Процесс решения сведен в табл.4.1. Из этой таблицы видно, что нечеткое число <img align="absmiddle" width=16 height=23 src="4_3_files/image068.gif"> определяется так: </p>
+
+  <p><img align="absmiddle" width=16 height=23 src="4_3_files/image068.gif">=0/2+ 0/3 + 0/4 + 1/6 + 1/8 +1/9 + 1/12 + 0/16 + 0/24 +0/32. </p>
+
+  <p>Переходя к разложениям по <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневым множествам, получаем: </p>
+
+  <p><b><img align="absmiddle" width=220 height=36 src="4_3_files/image069.gif"></b></p>
+
+  <p>В этом примере применение принципа обобщения Заде потребовало перебора 16 вариантов. </p>
+  <p>Таблица 4.1 к примеру 4.6</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p><img align="absmiddle" width=88 height=28   src="4_3_files/image070.gif"></p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td colspan="2" align="center">   <p>4</p>
+   </td>
+   <td colspan="2" align="center">   <p>6</p>
+   </td>
+   <td colspan="3" align="center">   <p>8</p>
+   </td>
+   <td>   <p>9</p>
+   </td>
+   <td colspan="2" align="center">   <p>12</p>
+   </td>
+   <td colspan="2" align="center">   <p>16</p>
+   </td>
+   <td>   <p>24</p>
+   </td>
+   <td>   <p>32</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=24 height=28   src="4_3_files/image071.gif"></p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=23 height=28   src="4_3_files/image072.gif"></p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>2</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>3</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=84 height=41   src="4_3_files/image073.gif"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=84 height=41   src="4_3_files/image074.gif"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=148 height=92   src="4_3_files/image075.gif"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p><img align="absmiddle" width=83 height=41   src="4_3_files/image076.gif"></p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td colspan="2" align="center">   <p>0</p>
+   </td>
+   <td colspan="2" align="center">   <p>1</p>
+   </td>
+   <td colspan="3" align="center">   <p>1</p>
+   </td>
+   <td>   <p>1</p>
+   </td>
+   <td colspan="2" align="center">   <p>1</p>
+   </td>
+   <td colspan="2" align="center">   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+   <td>   <p>0</p>
+   </td>
+  </tr>
+ </table>
+
+  <p><b>Предложение 4.5.</b> Если <img align="absmiddle" width=191 height=39 src="4_3_files/image077.gif">  - функция от <img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif"> нечетких аргументов <img align="absmiddle" width=23 height=32 src="4_3_files/image078.gif">, каждый из которых задается функцией принадлежности в <img align="absmiddle" width=15 height=20 src="4_3_files/image079.gif"> точках универсального множества </p>
+
+  <p><img align="absmiddle" width=203 height=72 src="4_3_files/image080.gif"> , <img align="absmiddle" width=52 height=29 src="4_3_files/image081.gif"></p>
+
+  <p>тo для определения нечеткого числа <img align="absmiddle" width=17 height=27 src="4_3_files/image063.gif"> по принципу обобщения Заде необходимо перебрать <img align="absmiddle" width=60 height=29 src="4_3_files/image082.gif"> вариантов.</p>
+  <p>Доказательство этого предложения следует из элементарных комбинаторных рассуждений. </p>
+  <p>Из предложения 4.5 становится ясно, что применение известного принципа обобщения Заде [6,15] связано с большими вычислительными трудностями. Например, для нахождения только одного значения функции от семи аргументов (<img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif"> = 7), каждый из которых задан на трех <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровнях (&nbsp;<img align="absmiddle" width=89 height=20 src="4_3_files/image083.gif">&nbsp;), необходимо перебрать <img align="absmiddle" width=20 height=20 src="4_3_files/image084.gif">= 6<sup>7</sup> = 279 936 вариантов. </p>
+  <p>Для  решения практических задач ниже будет предложен модифицированный принцип обобщения, не требующий трудоемких вычислительных процедур. Для доказательства его корректности введем <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневый принцип обобщения. </p>
+
+  <p><b><a name="2"></a>4.3.2. <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневый принцип обобщения</b></p>
+
+  <p><b>Определение 4.7.</b> Если задана функция от нечетких аргументов <img align="absmiddle" width=191 height=39 src="4_3_files/image077.gif">, в которой нечеткие числа представлены в виде разложения по <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневым множествам: </p>
+
+  <p><img align="absmiddle" width=204 height=64 src="4_3_files/image085.gif">,    <img align="absmiddle" width=231 height=67 src="4_3_files/image086.gif">,    <img align="absmiddle" width=52 height=29 src="4_3_files/image009.gif"> . </p>
+
+  <p>то для любого <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровня значение функции вычисляется по формулам: </p>
+
+  <p><img align="absmiddle" width=285 height=68 src="4_3_files/image087.gif"> ; </p>
+
+  <p><img align="absmiddle" width=288 height=68 src="4_3_files/image088.gif"> , </p>
+
+  <p>где <img align="absmiddle" width=156 height=57 src="4_3_files/image089.gif">, <img align="absmiddle" width=52 height=29 src="4_3_files/image090.gif">.</p>
+  <p>Эквивалентность <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневого принципа обобщения и классического принципа обобщения Заде доказывается в следующем предложении. </p>
+
+  <p><b>Предложение 4.6.</b> Если задана функция от нечетких аргументов <img align="absmiddle" width=191 height=39 src="4_3_files/image077.gif"> и нечеткие числа представлены в виде разложения по <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневым множествам: </p>
+
+  <p><img align="absmiddle" width=204 height=64 src="4_3_files/image085.gif"> ,  <img align="absmiddle" width=223 height=67 src="4_3_files/image091.gif"> ,  <img align="absmiddle" width=51 height=29 src="4_3_files/image092.gif"> . </p>
+
+  <p>то результаты нечеткого обобщения по определениям 4.6 и 4.7 совпадают.</p>
+  <p><i>Доказательство.</i> Достаточно доказать, что определение 4.7 следует из определения 4.6. Вначале покажем, что для вычисления значения функции <img align="absmiddle" width=55 height=33 src="4_3_files/image093.gif"> на конкретном <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровне достаточно знать значения аргументов только на этом <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровне. В этом случае формула (4.16) преобразуется к виду: </p>
+
+  <p><table border="0" width="100%">
+    <tr>
+      <td align="left"><img align="absmiddle" width=557 height=172 src="4_3_files/image094.gif">   </td>
+      <td align="right">(4.17)</td>
+    </tr>
+</table></p>
+
+  <p>Докажем, что применение значений аргументов на других <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровнях не добавляет новых значений <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif"> со степенью принадлежности <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">. Доказательство выполним от противного. Рассмотрим аргумент <img align="absmiddle" width=20 height=31 src="4_3_files/image007.gif">. Новое значение аргумента <img align="absmiddle" width=20 height=31 src="4_3_files/image007.gif"> обозначим через <img align="absmiddle" width=31 height=37 src="4_3_files/image096.gif">. Предположим, что изменение аргумента <img align="absmiddle" width=20 height=31 src="4_3_files/image007.gif"> добавит новое значение <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif"> со степенью принадлежности <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">. Возможны следующие три случая: </p>
+  <p><i>Случаи 1</i>: <img align="absmiddle" width=169 height=73 src="4_3_files/image097.gif"> и  <img align="absmiddle" width=133 height=48 src="4_3_files/image098.gif">.</p>
+  <p>В связи с тем, что нечеткие числа представлены в виде разложения по <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневым множествам, то из выполнения условия</p>
+  <p><img align="absmiddle" width=127 height=47 src="4_3_files/image099.gif"> следует, что <img align="absmiddle" width=160 height=60 src="4_3_files/image100.gif"> Последнее означает, что аргумент <img align="absmiddle" width=23 height=31 src="4_3_files/image010.gif"> не изменяется. Поэтому новые значения <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif"> со степенью принадлежности <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif"> не появляются. </p>
+  <p><i>Случай 2</i>: <img align="absmiddle" width=169 height=73 src="4_3_files/image097.gif"> и  <img align="absmiddle" width=133 height=48 src="4_3_files/image101.gif">. </p>
+  <p>Первое условие означает, что диапазон изменения <img align="absmiddle" width=31 height=37 src="4_3_files/image096.gif"> шире, чем <img align="absmiddle" width=113 height=60 src="4_3_files/image102.gif">. В связи с этим <img align="absmiddle" width=133 height=48 src="4_3_files/image103.gif">. В результате расширения диапазона изменения аргумента <img align="absmiddle" width=23 height=31 src="4_3_files/image010.gif"> может появиться новое значение <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif">. Однако это новое значение <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif"> не может иметь степень принадлежности равную <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">, т.к. по формуле (4.16)<b> <img align="absmiddle" width=189 height=65 src="4_3_files/image104.gif"></b>.</p>
+  <p>Таким образом, изменение аргумента не приводит к появлению новых значений <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif"> со степенью принадлежности <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">.</p>
+  <p><i>Случай 3</i>: <img align="absmiddle" width=172 height=73 src="4_3_files/image105.gif"> и  <img align="absmiddle" width=133 height=48 src="4_3_files/image101.gif"></p>
+  <p>Первое условие означает, что диапазон изменения аргумента не расширился. Учитывая второе условие, получаем <b><img align="absmiddle" width=121 height=51 src="4_3_files/image106.gif"></b>. Отсюда следует,  что  диапазон  изменения  аргумента  сузился,       что означает невозможность  появления новых значений <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif">.</p>
+  <p>Таким образом, любое изменение аргумента <img align="absmiddle" width=23 height=31 src="4_3_files/image010.gif"> не приводит к появлению новых значений <img align="absmiddle" width=16 height=20 src="4_3_files/image095.gif"> со  степенью  принадлежности равной <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">. Аналогичные выкладки можно проделать для всех остальных аргументов. Это означает, что в случае представления нечетких     чисел в виде разложения по <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif"><b>-</b>уровневым множествам формула (4.17) справедлива. </p>
+  <p>Заметим, что</p>
+
+  <p><img align="absmiddle" width=441 height=60 src="4_3_files/image107.gif"> . </p>
+
+  <p>Поэтому результат применения операций min и sup в (4.17) всегда равен <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">. Формула (4.17) дает ряд значений <img align="absmiddle" width=120 height=39 src="4_3_files/image108.gif"> со степенью принадлежности, равной <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">. Для перехода к <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневому представлению необходимо найти минимальное и максимальное значения: </p>
+
+  <p><img align="absmiddle" width=231 height=47 src="4_3_files/image109.gif">  и  <img align="absmiddle" width=233 height=47 src="4_3_files/image110.gif"></p>
+
+  <p>Окончательно получаем: </p>
+
+  <p><img align="absmiddle" width=308 height=65 src="4_3_files/image111.gif">; </p>
+
+  <p><img align="absmiddle" width=311 height=65 src="4_3_files/image112.gif">,</p>
+
+  <p>где <img align="absmiddle" width=171 height=60 src="4_3_files/image113.gif">, <img align="absmiddle" width=53 height=29 src="4_3_files/image114.gif">, <img align="absmiddle" width=83 height=32 src="4_3_files/image115.gif">.</p>
+  <p>Применение <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневого принципа обобщения сопряжено с необходимостью решения задачи оптимизации, которая  формулируется следующим образом. </p>
+  <p><i>Дано:</i> функция от <img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif"> переменных <img align="absmiddle" width=189 height=39 src="4_3_files/image116.gif">, в которой аргументы <img align="absmiddle" width=120 height=44 src="4_3_files/image117.gif">, <img align="absmiddle" width=53 height=29 src="4_3_files/image114.gif">.</p>
+  <p><i>Требуется:</i> найти такие значения аргументов <img align="absmiddle" width=117 height=39 src="4_3_files/image118.gif">, которые обеспечивают максимальное <img align="absmiddle" width=31 height=25 src="4_3_files/image119.gif"> и минимальное <img align="absmiddle" width=40 height=40 src="4_3_files/image120.gif">  значение функции <img align="absmiddle" width=189 height=39 src="4_3_files/image116.gif"> на области определения <img align="absmiddle" width=120 height=44 src="4_3_files/image117.gif">, <img align="absmiddle" width=53 height=29 src="4_3_files/image114.gif">.</p>
+  <p>В общем случае решение этой задачи является достаточно сложным. Однако, вводя ряд ограничений, свойственных peальным моделям, удается упростить решение оптимизационной задачи и получить достаточно простой алгоритм. </p>
+
+
+  <p><b><a name="3"></a>4.3.3. Модифицированный принцип обобщения</b></p>
+
+  <p><b>Допущение&nbsp;4.3</b>. Будем предполагать, что функция </p>
+
+  <p><img align="absmiddle" width=189 height=39 src="4_3_files/image116.gif"> </p>
+
+  <p>удовлетворяет следующим ограничениям: </p>
+  <p>&nbsp; Область изменения любого аргумента непрерывна. </p>
+  <p>&nbsp; На области определения функция дифференцируема.</p>
+  <p>&nbsp; Множество аргументов <img align="absmiddle" width=183 height=39 src="4_3_files/image121.gif"> можно представить объединением не более, чем трех подмножеств<b> <img align="absmiddle" width=164 height=31 src="4_3_files/image122.gif"></b> причем:</p>
+
+  <p><img align="absmiddle" width=316 height=31 src="4_3_files/image123.gif"> ;</p>
+
+  <p><img align="absmiddle" width=176 height=71 src="4_3_files/image124.gif">  <img align="absmiddle" width=93 height=44 src="4_3_files/image125.gif"> ;</p>
+
+  <p><img align="absmiddle" width=180 height=71 src="4_3_files/image126.gif">  <img align="absmiddle" width=97 height=44 src="4_3_files/image127.gif"> ;</p>
+
+  <p><img align="absmiddle" width=317 height=76 src="4_3_files/image128.gif">  <img align="absmiddle" width=263 height=44 src="4_3_files/image129.gif"> .</p>
+
+  <p>Обратим внимание, что <img align="absmiddle" width=157 height=60 src="4_3_files/image130.gif"> - знакопеременная функция  и для всех <img align="absmiddle" width=72 height=31 src="4_3_files/image131.gif">, знак производной <img align="absmiddle" width=40 height=60 src="4_3_files/image132.gif"> не зависит от  <img align="absmiddle" width=23 height=31 src="4_3_files/image133.gif"> т.е. : </p>
+
+  <p><img align="absmiddle" width=163 height=71 src="4_3_files/image134.gif"> . </p>
+
+  <p>Перечисленные ограничения введены на основе анализа аналитических моделей, которые используются в практических расчетах. </p>
+
+  <p><b>Определение 4.8.</b> <i>Модифицированный принцип обобщения.</i> </p>
+  <p>Пусть <img align="absmiddle" width=189 height=39 src="4_3_files/image135.gif"> <b>-</b> функция от <img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif"> переменных, удовлетворяющая допущениям 4.3. Аргументы функции <img align="absmiddle" width=23 height=31 src="4_3_files/image010.gif">  - суть нечеткие числа в виде</p>
+
+  <p><img align="absmiddle" width=232 height=75 src="4_3_files/image136.gif">  ,  <img align="absmiddle" width=53 height=29 src="4_3_files/image114.gif"> . </p>
+
+  <p>Нечетким обобщением <img align="absmiddle" width=196 height=39 src="4_3_files/image137.gif"> назовем число: </p>
+
+  <p><img align="absmiddle" width=501 height=80 src="4_3_files/image138.gif">  , </p>
+
+  <p>где</p>
+
+  <p><img align="absmiddle" width=309 height=103 src="4_3_files/image139.gif"></p>
+
+  <p><img align="absmiddle" width=313 height=103 src="4_3_files/image140.gif"></p>
+
+  <p>Эквивалентность результатов применения модифицированного и известных принципов обобщения доказывается в следующем предложении. </p>
+  <p><b>Предложение 4.7.</b> Если нечеткие числа представлены в виде разложения по <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневым множествам и функция <img align="absmiddle" width=185 height=39 src="4_3_files/image141.gif"> подчиняется допущениям 4.3, то результаты нечеткого обобщения по определениям 4.6 и 4.8 совпадают. </p>
+  <p><i>Доказательство.</i> Если нечеткие числа задаются   в виде <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровневого разложения, то принцип обобщения Заде эквивалентен определению 4.7. Поэтому достаточно показать, что при допущениях 4.3 результаты применения определений 4.7 и 4.8 совпадают. </p>
+  <p>В предложении 4.6 доказано, что для любого <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровня </p>
+
+  <p><img align="absmiddle" width=308 height=65 src="4_3_files/image111.gif">; </p>
+
+  <p><img align="absmiddle" width=311 height=65 src="4_3_files/image112.gif"> , </p>
+
+  <p>где <img align="absmiddle" width=171 height=60 src="4_3_files/image113.gif">, <img align="absmiddle" width=53 height=29 src="4_3_files/image114.gif"> . </p>
+  <p>Теперь необходимо найти максимальное и минимальное значение функции для каждого <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровня с учетом допущений 4.3. </p>
+  <p>Максимальное значение функции достигается при таких значениях аргументов: </p>
+
+  <p><img align="absmiddle" width=100 height=47 src="4_3_files/image142.gif">,  <img align="absmiddle" width=104 height=40 src="4_3_files/image143.gif">,  <img align="absmiddle" width=308 height=103 src="4_3_files/image144.gif"></p>
+
+  <p>Это обусловлено тем, что любое приращение аргументов в пределах заданной области не увеличивает значение функции. </p>
+  <p>Минимальное значение функции достигается при таких значениях аргументов: </p>
+  <p><img align="absmiddle" width=100 height=40 src="4_3_files/image145.gif">,  <img align="absmiddle" width=103 height=47 src="4_3_files/image146.gif">,  <img align="absmiddle" width=284 height=103 src="4_3_files/image147.gif"></p>
+
+  <p>Это обусловлено тем, что любое приращение аргументов в пределах заданной области не уменьшает значение функции. </p>
+  <p>Учитывая это, получаем следующую нечеткую модель: </p>
+
+  <p><img align="absmiddle" width=503 height=80 src="4_3_files/image148.gif">  , </p>
+
+  <p>где <img align="absmiddle" width=287 height=103 src="4_3_files/image149.gif"></p>
+
+  <p><img align="absmiddle" width=308 height=103 src="4_3_files/image150.gif"></p>
+
+  <p>Совпадение полученных результатов с определением 4.8, свидетельствует о справедливости предложения 4.7. Целесообразность использования модифицированного принципа обобщения вытекает из следующего предложения.</p>
+  <p><b>Предложение 4.8.</b> Модифицированный принцип обобщения обладает меньшей вычислительной трудоемкостью по сравнению с классическим принципом обобщения Заде. </p>
+  <p><i>Доказательство</i>. Пусть <img align="absmiddle" width=15 height=16 src="4_3_files/image051.gif"> - количество аргументов функций, а <img align="absmiddle" width=19 height=16 src="4_3_files/image151.gif">-количество <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровней, на которых задан каждый аргумент. Рассмотрим трудоемкость применения каждого принципа. </p>
+  <p><i>Принцип обобщения Заде.</i> Поскольку нечеткое число задается в <img align="absmiddle" width=59 height=20 src="4_3_files/image152.gif"> точках, то, в соответствии с предложением 4.5, для применения принципа обобщения Заде необходимо перебрать <img align="absmiddle" width=105 height=37 src="4_3_files/image153.gif"> вариантов. </p>
+  <p><i>Модифицированный  принцип  обобщения.</i>   В    этом  случае максимальное и минимальное значение функции находится аналитически для каждого из <img align="absmiddle" width=19 height=16 src="4_3_files/image151.gif"> <img align="absmiddle" width=17 height=16 src="4_3_files/image049.gif">-уровней. Поэтому число вариантов <img align="absmiddle" width=80 height=29 src="4_3_files/image154.gif"> . Отсюда следует существенно меньшая вычислительная трудоемкость (табл. 4.2). </p>
+
+  <p>Таблица 4.2. Трудоемкость применения различных принципов обобщения</p>
+  <table border=1 cellspacing=2 cellpadding=2>  <tr>   <td>   <p>Принцип обобщения</p>
+   </td>
+   <td colspan="4" align="center">   <p>Количество вариантов перебора</p>
+   </td>
+  </tr>
+  <tr>   <td><p>&nbsp;</p>
+   </td>
+   <td >   <p><img align="absmiddle" width=104 height=24   src="4_3_files/image155.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=64 height=24   src="4_3_files/image156.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=64 height=24   src="4_3_files/image157.gif"></p>
+   </td>
+   <td>   <p><img align="absmiddle" width=64 height=24   src="4_3_files/image158.gif"></p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>По Заде</p>
+   </td>
+   <td >   <p><img align="absmiddle" width=57 height=32   src="4_3_files/image159.gif"></p>
+   </td>
+   <td>   <p>16</p>
+   </td>
+   <td>   <p>100</p>
+   </td>
+   <td>   <p>4 096</p>
+   </td>
+  </tr>
+  <tr>   <td>   <p>Модифицированный</p>
+   </td>
+   <td >   <p><img align="absmiddle" width=31 height=20   src="4_3_files/image160.gif"></p>
+   </td>
+   <td>   <p>4</p>
+   </td>
+   <td>   <p>10</p>
+   </td>
+   <td>   <p>8</p>
+   </td>
+  </tr>
+ </table>
+
+
+    <p><a class="menu1" href="index.php">В оглавление книги</a> \ <a
+    class="menu1" href="4_4.php">К следующему разделу</a> \ <a class="menu1"
+    href="4_2.php">К предыдущему разделу </a></p>
+
+ 
+</td>
+</tr>
+</table>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+<tr>
+<td colspan="2" height="2" bgcolor="#FFCE9D" align="center"><a href="http://matlab.exponenta.ru/conf2002/default.php">I Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2002 г.)</a><br>
+<a href="http://matlab.exponenta.ru/conf2004/default.php">II Всероссийская научная конференция &quot;Проектирование научных и инженерных приложений в среде MATLAB&quot; (май 2004 г.)</a></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<a class="menu1" href="http://matlab.exponenta.ru/index.php">На первую страницу</a> \ 
+<a href="http://matlab.exponenta.ru/collabor/default.php" class="menu1">Сотрудничество</a> \ 
+<a href="http://www.mathworks.com" target=_blank class="menu1">MathWorks</a> \ 
+<a href="http://www.softline.ru" target=_blank class="menu1">Softline</a> \ 
+<a href="mailto:matlab@exponenta.ru" target=_blank class="menu1">Контакты</a>
+<!--<a href="http://www.exponenta.ru" target=_blank class="menu1">Exponenta.ru</a> \ 
+<a href="http://www.exponenta.ru/journal" target=_blank class="menu1">Exponenta Pro</a>-->&nbsp;</td>
+</tr>
+<!--<tr>
+<td colspan="2" align="right">E-mail: <a href="mailto:matlab@exponenta.ru" class="menu1">matlab@exponenta.ru</a>&nbsp;&nbsp;</td>
+</tr>-->
+<tr>
+<td>&nbsp;&nbsp;Информация на сайте была обновлена 23.01.07</td>
+<td align="right"><a href="http://matlab.exponenta.ru/copyright.php">Copyright 2001-2007 Softline Co&nbsp;&nbsp;</a><br>
+<a href="http://matlab.exponenta.ru/banner.php">Наши баннеры</a>&nbsp;&nbsp;</td>
+</tr></table>
+<!--<a href="http://www.exponenta.ru/journal/"></a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="780" height="60" id="EXP_2004" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://matlab.exponenta.ru/images/EXP_2004.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://matlab.exponenta.ru/images/EXP_2004.swf" quality="high" bgcolor="#ffffff" width="780" height="60" name="EXP_2004" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>-->
+<iframe id="orphus" src="/orphus/orphus.htm#!lvdamirilgs@foltni.eur" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+<table border="0" cellpadding="10" cellspacing="0" width="780">
+<tr>
+<td align="center"><!--<a href="http://soft.mail.ru/uregistration/anketa_profile.php" target="_blank"><img src="http://allsoft.ru/banners/expo.gif" border="0" width="468" height="60" alt="On-line подписка на печатный каталог программного обеспечения. Бесплатно для ВУЗов."></a>-->
+
+<iframe src="http://matlab.exponenta.ru/banner.html" width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br><a href="http://daripodarki.ru/" target="_blank"><strong>подарочные сертификаты</strong></a></td>
+
+<td><p align=right><div align=right><!--begin of Top100 logo--><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width=88 height=31 border=0></a><!--end of Top100 logo -->&nbsp;&nbsp;<!--TopList LOGO--><a target=_tophref="http://top.list.ru/jump?from=239195"><imgsrc="http://top.list.ru/counter?id=239195;t=69;l=1"border=0 height=31 width=38alt="TopList"></a><!--TopList LOGO--> &nbsp;&nbsp;  <!-- HotLog --><script language="javascript">hotlog_js="1.0";hotlog_r=""+Math.random()+"&s=58396&im=33&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");</script><script language="javascript1.1">hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">hotlog_js="1.2";hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">hotlog_js="1.3"</script><script language="javascript">hotlog_r+="&js="+hotlog_js;document.write("<a href='http://click.hotlog.ru/?58396' target='_top'><img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script><noscript><a href=http://click.hotlog.ru/?58396 target=_top><imgsrc="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=58396&im=33" border=0 width="88" height="31" alt="HotLog"></a></noscript><!-- /HotLog --><!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--d=document;var a='';a+=';r='+escape(d.referrer) js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--a+=';j='+navigator.javaEnabled()js=11//-->></script><script language="JavaScript1.2" type="text/javascript"><!--s=screen;a+=';s='+s.width+'*'+s.heighta+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--js=13//--></script><script language="JavaScript" type="text/javascript"><!-- d.write('<img src="http://top.list.ru/counter'+'?id=239195;js='+js+a+';rand='+Math.random()+'" height=1 width=1/>')if(11<js)d.write('<'+'!-- ')//--></script><noscript><img src="http://top.list.ru/counter?js=na;id=239195"height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--> &nbsp;&nbsp;  <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=239195"'+
+' target=_top><img src="http://d6.ca.b3.a0.top.list.ru/counter'+
+'?id=239195;t=68;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=239195"><img
+src="http://d6.ca.b3.a0.top.list.ru/counter?js=na;id=239195;t=68"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER--></div></td> </tr>
+</table>
+
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,20 @@
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.csprojAssemblyReference.cache
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.Form1.resources
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.Properties.Resources.resources
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.csproj.GenerateResource.cache
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\bin\Debug\Lab1.exe.config
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\bin\Debug\Lab1.exe
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\bin\Debug\Lab1.pdb
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.exe
+C:\Users\User.DESKTOP-Q2FT676\Documents\812-3\ИЧ-ЭВМ\Лаб 1\Lab1\obj\Debug\Lab1.pdb
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\bin\Debug\Lab1.exe.config
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\bin\Debug\Lab1.exe
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\bin\Debug\Lab1.pdb
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.csprojAssemblyReference.cache
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.Form1.resources
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.Properties.Resources.resources
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.csproj.GenerateResource.cache
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.exe
+C:\Users\Buzz\Desktop\Учеба\7 семак\Интерфейс человек-ЭВМ\ЛР 1\Lab1\obj\Debug\Lab1.pdb
