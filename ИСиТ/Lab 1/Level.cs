@@ -11,6 +11,7 @@ namespace Lab_1
         public double alpha;
         public double low;
         public double high;
+        public double sumAllLevels;
 
         public Level(double alpha = 0, double low = 0, double high = 0)
         {
