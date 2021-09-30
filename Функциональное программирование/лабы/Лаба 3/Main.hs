@@ -1,24 +1,27 @@
 module Lab3 where
 
-
+average :: [Double] -> Double
+average [] = 0
 average s = foldr (+) 0 s / foldr (\x y -> 1+y) 0 s
 
-
+dotLists :: [Double] -> [Double] -> Double
+dotLists [] [] = 0
 dotLists a b = foldr (+) 0 (zipWith (*) a b)
 
+countNegat :: [Double] -> Int
+getNegat :: [Double] -> [Double]
+getNegat = filter (\x -> x<0)
+countNegat a = length (getNegat a)
 
-countEven a = length (filter (even) a)
-
-
+quicksort :: [Double] -> [Double]
+quicksort [] = []
 quicksort (x:xs) = quicksort(filter (< x) xs) ++ [x] ++ quicksort(filter (>= x) xs)
 
-{--
-inversion x = if x == True then False else True
-comparator x y = y >= x
-quicksort' [] comparator = []
-quicksort' (x:xs) comparator = quicksort'(filter (comparator x) xs) ++ [x] ++ quicksort'(filter (comparator x) xs)
---}
-
+quicksort' :: (a -> a -> Bool) -> [a] -> [a]
+quicksort' p []     = []
+quicksort' p (x:xs) = quicksort' p (filter (p x) xs)
+                      ++ [x] ++
+                      quicksort' p (filter (not . (p x)) xs)
 
 delete :: Char -> String -> String
 delete c [] = []

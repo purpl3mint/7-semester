@@ -25,17 +25,20 @@ getHouses [] = []
 getHouses (((House squareAll), price):xs) = ((House squareAll), price) : (getHouses xs)
 getHouses ((_, _):xs) = getHouses xs
 
+{--Get all real estate items with price less than value --}
 getByPrice :: [(RealEstate, Integer)] -> Integer -> [(RealEstate, Integer)]
 getByPrice [] _ = []
 getByPrice (x:xs) value | (snd x) < value = x : (getByPrice xs value)
                         |  otherwise = (getByPrice xs value)
 
+{--Get all flats with level = value --}
 getByLevel :: [(RealEstate, Integer)] -> Integer -> [(RealEstate, Integer)]
 getByLevel [] _ = []
 getByLevel (((Flat level squareAll maxLevel), price):xs) value | level == value = ((Flat level squareAll maxLevel), price) : (getByLevel xs value)
                                                                | otherwise = (getByLevel xs value)
 getByLevel ((_, _):xs) value = (getByLevel xs value)
 
+{--Get all flats excepting first and last levels --}
 getExceptBounds :: [(RealEstate, Integer)] -> [(RealEstate, Integer)]
 getExceptBounds [] = []
 getExceptBounds (((Flat level squareAll maxLevel), price):xs) | ((level - 1) * (maxLevel - level)) /= 0 = ((Flat level squareAll maxLevel), price) : (getExceptBounds xs)
