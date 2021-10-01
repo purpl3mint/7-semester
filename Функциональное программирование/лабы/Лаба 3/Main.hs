@@ -1,28 +1,34 @@
 module Lab3 where
 
-average :: [Double] -> Double
-average [] = 0
-average s = foldr (+) 0 s / foldr (\x y -> 1+y) 0 s
+{--Get the geometric mean--}
+mean :: [Double] -> Double
+mean [] = 0
+mean s = (foldr (*) 1 s) ** (1.0 / (foldr(\x y -> 1.0+y) 0.0 s))
 
-dotLists :: [Double] -> [Double] -> Double
-dotLists [] [] = 0
-dotLists a b = foldr (+) 0 (zipWith (*) a b)
+{--Get scalar product --}
+scalar :: [Double] -> [Double] -> Double
+scalar [] [] = 0
+scalar a b = foldr (+) 0 (zipWith (*) a b)
 
+{--Count negative numbers --}
 countNegat :: [Double] -> Int
 getNegat :: [Double] -> [Double]
 getNegat = filter (\x -> x<0)
 countNegat a = length (getNegat a)
 
+{--Quicksort without comparator --}
 quicksort :: [Double] -> [Double]
 quicksort [] = []
 quicksort (x:xs) = quicksort(filter (< x) xs) ++ [x] ++ quicksort(filter (>= x) xs)
 
+{--Quicksort with comparator --}
 quicksort' :: (a -> a -> Bool) -> [a] -> [a]
-quicksort' p []     = []
-quicksort' p (x:xs) = quicksort' p (filter (p x) xs)
+quicksort' cmp []     = []
+quicksort' cmp (x:xs) = quicksort' cmp (filter (cmp x) xs)
                       ++ [x] ++
-                      quicksort' p (filter (not . (p x)) xs)
+                      quicksort' cmp (filter (not . (cmp x)) xs)
 
+{--Delete character from string --}
 delete :: Char -> String -> String
 delete c [] = []
 delete c str = filter (/=c) str
