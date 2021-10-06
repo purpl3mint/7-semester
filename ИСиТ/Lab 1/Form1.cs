@@ -16,13 +16,14 @@ namespace Lab_1
         {
             InitializeComponent();
 
-            dataGridView1.Rows.Add(1, 3, 4);
-            dataGridView1.Rows.Add("0,5", 2, 5);
-            dataGridView1.Rows.Add(0, 1, 6);
+            dataGridView1.Rows.Add(1, 10, 11);
+            dataGridView1.Rows.Add("0,5", 9, 12);
+            dataGridView1.Rows.Add("0,3", 7, 14);
+            dataGridView1.Rows.Add(0, 0, 21);
 
-            dataGridView2.Rows.Add(1, 9, 10);
-            dataGridView2.Rows.Add("0,5", 8, 11);
-            dataGridView2.Rows.Add(0, 7, 12);
+            dataGridView2.Rows.Add(1, 8, 10);
+            dataGridView2.Rows.Add("0,5", 6, 12);
+            dataGridView2.Rows.Add(0, 1, 17);
 
 
             chart1.Series.Clear();
@@ -83,7 +84,51 @@ namespace Lab_1
             int currentItemA = 0;
             int currentItemB = 0;
             List<Level> valuesC = new List<Level>() { };
+            Level currentLevelA;
+            Level currentLevelB;
 
+            while (currentItemA < valuesA.Count && currentItemB < valuesB.Count)
+            {
+                if (valuesA[currentItemA].alpha < valuesB[currentItemB].alpha)
+                {
+                    currentLevelA = valuesA[currentItemA++];
+                    currentLevelB = Level.getLevelByAlpha(
+                        valuesB[currentItemB - 1],
+                        valuesB[currentItemB],
+                        valuesA[currentItemA - 1].alpha);
+
+                }
+                else if (valuesA[currentItemA].alpha > valuesB[currentItemB].alpha)
+                {
+                    currentLevelB = valuesB[currentItemB++];
+                    currentLevelA = Level.getLevelByAlpha(
+                        valuesA[currentItemA - 1],
+                        valuesA[currentItemA],
+                        valuesB[currentItemB - 1].alpha);
+                }
+                else
+                {
+                    currentLevelA = valuesA[currentItemA++];
+                    currentLevelB = valuesB[currentItemB++];
+                }
+
+                switch (operation)
+                {
+                    case '+':
+                        valuesC.Add(currentLevelA + currentLevelB);
+                        break;
+                    case '-':
+                        valuesC.Add(currentLevelA - currentLevelB);
+                        break;
+                    case '*':
+                        valuesC.Add(currentLevelA * currentLevelB);
+                        break;
+                    case '/':
+                        valuesC.Add(currentLevelA / currentLevelB);
+                        break;
+                }
+            }
+            /*
             while (currentItemA < valuesA.Count && currentItemB < valuesB.Count)
             {
                 if (valuesA[currentItemA].alpha < valuesA[currentItemB].alpha
@@ -115,6 +160,7 @@ namespace Lab_1
                     }
                 }
             }
+            */
 
             return valuesC;
         }

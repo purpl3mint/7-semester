@@ -32,19 +32,72 @@ namespace Lab1
             this.Close();
         }
 
+        private List<List<Double>> getNodes(DataGridView source)
+        {
+            List<List<Double>> result = new List<List<double>>();
+
+            for (int i = 0; i < source.RowCount; i++)
+            {
+                List<Double> newItem = new List<double>();
+
+                newItem.Add(Convert.ToDouble(source[i, 0].Value));
+                newItem.Add(Convert.ToDouble(source[i, 1].Value));
+                newItem.Add(Convert.ToDouble(source[i, 2].Value));
+                newItem.Add(Convert.ToDouble(source[i, 3].Value));
+
+                result.Add(newItem);
+            }
+
+            return result;
+        }                       
+        
+        private List<List<Double>> getRoutes(DataGridView source)
+        {
+            List<List<Double>> result = new List<List<double>>();
+
+            for (int i = 0; i < source.RowCount; i++)
+            {
+                List<Double> newItem = new List<double>();
+
+                for (int j = 0; j < 10; j++)
+                {
+                    if (source[i, j].Value != null)
+                        newItem.Add(Convert.ToDouble(source[i, j].Value));
+                }
+
+                result.Add(newItem);
+            }
+
+            return result;
+        }
+                                                                    
         private void Button1_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+
             int Psub1 = (int)this.numericUpDown1.Value;
             int Psub2 = (int)this.numericUpDown2.Value;
             int Perr = (int)this.numericUpDown3.Value;
             int N = (int)this.numericUpDown4.Value;
 
-            List<List<int>> nodesSub1 = new List<List<int>>();
-            List<List<int>> nodesSub2 = new List<List<int>>();
-            List<List<int>> routesSub1 = new List<List<int>>();
-            List<List<int>> routesSub2 = new List<List<int>>();
+            List<List<Double>> nodesSub1 = getNodes(dataGridView1);
+            List<List<Double>> nodesSub2 = getNodes(dataGridView2);
+
+            List<List<Double>> routesSub1 = getRoutes(dataGridView3);
+            List<List<Double>> routesSub2 = getRoutes(dataGridView4);
 
 
+
+            for (int i = 0; i < N; i++)
+            {
+                double probabilityTheme = rnd.NextDouble();
+                int themeNumber = 1;
+
+                if (probabilityTheme > Psub1)
+                    themeNumber = 2;
+
+
+            }
         }
     }
 }

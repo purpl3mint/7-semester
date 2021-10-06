@@ -39,5 +39,14 @@ namespace Lab_1
         {
             return new Level { alpha = l1.alpha, low = l1.low / l2.high, high = l1.high / l2.low };
         }
+
+        public static Level getLevelByAlpha (Level l1, Level l2, double alpha)
+        {
+            double low = ((alpha - l1.alpha) * (l2.low - l1.low) / (l2.alpha - l1.alpha)) + l1.low;
+            double high = ((alpha - l1.alpha) * (l2.high - l1.high) / (l2.alpha - l1.alpha)) + l1.high;
+            Level result = new Level(alpha, low, high);
+
+            return result;
+        }
     }
 }
