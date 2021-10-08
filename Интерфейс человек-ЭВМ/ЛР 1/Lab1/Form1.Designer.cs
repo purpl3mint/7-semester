@@ -32,6 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,8 +83,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -119,6 +119,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Начальные условия";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(271, 266);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Маршруты второй подтемы";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(271, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(147, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Маршруты первой подтемы";
             // 
             // dataGridView4
             // 
@@ -436,7 +454,7 @@
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown3.TabIndex = 8;
             this.numericUpDown3.Value = new decimal(new int[] {
-            100,
+            10,
             0,
             0,
             0});
@@ -531,30 +549,12 @@
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(271, 132);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Маршруты первой подтемы";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(271, 266);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Маршруты второй подтемы";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(1371, 614);
+            this.ClientSize = new System.Drawing.Size(1370, 614);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
