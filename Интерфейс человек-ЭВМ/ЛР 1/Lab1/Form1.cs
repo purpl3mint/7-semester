@@ -19,20 +19,126 @@ namespace Lab1
             chart1.Series[0].ChartType = SeriesChartType.Column;
             chart1.Series[0].LegendText = "Измерения времени";
             chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.00";
-            chart1.ChartAreas[0].AxisX.Minimum = 0;
 
-            dataGridView1.Rows.Add(1, 2, 10);
-            dataGridView1.Rows.Add(2, 3, 50);
+            //1
+            //dataGridView1.Rows.Add(1, 2, 1);
+            //dataGridView1.Rows.Add(2, 4, 2);
+            //dataGridView1.Rows.Add(4, 5, 3);
+            //dataGridView1.Rows.Add(4, 6, 4);
+            //dataGridView1.Rows.Add(6, 7, 5);
+            //dataGridView1.Rows.Add(1, 3, 6);
+            //dataGridView1.Rows.Add(3, 8, 7);
+            //dataGridView1.Rows.Add(8, 9, 8);
+            //dataGridView1.Rows.Add(9, 10, 9);
+            //dataGridView1.Rows.Add(10, 11, 10);
+            //dataGridView1.Rows.Add(10, 12, 11);
 
-            dataGridView2.Rows.Add(1, 2, 4);
-            dataGridView2.Rows.Add(2, 3, 6);
+            //dataGridView2.Rows.Add(1, 2, 1);
+            //dataGridView2.Rows.Add(2, 3, 2);
+            //dataGridView2.Rows.Add(3, 4, 3);
+            //dataGridView2.Rows.Add(4, 7, 4);
+            //dataGridView2.Rows.Add(3, 5, 5);
+            //dataGridView2.Rows.Add(5, 9, 6);
+            //dataGridView2.Rows.Add(4, 6, 7);
+            //dataGridView2.Rows.Add(6, 10, 8);
+            //dataGridView2.Rows.Add(5, 8, 9);
+            //dataGridView2.Rows.Add(8, 18, 10);
+            //dataGridView2.Rows.Add(8, 15, 11);
+            //dataGridView2.Rows.Add(15, 17, 12);
+            //dataGridView2.Rows.Add(3, 10, 13);
+            //dataGridView2.Rows.Add(10, 11, 14);
+            //dataGridView2.Rows.Add(11, 12, 15);
+            //dataGridView2.Rows.Add(12, 13, 16);
+            //dataGridView2.Rows.Add(12, 14, 17);
 
 
-            dataGridView3.Rows.Add(0.5, 1, 2);
-            dataGridView3.Rows.Add(0.5, 1, 2, 3);
+            //dataGridView3.Rows.Add(0.25, 1, 2, 4, 5);
+            //dataGridView3.Rows.Add(0.25, 1, 2, 4, 6, 7);
+            //dataGridView3.Rows.Add(0.25, 1, 3, 8, 9, 10, 11);
+            //dataGridView3.Rows.Add(0.25, 1, 3, 8, 9, 10, 12);
 
-            dataGridView4.Rows.Add(0.5, 1, 2);
-            dataGridView4.Rows.Add(0.5, 1, 2, 3);
+            //dataGridView4.Rows.Add(0.4, 1, 2, 3, 4, 7);
+            //dataGridView4.Rows.Add(0.1, 1, 2, 3, 5, 9);
+            //dataGridView4.Rows.Add(0.1, 1, 2, 3, 4, 6, 10);
+            //dataGridView4.Rows.Add(0.1, 1, 2, 3, 5, 8, 18);
+            //dataGridView4.Rows.Add(0.1, 1, 2, 3, 5, 8, 15, 17);
+            //dataGridView4.Rows.Add(0.1, 1, 2, 3, 10, 11, 12, 13);
+            //dataGridView4.Rows.Add(0.1, 1, 2, 3, 10, 11, 12, 14);
+            //1
+            
+            //2
+            //dataGridView1.Rows.Add(1, 2, 23);
+            //dataGridView1.Rows.Add(2, 4, 42);
+            //dataGridView1.Rows.Add(4, 5, 20);
+            //dataGridView1.Rows.Add(4, 6, 36);
+            //dataGridView1.Rows.Add(6, 7, 20);
+            //dataGridView1.Rows.Add(1, 3, 11);
+            //dataGridView1.Rows.Add(3, 8, 6);
+            //dataGridView1.Rows.Add(8, 9, 123);
+            //dataGridView1.Rows.Add(9, 10, 2);
+            //dataGridView1.Rows.Add(10, 11, 1);
+            //dataGridView1.Rows.Add(10, 12, 3);
+
+            //dataGridView2.Rows.Add(1, 2, 13);
+            //dataGridView2.Rows.Add(2, 4, 12);
+            //dataGridView2.Rows.Add(4, 5, 11);
+            //dataGridView2.Rows.Add(4, 6, 5);
+            //dataGridView2.Rows.Add(6, 7, 1);
+            //dataGridView2.Rows.Add(1, 3, 2);
+            //dataGridView2.Rows.Add(3, 8, 6);
+            //dataGridView2.Rows.Add(8, 9, 6);
+            //dataGridView2.Rows.Add(9, 10, 41);
+            //dataGridView2.Rows.Add(10, 11, 3);
+            //dataGridView2.Rows.Add(10, 12, 5);
+
+
+            //dataGridView3.Rows.Add(0.25, 1, 2, 4, 5);
+            //dataGridView3.Rows.Add(0.25, 1, 2, 4, 6, 7);
+            //dataGridView3.Rows.Add(0.25, 1, 3, 8, 9, 10, 11);
+            //dataGridView3.Rows.Add(0.25, 1, 3, 8, 9, 10, 12);
+
+            //dataGridView4.Rows.Add(0.25, 1, 2, 4, 5);
+            //dataGridView4.Rows.Add(0.25, 1, 2, 4, 6, 7);
+            //dataGridView4.Rows.Add(0.25, 1, 3, 8, 9, 10, 11);
+            //dataGridView4.Rows.Add(0.25, 1, 3, 8, 9, 10, 12);
+            //2
+            
+            //3
+            dataGridView1.Rows.Add(1, 2, 23);
+            dataGridView1.Rows.Add(2, 4, 42);
+            dataGridView1.Rows.Add(4, 5, 20);
+            dataGridView1.Rows.Add(4, 6, 36);
+            dataGridView1.Rows.Add(6, 7, 20);
+            dataGridView1.Rows.Add(1, 3, 11);
+            dataGridView1.Rows.Add(3, 8, 6);
+            dataGridView1.Rows.Add(8, 9, 123);
+            dataGridView1.Rows.Add(9, 10, 2);
+            dataGridView1.Rows.Add(10, 11, 1);
+            dataGridView1.Rows.Add(10, 12, 3);
+
+            dataGridView2.Rows.Add(1, 2, 13);
+            dataGridView2.Rows.Add(2, 4, 12);
+            dataGridView2.Rows.Add(4, 5, 11);
+            dataGridView2.Rows.Add(4, 6, 5);
+            dataGridView2.Rows.Add(6, 7, 1);
+            dataGridView2.Rows.Add(1, 3, 2);
+            dataGridView2.Rows.Add(3, 8, 6);
+            dataGridView2.Rows.Add(8, 9, 6);
+            dataGridView2.Rows.Add(9, 10, 41);
+            dataGridView2.Rows.Add(10, 11, 3);
+            dataGridView2.Rows.Add(10, 12, 5);
+
+
+            dataGridView3.Rows.Add(0.25, 1, 2, 4, 5);
+            dataGridView3.Rows.Add(0.25, 1, 2, 4, 6, 7);
+            dataGridView3.Rows.Add(0.25, 1, 3, 8, 9, 10, 11);
+            dataGridView3.Rows.Add(0.25, 1, 3, 8, 9, 10, 12);
+
+            dataGridView4.Rows.Add(0.25, 1, 2, 4, 5);
+            dataGridView4.Rows.Add(0.25, 1, 2, 4, 6, 7);
+            dataGridView4.Rows.Add(0.25, 1, 3, 8, 9, 10, 11);
+            dataGridView4.Rows.Add(0.25, 1, 3, 8, 9, 10, 12);
+            //3
         }
 
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
