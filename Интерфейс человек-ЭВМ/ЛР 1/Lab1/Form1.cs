@@ -18,11 +18,21 @@ namespace Lab1
             InitializeComponent();
             chart1.Series[0].ChartType = SeriesChartType.Column;
             chart1.Series[0].LegendText = "Измерения времени";
+            chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.00";
+            chart1.ChartAreas[0].AxisX.Minimum = 0;
 
-            dataGridView1.Rows.Add(1, 2, 10, 1);
-            dataGridView2.Rows.Add(1, 2, 4, 1);
-            dataGridView3.Rows.Add(1, 1, 2);
-            dataGridView4.Rows.Add(1, 1, 2);
+            dataGridView1.Rows.Add(1, 2, 10);
+            dataGridView1.Rows.Add(2, 3, 50);
+
+            dataGridView2.Rows.Add(1, 2, 4);
+            dataGridView2.Rows.Add(2, 3, 6);
+
+
+            dataGridView3.Rows.Add(0.5, 1, 2);
+            dataGridView3.Rows.Add(0.5, 1, 2, 3);
+
+            dataGridView4.Rows.Add(0.5, 1, 2);
+            dataGridView4.Rows.Add(0.5, 1, 2, 3);
         }
 
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -51,7 +61,6 @@ namespace Lab1
                 newItem.Add(Convert.ToDouble(source[0, i].Value));
                 newItem.Add(Convert.ToDouble(source[1, i].Value));
                 newItem.Add(Convert.ToDouble(source[2, i].Value));
-                newItem.Add(Convert.ToDouble(source[3, i].Value));
 
                 result.Add(newItem);
             }
