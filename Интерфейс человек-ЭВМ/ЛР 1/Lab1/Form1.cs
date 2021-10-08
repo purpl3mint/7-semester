@@ -167,6 +167,7 @@ namespace Lab1
             List<List<Double>> routesSub2 = getRoutes(dataGridView4);
 
             List<Double> measuringTime = new List<double>();
+            List<int> themeNumberTime = new List<int>();
             
             for (int i = 0; i < N; i++)
             {
@@ -176,10 +177,12 @@ namespace Lab1
                 {
                     double time = makeExperiment(rnd, Perr, nodesSub1, routesSub1);
                     measuringTime.Add(time);
+                    themeNumberTime.Add(1);
                 } else
                 {
                     double time = makeExperiment(rnd, Perr, nodesSub2, routesSub2);
                     measuringTime.Add(time);
+                    themeNumberTime.Add(2);
                 }
             }
 
@@ -205,6 +208,38 @@ namespace Lab1
             {
                 chart1.Series[0].Points.AddXY(minTime + step * i, gistData[i]);
             }
+
+            double avgTime1 = 0, avgTime2 = 0, avgTotal = 0;
+            int times1 = 0, times2 = 0;
+            for (int i = 0; i < N; i++)
+            {
+                switch (themeNumberTime[i])
+                {
+                    case 1:
+                        if (avgTime1 == 0)
+                            avgTime1 = measuringTime[i];
+                        else
+                            avgTime1 += measuringTime[i];
+                        times1++;
+                        break;
+                    case 2:
+                        if (avgTime2 == 0)
+                            avgTime2 = measuringTime[i];
+                        else
+                            avgTime2 += measuringTime[i];
+                        times2++;
+                        break;
+                }
+
+            }
+
+            avgTotal = (avgTime1 + avgTime2) / N;
+            avgTime1 /= times1;
+            avgTime2 /= times2;
+
+            textBox1.Text = Convert.ToString(avgTime1);
+            textBox2.Text = Convert.ToString(avgTime2);
+            textBox3.Text = Convert.ToString(avgTotal);
         }
 
     }

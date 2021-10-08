@@ -63,7 +63,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.startNode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endNode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
@@ -75,12 +81,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.startNode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endNode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -95,6 +101,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.dataGridView4);
@@ -352,6 +364,24 @@
             this.dataGridView2.Size = new System.Drawing.Size(246, 108);
             this.dataGridView2.TabIndex = 12;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Нач. узел";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Кон. узел";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Вес";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -363,6 +393,24 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(246, 108);
             this.dataGridView1.TabIndex = 11;
+            // 
+            // startNode
+            // 
+            this.startNode.HeaderText = "Нач. узел";
+            this.startNode.Name = "startNode";
+            this.startNode.Width = 50;
+            // 
+            // endNode
+            // 
+            this.endNode.HeaderText = "Кон. узел";
+            this.endNode.Name = "endNode";
+            this.endNode.Width = 50;
+            // 
+            // weight
+            // 
+            this.weight.HeaderText = "Время";
+            this.weight.Name = "weight";
+            this.weight.Width = 50;
             // 
             // numericUpDown4
             // 
@@ -497,41 +545,56 @@
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
             // 
-            // startNode
+            // label9
             // 
-            this.startNode.HeaderText = "Нач. узел";
-            this.startNode.Name = "startNode";
-            this.startNode.Width = 50;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(308, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Ср. значение подтемы 1";
             // 
-            // endNode
+            // label10
             // 
-            this.endNode.HeaderText = "Кон. узел";
-            this.endNode.Name = "endNode";
-            this.endNode.Width = 50;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(308, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Ср. значение подтемы 2";
             // 
-            // weight
+            // label11
             // 
-            this.weight.HeaderText = "Время";
-            this.weight.Name = "weight";
-            this.weight.Width = 50;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(308, 75);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Ср. значение общее";
             // 
-            // dataGridViewTextBoxColumn1
+            // textBox1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Нач. узел";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(444, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 22;
             // 
-            // dataGridViewTextBoxColumn2
+            // textBox2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Кон. узел";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 50;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(444, 46);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 23;
             // 
-            // dataGridViewTextBoxColumn3
+            // textBox3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Вес";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 50;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(444, 72);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 24;
             // 
             // Form1
             // 
@@ -612,6 +675,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn startNode;
         private System.Windows.Forms.DataGridViewTextBoxColumn endNode;
         private System.Windows.Forms.DataGridViewTextBoxColumn weight;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
 
