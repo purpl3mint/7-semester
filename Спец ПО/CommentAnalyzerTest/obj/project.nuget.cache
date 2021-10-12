@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "ufcg+YtXN4lx2JD8vu0WoKxdK069FcZ2NX8MuzebE6dG8j2S6vKwvlJMy+JRu/KNXSKhXDCEu7X7pvlStirv9A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Buzz\\Desktop\\Учеба\\7-semester\\Спец ПО\\CommentAnalyzerTest\\CommentAnalyzerTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Buzz\\.nuget\\packages\\antlr\\3.5.0.2\\antlr.3.5.0.2.nupkg.sha512",
+    "C:\\Users\\Buzz\\.nuget\\packages\\antlr4.runtime.standard\\4.9.2\\antlr4.runtime.standard.4.9.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Antlr 3.5.0.2\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net5.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Antlr",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Antlr/3.5.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/Antlr3.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/Antlr3.Runtime.dll": {}
+        }
+      },
+      "Antlr4.Runtime.Standard/4.9.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Antlr/3.5.0.2": {
+      "sha512": "CSfrVuDVMx3OrQhT84zed+tOdM1clljyRLWWlQM22fJsmG836RVDGQlE6tzysXh8X8p9UjkHbLr6OqEIVhtdEA==",
+      "type": "package",
+      "path": "antlr/3.5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "antlr.3.5.0.2.nupkg.sha512",
+        "antlr.nuspec",
+        "lib/Antlr3.Runtime.dll",
+        "lib/Antlr3.Runtime.pdb"
+      ]
+    },
+    "Antlr4.Runtime.Standard/4.9.2": {
+      "sha512": "NH/CZeP56ERa+1w7HqlQKXMVBlkNHOWrjF3holW5XgUdyDP36Mw0SynoNj6jD7UNqhxc+4YYfOWXajO3U1Q2dw==",
+      "type": "package",
+      "path": "antlr4.runtime.standard/4.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "antlr4.runtime.standard.4.9.2.nupkg.sha512",
+        "antlr4.runtime.standard.nuspec",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.dll",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Antlr >= 3.5.0.2",
+      "Antlr4.Runtime.Standard >= 4.9.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Buzz\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Buzz\\Desktop\\Учеба\\7-semester\\Спец ПО\\CommentAnalyzerTest\\CommentAnalyzerTest.csproj",
+      "projectName": "CommentAnalyzerTest",
+      "projectPath": "C:\\Users\\Buzz\\Desktop\\Учеба\\7-semester\\Спец ПО\\CommentAnalyzerTest\\CommentAnalyzerTest.csproj",
+      "packagesPath": "C:\\Users\\Buzz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Buzz\\Desktop\\Учеба\\7-semester\\Спец ПО\\CommentAnalyzerTest\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Buzz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Antlr": {
+            "target": "Package",
+            "version": "[3.5.0.2, )"
+          },
+          "Antlr4.Runtime.Standard": {
+            "target": "Package",
+            "version": "[4.9.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Antlr 3.5.0.2\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net5.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Antlr",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
