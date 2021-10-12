@@ -196,18 +196,51 @@ namespace Lab_1
             return -1;
         }
 
-        private void drawChart(string seriesName, DataGridView data)
+        private void drawChart(string valuesName, DataGridView data)
         {
-            chart1.Series[seriesName].Points.Clear();
+            string seriesName = "Chart" + valuesName;
+            chart1.Series["Chart" + valuesName].Points.Clear();
 
             List<Level> values = getValues(data);
-            sortValues(values);
+            values = sortValues(values);
+
+            if (!verifyValues(values, valuesName))
+                return;
 
             for (int i = values.Count - 1; i >= 0; i--)
                 chart1.Series[seriesName].Points.AddXY(values[i].low, values[i].alpha);
 
             for (int i = 0; i < values.Count; i++)
                 chart1.Series[seriesName].Points.AddXY(values[i].high, values[i].alpha);
+        }
+
+        private void errorHandler(string valuesName)
+        {
+            string errorMessageBoxTitle = "Ошибка";
+            string message = "Некорректное множество " + valuesName;
+
+            MessageBox.Show(message, errorMessageBoxTitle, MessageBoxButtons.OK);
+        }
+
+        private bool verifyValues(List<Level> values, string valuesName)
+        {
+            bool result = true;
+
+            for (int i = 0; i < values.Count - 1; i++)
+            {
+                if (values[i].alpha < 0 || values[i].alpha > 1 ||   //check alpha levels
+                    values[i].alpha == values[i + 1].alpha ||       //check unequality diff alpha values
+                    values[i].low > values[i].low ||                //check increasing diff left parts
+                    values[i].high < values[i].high)                //check decreasing diff right parts
+                {
+                    result = false;
+                }
+            }
+
+            if (result == false)
+                errorHandler(valuesName);
+
+            return result;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -218,9 +251,16 @@ namespace Lab_1
             valuesA = sortValues(valuesA);
             valuesB = sortValues(valuesB);
 
+            if (!verifyValues(valuesA, "A"))
+                return;
+
+            if (!verifyValues(valuesB, "B"))
+                return;
+
             List<Level> valuesC = operationValues(valuesA, valuesB, '+');
 
             showValues(valuesC, dataGridView3);
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -229,6 +269,12 @@ namespace Lab_1
 
             valuesA = sortValues(valuesA);
             valuesB = sortValues(valuesB);
+
+            if (!verifyValues(valuesA, "A"))
+                return;
+
+            if (!verifyValues(valuesB, "B"))
+                return;
 
             List<Level> valuesC = operationValues(valuesA, valuesB, '-');
 
@@ -243,6 +289,12 @@ namespace Lab_1
             valuesA = sortValues(valuesA);
             valuesB = sortValues(valuesB);
 
+            if (!verifyValues(valuesA, "A"))
+                return;
+
+            if (!verifyValues(valuesB, "B"))
+                return;
+
             List<Level> valuesC = operationValues(valuesA, valuesB, '*');
 
             showValues(valuesC, dataGridView3);
@@ -256,6 +308,12 @@ namespace Lab_1
             valuesA = sortValues(valuesA);
             valuesB = sortValues(valuesB);
 
+            if (!verifyValues(valuesA, "A"))
+                return;
+
+            if (!verifyValues(valuesB, "B"))
+                return;
+
             List<Level> valuesC = operationValues(valuesA, valuesB, '/');
 
             showValues(valuesC, dataGridView3);
@@ -266,9 +324,18 @@ namespace Lab_1
             List<Level> valuesA = getValues(dataGridView1);
             List<Level> valuesB = getValues(dataGridView2);
 
+            valuesA = sortValues(valuesA);
+            valuesB = sortValues(valuesB);
+
+            if (!verifyValues(valuesA, "A"))
+                return;
+
+            if (!verifyValues(valuesB, "B"))
+                return;
+
             int comparisonResult = compareValues(valuesA, valuesB);
 
-            switch(comparisonResult)
+            switch (comparisonResult)
             {
                 case -1:
                     button9.BackColor = Color.LightPink;
@@ -297,21 +364,23 @@ namespace Lab_1
                 default:
                     break;
             }
+
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            drawChart("ChartA", dataGridView1);
+            drawChart("A", dataGridView1);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            drawChart("ChartB", dataGridView2);
+            drawChart("B", dataGridView2);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            drawChart("ChartC", dataGridView3);
+            drawChart("C", dataGridView3);
         }
     }
 }
