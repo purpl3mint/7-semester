@@ -18,6 +18,7 @@ data RealEstate = Null |
 db = [(Flat 2 44.3 9, 40000),
       (Flat 5 56.1 5, 35000),
       (Room 3 77.0 8 12.5, 10000),
+      (House 180.3, 70000),
       (House 180.3, 70000)]
 
 getHouses :: [(RealEstate, Integer)] -> [(RealEstate, Integer)]

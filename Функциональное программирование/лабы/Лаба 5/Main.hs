@@ -6,7 +6,7 @@ data MySystem =   FFile MyFile
                 | FDir  (String, [MySystem]) deriving Show
 
 {--File system for examples --}
-fs = (FDir ("Main", [FFile ("bin.exe", 19121), FFile ("run.exe", 434343), FDir ("Log", [FFile ("log1.txt", 1000), FFile ("log2.txt", 3500)])]))
+fs = (FDir ("Main", [FFile ("bin.exe", 19000), FFile ("run.exe", 434200), FDir ("Log", [FFile ("log1.txt", 1000), FFile ("log2.txt", 3500), FFile ("run.exe", 434200)])]))
 
 {--Total length of files in file system--}
 du :: MySystem -> Integer
