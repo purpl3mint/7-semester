@@ -1,8 +1,25 @@
 ﻿#include <iostream>
 #include <conio.h>
 #include <stddef.h>
+#include <fstream>
 
 using namespace std;
+
+uint8_t gencrc(uint8_t* data, size_t len)
+{
+	uint8_t crc = 0xff; // 0 FF
+	size_t i, j;
+	for (i = 0; i < len; i++) {
+		crc ^= data[i];
+		for (j = 0; j < 8; j++) {
+			if ((crc & 0x80) != 0)
+				crc = (uint8_t)((crc << 1) ^ 0x31);
+			else
+				crc <<= 1;
+		}
+	}
+	return crc;
+}
 
 static unsigned char const crc8x_table[] = {
     0x00, 0x31, 0x62, 0x53, 0xc4, 0xf5, 0xa6, 0x97, 0xb9, 0x88, 0xdb, 0xea, 0x7d,
@@ -26,13 +43,12 @@ static unsigned char const crc8x_table[] = {
     0x1a, 0x2b, 0xbc, 0x8d, 0xde, 0xef, 0x82, 0xb3, 0xe0, 0xd1, 0x46, 0x77, 0x24,
     0x15, 0x3b, 0x0a, 0x59, 0x68, 0xff, 0xce, 0x9d, 0xac };
 
-unsigned crc8x_fast(unsigned crc, void const* mem, size_t len) {
-    unsigned char const* data = (unsigned char const*)mem;
-    if (data == NULL)
+unsigned crc8x_fast(uint8_t* mem, size_t len) {
+	unsigned crc = 0xFF; // 0 FF
+    if (mem == NULL)
         return 0xff;
-    crc &= 0xff;
     while (len--)
-        crc = crc8x_table[crc ^ *data++];
+        crc = crc8x_table[crc ^ *mem++];
     return crc;
 }
 
@@ -71,48 +87,48 @@ int lengthNumber(int number)
 	return length;
 }
 
+	stringXor()
+{
+
+
+}
 void directCRCalgorithm()
 {
-	unsigned int startCRC = 0;
-	unsigned int CRC8 = 49; //const
-	unsigned int data = 0; //can change
-	unsigned int temp;
-	unsigned int tempData;
+	uint8_t *data = NULL;
+	uint8_t crc;
 	
-	cout << "Введите число: ";
-	cin >> data;
+	data = (uint8_t*)malloc(sizeof(uint8_t));
 	
-	//Пример 2
-	cout << "\nПрямой алгоритм вычисления (СRC-8)\n"
-		 << "Введите начальное значение CRC(0 или 255): ";
+	ifstream in("test.txt");
 	
-	cin >> startCRC;
+	int i = 0;
 
-	while((startCRC != 0) && (startCRC != 255))
+	if (in.is_open())
 	{
-		cout << "\nОшибка ввода\n"
-			<< "Введите начальное значение CRC(0 или 255): ";
-		
-		cin >> startCRC;
-	}
-
-	for (int i = 0; i < 8; i++)
-	{
-
-		if (((startCRC & 0x1) xor (data & 0x1)) == 1)
+		while (!in.eof())
 		{
-			startCRC = startCRC xor CRC8;
-		}else {
-			startCRC = startCRC >> 1;
-			startCRC += 128;
+			in.read((char*)data + i, 1);
+			i++;
+			if (data != NULL)
+				data = (uint8_t*)realloc(data, (i + 1) * sizeof(uint8_t));
 		}
-	}
 
-	cout << "\nCRC код: " << dataInByte(startCRC);
-	cout << "\nCRC код: "<<startCRC <<"\n";
-	//Конец примера 2
+	}
 	
-	tempData = data;
+	if (data != NULL)
+		data[i-1] = '\0';
+	
+	crc = gencrc(data, i - 1);
+	cout << "CRC код: " << (int)crc << "\n";
+	cout << "CRC код: " << dataInByte(crc) <<"\n\n";
+
+	string dataString = "";
+	for (size_t j = 0; j < i; j++)
+		dataString += dataInByte(data[j]);
+	
+	stringXor();
+
+	int tempData = data;
 	int tempK = startCRC;
 
 	int lengthData;
@@ -123,6 +139,7 @@ void directCRCalgorithm()
 
 	while (lengthData > lengthCRC)
 	{
+		tempK = startCRC;
 		tempK <<= (lengthData - lengthCRC);
 
 		tempData = (tempData xor tempK);
@@ -133,32 +150,132 @@ void directCRCalgorithm()
 
 	cout << "\nОстаток: " << dataInByte(tempData); ;
 	cout << "\nОстаток: " << tempData << "\n"; ;
+	
+	
+	
+	free(data);
 
-	
-	
-	cout << "\nВходные данные: " << dataInByte(data);
-	cout << "\nВходные данные: " << data << "\n";
-	
-	int endData = data;
-	endData <<= lengthNumber(tempData);
-	endData += tempData;
-
-	cout << "\nОтвет: " << dataInByte(endData);
-	cout << "\nОтвет: " << endData << "\n\n";
+//	unsigned int startCRC = 0;
+//	unsigned int CRC8 = 49; //const
+//	unsigned int data = 0; //can change
+//	unsigned int temp;
+//	unsigned int tempData;
+//	
+//	cout << "Введите число: ";
+//	cin >> data;
+//	
+//	//Пример 2
+//	cout << "\nПрямой алгоритм вычисления (СRC-8)\n"
+//		 << "Введите начальное значение CRC(0 или 255): ";
+//	
+//	cin >> startCRC;
+//
+//	while((startCRC != 0) && (startCRC != 255))
+//	{
+//		cout << "\nОшибка ввода\n"
+//			<< "Введите начальное значение CRC(0 или 255): ";
+//		
+//		cin >> startCRC;
+//	}
+//
+//	int dataExample2 = data;
+//	for (int i = 0; i < 8; i++)
+//	{
+//		if (((startCRC & 0x1) xor (dataExample2 & 0x1)) == 1)
+//		{
+//			startCRC = startCRC xor CRC8;
+//			startCRC = startCRC >> 1;
+//			startCRC += 128;
+//		}else {
+//			startCRC = startCRC >> 1;
+//		}
+//		dataExample2 >>= 1;
+//	}
+//
+//	cout << "\nCRC код: " << dataInByte(startCRC);
+//	cout << "\nCRC код: "<<startCRC <<"\n";
+//	//Конец примера 2
+//	
+//	tempData = data;
+//	int tempK = startCRC;
+//
+//	int lengthData;
+//	int lengthCRC;
+//	
+//	lengthData = lengthNumber(tempData);
+//	lengthCRC = lengthNumber(tempK);
+//
+//	while (lengthData > lengthCRC)
+//	{
+//		tempK = startCRC;
+//		tempK <<= (lengthData - lengthCRC);
+//
+//		tempData = (tempData xor tempK);
+//
+//		lengthData = lengthNumber(tempData);
+//		lengthCRC = lengthNumber(tempK);
+//	}
+//
+//	cout << "\nОстаток: " << dataInByte(tempData); ;
+//	cout << "\nОстаток: " << tempData << "\n"; ;
+//
+//	
+//	
+//	cout << "\nВходные данные: " << dataInByte(data);
+//	cout << "\nВходные данные: " << data << "\n";
+//	
+//	int endData = data;
+//	endData <<= lengthNumber(tempData);
+//	endData += tempData;
+//
+//	cout << "\nОтвет: " << dataInByte(endData);
+//	cout << "\nОтвет: " << endData << "\n\n";
 }
 
 void tabularCRCmethod()
 {
-	string data = "";
-	int startCRC = 0;
+	/*static int datat;
+	static int startCRC = 0;
 	cout << "Введите данные: ";
-	cin >> data;
+	cin >> datat;
 	
 	cout << "\nВведите начальное значение CRC(0 или 255): ";
 	cin >> startCRC;
+	unsigned int test = crc8x_fast(startCRC, &datat, 1);
+	cout << "\n" << test << "\n";
+	cout << "Входные данные: " << dataInByte(test) << "\n\n";*/
 
-	cout <<"\n" << crc8x_fast(startCRC, &data, (size_t)data.length()) <<"\n";
-	cout << "Входные данные: " << dataInByte(crc8x_fast(startCRC, &data, (size_t)data.length())) << "\n\n";
+	uint8_t* data = NULL;
+
+	data = (uint8_t*)malloc(sizeof(uint8_t));
+
+	ifstream in("test.txt");
+
+	int i = 0;
+
+	if (in.is_open())
+	{
+		while (!in.eof())
+		{
+			in.read((char*)data + i, 1);
+			i++;
+			if (data != NULL)
+				data = (uint8_t*)realloc(data, (i + 1) * sizeof(uint8_t));
+		}
+
+	}
+
+	if (data != NULL)
+		data[i - 1] = '\0';
+
+	unsigned int test = crc8x_fast(data, i - 1);
+
+	cout << "CRC код: " << (int)test << "\n";
+	cout << "CRC код: " << dataInByte(test) << "\n\n";
+
+
+
+	free(data);
 }
 
 void menu()
@@ -188,8 +305,10 @@ void menu()
 		}
 	}
 }
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	menu();
+	return 0;
 }
