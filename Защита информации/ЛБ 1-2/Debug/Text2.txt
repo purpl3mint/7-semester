@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WindowsFormsApp
+{
+    public class Encryption
+    {
+        protected char[] alphabet = {   'а','б', 'в', 'г',
+                                        'д','е', 'ж', 'з',
+                                        'и', 'к', 'л', 'м',
+                                        'н','о', 'п', 'р',
+                                        'с', 'т', 'у', 'ф',
+                                        'х', 'ц', 'ч', 'ш',
+                                        'щ', 'э', 'ю', 'я',
+                                        'ъ', 'ь'            };
+        
+        protected string word;
+        protected string key;
+        protected byte[] bt;
+
+        public Encryption()
+        {
+            this.word = "EMPTY";
+            this.key = "EMPTY";
+        }
+        public Encryption(string word, string key)
