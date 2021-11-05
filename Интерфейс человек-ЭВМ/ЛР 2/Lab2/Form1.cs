@@ -35,11 +35,20 @@ namespace Lab2
 
             double tOrdersCurrent = 0;
             double tExecutionCurrent = 0;
-            
+            double tRejection = 0;
+
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
 
             for (; ; )
             {
-                double tRejection = tOrdersCurrent + (-1 / densityRejection) * Math.Log(rnd.NextDouble());
+                if (tRejection != 0) tRejection += tRecovery;
+                if (tOrdersCurrent != 0) tOrdersCurrent = tRejection;
+
+                tRejection = tRejection + (-1 / densityRejection) * Math.Log(rnd.NextDouble());
+
+                dataGridView2.Rows.Add(tRejection.ToString(), tRecovery.ToString());
+                dataGridView2.Rows[dataGridView2.Rows.Count - 2].DefaultCellStyle.BackColor = Color.LightPink;
 
                 while (tOrdersCurrent < tRejection)
                 {
@@ -53,12 +62,34 @@ namespace Lab2
 
                     tOrdersCurrent += tOrder;
 
+                    if (tExecutionCurrent < tOrdersCurrent)
+                    {
+                        tExecutionCurrent = tOrdersCurrent;
+                    }
+
                     if (tExecutionCurrent < tRejection)
+                    {
                         tExecutionCurrent += tExecution;
+                    }
+                    dataGridView1.Rows.Add(tOrdersCurrent.ToString(), tExecutionCurrent.ToString(), tExecution.ToString());
+
+                    
+                    if (tExecutionCurrent < tRejection)
+                    {
+                        
+                    } else
+                    {
+                        
+                    }
+                    
 
                     if (tOrdersCurrent < tRejection && tExecutionCurrent < tRejection)
                     {
                         ordersProcessed += 1;
+                        dataGridView1.Rows[dataGridView1.Rows.Count - 1].DefaultCellStyle.BackColor = Color.LightGreen;
+                    } else
+                    {
+                        dataGridView1.Rows[dataGridView1.Rows.Count - 1].DefaultCellStyle.BackColor = Color.LightPink;
                     }
                     ordersTotal += 1;
                 }
