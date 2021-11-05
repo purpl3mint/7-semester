@@ -1,0 +1,10 @@
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\bin\Debug\FPG Demo.exe.config
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\bin\Debug\FPG Demo.exe
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\bin\Debug\FPG Demo.pdb
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG Demo.csprojAssemblyReference.cache
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG_Demo.Form1.resources
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG_Demo.Properties.Resources.resources
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG Demo.csproj.GenerateResource.cache
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG Demo.csproj.CoreCompileInputs.cache
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG Demo.exe
+C:\Users\Buzz\Desktop\Учеба\7-semester\МАД\ЛР 2\Доп задание\FPG Demo\obj\Debug\FPG Demo.pdb
