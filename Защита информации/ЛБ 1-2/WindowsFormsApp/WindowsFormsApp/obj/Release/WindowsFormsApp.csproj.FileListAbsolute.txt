@@ -1,0 +1,10 @@
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Release\WindowsFormsApp.exe.config
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Release\WindowsFormsApp.exe
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Release\WindowsFormsApp.pdb
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.Form1.resources
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.Properties.Resources.resources
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.csproj.GenerateResource.cache
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.exe
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.pdb
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Release\WindowsFormsApp.csprojAssemblyReference.cache

@@ -1,0 +1,50 @@
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\7-semester\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+C:\Users\gelvi\Desktop\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+G:\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\7-semester\Защита информации\Защита информации\ЛБ 1\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\7-semester\Защита информации\Защита информации\ЛБ 1-2\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
