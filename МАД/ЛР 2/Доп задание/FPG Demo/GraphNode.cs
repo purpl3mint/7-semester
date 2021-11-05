@@ -27,17 +27,6 @@ namespace FPG_Demo
                 this.children.Add(child);
         }
 
-        public GraphNode GetChildByValue(string value)
-        {
-            foreach (GraphNode node in this.children)
-            {
-                if (node.value == value)
-                    return node;
-            }
-
-            return null;
-        }
-
         public void AddTransaction(List<string> transaction)
         {
             this.count++;
