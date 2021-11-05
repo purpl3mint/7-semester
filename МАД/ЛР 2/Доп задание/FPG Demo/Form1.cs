@@ -18,6 +18,15 @@ namespace FPG_Demo
             InitializeComponent();
         }
 
+        private void ShowTransactions()
+        {
+            dataGridView2.Rows.Clear();
+            foreach (Transaction transaction in Data.transactions)
+            {
+                dataGridView2.Rows.Add(transaction.id, transaction.value);
+            }
+        }
+
         private void GetRecords()
         {
             string[] lines = Data.fileContent.Split('\n');
@@ -67,6 +76,7 @@ namespace FPG_Demo
                 }
                 else
                 {
+                    value = value.TrimEnd();
                     Data.transactions.Add(new Transaction(currentId, value));
                     value = record.value + " ";
                     currentId = record.id;
@@ -75,13 +85,8 @@ namespace FPG_Demo
 
             if (value != "")
             {
+                value = value.TrimEnd();
                 Data.transactions.Add(new Transaction(currentId, value));
-            }
-
-            dataGridView2.Rows.Clear();
-            foreach (Transaction transaction in Data.transactions)
-            {
-                dataGridView2.Rows.Add(transaction.id, transaction.value);
             }
         }
 
@@ -106,39 +111,31 @@ namespace FPG_Demo
 
         private void SortValuesInTransactions()
         {
-            /*
-            Data.transactions.Sort(delegate (Record x, Record y)
-            {
-                if (x == null && y == null) return 0;
-                else if (x == null) return -1;
-                else if (y == null) return 1;
-                else return x.id.CompareTo(y.id);
-            });
-            */
-            
             for (int i = 0; i < Data.transactions.Count; i++)
             {
-                /*
-                string currentString = Data.transactions[i].value.OrderBy(delegate (string x, string y)
-                {
-                    if (Data.occurencies[x] == Data.occurencies[y]) return 0;
-                    else if (Data.occurencies[x] > Data.occurencies[y]) return -1;
-                    else return 1;
-                });
-                */
                 string currentString = Data.transactions[i].value;
                 List<string> splittedString = new List<string>(currentString.Split(' '));
-                //Почему тут ошибка?
-                /*
-                splittedString = splittedString.Sort(delegate (string x, string y)
+
+                splittedString.Sort(delegate (string x, string y)
                 {
                     if (Data.occurencies[x] == Data.occurencies[y]) return 0;
                     else if (Data.occurencies[x] > Data.occurencies[y]) return -1;
                     else return 1;
                 });
-                */
+
+                Data.transactions[i].value = String.Join(" ", splittedString.ToArray());
             }
-            
+        }
+
+        private void BuildGraph()
+        {
+            foreach(Transaction transaction in Data.transactions)
+            {
+                string currentValue = transaction.value;
+                List<string> splittedValue = new List<string>(currentValue.Split(' '));
+
+                Data.graph.AddTransaction(splittedValue);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -173,7 +170,13 @@ namespace FPG_Demo
             if (Data.records.Count > 0)
             {
                 GetTransactions();
+                GetOccurencies();
+                SortValuesInTransactions();
             }
+
+            ShowTransactions();
+
+            BuildGraph();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
