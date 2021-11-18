@@ -138,6 +138,108 @@ namespace FPG_Demo
             }
         }
 
+        private string GetPathFromNode (GraphNode node)
+        {
+            if (node.parent != null)
+            {
+                return node.value + " " + GetPathFromNode(node.parent);
+            }
+
+            return node.value;
+        }
+
+        private Dictionary<string, int> GetLocalOccurencies(string path, Dictionary<string, int> localOccurencies)
+        {
+            List<string> items = new List<string>(path.Split(' '));
+
+            foreach (string item in items)
+            {
+                if (localOccurencies.ContainsKey(item))
+                {
+                    localOccurencies[item] += 1;
+                } else
+                {
+                    localOccurencies[item] = 1;
+                }
+            }
+
+            return localOccurencies;
+        }
+
+        private List<Rule> GetRulesFromConvolutionTree(List<GraphNode> currentNodes, string prefix)
+        {
+            List<Rule> result = new List<Rule>();
+
+            foreach(GraphNode node in currentNodes)
+            {
+                if (node.children.Count == 0)
+                {
+                    if (prefix.Length > 0)
+                        result.Add(new Rule(node.value, prefix));
+                } else
+                {
+                    List<Rule> resultFromNextLevel = GetRulesFromConvolutionTree(node.children, prefix + " " + node.value);
+                    resultFromNextLevel.ForEach(r => result.Add(r));
+                }
+            }          
+
+            return result;
+        }
+
+        private void GetRules()
+        {
+            foreach (string value in Data.occurencies.Keys)
+            {
+                List<GraphNode> foundNodes = Data.graph.FindNodes(value, Data.graph.children);
+
+                List<string> paths = new List<string>();
+
+                //Getting paths
+                foreach (GraphNode node in foundNodes)
+                {
+                    //paths.Add(new string(GetPathFromNode(node).Substring(value.Length + 1).Reverse().ToArray()));
+                    paths.Add(new string(GetPathFromNode(node).Reverse().ToArray()));
+                }
+
+                //Getting occurencies for conditional tree
+                Dictionary<string, int> localOccurencies = new Dictionary<string, int>();
+                foreach (string path in paths)
+                {
+                    localOccurencies = GetLocalOccurencies(path, localOccurencies);
+                }
+
+                //Sort items in paths
+                /*
+                for (int i = 0; i < paths.Count; i++)
+                {
+                    string path = paths[i];
+                    List<string> splittedPath = new List<string>(path.Split(' '));
+
+                    splittedPath.Sort(delegate (string x, string y)
+                    {
+                        if (localOccurencies[x] == localOccurencies[y]) return 0;
+                        else if (localOccurencies[x] > localOccurencies[y]) return -1;
+                        else return 1;
+                    });
+
+                    paths[i++] = String.Join(" ", splittedPath.ToArray());
+                }
+                */
+
+                //Generating conditional tree
+                Graph convolutionGraph = new Graph();
+                foreach (string path in paths)
+                {
+                    List<string> preparedPath = new List<string>(path.Split(' '));
+                    convolutionGraph.AddTransaction(preparedPath);
+                }
+
+                //Generating rules
+                List<Rule> localRules = GetRulesFromConvolutionTree(convolutionGraph.children, "");
+                localRules.ForEach(r => Data.rules.Add(r));
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -201,6 +303,11 @@ namespace FPG_Demo
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Data.minSupport = Convert.ToInt32(numericUpDown1.Value);
+            Data.maxSupport = Convert.ToInt32(numericUpDown2.Value);
+            Data.minConfidence = Convert.ToInt32(numericUpDown3.Value);
+            Data.maxConfidence = Convert.ToInt32(numericUpDown4.Value);
+
             if (Data.records.Count == 0 || Data.transactions.Count == 0)
             {
                 MessageBox.Show(
@@ -210,9 +317,13 @@ namespace FPG_Demo
                     MessageBoxIcon.Exclamation);
             }
 
-            GetOccurencies();
-            SortValuesInTransactions();
+            GetRules();
 
+            int i = 1;
+            foreach(Rule rule in Data.rules)
+            {
+                dataGridView3.Rows.Add(i++, rule.prefixItems, rule.targetItem, rule.support, rule.confidence);
+            }
         }
     }
 }

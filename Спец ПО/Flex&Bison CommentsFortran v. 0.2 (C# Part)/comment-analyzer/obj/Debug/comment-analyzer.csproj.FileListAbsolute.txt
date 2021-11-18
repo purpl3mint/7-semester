@@ -1,0 +1,12 @@
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment-analyzer.csprojAssemblyReference.cache
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment_analyzer.Properties.Resources.resources
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment-analyzer.csproj.GenerateResource.cache
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment-analyzer.csproj.CoreCompileInputs.cache
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\bin\Debug\comment-analyzer.exe.config
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\bin\Debug\comment-analyzer.exe
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\bin\Debug\comment-analyzer.pdb
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment_analyzer.AboutForm.resources
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment_analyzer.SaveBeforeCloseForm.resources
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment-analyzer.exe
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment-analyzer.pdb
+C:\Users\Buzz\Desktop\Учеба\6 семак\ТФЯиК\курсач\CommentAnalyzer(C#) v.1.2\comment-analyzer\comment-analyzer\obj\Debug\comment_analyzer.CommentAnalyzerForm.resources

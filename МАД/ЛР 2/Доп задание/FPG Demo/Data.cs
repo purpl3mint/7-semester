@@ -14,6 +14,7 @@ namespace FPG_Demo
         static public List<Transaction> transactions { get; set; } = new List<Transaction>();
         static public Dictionary<string, int> occurencies { get; set; } = new Dictionary<string, int>();
         static public Graph graph = new Graph();
+        static public List<Rule> rules = new List<Rule>();
         static public double minSupport { get; set; } = 0;
         static public double maxSupport { get; set; } = 0;
         static public double minConfidence { get; set; } = 0;
