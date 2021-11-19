@@ -208,34 +208,16 @@ namespace FPG_Demo
                     localOccurencies = GetLocalOccurencies(path, localOccurencies);
                 }
 
-                //Sort items in paths
-                /*
-                for (int i = 0; i < paths.Count; i++)
-                {
-                    string path = paths[i];
-                    List<string> splittedPath = new List<string>(path.Split(' '));
-
-                    splittedPath.Sort(delegate (string x, string y)
-                    {
-                        if (localOccurencies[x] == localOccurencies[y]) return 0;
-                        else if (localOccurencies[x] > localOccurencies[y]) return -1;
-                        else return 1;
-                    });
-
-                    paths[i++] = String.Join(" ", splittedPath.ToArray());
-                }
-                */
-
                 //Generating conditional tree
-                Graph convolutionGraph = new Graph();
+                Graph conditionalGraph = new Graph();
                 foreach (string path in paths)
                 {
                     List<string> preparedPath = new List<string>(path.Split(' '));
-                    convolutionGraph.AddTransaction(preparedPath);
+                    conditionalGraph.AddTransaction(preparedPath);
                 }
 
                 //Generating rules
-                List<Rule> localRules = GetRulesFromConvolutionTree(convolutionGraph.children, "");
+                List<Rule> localRules = GetRulesFromConvolutionTree(conditionalGraph.children, "");
                 localRules.ForEach(r => Data.rules.Add(r));
             }
         }
