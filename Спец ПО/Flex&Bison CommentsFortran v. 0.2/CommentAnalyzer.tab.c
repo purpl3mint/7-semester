@@ -69,9 +69,26 @@
 /* First part of user prologue.  */
 #line 1 "CommentAnalyzer.y"
 
+#undef UNICODE
 
+#define WIN32_LEAN_AND_MEAN
+
+#include <windows.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+// Need to link with Ws2_32.lib
+#pragma comment (lib, "Ws2_32.lib")
+
+#define DEFAULT_BUFLEN 512
+#define DEFAULT_PORT "777"
+#define ERROR_MAX_LENGTH 160
+
+int lineCounter = 1;
+int errorType = 0;
 
 extern int yylex();
 extern int yyparse();
@@ -79,7 +96,7 @@ extern FILE* yyin;
 
 void yyerror(const char* s);
 
-#line 83 "CommentAnalyzer.tab.c"
+#line 100 "CommentAnalyzer.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -120,7 +137,7 @@ enum yysymbol_kind_t
   YYSYMBOL_prog = 10,                      /* prog  */
   YYSYMBOL_comment = 11,                   /* comment  */
   YYSYMBOL_correct = 12,                   /* correct  */
-  YYSYMBOL_err = 13                        /* err  */
+  YYSYMBOL_notcomment = 13                 /* notcomment  */
 };
 typedef enum yysymbol_kind_t yysymbol_kind_t;
 
@@ -428,7 +445,7 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  2
+#define YYFINAL  18
 /* YYLAST -- Last index in YYTABLE.  */
 #define YYLAST   29
 
@@ -437,9 +454,9 @@ union yyalloc
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  5
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  19
+#define YYNRULES  15
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  35
+#define YYNSTATES  31
 
 /* YYMAXUTOK -- Last valid token kind.  */
 #define YYMAXUTOK   263
@@ -489,8 +506,8 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    29,    29,    30,    33,    34,    35,    36,    37,    38,
-      41,    42,    43,    44,    45,    48,    49,    50,    51,    52
+       0,    46,    46,    47,    50,    51,    52,    53,    54,    55,
+      58,    59,    60,    61,    62,    65
 };
 #endif
 
@@ -508,7 +525,7 @@ static const char *const yytname[] =
 {
   "\"end of file\"", "error", "\"invalid token\"", "T_STAR", "T_DIGIT",
   "T_LETTER", "T_SPLITTER", "T_NEWLINE", "T_QUIT", "$accept", "prog",
-  "comment", "correct", "err", YY_NULLPTR
+  "comment", "correct", "notcomment", YY_NULLPTR
 };
 
 static const char *
@@ -527,7 +544,7 @@ static const yytype_int16 yytoknum[] =
 };
 #endif
 
-#define YYPACT_NINF (-6)
+#define YYPACT_NINF (-4)
 
 #define yypact_value_is_default(Yyn) \
   ((Yyn) == YYPACT_NINF)
@@ -541,10 +558,10 @@ static const yytype_int16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      -6,    14,    -6,    -1,     3,     3,     3,    -6,     8,    -6,
-      -1,    -1,    -1,    -1,     9,     3,     3,     3,     3,    20,
-      21,    22,    -6,    -6,    -6,    -6,    -6,    -6,    -6,    -6,
-      -6,    -6,    -6,    -6,    -6
+      -3,     3,    -4,    -4,    -4,    -4,     9,    17,    -3,     3,
+       3,     3,     3,    12,    19,    20,    21,    -4,    -4,    -4,
+      -4,    -4,    -4,    -4,    -4,    16,    18,    22,    -4,    -4,
+      -4
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -552,22 +569,22 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_int8 yydefact[] =
 {
-       2,     0,     1,    10,    15,    15,    15,     4,     0,     3,
-      10,    10,    10,    10,     0,    15,    15,    15,    15,     0,
-       0,     0,     5,    14,    12,    11,    13,     6,    19,    17,
-      16,    18,     8,     7,     9
+       2,    10,    15,    15,    15,     4,     0,     0,     2,    10,
+      10,    10,    10,     0,     0,     0,     0,     5,     1,     3,
+      14,    12,    11,    13,     6,     0,     0,     0,     8,     7,
+       9
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -6,    -6,    -6,    13,    -5
+      -4,    10,    -4,     1,    11
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     1,     9,    14,    19
+      -1,     7,     8,    13,    14
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -575,40 +592,40 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
-      20,    21,    10,    11,    12,    13,    15,    16,    17,    18,
-      28,    29,    30,    31,     2,    22,    27,     3,     4,     5,
-       6,     7,     8,    23,    24,    25,    26,    32,    33,    34
+       1,     2,     3,     4,     5,     6,     9,    10,    11,    12,
+      20,    21,    22,    23,    15,    16,    17,    18,    19,    24,
+      25,    26,    27,    28,     0,    29,     0,     0,     0,    30
 };
 
 static const yytype_int8 yycheck[] =
 {
-       5,     6,     3,     4,     5,     6,     3,     4,     5,     6,
-      15,    16,    17,    18,     0,     7,     7,     3,     4,     5,
-       6,     7,     8,    10,    11,    12,    13,     7,     7,     7
+       3,     4,     5,     6,     7,     8,     3,     4,     5,     6,
+       9,    10,    11,    12,     3,     4,     7,     0,     8,     7,
+       1,     1,     1,     7,    -1,     7,    -1,    -1,    -1,     7
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_int8 yystos[] =
 {
-       0,    10,     0,     3,     4,     5,     6,     7,     8,    11,
-       3,     4,     5,     6,    12,     3,     4,     5,     6,    13,
-      13,    13,     7,    12,    12,    12,    12,     7,    13,    13,
-      13,    13,     7,     7,     7
+       0,     3,     4,     5,     6,     7,     8,    10,    11,     3,
+       4,     5,     6,    12,    13,    13,    13,     7,     0,    10,
+      12,    12,    12,    12,     7,     1,     1,     1,     7,     7,
+       7
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_int8 yyr1[] =
 {
        0,     9,    10,    10,    11,    11,    11,    11,    11,    11,
-      12,    12,    12,    12,    12,    13,    13,    13,    13,    13
+      12,    12,    12,    12,    12,    13
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_int8 yyr2[] =
 {
-       0,     2,     0,     2,     1,     2,     3,     3,     3,     3,
-       0,     2,     2,     2,     2,     0,     2,     2,     2,     2
+       0,     2,     0,     2,     1,     2,     3,     4,     4,     4,
+       0,     2,     2,     2,     2,     0
 };
 
 
@@ -1075,38 +1092,50 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
+  case 4: /* comment: T_NEWLINE  */
+#line 50 "CommentAnalyzer.y"
+                        {lineCounter++;}
+#line 1099 "CommentAnalyzer.tab.c"
+    break;
+
   case 5: /* comment: T_QUIT T_NEWLINE  */
-#line 34 "CommentAnalyzer.y"
-                                                                        {printf("Good bye\0"); exit(0);}
-#line 1082 "CommentAnalyzer.tab.c"
+#line 51 "CommentAnalyzer.y"
+                                        {exit(0);}
+#line 1105 "CommentAnalyzer.tab.c"
     break;
 
   case 6: /* comment: T_STAR correct T_NEWLINE  */
-#line 35 "CommentAnalyzer.y"
-                                        {printf("Correct comment\n");}
-#line 1088 "CommentAnalyzer.tab.c"
+#line 52 "CommentAnalyzer.y"
+                                        {lineCounter++;}
+#line 1111 "CommentAnalyzer.tab.c"
     break;
 
-  case 7: /* comment: T_LETTER err T_NEWLINE  */
-#line 36 "CommentAnalyzer.y"
-                                                {printf("Wrong comment\n");}
-#line 1094 "CommentAnalyzer.tab.c"
+  case 7: /* comment: T_LETTER notcomment error T_NEWLINE  */
+#line 53 "CommentAnalyzer.y"
+                                                        {lineCounter++;}
+#line 1117 "CommentAnalyzer.tab.c"
     break;
 
-  case 8: /* comment: T_DIGIT err T_NEWLINE  */
-#line 37 "CommentAnalyzer.y"
-                                                        {printf("Wrong comment\n");}
-#line 1100 "CommentAnalyzer.tab.c"
+  case 8: /* comment: T_DIGIT notcomment error T_NEWLINE  */
+#line 54 "CommentAnalyzer.y"
+                                                        {lineCounter++;}
+#line 1123 "CommentAnalyzer.tab.c"
     break;
 
-  case 9: /* comment: T_SPLITTER err T_NEWLINE  */
-#line 38 "CommentAnalyzer.y"
-                                                {printf("Wrong comment\n");}
-#line 1106 "CommentAnalyzer.tab.c"
+  case 9: /* comment: T_SPLITTER notcomment error T_NEWLINE  */
+#line 55 "CommentAnalyzer.y"
+                                                        {lineCounter++;}
+#line 1129 "CommentAnalyzer.tab.c"
+    break;
+
+  case 15: /* notcomment: %empty  */
+#line 65 "CommentAnalyzer.y"
+            {errorType = 1;}
+#line 1135 "CommentAnalyzer.tab.c"
     break;
 
 
-#line 1110 "CommentAnalyzer.tab.c"
+#line 1139 "CommentAnalyzer.tab.c"
 
       default: break;
     }
@@ -1300,20 +1329,213 @@ yyreturn:
   return yyresult;
 }
 
-#line 56 "CommentAnalyzer.y"
+#line 67 "CommentAnalyzer.y"
 
 
-int main() {
-	yyin = stdin;
+int errorsCount = 0;
+char** errors;
+
+
+int __cdecl main(void) {
+		WSADATA wsaData;
+    int iResult;
+
+    SOCKET ListenSocket = INVALID_SOCKET;
+    SOCKET ClientSocket = INVALID_SOCKET;
+
+    struct addrinfo *result = NULL;
+    struct addrinfo hints;
+
+    int iSendResult;
+    char recvbuf[DEFAULT_BUFLEN];
+    int recvbuflen = DEFAULT_BUFLEN;
+    
+    // Initialize Winsock
+    iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+    if (iResult != 0) {
+        printf("WSAStartup failed with error: %d\n", iResult);
+        return 1;
+    }
+
+    ZeroMemory(&hints, sizeof(hints));
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
+    hints.ai_flags = AI_PASSIVE;
+
+    // Resolve the server address and port
+    iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
+    if ( iResult != 0 ) {
+        printf("getaddrinfo failed with error: %d\n", iResult);
+        WSACleanup();
+        return 1;
+    }
+
+    // Create a SOCKET for connecting to server
+    ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+    if (ListenSocket == INVALID_SOCKET) {
+        printf("socket failed with error: %ld\n", WSAGetLastError());
+        freeaddrinfo(result);
+        WSACleanup();
+        return 1;
+    }
+
+		// Setup the TCP listening socket
+    iResult = bind( ListenSocket, result->ai_addr, (int)result->ai_addrlen);
+    if (iResult == SOCKET_ERROR) {
+        printf("bind failed with error: %d\n", WSAGetLastError());
+        freeaddrinfo(result);
+        closesocket(ListenSocket);
+        WSACleanup();
+        return 1;
+    }
+
+		freeaddrinfo(result);
+
+    iResult = listen(ListenSocket, SOMAXCONN);
+    if (iResult == SOCKET_ERROR) {
+        printf("listen failed with error: %d\n", WSAGetLastError());
+        closesocket(ListenSocket);
+        WSACleanup();
+        return 1;
+    }
+
+    printf("Server opened at 127.0.0.1:%s\n", DEFAULT_PORT);
+
+		do {
+      // Accept a client socket
+      ClientSocket = accept(ListenSocket, NULL, NULL);
+      if (ClientSocket == INVALID_SOCKET) {
+          printf("accept failed with error: %d\n", WSAGetLastError());
+          closesocket(ListenSocket);
+          WSACleanup();
+          return 1;
+      }
+
+      // No longer need server socket
+      //closesocket(ListenSocket);
+
+      // Receive until the peer shuts down the connection
+      do {
+          iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+          if (iResult > 0) {
+              printf("Bytes received: %d\n", iResult);
+
+              printf("Message: %s\n", recvbuf);
+
+							FILE* input = fopen("input.txt", "w");
+							fprintf(input, "%s", recvbuf);
+							fclose(input);
+
+							yyin = fopen("input.txt", "r");
+							do {
+								yyparse();
+							}while(!feof(yyin));
+
+							char error[ERROR_MAX_LENGTH * errorsCount * sizeof(char)];
+
+							strcpy(error, (char*)"");
+							for(int i = 0; i < errorsCount; i++) {
+								if (i == 0)
+									strcpy(error, errors[i]);
+								else
+									strcat(error, errors[i]);
+							}
+
+							strcat(error, "\r\n");
+							strcat(error, "Total errors: ");
+							char* totalErrors = (char*) calloc (sizeof(char), 10);
+							itoa(errorsCount, totalErrors, 10);
+							strcat(error, totalErrors);
+
+
+          		// Echo the buffer back to the sender
+              iSendResult = send( ClientSocket, error, ERROR_MAX_LENGTH * errorsCount * sizeof(char), 0 );
+              if (iSendResult == SOCKET_ERROR) {
+                  printf("send failed with error: %d\n", WSAGetLastError());
+                  closesocket(ClientSocket);
+                  WSACleanup();
+                  return 1;
+              }
+              printf("Bytes sent: %d\n", iSendResult);
+
+          }
+          else if (iResult == 0)
+              printf("Waiting for new data...\n");
+          else  {
+              printf("recv failed with error: %d\n", WSAGetLastError());
+              closesocket(ClientSocket);
+              WSACleanup();
+              return 1;
+          }
+
+					errors = NULL;
+					errorsCount = 0;
+					lineCounter = 1;
+					errorType = 0;
+      } while (iResult > 0);
+
+      // shutdown the connection since we're done
+      iResult = shutdown(ClientSocket, SD_SEND);
+      if (iResult == SOCKET_ERROR) {
+          printf("shutdown failed with error: %d\n", WSAGetLastError());
+          closesocket(ClientSocket);
+          WSACleanup();
+          return 1;
+      }
+    }while(true);
+    // cleanup
+    closesocket(ClientSocket);
+    WSACleanup();
+
+/*
+	yyin = fopen("input.txt", "r");
 
 	do {
 		yyparse();
 	} while(!feof(yyin));
+*/
 
-	return 0;
+	FILE* output = fopen("output.txt", "w");
+
+	for (int i = 0; i < errorsCount; i++){
+		int currentCharacter = 0;
+		do {
+			fputc(errors[i][currentCharacter], output);
+
+			if (errors[i][currentCharacter++] == '\n')
+				break;
+
+		} while (true);
+	}
+
+	fclose(output);
+
+	exit(0);
 }
 
 void yyerror(const char* s) {
-	fprintf(stderr, "Parse error: %s\n", s);
-	exit(1);
+
+	if (errors == NULL) {
+		errors = (char**) calloc (sizeof(char*), ++errorsCount);
+	} else {
+		errors = (char**) realloc (errors, sizeof(char*)*(++errorsCount));
+	}
+	//errors[errorsCount - 1] = (char*)"Error[line:]: not a comment\n";
+
+
+	errors[errorsCount - 1] = (char*) calloc (sizeof(char), 200);
+
+	if (errorType == 1) {
+		strcpy(errors[errorsCount - 1], "");
+		char* line = (char*) calloc (sizeof(char), 10);
+		itoa(lineCounter, line, 10);
+		strcat(errors[errorsCount - 1], "Line:");
+		strcat(errors[errorsCount - 1], (const char*)line);
+		strcat(errors[errorsCount - 1], ": [ERROR] line is not a comment\r\n");
+	}
+
+	errorType = 0;
+
+	//exit(1);
 }

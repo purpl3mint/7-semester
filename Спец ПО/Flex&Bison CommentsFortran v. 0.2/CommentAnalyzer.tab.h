@@ -68,7 +68,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 13 "CommentAnalyzer.y"
+#line 30 "CommentAnalyzer.y"
 
 	int ival;
 	float fval;

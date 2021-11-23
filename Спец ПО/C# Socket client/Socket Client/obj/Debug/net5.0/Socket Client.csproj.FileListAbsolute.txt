@@ -1,0 +1,16 @@
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\Socket Client.exe
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\Socket Client.deps.json
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\Socket Client.runtimeconfig.json
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\Socket Client.runtimeconfig.dev.json
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\Socket Client.dll
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\ref\Socket Client.dll
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\bin\Debug\net5.0\Socket Client.pdb
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.csprojAssemblyReference.cache
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.AssemblyInfoInputs.cache
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.AssemblyInfo.cs
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.csproj.CoreCompileInputs.cache
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.dll
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\ref\Socket Client.dll
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.pdb
+C:\Users\Buzz\Desktop\Учеба\7-semester\Спец ПО\C# Socket client\Socket Client\obj\Debug\net5.0\Socket Client.genruntimeconfig.cache
