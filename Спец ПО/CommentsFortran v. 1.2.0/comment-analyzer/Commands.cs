@@ -265,6 +265,11 @@ namespace comment_analyzer
         {
             String source = StaticData.mainForm.TextBox.Text;
 
+            if (source.Length == 0)
+            {
+                source = "***";
+            }
+
             int port = 777;
             string address = "127.0.0.1";
 
@@ -275,10 +280,7 @@ namespace comment_analyzer
                 Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 // подключаемся к удаленному хосту
                 socket.Connect(ipPoint);
-                //Console.Write("Введите сообщение:");
-                string message = Console.ReadLine();
-                byte[] data = Encoding.Unicode.GetBytes(source);
-                data = Encoding.ASCII.GetBytes(source);
+                byte[] data = Encoding.ASCII.GetBytes(source);
                 socket.Send(data);
 
                 // получаем ответ
@@ -304,111 +306,6 @@ namespace comment_analyzer
                 //Console.WriteLine(ex.Message);
                 StaticData.mainForm.ResultsTextBox.Text = ex.Message.ToString();
             }
-            /*
-            String source = StaticData.mainForm.TextBox.Text;
-            List<String> sourceLines = new List<string>(source.Split('\n'));
-
-            //Write source text
-            String pathInput = "../../Flex+Bison engine/input.txt";
-            using (StreamWriter sw = File.CreateText(pathInput))
-            {
-                foreach(String line in sourceLines)
-                {
-                    sw.WriteLine(line.Trim('\r'));
-                }
-            }
-
-            //Here executing analyzer process
-            var cppProcess = new Process();
-            cppProcess.StartInfo = new ProcessStartInfo
-            {
-                FileName = "../../Flex+Bison engine/CommentAnalyzer.exe",
-                UseShellExecute = false,
-                RedirectStandardInput = true,
-                RedirectStandardOutput = true,
-            };
-
-            cppProcess.Start();
-
-            StreamReader str = cppProcess.StandardOutput;
-            StreamWriter stw = cppProcess.StandardInput;
-
-            StaticData.mainForm.ResultsTextBox.Text = "";
-            foreach (string line in sourceLines)
-            {
-                stw.WriteLine(line);
-                StaticData.mainForm.ResultsTextBox.Text += str.ReadLine();
-            }
-
-            StaticData.mainForm.ResultsTextBox.Text = str.ReadToEnd();
-
-            cppProcess.WaitForExit();
-
-            //Read and show result of analysis
-            /*
-            String pathOutput = "../../Flex+Bison engine/output.txt";
-            if (File.Exists(pathOutput))
-            {
-                using (StreamReader sr = File.OpenText(pathOutput))
-                {
-                    String line;
-                    StaticData.mainForm.ResultsTextBox.Text = "";
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        StaticData.mainForm.ResultsTextBox.Text += line + '\n';
-                    }
-                }
-            }
-            */
-            /*
-            var cppProcess = new Process();
-            cppProcess.StartInfo = new ProcessStartInfo
-            {
-                FileName = "../../Flex+Bison engine/CommentAnalyzer.exe",
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardInput = true,
-            };
-            */
-            /*
-            cppProcess.OutputDataReceived += (sender, arg) =>
-            {
-                Console.WriteLine("Received: {0}", arg.Data);
-            };
-            */
-
-            /*
-            cppProcess.Start();
-
-            StreamReader reader = cppProcess.StandardOutput;
-            StreamWriter writer = cppProcess.StandardInput;
-
-            foreach (String line in sourceLines)
-            {
-                writer.WriteLine(line);
-            }
-
-            StaticData.mainForm.ResultsTextBox.Text = reader.ReadToEnd();
-            */
-            /*
-            cppProcess.OutputDataReceived += new DataReceivedEventHandler
-            (
-                delegate(object sender, DataReceivedEventArgs e)
-                {
-                    using (StreamReader output = cppProcess.StandardOutput)
-                    {
-                        StaticData.mainForm.ResultsTextBox.Text += output.ReadToEnd();
-                    }
-                }
-            );
-            */
-
-
-
-            //writer.Close();
-            //reader.Close();
-            //cppProcess.WaitForExit();
-
         }
     }
 }

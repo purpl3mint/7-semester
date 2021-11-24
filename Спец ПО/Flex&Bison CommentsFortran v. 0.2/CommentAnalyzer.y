@@ -49,7 +49,7 @@ prog:
 
 comment: T_NEWLINE	{lineCounter++;}
 	|	T_QUIT T_NEWLINE	{exit(0);}
-	| T_STAR correct T_NEWLINE	{lineCounter++;}
+	|   T_STAR correct T_NEWLINE	{lineCounter++;}
 	|	T_LETTER notcomment error T_NEWLINE	{lineCounter++;}
 	|	T_DIGIT notcomment error T_NEWLINE	{lineCounter++;}
 	|	T_SPLITTER notcomment error T_NEWLINE	{lineCounter++;}
@@ -71,7 +71,8 @@ char** errors;
 
 
 int __cdecl main(void) {
-		WSADATA wsaData;
+	
+    WSADATA wsaData;
     int iResult;
 
     SOCKET ListenSocket = INVALID_SOCKET;
@@ -136,114 +137,98 @@ int __cdecl main(void) {
 
     printf("Server opened at 127.0.0.1:%s\n", DEFAULT_PORT);
 
-		do {
-      // Accept a client socket
-      ClientSocket = accept(ListenSocket, NULL, NULL);
-      if (ClientSocket == INVALID_SOCKET) {
-          printf("accept failed with error: %d\n", WSAGetLastError());
-          closesocket(ListenSocket);
-          WSACleanup();
-          return 1;
-      }
+	do {
+        // Accept a client socket
+        ClientSocket = accept(ListenSocket, NULL, NULL);
+        if (ClientSocket == INVALID_SOCKET) {
+            printf("accept failed with error: %d\n", WSAGetLastError());
+            closesocket(ListenSocket);
+            WSACleanup();
+            return 1;
+        }
 
-      // No longer need server socket
-      //closesocket(ListenSocket);
+        // No longer need server socket
+        //closesocket(ListenSocket);
 
-      // Receive until the peer shuts down the connection
-      do {
-          iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
-          if (iResult > 0) {
-              printf("Bytes received: %d\n", iResult);
+        // Receive until the peer shuts down the connection
+        do {
+            iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+            if (iResult > 0) {
+                printf("Bytes received: %d\n", iResult);
 
-              printf("Message: %s\n", recvbuf);
-
-							FILE* input = fopen("input.txt", "w");
-							fprintf(input, "%s", recvbuf);
-							fclose(input);
-
-							yyin = fopen("input.txt", "r");
-							do {
-								yyparse();
-							}while(!feof(yyin));
-
-							char error[ERROR_MAX_LENGTH * errorsCount * sizeof(char)];
-
-							strcpy(error, (char*)"");
-							for(int i = 0; i < errorsCount; i++) {
-								if (i == 0)
-									strcpy(error, errors[i]);
-								else
-									strcat(error, errors[i]);
-							}
-
-							strcat(error, "\r\n");
-							strcat(error, "Total errors: ");
-							char* totalErrors = (char*) calloc (sizeof(char), 10);
-							itoa(errorsCount, totalErrors, 10);
-							strcat(error, totalErrors);
+                printf("Message: %s\n", recvbuf);
 
 
-          		// Echo the buffer back to the sender
-              iSendResult = send( ClientSocket, error, ERROR_MAX_LENGTH * errorsCount * sizeof(char), 0 );
-              if (iSendResult == SOCKET_ERROR) {
-                  printf("send failed with error: %d\n", WSAGetLastError());
-                  closesocket(ClientSocket);
-                  WSACleanup();
-                  return 1;
-              }
-              printf("Bytes sent: %d\n", iSendResult);
+                FILE* input = fopen("input.txt", "w");
+                fprintf(input, "%s", recvbuf);
+                fclose(input);
 
-          }
-          else if (iResult == 0)
-              printf("Waiting for new data...\n");
-          else  {
-              printf("recv failed with error: %d\n", WSAGetLastError());
-              closesocket(ClientSocket);
-              WSACleanup();
-              return 1;
-          }
+                yyin = fopen("input.txt", "r");
+                do {
+                    yyparse();
+                }while(!feof(yyin));
 
-					errors = NULL;
-					errorsCount = 0;
-					lineCounter = 1;
-					errorType = 0;
-      } while (iResult > 0);
+                char error[ERROR_MAX_LENGTH * errorsCount * sizeof(char)];
 
-      // shutdown the connection since we're done
-      iResult = shutdown(ClientSocket, SD_SEND);
-      if (iResult == SOCKET_ERROR) {
-          printf("shutdown failed with error: %d\n", WSAGetLastError());
-          closesocket(ClientSocket);
-          WSACleanup();
-          return 1;
-      }
+                strcpy(error, (char*)"");
+                if (errorsCount - 1 > 0) {
+                    for(int i = 0; i < errorsCount; i++) {
+                        if (i == 0)
+                            strcpy(error, errors[i]);
+                        else
+                            strcat(error, errors[i]);
+                    }
+
+                    strcat(error, "\r\n");
+                    strcat(error, "Total errors: ");
+                    char* totalErrors = (char*) calloc (sizeof(char), 10);
+                    itoa(errorsCount - 1, totalErrors, 10);
+                    strcat(error, totalErrors);
+                } else {
+                    strcpy(error, (char*)"No errors\r\n");
+                }
+
+                // Echo the buffer back to the sender
+                iSendResult = send( ClientSocket, error, ERROR_MAX_LENGTH * errorsCount * sizeof(char), 0 );
+                if (iSendResult == SOCKET_ERROR) {
+                    printf("send failed with error: %d\n", WSAGetLastError());
+                    closesocket(ClientSocket);
+                    WSACleanup();
+                    return 1;
+                }
+                printf("Bytes sent: %d\n", iSendResult);
+
+            }
+            else if (iResult == 0)
+                printf("Waiting for new data...\n");
+            else  {
+                printf("recv failed with error: %d\n", WSAGetLastError());
+                closesocket(ClientSocket);
+                WSACleanup();
+                return 1;
+            }
+
+            errors = NULL;
+            errorsCount = 0;
+            lineCounter = 1;
+            errorType = 0;
+            for (int i = 0; i < recvbuflen; i++){
+                recvbuf[i] = (char)0;
+            }
+        } while (iResult > 0);
+
+        // shutdown the connection since we're done
+        iResult = shutdown(ClientSocket, SD_SEND);
+        if (iResult == SOCKET_ERROR) {
+            printf("shutdown failed with error: %d\n", WSAGetLastError());
+            closesocket(ClientSocket);
+            WSACleanup();
+            return 1;
+        }
     }while(true);
     // cleanup
     closesocket(ClientSocket);
     WSACleanup();
-
-/*
-	yyin = fopen("input.txt", "r");
-
-	do {
-		yyparse();
-	} while(!feof(yyin));
-*/
-
-	FILE* output = fopen("output.txt", "w");
-
-	for (int i = 0; i < errorsCount; i++){
-		int currentCharacter = 0;
-		do {
-			fputc(errors[i][currentCharacter], output);
-
-			if (errors[i][currentCharacter++] == '\n')
-				break;
-
-		} while (true);
-	}
-
-	fclose(output);
 
 	exit(0);
 }
@@ -255,7 +240,6 @@ void yyerror(const char* s) {
 	} else {
 		errors = (char**) realloc (errors, sizeof(char*)*(++errorsCount));
 	}
-	//errors[errorsCount - 1] = (char*)"Error[line:]: not a comment\n";
 
 
 	errors[errorsCount - 1] = (char*) calloc (sizeof(char), 200);
