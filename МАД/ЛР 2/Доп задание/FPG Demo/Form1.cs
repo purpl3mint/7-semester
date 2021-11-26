@@ -104,8 +104,9 @@ namespace FPG_Demo
                 }
             }
 
+            
             Data.occurencies = Data.occurencies
-                .OrderBy(pair => pair.Value)
+                .OrderByDescending(pair => pair.Value)
                 .ToDictionary(pair => pair.Key, pair => pair.Value);
         }
 
@@ -118,7 +119,10 @@ namespace FPG_Demo
 
                 splittedString.Sort(delegate (string x, string y)
                 {
-                    if (Data.occurencies[x] == Data.occurencies[y]) return 0;
+                    if (Data.occurencies[x] == Data.occurencies[y])
+                    {
+                        return String.Compare(x, y);
+                    }
                     else if (Data.occurencies[x] > Data.occurencies[y]) return -1;
                     else return 1;
                 });
@@ -175,7 +179,7 @@ namespace FPG_Demo
                 if (node.children.Count == 0)
                 {
                     if (prefix.Length > 0)
-                        result.Add(new Rule(node.value, prefix));
+                        result.Add(new Rule(node.value, prefix, node.parent.count));
                 } else
                 {
                     List<Rule> resultFromNextLevel = GetRulesFromConvolutionTree(node.children, prefix + " " + node.value);
@@ -186,40 +190,65 @@ namespace FPG_Demo
             return result;
         }
 
+        private void GenerateConditionalRules(Graph tree, string conclusion, List<string> prefix, string target)
+        {
+            List<GraphNode> foundNodes = tree.FindNodes(target, tree.children);
+
+            List<string> paths = new List<string>();
+
+            //Getting paths
+            foreach (GraphNode node in foundNodes)
+            {
+                string path = new string(GetPathFromNode(node).Reverse().ToArray());
+                if (path == target)
+                    continue;
+
+                for (int i = 0; i < node.count; i++)
+                {
+                    paths.Add(path);
+                }
+            }
+
+            if (paths.Count == 0)
+                return;
+
+            //Getting occurencies for conditional tree
+            Dictionary<string, int> localOccurencies = new Dictionary<string, int>();
+            foreach (string path in paths)
+            {
+                localOccurencies = GetLocalOccurencies(path, localOccurencies);
+            }
+
+            //Generating conditional tree
+            Graph newTree = new Graph();
+            foreach (string path in paths)
+            {
+                List<string> preparedPath = new List<string>(path.Split(' '));
+                newTree.AddTransaction(preparedPath);
+            }
+
+            //Getting rules
+            foreach(string item in localOccurencies.Keys)
+            {
+                if (localOccurencies[item] < Data.minSupport || item == target)
+                    continue;
+
+                List<string> newPrefix = new List<string>(prefix);
+                newPrefix.Add(item);
+                string newPrefixStringified = String.Join(" ", newPrefix.ToArray());
+                Data.rules.Add(new Rule(conclusion, newPrefixStringified, localOccurencies[item], 0));
+
+                GenerateConditionalRules(newTree, conclusion, newPrefix, item);
+            }
+        }
+
         private void GetRules()
         {
             foreach (string value in Data.occurencies.Keys)
             {
-                List<GraphNode> foundNodes = Data.graph.FindNodes(value, Data.graph.children);
-
-                List<string> paths = new List<string>();
-
-                //Getting paths
-                foreach (GraphNode node in foundNodes)
-                {
-                    //paths.Add(new string(GetPathFromNode(node).Substring(value.Length + 1).Reverse().ToArray()));
-                    paths.Add(new string(GetPathFromNode(node).Reverse().ToArray()));
-                }
-
-                //Getting occurencies for conditional tree
-                Dictionary<string, int> localOccurencies = new Dictionary<string, int>();
-                foreach (string path in paths)
-                {
-                    localOccurencies = GetLocalOccurencies(path, localOccurencies);
-                }
-
-                //Generating conditional tree
-                Graph conditionalGraph = new Graph();
-                foreach (string path in paths)
-                {
-                    List<string> preparedPath = new List<string>(path.Split(' '));
-                    conditionalGraph.AddTransaction(preparedPath);
-                }
-
-                //Generating rules
-                List<Rule> localRules = GetRulesFromConvolutionTree(conditionalGraph.children, "");
-                localRules.ForEach(r => Data.rules.Add(r));
+                GenerateConditionalRules(Data.graph, value, new List<string>(), value);
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
