@@ -227,21 +227,51 @@ namespace FPG_Demo
                 newTree.AddTransaction(preparedPath);
             }
 
+            int totalTransactions = Data.transactions.Count;
+
             //Getting rules
             foreach(string item in localOccurencies.Keys)
             {
-                if (localOccurencies[item] < Data.minSupport || item == target)
+                if (localOccurencies[item] * 100 / totalTransactions < Data.minSupport 
+                    || localOccurencies[item] * 100 / totalTransactions > Data.maxSupport
+                    || item == target)
                     continue;
 
                 List<string> newPrefix = new List<string>(prefix);
                 newPrefix.Add(item);
                 string newPrefixStringified = String.Join(" ", newPrefix.ToArray());
-                Data.rules.Add(new Rule(conclusion, newPrefixStringified, localOccurencies[item], 0));
+                Data.rules.Add(
+                    new Rule(
+                        conclusion, 
+                        newPrefixStringified, 
+                        localOccurencies[item] / (double)totalTransactions, 
+                        0
+                ));
 
                 GenerateConditionalRules(newTree, conclusion, newPrefix, item);
             }
         }
 
+        private Rule FindRuleBySearching(string prefix, string target)
+        {
+            if (prefix == "" || target == "")
+                return null;
+
+            foreach (Rule rule in Data.rules)
+            {
+                if (rule.prefixItems == prefix && rule.targetItem == target)
+                    return rule;
+            }
+
+            return null;
+        }
+
+        private Rule FindRuleByCreating(string prefix, string target)
+        {
+            Rule result = new Rule();
+
+            return result;
+        }
         private void GetRules()
         {
             foreach (string value in Data.occurencies.Keys)
@@ -249,6 +279,41 @@ namespace FPG_Demo
                 GenerateConditionalRules(Data.graph, value, new List<string>(), value);
             }
 
+            //Calculating confidences
+            List<Rule> newRules = new List<Rule>();
+            foreach (Rule rule in Data.rules)
+            {
+                Rule newRule;
+                if (rule.prefixItems.Length == 1)
+                {
+                    newRule = new Rule(
+                        rule.targetItem, 
+                        rule.prefixItems, 
+                        rule.support,
+                        rule.support * Data.transactions.Count / Data.occurencies[rule.prefixItems] );
+                } else
+                {
+                    List<string> rulePrefixSplitted = new List<string>(rule.prefixItems.Split(' '));
+                    string newConclusion = rulePrefixSplitted[0];
+                    rulePrefixSplitted.RemoveAt(0);
+                    string newPrefix = String.Join(" ", rulePrefixSplitted);
+                    Rule ruleWithoutConclusion = FindRuleBySearching(newPrefix, newConclusion);
+
+                    if (ruleWithoutConclusion == null)
+                        ruleWithoutConclusion = rule;
+
+                    newRule = new Rule(
+                        rule.targetItem,
+                        rule.prefixItems,
+                        rule.support,
+                        rule.support / (double)ruleWithoutConclusion.support );
+                }
+
+                if (newRule.confidence * 100 >= Data.minConfidence && newRule.confidence * 100 <= Data.maxConfidence)
+                    newRules.Add(newRule);
+            }
+
+            Data.rules = newRules;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -319,6 +384,26 @@ namespace FPG_Demo
             Data.minConfidence = Convert.ToInt32(numericUpDown3.Value);
             Data.maxConfidence = Convert.ToInt32(numericUpDown4.Value);
 
+            if (Data.minSupport >= Data.maxSupport)
+            {
+                MessageBox.Show(
+                    "Некорректные значения поддержки",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Data.minConfidence >= Data.maxConfidence)
+            {
+                MessageBox.Show(
+                    "Некорректные значения достоверности",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (Data.records.Count == 0 || Data.transactions.Count == 0)
             {
                 MessageBox.Show(
@@ -328,12 +413,20 @@ namespace FPG_Demo
                     MessageBoxIcon.Exclamation);
             }
 
+            Data.rules = new List<Rule>();
+            dataGridView3.Rows.Clear();
+
             GetRules();
 
             int i = 1;
             foreach(Rule rule in Data.rules)
             {
-                dataGridView3.Rows.Add(i++, rule.prefixItems, rule.targetItem, rule.support, rule.confidence);
+                dataGridView3.Rows.Add(
+                    i++, 
+                    rule.prefixItems, 
+                    rule.targetItem, 
+                    rule.support * 100, 
+                    rule.confidence * 100);
             }
         }
     }

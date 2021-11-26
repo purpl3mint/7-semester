@@ -31,27 +31,27 @@ namespace FPG_Demo
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idTransaction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueTransaction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -60,17 +60,16 @@ namespace FPG_Demo
             this.consequenceRule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supportRule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confidenceRule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.liftRule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +98,18 @@ namespace FPG_Demo
             this.dataGridView1.Size = new System.Drawing.Size(272, 210);
             this.dataGridView1.TabIndex = 1;
             // 
+            // idData
+            // 
+            this.idData.HeaderText = "ID";
+            this.idData.Name = "idData";
+            this.idData.ReadOnly = true;
+            // 
+            // valueData
+            // 
+            this.valueData.HeaderText = "Значение";
+            this.valueData.Name = "valueData";
+            this.valueData.ReadOnly = true;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -112,18 +123,6 @@ namespace FPG_Demo
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(272, 210);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // idData
-            // 
-            this.idData.HeaderText = "ID";
-            this.idData.Name = "idData";
-            this.idData.ReadOnly = true;
-            // 
-            // valueData
-            // 
-            this.valueData.HeaderText = "Значение";
-            this.valueData.Name = "valueData";
-            this.valueData.ReadOnly = true;
             // 
             // idTransaction
             // 
@@ -190,86 +189,48 @@ namespace FPG_Demo
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры";
             // 
-            // numericUpDown1
+            // progressBar4
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(150, 19);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.progressBar4.BackColor = System.Drawing.SystemColors.Control;
+            this.progressBar4.ForeColor = System.Drawing.Color.DarkOrange;
+            this.progressBar4.Location = new System.Drawing.Point(150, 171);
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(120, 10);
+            this.progressBar4.Step = 1;
+            this.progressBar4.TabIndex = 11;
+            this.progressBar4.Value = 90;
             // 
-            // label1
+            // progressBar3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Min. Поддержка, %";
+            this.progressBar3.BackColor = System.Drawing.SystemColors.Control;
+            this.progressBar3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.progressBar3.Location = new System.Drawing.Point(150, 129);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(120, 10);
+            this.progressBar3.Step = 1;
+            this.progressBar3.TabIndex = 10;
+            this.progressBar3.Value = 40;
             // 
-            // label2
+            // progressBar2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Max. Поддержка, %";
+            this.progressBar2.BackColor = System.Drawing.SystemColors.Control;
+            this.progressBar2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.progressBar2.Location = new System.Drawing.Point(150, 87);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(120, 10);
+            this.progressBar2.Step = 1;
+            this.progressBar2.TabIndex = 9;
+            this.progressBar2.Value = 20;
             // 
-            // numericUpDown2
+            // progressBar1
             // 
-            this.numericUpDown2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDown2.Location = new System.Drawing.Point(150, 61);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Min. Достоверность, %";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDown3.Location = new System.Drawing.Point(150, 103);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 4;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            this.progressBar1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.progressBar1.Location = new System.Drawing.Point(150, 45);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(120, 10);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 8;
+            this.progressBar1.Value = 1;
             // 
             // label4
             // 
@@ -298,48 +259,86 @@ namespace FPG_Demo
             0});
             this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
-            // progressBar1
+            // label3
             // 
-            this.progressBar1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.progressBar1.Location = new System.Drawing.Point(150, 45);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(120, 10);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 8;
-            this.progressBar1.Value = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Min. Достоверность, %";
             // 
-            // progressBar2
+            // numericUpDown3
             // 
-            this.progressBar2.BackColor = System.Drawing.SystemColors.Control;
-            this.progressBar2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.progressBar2.Location = new System.Drawing.Point(150, 87);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(120, 10);
-            this.progressBar2.Step = 1;
-            this.progressBar2.TabIndex = 9;
-            this.progressBar2.Value = 20;
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDown3.Location = new System.Drawing.Point(150, 103);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown3.TabIndex = 4;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
-            // progressBar3
+            // label2
             // 
-            this.progressBar3.BackColor = System.Drawing.SystemColors.Control;
-            this.progressBar3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.progressBar3.Location = new System.Drawing.Point(150, 129);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(120, 10);
-            this.progressBar3.Step = 1;
-            this.progressBar3.TabIndex = 10;
-            this.progressBar3.Value = 40;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Max. Поддержка, %";
             // 
-            // progressBar4
+            // numericUpDown2
             // 
-            this.progressBar4.BackColor = System.Drawing.SystemColors.Control;
-            this.progressBar4.ForeColor = System.Drawing.Color.DarkOrange;
-            this.progressBar4.Location = new System.Drawing.Point(150, 171);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(120, 10);
-            this.progressBar4.Step = 1;
-            this.progressBar4.TabIndex = 11;
-            this.progressBar4.Value = 90;
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDown2.Location = new System.Drawing.Point(150, 61);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 2;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Min. Поддержка, %";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDown1.Location = new System.Drawing.Point(150, 19);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 0;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // button2
             // 
@@ -371,8 +370,7 @@ namespace FPG_Demo
             this.conditionRule,
             this.consequenceRule,
             this.supportRule,
-            this.confidenceRule,
-            this.liftRule});
+            this.confidenceRule});
             this.dataGridView3.Location = new System.Drawing.Point(6, 19);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
@@ -391,33 +389,27 @@ namespace FPG_Demo
             this.conditionRule.HeaderText = "Условие";
             this.conditionRule.Name = "conditionRule";
             this.conditionRule.ReadOnly = true;
+            this.conditionRule.Width = 90;
             // 
             // consequenceRule
             // 
             this.consequenceRule.HeaderText = "Следствие";
             this.consequenceRule.Name = "consequenceRule";
             this.consequenceRule.ReadOnly = true;
+            this.consequenceRule.Width = 90;
             // 
             // supportRule
             // 
             this.supportRule.HeaderText = "Поддержка, %";
             this.supportRule.Name = "supportRule";
             this.supportRule.ReadOnly = true;
-            this.supportRule.Width = 55;
+            this.supportRule.Width = 80;
             // 
             // confidenceRule
             // 
             this.confidenceRule.HeaderText = "Достоверность, %";
             this.confidenceRule.Name = "confidenceRule";
             this.confidenceRule.ReadOnly = true;
-            this.confidenceRule.Width = 55;
-            // 
-            // liftRule
-            // 
-            this.liftRule.HeaderText = "Лифт";
-            this.liftRule.Name = "liftRule";
-            this.liftRule.ReadOnly = true;
-            this.liftRule.Width = 40;
             // 
             // Form1
             // 
@@ -438,10 +430,10 @@ namespace FPG_Demo
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
@@ -481,7 +473,6 @@ namespace FPG_Demo
         private System.Windows.Forms.DataGridViewTextBoxColumn consequenceRule;
         private System.Windows.Forms.DataGridViewTextBoxColumn supportRule;
         private System.Windows.Forms.DataGridViewTextBoxColumn confidenceRule;
-        private System.Windows.Forms.DataGridViewTextBoxColumn liftRule;
     }
 }
 
